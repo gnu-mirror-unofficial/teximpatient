@@ -10,9 +10,9 @@
 
 %\codefuzz = 4pc % for this chapter only (in scope of \chapter)
 \bix^^{messages d'erreur}
-L'interpr\'etation des messages d'erreur des \TeX\ peut parfois \^etre 
+L'interpr\'etation des messages d'erreur de \TeX\ peut parfois \^etre 
 compar\'ee \`a aller chez votre m\'edecin avec la sensation d'\^etre 
-fatigu\'e et obtenir, en r\'eponse, une anomalie de votre chimie sanguine. 
+fatigu\'e et obtenir, en r\'eponse, une analyse de votre chimie sanguine. 
 C'est probablement l'explication de votre d\'etresse, mais il n'est pas 
 facile de la d\'ecrire. Quelques r\`egles simples vous feront aller plus 
 loin en vous aidant \`a comprendre les messages d'erreur de \TeX\ et \`a en 
@@ -38,16 +38,16 @@ Ce message appara\^\i tra sur votre terminal et dans votre \logfile.
 ^^{fichier log//message d'erreur} La premi\`ere ligne, qui commence 
 toujours par un point d'exclamation (|!!|), vous indique ce qu'est le 
 probl\`eme. Les deux derni\`eres lignes avant le prompt `|?|'(qui sont, 
-dans ce cas-ci, \'egalement, les deux lignes suivante) vous indiquent o\`u 
+dans ce cas-ci, \'egalement, les deux lignes suivantes) vous indiquent o\`u 
 \'etait \TeX\ quand il a trouv\'e l'erreur. Il a trouv\'e l'erreur sur la 
 ligne $291$ du fichier source courant, et la coupure entre les deux lignes 
-de message indique la position pr\'ecise de \TeX\ dans la ligne $291$, \`a 
+de message indiquent la position pr\'ecise de \TeX\ dans la ligne $291$, \`a 
 savoir, juste apr\`es |\quid|. Le fichier source courant est celui juste 
 apr\`es la parenth\`ese gauche la plus r\'ecemment ouverte dans le r\'esultat 
 de votre ex\'ecution sur votre terminal (voir les \xref{infiles}).
 
 Cette erreur particuli\`ere, un ``undefined control sequence'', est l'une 
-de la plus commune que vous puissiez obtenir. Si vous r\'epondez au prompt 
+des plus communes que vous puissiez obtenir. Si vous r\'epondez au prompt 
 par un autre~`|?| ', \TeX\ affichera le message suivant~:
 
 {\hfuzz = 2in
@@ -66,7 +66,7 @@ votre document. Dans ce cas, il ignorera juste le |\quid|.
 \li Si vous saisissez `|S|' (ou `|s|'---majuscule et minuscule sont 
 \'equivalentes ici), \TeX\ traitera votre document sans s'arr\^eter, 
 \emph{sauf} s'il rencontre un fichier absent. Les messages d'erreur 
-continuerons \`a appara\^\i tre sur votre terminal et dans le \logfile.
+continueront \`a appara\^\i tre sur votre terminal et dans le \logfile.
 \li Si vous saisissez `|R|' ou `|r|', vous obtiendrez le m\^eme effet que 
 pour `|S|', sauf que \TeX\ ne s'arr\^etera pas pour les fichiers manquants.
 \li Si vous saisissez `|Q|' ou `|q|', \TeX\ continuera \`a traiter votre 
@@ -105,7 +105,7 @@ votre document~:
 \ulist
 \li Si vous saisissez `|I|' ou `|i|' suivi de texte, alors \TeX\ ins\'erera 
 ce texte comme s'il s'\'etait produit juste apr\`es le point d'erreur, au 
-niveau les plus secrets o\`u le \TeX \ travaille. Dans le cas de l'exemple 
+niveau les plus secrets o\`u \TeX \ travaille. Dans le cas de l'exemple 
 ci-dessus, cela signifie \`a la position de \TeX\ dans votre source 
 original, c'est-\`a-dire, juste apr\`es `|\quid|'. Plus tard vous verrez un 
 exemple qui montre la diff\'erence entre ins\'erer quelque chose au niveau 
@@ -177,8 +177,8 @@ Puisque le symbole |\spadesuit| n'est permis qu'en mode math\'ematique,
 token, il se place \emph{devant} ce token, dans ce cas, le `|$|', pr\^et 
 \`a le lire. saisir `|2|' fera que \TeX\ sautera le `|$|' et le token 
 `|\spadesuit|', le laissant pr\^et \`a traiter le `|s|' de 
-`|s are trumps|'. (si vous laissez juste \TeX\ continuer, il 
-composera `|s are trumps|' en mode math\'ematique.)
+`|s are trumps|'. Si vous laissez juste \TeX\ continuer, il 
+composera `|s are trumps|' en mode math\'ematique.
 
 Voici un exemple o\`u le diagnostic d'erreur de \TeX\ est compl\`etement 
 erron\'e~:
@@ -230,9 +230,9 @@ Le message d'erreur est quelque chose comme~:
 l.93 ...Skip \smallskip a little further.}
                                            But no more.
 |
-Les messages d'erreur ici vous donnent un tour d'horion des macros qui sont 
+Les messages d'erreur ici vous donnent un tour d'horizon des macros qui sont 
 utilis\'ees dans l'impl\'ementation de |\leftline| dans \plainTeX---des 
-macros auxquelles vous ne vous inqui\'etez probablement pas. La premi\`ere 
+macros sur lesquelles vous ne vous inqui\'etez probablement pas. La premi\`ere 
 ligne vous indique que \TeX\ pr\'evoit de traiter le probl\`eme en 
 ins\'erant une accolade droite. \TeX\ n'a pas encore r\'eellement lu 
 l'accolade droite, ainsi vous pouvez la supprimer si vous le choisissez. 
@@ -245,12 +245,12 @@ accolade droite~:
 \li La paire suivante indique qu'apr\`es avoir lu l'accolade droite, \TeX\ 
 relira un `|\vskip|' (obtenue de la macro d\'efinition du |\smallskip|).
 \li La troisi\`eme paire indique que \TeX\ d\'eveloppait la macro 
-|\smallskip| quand il a trouv\'e l'erreur. ces deux lignes  montrent 
-\'egalement la d\'efinition de |\smallskip| et indique o\`u \TeX\ est 
+|\smallskip| quand il a trouv\'e l'erreur. Ces deux lignes  montrent 
+\'egalement la d\'efinition de |\smallskip| et indiquent o\`u \TeX\ est 
 parvenu en d\'evelop\-pant et en ex\'ecutant cette d\'efinition. 
-Sp\'ecifiquement, il a juste essay\'ee sans succ\`es d'ex\'ecuter la 
-commande |\vskip|. En g\'en\'eral, une ligne diagnostique qui commence par 
-une commande suivi de `|->|' indique que \TeX\ a d\'evelopp\'e et 
+Sp\'ecifiquement, il a juste essay\'e sans succ\`es d'ex\'ecuter la 
+commande |\vskip|. En g\'en\'eral, une ligne diagnostic qui commence par 
+une commande suivie de `|->|' indique que \TeX\ a d\'evelopp\'e et 
 ex\'ecut\'e une macro de ce nom.
 \li La quatri\`eme paire indique que \TeX\ traitait un argument de macro 
 quand il a trouv\'e le |\smallskip| et indique \'egalement la position de 
@@ -258,10 +258,10 @@ quand il a trouv\'e le |\smallskip| et indique \'egalement la position de
 |\smallskip| (sans succ\`es). En regardant vers la prochaine paire de 
 lignes nous pouvons voir que l'argument a \'et\'e pass\'e \`a |\leftline|.
 \li La cinqui\`eme paire indique que \TeX\ d\'eveloppait la macro  
-|\leftline| quand il a trouv\'e l'erreur. (dans cet exemple l'erreur s'est 
+|\leftline| quand il a trouv\'e l'erreur. Dans cet exemple l'erreur s'est 
 produite pendant que \TeX\ \'etait en train d'interpr\'eter plusieurs 
-d\'efinitions de macro \`a diff\'erents degr\'es de d\'eveloppement.) Sa 
-position apr\`es |#1| indique que la derni\`ere chose qu'il a vu \'etait le 
+d\'efinitions de macro \`a diff\'erents degr\'es de d\'eveloppement. Sa 
+position apr\`es |#1| indique que la derni\`ere chose qu'il ait vu \'etait le 
 premier (et dans ce cas-ci le seul) argument de |\leftline|.
 \li La derni\`ere paire indique o\`u \TeX\ est plac\'e dans votre fichier 
 source. Notez que cette position est bien au del\`a de la position o\`u il 
@@ -273,12 +273,12 @@ source n'est pas montr\'ee. Cette partie pr\'ec\'edente, en fait, inclut la
 commande |\leftline| qui a rendu le |\vskip| ill\'egal.
 \endolist
 \noindent
-Dans un long message comme ceci, vous ne trouverez g\'en\'eralement utile 
+Dans un long message comme ceci, vous ne trouverez g\'en\'eralement utiles 
 que la premi\`ere ligne et la derni\`ere paire de lignes~; mais cela aide 
 parfois de savoir ce que sont les autres lignes. N'importe quel texte que 
 vous ins\'ererez ou effacerez sera ins\'er\'e ou supprim\'e au niveau les 
 plus secrets. Dans cet exemple l'insertion ou la suppression se produira 
-juste avant l'accolade droite ins\'er\'e. Notez en particulier que dans ce 
+juste avant l'accolade droite ins\'er\'ee. Notez en particulier que dans ce 
 cas-ci, \TeX \ met tout texte que vous pourriez ins\'erer, \emph{non} dans 
 votre texte source mais dans une d\'efinition de macro plusieurs niveaux 
 plus bas. (naturellement, la d\'efinition de macro originale n'est pas 

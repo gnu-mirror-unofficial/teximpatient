@@ -76,11 +76,11 @@ c'est-\`a-dire, `|{\rm o}|' ou un ^{beta} majuscule (`B') en \'ecrivant `|{\rm B
 
 Ne confondez pas les lettres suivantes~:
 \ulist \compact
-\li |\upsilon| (`$\upsilon$'), |{\rm v}| (`v'), and |\nu| (`$\nu$').
+\li |\upsilon| (`$\upsilon$'), |{\rm v}| (`v'), et |\nu| (`$\nu$').
 \li |\varsigma| (`$\varsigma$') and |\zeta| (`$\zeta$').
 \endulist
 
-vous pouvez obtenir des lettres grecques capitales inclin\'ees en utilisant 
+Vous pouvez obtenir des lettres grecques capitales inclin\'ees en utilisant 
 la \minref{police} math\'ematique italique (|\mit|).
 
 \TeX \ traite les lettres grecques comme des symboles ordinaires quand 
@@ -159,7 +159,7 @@ le sont les commandes ^|\neg| et ^|\lnot|.
 La commande |\vert| produit le m\^eme r\'esultat que `|!||'.
 \indexchar |
 
-Les symboles produit par |\backslash|, |\vert| et |\Vert|
+Les symboles produits par |\backslash|, |\vert| et |\Vert|
 sont des \minref{d\'eli\-mi\-teur}s.  ces symboles peuvent \^etre produit en grandes taille
 en utilisant ^|\bigm| etc.\ (\xref \bigm).  
 
@@ -225,8 +225,8 @@ $${{x-a}\over{x+a}}\biggm\backslash{{y-b}\over{y+b}}$$
 \egroup
 \explain
 Ces commandes produisent les symboles pour diff\'erentes op\'erations binaires.
-Les op\'eration binaire sont une des \minref{classe}s des symboles math\'e\-matiques de \TeX.
-\TeX\ mets diff\'erent montants d'espace autour de dif\-f\'e\-rentes classes de symboles
+Les op\'erations binaires sont une des \minref{classe}s des symboles math\'e\-matiques de \TeX.
+\TeX\ met diff\'erents montants d'espace autour de dif\-f\'e\-rentes classes de symboles
 math\'ematiques.  Quand \TeX\ a besoin de couper une ligne de texte dans une formule math\'ematique, 
 \minrefs{line break} il devra placer la coupure apr\`es une op\'eration binaire---mais seulement si 
 l'op\'eration est \`a un niveau sup\'erieur \`a la formule, c'est-\`a-dire, non incluse dans un groupe.
@@ -253,8 +253,8 @@ La commande |\*| indique un symbole de multiplication optionnel
 ($\times$), qui est une op\'eration binaire.  Ce symbole de multiplication
 agit comme une c\'esure optionnelle quand il appara\^\i t dans une formule dans un
 texte\minrefs{texte math\'ematique}.  Cela \'etant, \TeX\ ne composera le symbole |\times|
-\emph{que} si la formule doit \^etre coup\'e en ce point.
-Il n'y a aucun point en utilisant |\*| dans des formule affich\'ees \minrefs{math\'ematique 
+\emph{que} si la formule doit \^etre coup\'ee en ce point.
+Il n'y a aucun point en utilisant |\*| dans des formules affich\'ees \minrefs{math\'ematique 
 affich\'ee} car \TeX\ ne coupe jamais de formules affich\'ees de lui-m\^eme.
 
 \example
@@ -319,9 +319,9 @@ largest $q$})$ in the set of approximate $\tau$-values.
 \ctsdisplay sqsupseteq {}
 \egroup
 \explain
-Ces commands produisent des symboles pour diff\'erentes relations.
+Ces commandes produisent des symboles pour diff\'erentes relations.
 Les relations sont une des \minref{classe}s des symboles math\'ematiques.
-\TeX\ mets diff\'erent montants d'espace autour de diff\'erentes classes de symboles
+\TeX\ met diff\'erents montants d'espace autour de diff\'erentes classes de symboles
 math\'ematiques.
 Quand \TeX\ a besoin de couper une ligne de texte dans une formule math\'ematique, 
 \minrefs{line break} il devra placer la coupure apr\`es une relation---mais seulement si 
@@ -406,9 +406,9 @@ Ces commandes produisent des \minref{d\'elimiteur}s gauches et droits.
 Les math\'e\-maticiens utilisent les d\'elimiteurs pour indiquer les fronti\`eres entre les parties
 d'une formule.  Les d\'elimiteurs gauches sont aussi appel\'es ``^{ouvrant}s'' et
 les d\'elimiteurs droits sont aussi appel\'es ``^{fermant}s''.  Ouvrants et Fermants
-sont deux des \minref{classe}s de symboles math\'ematiques de \TeX.  \TeX\ mets
+sont deux des \minref{classe}s de symboles math\'ematiques de \TeX.  \TeX\ met
 diff\'erents montants d'espace autour des diff\'erentes \minref{classe}s de symboles math\'ematiques.
-Vous devriez vous attendre \`a ce que l'espacement que \TeX\ mets autour des ouvrants et
+Vous devriez vous attendre \`a ce que l'espacement que \TeX\ met autour des ouvrants et
 des fermants soit sym\'etrique, mais en fait, il ne l'est pas.
 
 Certains d\'elimiteurs gauches et droits ont plus d'une commande utilisable pour les produire~:
@@ -420,7 +420,7 @@ Certains d\'elimiteurs gauches et droits ont plus d'une commande utilisable pour
 \li `$]$' (|\rbrack| and `|]|')
 \endulist
 \noindent vous pouvez aussi utiliser les caract\`eres crochets gauches et droits
-(sous toutes ses forme) en dehors du mode math\'ematique.
+(sous toutes ses formes) en dehors du mode math\'ematique.
 
 En plus de ces commandes, \TeX\ traite `|(|' comme un d\'elimiteur gauche
 et `|)|' comme un d\'elimiteur droit.
@@ -549,9 +549,9 @@ $$f(x)\mapsto f(y) \iff x \mapsto y$$
 \ctsdisplay Pr {}
 \egroup}
 \explain
-Ces commandes mettent les noms de diff\'erentes fonctions math\'ematique
+Ces commandes mettent les noms de diff\'erentes fonctions math\'ematiques
 en type romain, comme \`a l'accoutum\'ee.
-Si vous appliquez une exposant ou un indice sur une de ces commandes,
+Si vous appliquez un exposant ou un indice sur une de ces commandes,
 \TeX\ le composera dans la plupart des cas \`a l'endroit usuel.
 En style d'affichage, \TeX\ compose les exposants et les indices
 de |\det|, |\gcd|, |\inf|, |\lim|, |\liminf|,
@@ -622,20 +622,20 @@ $$x \equiv y+1 \pmod 2$$
 \explain
 Ces commandes produisent diff\'erents grands symboles d'op\'erateur.  
 \TeX\ produit la plus petite taille quand il est en \minrefs{mode math\'ematique} 
-^{style texte} et les plus grandes taille quand il est en ^{style d'affichage}.
+^{style texte} et les plus grandes tailles quand il est en ^{style d'affichage}.
 Les Op\'erateurs sont une des \minref{classe}s de symboles math\'ematiques de \TeX.
-\TeX\ mets diff\'erents montants d'espace
+\TeX\ met diff\'erents montants d'espace
 autour des diff\'erentes classes de symboles math\'ematiques.
 
-Les grand symboles d'op\'erateur avec `|big|' dans leurs noms sont diff\'e\-rents
+Les grands symboles d'op\'erateur avec `|big|' dans leurs noms sont diff\'e\-rents
 des op\'erations binaires correspondantes (voir \xref{binops}) comme 
-|\cap| ($\cap$) puisqu'il apparaissent habituellement au d\'ebut
+|\cap| ($\cap$) puisqu'ils apparaissent habituellement au d\'ebut
 d'une formule.  \TeX\ utilise des espacements diff\'erents pour un grand op\'erateur
 et pour une op\'eration binaire.
 
 Ne confondez pas `$\sum$' (|\sum|) avec `$\Sigma$'^^|\Sigma| (|\Sigma|)
 ou `$\prod$' (|\prod|) avec `$\Pi$' ^^|\Pi| (|\Pi|).
-|\Sigma| et |\Pi| produisent les lettres grecques capitales, qui sont plus petite et
+|\Sigma| et |\Pi| produisent les lettres grecques capitales, qui sont plus petites et
 ont une apparence diff\'erente.
 
 Un grand op\'erateur peut avoir des ^{limites}.  La limite la plus basse est sp\'ecifi\'ee comme un indice
@@ -681,7 +681,7 @@ two elements.
 \explain
 Quand il est en style d'affichage, \TeX\ place normalement les limites sur et sous un grand op\'erateur.
 (L'op\'erateur |\int| est une exception---\TeX\
-places les limites pour |\int| apr\`es l'op\'erateur dans tous les cas.)
+place les limites pour |\int| apr\`es l'op\'erateur dans tous les cas.)
 ^^|\int//limites apr\`es|
 Cette commande demande \`a \TeX\ de placer
 les limites apr\`es un grand op\'erateur plut\^ot que sur et sous lui.
@@ -741,10 +741,10 @@ _{-\infty}^{+\infty} f(x)e^{-i\lambda x}\,dx$$
 \cts ldotp {}
 \explain
 Ces deux commandes produisent respectivement un point centr\'e et un point
-positionn\'e sur la \minref{ligne de base}.  Elles ne sont valide q'en
+positionn\'e sur la \minref{ligne de base}.  Elles ne sont valides qu'en
 \minref{mode} math\'ematique.  \TeX\ les traite comme de la ponctuation, ne mettant aucun espace suppl\'ementaire devant
 elles mais en ajoutant un petit en plus apr\`es elles.
-En contrepartie, \TeX\ mets un montant d'espace \'egal des deux cot\'es
+En contrepartie, \TeX\ met un montant d'espace \'egal des deux cot\'es
 d'un point centr\'e g\'en\'er\'e par la commande ^|\cdot| (\xref \cdot).
 \example
 $x \cdotp y \quad x \ldotp y \quad x \cdot y$
@@ -760,7 +760,7 @@ $x \cdotp y \quad x \ldotp y \quad x \cdot y$
 Cette commande produit une symbole de ponctuation deux-points.
 Elle n'est valide qu'en mode math\'ematique.
 La diff\'erence entre |\colon| et le caract\`ere deux-points (|:|) est que
-`|:|' est un op\'erateur, donc \TeX\ mets une espace suppl\'ementaire \`a sa gauche tandis qu'il
+`|:|' est un op\'erateur, donc \TeX\ met une espace suppl\'ementaire \`a sa gauche tandis qu'il
 ne met pas d'espace suppl\'ementaire \`a la gauche de |\colon|.
 \example
 $f \colon t \quad f : t$
@@ -790,8 +790,8 @@ $f \colon t \quad f : t$
 %\secondprinting{\vglue-4pt}
 \explain
 Les commandes de chaque colonne sont \'equivalentes.  Les commandes de la premi\`ere
-colonne composent \<argument> comme une puissance et celle de la seconde
-colonne composent \<argument> comme un indice.  Les commandes |\sb| et |\sp|
+colonne composent \<argument> comme un indice et celle de la seconde
+colonne composent \<argument> comme une puissance.  Les commandes |\sb| et |\sp|
 sont principalement utiles si vous travaillez sur un terminal sur lequel manque un
 signe soulign\'e ou de puissance ou si vous avez red\'efini `|_|' or `|^|' et avez besoin
 d'acc\'eder \`a sa d\'efinition originale.  Ces commandes sont aussi utilis\'ees pour 
@@ -799,19 +799,19 @@ mettre des limites inf\'erieures ou sup\'erieures sur des sommes ou des int\'egr
 inf\'erieures} ^^{limites sup\'erieures}
 
 Si une puissance ou un indice n'est pas un \minref{token} seul, vous devez
-l'englober dans un \minref{groupe}.  \TeX\ ne mets pas de priorit\'e aux puissances
+l'englober dans un \minref{groupe}.  \TeX\ ne met pas de priorit\'e aux puissances
 ou aux indices, donc il rejettera des formules telles que |a_i_j|, |a^i^j| ou
 |a^i_j|.
 
-les puissances et les indices sont normalement compos\'e en ^{style script} ou
+Les puissances et les indices sont normalement compos\'es en ^{style script} ou
 en ^{style scriptscript} s'il sont de second ordre, c'est-\`a-dire, un indice d'un
 indice ou une puissance d'une puissance.  Vous pouvez mettre \emph{tout}
 texte d'une formule math\'ematique en  \minref{style}script ou scriptscript avec
 les commandes ^|\scriptstyle| et ^|\scriptscriptstyle| (\xref
 \scriptscriptstyle).
 
-Vous pouvez appliquer une puissance ou un indice \`a tous les commandes qui
-produisent des fonction math\'ematique nomm\'ees en caract\`ere romain (voir
+Vous pouvez appliquer une puissance ou un indice \`a toutes les commandes qui
+produisent des fonctions math\'ematiques nomm\'ees en caract\`ere romain (voir
 \xref{namedfns}).  Dans certain cas (voyez encore \xref{namedfns}) la
 puissance ou l'indice appara\^\i t directement sur ou sous la fonction
 nomm\'ee comme montr\'e dans les exemples de ^|\lim| et de ^|\det| ci-dessous.
@@ -849,9 +849,9 @@ $$\lim_{x \leftarrow 0} f(x)\qquad
 \explain
 ^^{style texte} ^^{style script} ^^{style scriptscript} ^^{style d'affichage}
 Ces commandes forcent le \minref{style} normal et par cons\'equent la
-police que \TeX\ utilise pour composer une formule.  comme les
-commandes de choix de police telles que |\it|, elle sont effective
-jusqu'a la fin du groupe les contenant.
+police que \TeX\ utilise pour composer une formule.  Comme les
+commandes de choix de police telles que |\it|, elles sont effectives
+jusqu'\`a la fin du groupe les contenant.
 Elles sont utiles quand le choix de style de \TeX\  est inappropri\'e pour la formule
 que vous essayez de composer.
 \example
@@ -907,8 +907,8 @@ avec |#1| une
 commande qui s\'electionne le style courant et |#2| un \<argument>.
 Ainsi, dans la d\'efinition de |\build| vous pouvez composer quelque chose
 dans le style courant en le faisant pr\'ec\'eder de `|#1|'.
-Voir la \knuth{page~360}{999} pour des exemples d'utilisation de |\mathpalette|
-et la \knuth{page~151}{999} pour plus d'explication sur son fonctionnement. 
+Voir la \knuth{page~360}{417--418} pour des exemples d'utilisation de |\mathpalette|
+et la \knuth{page~151}{177} pour plus d'explication sur son fonctionnement. 
 
 \eix^^{styles}
 \enddesc
@@ -939,10 +939,10 @@ et la \knuth{page~151}{999} pour plus d'explication sur son fonctionnement.
 \ctsx vec {^{accent vecteur} comme dans $\vec x$}
 \explain
 Ces commandes produisent des accents dans les formules math\'e\-matiques.  
-vous devrez normalement laisser un espace apr\`es chacune d'entre elles.
+Vous devrez normalement laisser un espace apr\`es chacune d'entre elles.
 Un accent large peut s'appliquer \`a une sous-formule comportant plusieurs caract\`eres~;
 \TeX\ centrera l'accent sur la sous-formule.
-Les autres accents ne sont applicable qu'a des caract\`eres simples.
+Les autres accents ne sont applicables qu'a des caract\`eres simples.
 
 \example
 $\dot t^n \qquad \widetilde{v_1 + v_2}$
@@ -954,10 +954,10 @@ $\dot t^n \qquad \widetilde{v_1 + v_2}$
 \begindesc
 \cts mathaccent {\<mathcode>}
 \explain
-Ces commande demandent \`a \TeX\ de composer un accent math\'ematique
-dont la famille et le code de caract\`ere sont donn\'e par \<mathcode>.  (\TeX\ ignore
+Cette commande demande \`a \TeX\ de composer un accent math\'ematique
+dont la famille et le code de caract\`ere sont donn\'es par \<mathcode>.  (\TeX\ ignore
 la classe du \minref{mathcode}.)
-Voir l'\knuth{Annexe~G}{} pour les d\'etails sur la mani\`ere dont \TeX\ positionne de tels accents.
+Voir l'\knuth{annexe~G}{} pour les d\'etails sur la mani\`ere dont \TeX\ positionne de tels accents.
 La fa\c con usuelle d'utiliser |\mathaccent| est de le mettre dans une d\'efinition de macro
 que donne un nom \`a l'accent math\'ematique.
 \example
@@ -984,7 +984,7 @@ que donne un nom \`a l'accent math\'ematique.
 \explain
 {\def\fri{\<formula$_1$>}%
 \def\frii{\<formula$_2$>}%
-Ces commandes empile une sous-formule sur une autre.  Nous expliquerons comment
+Ces commandes empilent une sous-formule sur une autre.  Nous expliquerons comment
 marche |\over| et lui relierons ensuite les autres commandes.
 
 |\over| est la commande que vous utilisez normalement pour produire une fraction.
@@ -1004,7 +1004,7 @@ il absorbe
 tout ce qui est \`a sa gauche et \`a sa droite jusqu'a ce qu'il trouve une fronti\`ere,
 \`a savoir, le d\'ebut ou la fin d'un groupe.
 
-Vous ne pouvez pas utiliser |\over| ou un autre de ces commandes de ce groupe
+Vous ne pouvez pas utiliser |\over| ou une autre de ces commandes de ce groupe
 plus d'une fois dans une formule.
 Ainsi une formule telle que~:
 \csdisplay
@@ -1016,7 +1016,7 @@ vous pouvez toujours englober une de ces commandes entre accolades.
 La raison de cette restriction est que si vous avez deux de ces commandes
 dans une seule formule, \TeX\ ne saura pas comment les grouper.
 
-Les autres commandes sont similaire \`a |\over|, avec les exceptions suivantes~:
+Les autres commandes sont similaires \`a |\over|, avec les exceptions suivantes~:
 \ulist\compact
 \li |\atop| omet la barre de fraction. 
 \li |\above| procure une barre de fraction d'\'epaisseur \<dimension>.
@@ -1049,7 +1049,7 @@ $${n+1 \over n-1}      \qquad {n+1 \atop n-1}   \qquad
 Chacune de ces commandes superpose une sous-formule sur une autre et
 entoure le r\'esultat avec \<delim$_1$> \`a gauche et
 \<delim$_2$> \`a droite.  Ces commandes suivent les m\^eme r\`egles que
-|\over|, |\atop| et |\above|. Le \<dimen> dans |\abovewithdelims|
+|\over|, |\atop| et |\above|. Le \<dimension> dans |\abovewithdelims|
 sp\'ecifie l'\'epaisseur de la barre de fraction.
 \example
 $${m \overwithdelims () n}\qquad
@@ -1094,14 +1094,14 @@ $$g(x,y) = \cases{f(x,y),&if $x<y$\cr
 \cts overleftarrow {\<argument>}
 \cts overrightarrow {\<argument>}
 \explain
-Ces commandes placent des ^{accolades}, des lignes ou des ^{fl\`eches} extensible 
+Ces commandes placent des ^{accolades}, des lignes ou des ^{fl\`eches} extensibles 
 sur ou sous la sous-formule donn\'ee par \<argument>.
 \TeX\ fera cette construction aussi large que n\'ecessaire pour
 le contexte.
 Quand \TeX\ produit les accolades, lignes ou fl\`eches \'etendues, il ne consid\`ere
 que les dimensions de la \minref{bo\^\i te} contenant \<argument>.
 Si vous utilisez plus d'une de ces commandes dans une seule formule, les
-accolades, lignes ou fl\`eches qu'il produira
+accolades, lignes ou fl\`eches qu'elle produira
 pourront ne pas s'aligner proprement les unes avec les autres.
 Vous pouvez utiliser la commande |\mathstrut| (\xref \mathstrut)
 pour contourner cette difficult\'e.
@@ -1158,7 +1158,7 @@ $\buildrel \rm def \over \equiv$
 \explain
 Ces commandes produisent trois ^{points} align\'es.  Pour |\ldots|, les points
 sont sur la ligne de base~; pour |\cdots|, les points sont centr\'es en respectant 
-les axe (voir l'explication de |\vcenter|, \xref\vcenter).
+les axes (voir l'explication de |\vcenter|, \xref\vcenter).
 
 \example
 $t_1 + t_2 + \cdots + t_n \qquad x_1,x_2, \ldots\,, x_r$
@@ -1218,7 +1218,7 @@ $$\pmatrix{0&\ldots&0\cr
 \explain
 Ces commandes produisent de grandes ^{parenth\`eses} gauches et droites
 qui sont d\'efinies comme des \minref{d\'elimiteur}s ouvrants et fermants.
-La plus petite taille disponible pour ces d\'elimiteurs est |\Big|.
+La plus grande taille disponible pour ces d\'elimiteurs est |\Big|.
 Si vous utilisez des tailles plus petites, vous obtiendrez des caract\`eres \'etranges.
 \example
 $$\lgroup\dots\rgroup\qquad\bigg\lgroup\dots\bigg\rgroup$$
@@ -1238,11 +1238,11 @@ Ces commandes doivent \^etre employ\'ees ensemble selon le mod\`ele~:
 {{\bt \\left} \<delim$_1$> \<subformula> {\bt \\right} \<delim$_2$>}
 Cette construction demande \`a \TeX\ de produire \<subformula>, 
 entour\'ee des \minref{d\'elimiteur}s \<delim$_1$> et \<delim$_2$>.
-La taille verticale des d\'elimiteur est ajust\'ee pour correspondre \`a la 
-taille vertical (hauteur plus profondeur) de \<subformula>.  \<delim$_1$> et
+La taille verticale des d\'elimiteurs est ajust\'ee pour correspondre \`a la 
+taille verticale (hauteur plus profondeur) de \<subformula>.  \<delim$_1$> et
 \<delim$_2$> n'ont pas besoin de correspondre.
-Par exemple, vous pouvez utiliser `|]|' comme d'un d\'elimiteur gauche
-et `|(|' comme d'un d\'elimiteur droite dans une utilisation simple de |\left|
+Par exemple, vous pouvez utiliser `|]|' comme d\'elimiteur gauche
+et `|(|' comme d\'elimiteur droite dans une utilisation simple de |\left|
 et |\right|.
 
 |\left| et |\right| ont la propri\'et\'e importante de d\'efinir un
@@ -1299,7 +1299,7 @@ doit \^etre reli\'ee \`a la taille verticale de la sous-formule
 |\delimiterfactor| donne le ratio minimum
 de la taille du d\'elimiteur par rapport \`a la taille verticale de la sous-formule et
 |\deli!-mitershortfall| donne le maximum par lequel la hauteur du
-d\'elimiteur sera r\'eduit pour correspondre \`a la taille verticale de la sous-formule.
+d\'elimiteur sera r\'eduite pour correspondre \`a la taille verticale de la sous-formule.
 
 Supposez que la \minref{bo\^\i te} contenant la sous-formule
 ait une hauteur $h$ et une profondeur $d$ et $y=2\,\max(h,d)$.
@@ -1309,9 +1309,9 @@ Alors \TeX\ prend la taille de d\'elimiteur minimum \'etant au moins $y \cdot
 f/1000$ et au moins $y-\delta$.  En particulier, si |\delimiterfactor|
 est exactement \`a $1000$ alors \TeX\ essayera de faire un d\'elimiteur au moins aussi grand
 que la formule \`a laquelle il est attach\'e.
-Voir la \knuth{page~152 et la page~446 (R\`egle 19)}{page~999 et la page~999 (R\`egle 19)}
-pour les d\'etail exactes sur la fa\c con dont \TeX\ utilise ces param\`etres.
-\PlainTeX\ mets |\delimiter!-factor| \`a $901$ et 
+Voir les \knuth{pages~152 et~446 (R\`egle 19)}{pages~178 et~511 (R\`egle 19)}
+pour les d\'etail exacts sur la fa\c con dont \TeX\ utilise ces param\`etres.
+\PlainTeX\ met |\delimiter!-factor| \`a $901$ et 
 |\delimiter!-shortfall| \`a |5pt|.
 \enddesc
 
@@ -1336,16 +1336,16 @@ sont s\'epar\'es par `|&|' et chaque rang\'e est \`a son tour termin\'ee
 par |\cr|.
 (C'est la m\^eme forme que celle utilis\'ee pour un
 \minref{alignement}.)
-Les commandes diff\`erent de mani\`eres suivantes~:
+Les commandes diff\`erent de la mani\`ere suivante~:
 \ulist\compact
 \li |\matrix| produit une matrice sans aucun entourage ou \minref{d\'elimiteur}s ins\'er\'es.
 \li |\pmatrix| produit une matrice entour\'ee par des parenth\`eses.
-\li |\bordermatrix| produit une matrix dans laquelle la premi\`ere rang\'e et la premi\`ere
-colonne sont trait\'ees comme des labels.  (Le premier \'el\'ement de la premi\`ere rang\'e est
-habituellement laiss\'e \`a blanc.)  Le reste de la matrice est englob\'e dans
+\li |\bordermatrix| produit une matrice dans laquelle la premi\`ere rang\'ee et la premi\`ere
+colonne sont trait\'ees comme des labels.  (Le premier \'el\'ement de la premi\`ere rang\'ee est
+habituellement laiss\'e \`a blanc.)  Le reste de la matrice est englob\'ee dans
 des parenth\`eses.
 \endulist
-\TeX\ peut rendre les parenth\`eses de |\pmatrix| et de |\bordermatrix| aussi large que
+\TeX\ peut rendre les parenth\`eses de |\pmatrix| et de |\bordermatrix| aussi larges que
 n\'ecessaire en ins\'erant des extensions verticales.  Si vous voulez une matrice
 entour\'ee par des d\'elimiteurs autres que des paren\-th\`eses, vous devez utiliser
 |\matrix| en conjugaison avec |\left| et |\right| (\xref \left).
@@ -1402,7 +1402,7 @@ $$x = {-b\pm\sqrt{b^2-4ac} \over 2a}$$
 \begindesc
 \easy\cts root {\<argument$_1$> {\bt \\of} \<argument$_2$>}
 \explain
-Cette commande produit la notation pour un racine de \<argument$_2$> o\`u l'ordre
+Cette commande produit la notation pour une racine de \<argument$_2$> o\`u l'ordre
 est donn\'e par \<argument$_1$>.
 \example
 $\root \alpha \of {r \cos \theta}$
@@ -1435,7 +1435,7 @@ dans la commande ^|\delcode| (\xref \delcode).
 \cts leqno {}
 \explain
 Ces commandes attachent un num\'ero d'\'equation \`a une formule affich\'ee.
-|\eqno| mets le num\'ero d'\'equation \`a droite et |\leqno| le mets \`a gauche.
+|\eqno| met le num\'ero d'\'equation \`a droite et |\leqno| le met \`a gauche.
 Les commandes doivent \^etre mises \`a la fin de la formule.
 Si vous avez un affichage multi-ligne et voulez num\'eroter plus d'une ligne,
 utilisez les commandes |\eq!-alignno| ou |\leq!-alignno|
@@ -1468,11 +1468,11 @@ $$\cos^2 \theta + \sin^2 \theta = 1\leqno{(12)}$$
    {{\bt \rqbraces{\<ligne>\ths\\cr$\ldots$\<ligne>\ths\\cr}}}
 \explain
 Cette commande produit un affichage math\'ematique multi-ligne dans lequel chaque ligne est
-centr\'e ind\'ependamment des autres lignes.
+centr\'ee ind\'ependamment des autres lignes.
 Vous pouvez utiliser la commande |\noalign| (\xref \noalign) pour changer le montant
 d'espace entre deux lignes d'un affichage multi-ligne.
 
-Si vous voulez attacher des num\'ero d'\'equation \`a certaine ou toutes les \'equations
+Si vous voulez attacher des num\'eros d'\'equation \`a certaines ou toutes les \'equations
 dans un affichage math\'ematique multi-ligne, vous devez utiliser |\eqalignno| ou
 |\leqalignno|.
 \example
@@ -1500,17 +1500,17 @@ Ces commandes produisent un affichage math\'ematique multi-ligne
 dans lequel certaines parties correspondantes des lignes sont align\'ees verticalement.
 Les commandes |\eqalignno| et |\leqalignno| vous laissent aussi
 apporter des num\'eros d'\'equation pour certaines ou toutes les lignes.
-|\eqalignno| mets les num\'eros d'\'equation \`a droite et
-|\leqalignno| les mets \`a gauche.
+|\eqalignno| met les num\'eros d'\'equation \`a droite et
+|\leqalignno| les met \`a gauche.
 
-Chaque ligne dans l'affichage est termin\'ees par |\cr|.  Chacune des parties devant \^etre align\'ees
-(le plus souvent un signe \'egal) est pr\'ec\'ed\'e par
-`|&|'.  Un `|&|' pr\'ec\`ede aussi caque num\'ero d'\'equation, qui est donn\'e \`a la fin d'une ligne.
+Chaque ligne dans l'affichage est termin\'ee par |\cr|.  Chacune des parties devant \^etre align\'ee
+(le plus souvent un signe \'egal) est pr\'ec\'ed\'ee par
+`|&|'.  Un `|&|' pr\'ec\`ede aussi chaque num\'ero d'\'equation, qui est donn\'e \`a la fin d'une ligne.
 Vous pouvez mettre plus d'une de ces commandes dans un seul affichage pour
-produire plusieurs groupes d'\'equation.  Dans ce cas, seuls les groupes les plus \`a droites
-ou les plus \`a gauche peuvent \^etre produit avec |\eqalignno| ou |\leqalignno|.
+produire plusieurs groupes d'\'equation.  Dans ce cas, seuls les groupes les plus \`a droite
+ou les plus \`a gauche peuvent \^etre produits avec |\eqalignno| ou |\leqalignno|.
 
-Vous pouvez utiliser la commande |\noalign| (\xref \noalign) pour chager le montant
+Vous pouvez utiliser la commande |\noalign| (\xref \noalign) pour changer le montant
 d'espace entre deux lignes d'un affichage multi-ligne.
 \example
 $$\left\{\eqalign{f_1(t) &= 2t\cr f_2(t) &= t^3\cr
@@ -1567,11 +1567,11 @@ $$\eqalignno{
 ^^{polices}
 \xrdef{mathfonts}
 %
-\easy\ctsx cal {utilise un police calligraphique majuscule}
-\ctsx mit {utilise un police math\'ematique italique}
+\easy\ctsx cal {utilise une police calligraphique majuscule}
+\ctsx mit {utilise une police math\'ematique italique}
 \ctsx oldstyle {utilise une police de chiffres elz\'eviriens}
 \explain
-Ces commandes demande \`a \TeX\ de composer le texte suivant dans la police
+Ces commandes demandent \`a \TeX\ de composer le texte suivant dans la police
 sp\'ecifi\'ee.  Vous ne pouvez les utiliser qu'en \minref{mode math\'ematique}.
 La commande |\mit| est utile pour produire des ^{lettres grecques} capitales pench\'ees.
 Vous pouvez aussi utiliser les commandes donn\'ees dans
@@ -1596,7 +1596,7 @@ ${\cal XYZ} \quad
 \ctsx ttfam {famille de type machine \`a \'ecrire}
 \explain
 Ces commandes d\'efinissent des familles de type \minrefs{family} devant \^etre utilis\'ees en
-\minref{mode math\'ematique}.  Leur principale utilisation est dans le d\'efinition des commandes
+\minref{mode math\'ematique}.  Leur principale utilisation est dans la d\'efinition des commandes
 |\it|, |\bf|, |\sl| et |\tt| pour qu'elles puissent fonctionner en mode math\'ematique.
 \enddesc
 
@@ -1604,24 +1604,24 @@ Ces commandes d\'efinissent des familles de type \minrefs{family} devant \^etre 
 \cts fam {\param{nombre}}
 \explain
 Quand \TeX\ est en \minref{mode math\'ematique}, il compose normalement un caract\`ere
-en utilisant la ^^{classe} de famille de police donn\'e dans son \minref{mathcode}.
+en utilisant la ^^{classe} de famille de police donn\'ee dans son \minref{mathcode}.
 ^^{famille//donn\'ee par \b\tt\\fam\e}
 Cependant, quand \TeX\ est en mode math\'ematique et rencontre un caract\`ere dont
 la \minref{classe} est $7$ (Variable), il compose ce caract\`ere en utilisant
 la \minref{famille} de police donn\'ee par la valeur de |\fam|, \`a condition que la 
 valeur de |\fam| soit entre $0$ et $15$.
-Si la valeur de |\fam| n'est pas dans cette interval, \TeX\ utilise la famille du
+Si la valeur de |\fam| n'est pas dans cette intervalle, \TeX\ utilise la famille du
 mathcode du caract\`ere comme dans le cas ordinaire.
-\TeX\ mets |\fam| \`a $-1$ \`a chaque fois qu'il entre en mode math\'ematique.
-En ddehors du mode math\'ematique, |\fam| n'a pas d'effet.
+\TeX\ met |\fam| \`a $-1$ \`a chaque fois qu'il entre en mode math\'ematique.
+En dehors du mode math\'ematique, |\fam| n'a pas d'effet.
 
 En assignant une valeur \`a
-|\fam| vous pouvez changer la fa\c con dont \TeX\ compose des caract\`eres ordinaire
+|\fam| vous pouvez changer la fa\c con dont \TeX\ compose des caract\`eres ordinaires
 tels que des variables.    
 Par exemple, en mettant |\fam| \`a |\ttfam|, vous demandez \`a \TeX\ de composer
 des variables en utilisant une police de machine \`a \'ecrire.
 \PlainTeX\ d\'efinit |\tt| comme une \minref{macro} qui, entre autres choses,
-mets |\fam| \`a |\ttfam|.
+met |\fam| \`a |\ttfam|.
 \example
 \def\bf{\fam\bffam\tenbf} % As in plain TeX.
 |
@@ -1650,7 +1650,7 @@ Ces choix n'ont aucun effet en dehors du \minref{mode math\'ematique}.
 \section {Construire des symboles math\'ematiques}
 
 %==========================================================================
-\subsection {Rendre des d\'elimiteurs plus grand}
+\subsection {Rendre des d\'elimiteurs plus grands}
 
 \begindesc
 \makecolumns 16/4:
@@ -1672,7 +1672,7 @@ Ces choix n'ont aucun effet en dehors du \minref{mode math\'ematique}.
 \cts Biggr {}
 \explain
 ^^{d\'elimiteurs//\'elargis}
-Ces commandes rendent des \minref{d\'elimiteur}s plus grand que leur taille normale.
+Ces commandes rendent des \minref{d\'elimiteur}s plus grands que leur taille normale.
 Les commandes dans les quatre colonnes
 produisent successivement de plus grandes tailles.  La diff\'erence entre |\big|,
 |\bigl|, |\bigr| et |\bigm| est en relation avec la \minref{classe} du
@@ -1680,8 +1680,8 @@ d\'elimiteur agrandi~:
 \ulist\compact
 \li |\big| produit un symbole ordinaire.
 \li |\bigl| produit un symbole ouvrant.
-\li |\bigr| produces un symbole fermant.
-\li |\bigm| produces un symbole de relation.
+\li |\bigr| produit un symbole fermant.
+\li |\bigm| produit un symbole de relation.
 \endulist
 \noindent
 \TeX\ utilise la classe d'un symbole pour d\'ecider combien d'espace mettre
@@ -1734,11 +1734,11 @@ $$\hbox to 1in{\downbracefill} \quad
 \cts rmoustache {}
 \cts bracevert {}
 \explain
-Ces commandes produisent des portions de certain grand
+Ces commandes produisent des portions de certains grands
 d\'elimiteurs
 ^^{d\'elimiteurs//parties de}
 qui peuvent eux-m\^eme \^etre utilis\'es comme d\'elimiteurs.
-Elles font r\'ef\'erence aux caract\`eres de la police math\'ematique ^|cmex10|.
+Elles font r\'ef\'e\-rence aux caract\`eres de la police math\'ematique ^|cmex10|.
 \example
 $$\cdots \Big\arrowvert \cdots \Big\Arrowvert \cdots
   \Big\lmoustache \cdots \Big\rmoustache \cdots
@@ -1783,14 +1783,14 @@ $$\skew 2\bar{\bar z}\quad\skew 3\tilde{\tilde y}\quad
 \explain
 Le |\skewchar| d'une police
 est le caract\`ere dans la police dont les cr\'enages,
-d\'efini dans le fichier de m\'etrique de la police, d\'etermine les positions
+d\'efinis dans le fichier de m\'etrique de la police, d\'eterminent les positions
 des accents math\'ematiques. Cela dit, supposez que \TeX\ applique un accent math\'ematique
-au caract\`ere `|x|'.  \TeX\ regarde si la paire de caract\`ere
+au caract\`ere `|x|'.  \TeX\ regarde si la paire de caract\`eres
 `|x\skewchar|' a un cr\'enage~; si oui, il d\'eplace l'accent d'un montant de
-ce cr\'enage. l'algorithme complet que \TeX\ utilise pour positionner les accents
-math\'ematiques (qui d\'etermine beaucoup d'autres choses) se trouve dans l'\knuth{annexe~G}{}.
+ce cr\'enage. L'algorithme complet que \TeX\ utilise pour positionner les accents
+math\'ematiques (qui d\'eterminent beaucoup d'autres choses) se trouve dans l'\knuth{annexe~G}{}.
 
-Si la valeur de |\skewchar| n'est pas dans l'interval $0$--$255$,
+Si la valeur de |\skewchar| n'est pas dans l'intervalle $0$--$255$,
 \TeX\ prend une valeur de cr\'enage \`a z\'ero.
 
 Notez que \<font> est une s\'equence de contr\^ole
@@ -1798,7 +1798,7 @@ qui nomme une police, pas un \<nom de police> qui nomme des fichiers de police.
 Attention~: 
 un assignement de |\skewchar| n'est \emph{pas} enlev\'e \`a la fin d'un groupe.
 Si vous voulez changer |\skewchar| localement, vous devrez sauvegarder et
-restaurer sa valeur original explicitement.
+restaurer sa valeur originale explicitement.
 \enddesc
 
 \begindesc
@@ -1807,12 +1807,12 @@ restaurer sa valeur original explicitement.
 Quand \TeX\ lit le fichier de m\'etriques
 ^^{fichier de m\'etriques//caract\`ere oblique par d\'efaut dans le}
 pour une police en r\'eponse \`a une
-commande ^|\font|, il mets le ^|\skewchar| de la police
+commande ^|\font|, il met le ^|\skewchar| de la police
 dans |\default!-skewchar|.
 Si la valeur de |\default!-skewchar| n'est 
-pas dans l'interval $0$--$255$, \TeX\ n'assigne aucun caract\`ere oblique
+pas dans l'intervalle $0$--$255$, \TeX\ n'assigne aucun caract\`ere oblique
 par d\'efaut.
-\PlainTeX\ mets |\defaultskewchar| \`a $-1$, et il est normalement pr\'ef\'erable
+\PlainTeX\ met |\defaultskewchar| \`a $-1$, et il est normalement pr\'ef\'erable
 de le laisser ainsi.
 \margin{Misleading example deleted.}
 \eix^^{accents//aligner des}
@@ -1833,11 +1833,11 @@ Par exemple, l'axe d'une formule constitu\'ee d'une
 fraction est au centre de la barre de fraction.
 La commande |\vcenter| demande \`a \TeX\ de placer le \<mat\'eriel en mode vertical>
 dans une \minref{vbox} et de centrer la vbox
-en respectant l'axes de la formule qu'il est en train de construire.
+en respectant l'axe de la formule qu'il est en train de construire.
 
 La premi\`ere forme de la commande
 centre le mat\'eriel comme donn\'e.  Les deuxi\`emes et troisi\`emes
-forme \'elargissent ou r\'etr\'ecissent le mat\'eriel verticalement comme dans la 
+formes \'elargissent ou r\'etr\'ecissent le mat\'eriel verticalement comme dans la 
 commande |\vbox| (\xref \vbox).
 
 \example
@@ -1905,7 +1905,7 @@ $00\quad0\mskip\thinmuskip0\quad0\mskip\medmuskip0
 \begindesc
 \cts jot {\param{dimension}}
 \explain
-Ce param\`etre d\'efini une distance \'egale \`a trois points (\`a moins que
+Ce param\`etre d\'efinit une distance \'egale \`a trois points (\`a moins que
 vous le changiez).
 Le |\jot| est une unit\'e de mesure pratique pour ouvrir des affichages math\'ematiques.
 \enddesc
@@ -1993,7 +1993,7 @@ et se plaint.
 qui d\'ebute l'affichage.  Cette valeur initiale est
 |\hsize| (\xref \hsize) \`a moins qu'elle soit modifi\'ee par des 
 changements de la forme du paragraphe.
-Voir les \knuth{pages~188--189}{999--999} pour une explication plus d\'etaill\'ee de ce param\`etre.
+Voir les \knuth{pages~188--189}{220--222} pour une explication plus d\'etaill\'ee de ce param\`etre.
 \enddesc
 
 \begindesc
@@ -2006,7 +2006,7 @@ qui d\'ebute l'affichage.  Normalement la valeur initiale est z\'ero,
 mais si la forme du paragraphe indique que l'affichage doit \^etre
 d\'ecal\'e d'un montant $s$,
 \TeX\ mettra |\displayindent| \`a $s$.
-Voir les \knuth{pages~188--189}{999--999} pour une explication plus d\'etaill\'ee de ce param\`etre.
+Voir les \knuth{pages~188--189}{220--222} pour une explication plus d\'etaill\'ee de ce param\`etre.
 \enddesc
 
 \begindesc
@@ -2022,7 +2022,7 @@ S'il la recouvre, il utilise les ressorts |\abovedisplayskip| et
 |\belowdisplayskip| en mettant l'affichage~;
 autrement il utilise les ressorts |\abovedisplay!-shortskip| et
 |\belowdisplay!-shortskip|.
-Voir les \knuth{pages~188--189}{999--999} pour une explication plus d\'etaill\'ee de ce param\`etre.
+Voir les \knuth{pages~188--189}{220--222} pour une explication plus d\'etaill\'ee de ce param\`etre.
 \enddesc
 
 \begindesc
@@ -2033,7 +2033,7 @@ Ce param\`etre sp\'ecifie le montant de ressort vertical que
 \`a gauche d'o\`u la ligne pr\'ec\'edente se termine, c'est-\`a-dire, quand il recouvre 
 visuellement la ligne pr\'ec\'edente.
 \PlainTeX\ met |\abovedisplayskip| \`a |12pt plus3pt minus9pt|.
-Voir les \knuth{pages~188--189}{999--999} pour une explication plus d\'etaill\'ee de ce param\`etre.
+Voir les \knuth{pages~188--189}{220--222} pour une explication plus d\'etaill\'ee de ce param\`etre.
 \enddesc
 
 \begindesc
@@ -2044,7 +2044,7 @@ Ce param\`etre sp\'ecifie le montant de ressort vertical que
 \`a gauche d'o\`u la ligne pr\'ec\'edente se termine, c'est-\`a-dire, quand il recouvre 
 visuellement la ligne pr\'ec\'edente.
 \PlainTeX\ met |\belowdisplay!-skip| \`a |12pt plus3pt minus9pt|.
-Voir les \knuth{pages~188--189}{999--999} pour une explication plus d\'etaill\'ee de ce param\`etre.
+Voir les \knuth{pages~188--189}{220--222} pour une explication plus d\'etaill\'ee de ce param\`etre.
 \enddesc
 
 \begindesc
@@ -2055,7 +2055,7 @@ Ce param\`etre sp\'ecifie le montant de ressort vertical que
 \`a droite d'o\`u la ligne pr\'ec\'edente se termine, c'est-\`a-dire, quand il ne recouvre 
 pas visuellement la ligne pr\'ec\'edente.
 \PlainTeX\ met |\abovedisplay!-shortskip| \`a |0pt plus3pt|.
-Voir les \knuth{pages~188--189}{999--999} pour une explication plus d\'etail\-l\'ee de ce param\`etre.
+Voir les \knuth{pages~188--189}{220--222} pour une explication plus d\'etail\-l\'ee de ce param\`etre.
 \enddesc
 
 \begindesc
@@ -2066,7 +2066,7 @@ Ce param\`etre sp\'ecifie le montant de ressort vertical que
 \`a droite d'o\`u la ligne pr\'ec\'edente se termine, c'est-\`a-dire, quand il ne recouvre 
 pas visuellement la ligne pr\'ec\'edente.
 \PlainTeX\ met |\belowdisplay!-shortskip| \`a |7pt plus3pt minus4pt|.
-Voir les \knuth{pages~188--189}{999--999} pour une explication plus d\'etaill\'ee de ce param\`etre.
+Voir les \knuth{pages~188--189}{220--222} pour une explication plus d\'etaill\'ee de ce param\`etre.
 \eix^^{affichages//param\`etres d'espacement pour}
 \enddesc
 
@@ -2078,8 +2078,8 @@ Voir les \knuth{pages~188--189}{999--999} pour une explication plus d\'etaill\'e
 \cts mathsurround {\param{dimension}}
 \explain
 Ce param\`etre sp\'ecifie le montant d'espace que \TeX\
-ins\`ere avant et apr\`es une formule math\'ematique en mode texte (c'est-\`a-dire, un formule
-entour\'ee de |$| simples).  Voir la \knuth{page~162}{999} pour plus de d\'etails sur
+ins\`ere avant et apr\`es une formule math\'ematique en mode texte (c'est-\`a-dire, une formule
+entour\'ee de |$| simples).  Voir la \knuth{page~162}{190} pour plus de d\'etails sur
 son comportement.
 \PlainTeX\ laisse |\mathsurround| \`a |0pt|.
 \enddesc
@@ -2117,7 +2117,7 @@ apr\`es un exposant ou un indice annule cet espace.
 \cts mathpunct {}
 \explain
 Ces commandes demandent \`a \TeX\ de traiter la construction qui suit comme appartenant
-\`a une ^{classe} particuli\`ere (voir la \knuth{page~154}{999} pour la d\'efinition
+\`a une ^{classe} particuli\`ere (voir la \knuth{page~154}{179--180} pour la d\'efinition
 des classes).  Elles sont list\'ees ici dans l'ordre des num\'eros de classe,
 de $0$ \`a $6$.  
 Leur effet primaire est d'ajuster l'espace\-ment autour de la construction 

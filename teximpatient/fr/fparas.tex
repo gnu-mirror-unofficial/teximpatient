@@ -83,7 +83,7 @@ ces commandes.
 \ctsx S {symbole section \S}
 \explain
 
-Ces commandes produisent divers marques et caract\`eres sp\'eciaux. Les 
+Ces commandes produisent diverses marques et caract\`eres sp\'eciaux. Les 
 cinq premi\`eres commandes sont n\'ecessaires parce que \TeX\ attache par 
 d\'efaut des significations sp\'eciales aux caract\`eres (|#|, |$|, |%|, 
 |&|, |_|). vous n'avez pas besoin d'\^etre en \minref{mode math\'ematique} 
@@ -124,7 +124,7 @@ A book about \TeX\ is in your hands.
 ^^{points}
 Cette commande produit des ^{points de suspension}, c'est-\`a-dire, trois 
 points, dans du texte ordinaire. Elle est pr\'evue pour \^etre utilis\'ee 
-en \'ecriture math\'ematique~; pour des points de suspension entre des mots 
+en \'ecriture math\'ematique, pour des points de suspension entre des mots 
 ordinaires, vous devez utiliser |$\ldot$| \ctsref{\ldots} \`a la place. 
 Puisque |\dots| inclut son propre espace, vous ne devez pas le faire suivre 
 de |\!vs|. 
@@ -256,7 +256,7 @@ l'H\accent94 otel des Invalides
 \see Accents math\'ematiques (\xref{mathaccent}).
 \enddesc
 %==========================================================================
-\subsection {Defeating boundary ligatures}
+\subsection {Ligatures aux limites}
 
 \begindesc
 \bix^^{ligatures}
@@ -271,8 +271,8 @@ de fronti\`ere n'occupe aucun espace et est invisible une fois imprim\'e.
 Il permet \`a \TeX\ de fournir un traitement typographique diff\'erent aux 
 caract\`eres de d\'ebut ou de fin de mot, puisque le caract\`ere de 
 fronti\`ere peut faire partie d'une s\'equence de caract\`eres devant 
-\^etre cr\'enel\'ee ou remplac\'ee par une ligature. (aucunes polices 
-standards de \TeX\ ne contient ce caract\`ere de fronti\`ere.) L'effet de 
+\^etre cr\'enel\'ee ou remplac\'ee par une ligature (aucune police 
+standard de \TeX\ ne contient ce caract\`ere de fronti\`ere).  L'effet de 
 |\noboundary| est de supprimer le caract\`ere de fronti\`ere s'il est l\`a, 
 et de ce fait d'emp\^echer \TeX\ d'identifier la ligature ou le cr\'enage.
 \eix^^{ligatures}
@@ -408,7 +408,7 @@ Ces commandes convertissent les lettres de la \<token list>, c'est-\`a-dire,
 les tokens avec le code de cat\'egorie $11$, dans leurs formes minuscules 
 et majuscules. La conversion d'une lettre est d\'efinie par sa valeur de 
 table |\lccode| (pour une minuscule) ou |\uccode| (pour une majuscule). Les 
-tokens de la liste qui ne sont pas des lettres ne sont pas affecter---m\^eme 
+tokens de la liste qui ne sont pas des lettres ne sont pas affect\'ees---m\^eme 
 si les tokens sont des appels de \minref{macro} ou d'autres commandes qui 
 se d\'eveloppent en lettres.
 \example
@@ -482,7 +482,7 @@ token |\par| (si elle appara\^\i t \`a l'extr\'emit\'e d'une ligne vide).
 caract\`eres restants sur la ligne.
 \endolist
 \noindent
-Cependant, |^^M| ne fait \emph{pas} terminer la ligne quand il 
+Cependant, |^^M| \emph{ne} fait \emph{pas} terminer la ligne quand il 
 appara\^\i t dans le contexte |`\^^M|, d\'enotant le code ASCII du control-M 
 (le nombre $13$). Vous pouvez changer la signification du |^^M| en lui 
 donnant un \minref{code de cat\'egorie} diff\'erent. Voir 
@@ -601,13 +601,13 @@ phrases.
 \TeX\ condense normalement une suite de plusieurs espaces en un 
 espace simple. |\obeyspaces| demande \`a \TeX\ de produire un 
 espace dans le r\'esultat pour chaque espace dans le source. 
-Cependant,|\obeyspaces| ne met pas d'espaces au d\'ebut d'une ligne~; 
+Cependant,|\obeyspaces| ne met pas d'espace au d\'ebut d'une ligne~; 
 pour cela nous vous recommandons la commande de 
 |\obey!-white!-space| d\'efinie dans |eplain.tex|
 (\xref{ewhitesp}).
 ^^|\obeywhitespace|
 |\obeyspaces| est souvent utile quand vous composez quelque chose, 
-un source informatique par exemple, dans une police \`a espacement fixe (une dans 
+un source informatique par exemple, dans une police \`a espacement fixe (une police dans 
 laquelle chaque caract\`ere a le m\^eme espacement) et que vous voulez montrer 
 exactement \`a quoi ressemble chaque ligne du source. 
 
@@ -634,7 +634,7 @@ These     spaces    are    closed   up
 Ces \minref{param\`etres} primitifs affectent combien d'espace \TeX\ met 
 entre deux mots adjacents, c'est-\`a-dire, l'^{espacement inter-mots}. 
 L'espacement normal entre les mots est assur\'e par la police courante. 
-Pendant que \TeX\ traite une \minref{liste horizontal}, il garde trace 
+Pendant que \TeX\ traite une \minref{liste horizontale}, il garde trace 
 du facteur d'^{espacement} $f$ dans |\spacefactor|. pendant qu'il 
 traite chaque caract\`ere du source $c$, il met \`a jour $f$ selon la 
 valeur de $f_c$, le code de facteur d'espacement de $c$ (voir ci-
@@ -688,9 +688,9 @@ r\`egles normales s'appliquent. L'\'etirement et le r\'etr\'ecissement du
 ressort |\spaceskip|, comme le ressort ordinaire entre les mots, est 
 modifi\'e selon la valeur de $f$. 
 \endulist
-Voir \knuth{page~76}{99} pour les r\`egles pr\'ecises que \TeX\ utilise pour 
-calculer le \minref{ressort} entre les mots et \knuth{pages~285--287}{999-999} 
-pour les ajustements fait \`a |\spacefactor| apr\`es diff\'erents items dans 
+Voir \knuth{page~76}{88--89} pour les r\`egles pr\'ecises que \TeX\ utilise pour 
+calculer le \minref{ressort} entre les mots et \knuth{pages~285--287}{331--334} 
+pour les ajustements faits \`a |\spacefactor| apr\`es diff\'erents items dans 
 une liste horizontale. 
 \eix^^{espace//inter-mots}
 \enddesc
@@ -707,7 +707,7 @@ une liste horizontale.
 \cts leftline {\<argument>}
 \cts rightline {\<argument>}
 \explain
-La commande |\centerline| produit un \minref{hbox} aussi au large que 
+La commande |\centerline| produit un \minref{hbox} aussi large que 
 la ligne courante et place \<argument> au centre de la bo\^\i te. Les 
 commandes |\leftline| et |\rightline| sont analogues~; elles placent 
 \<argument> au bord gauche ou droite de la bo\^\i te. Si vous voulez 
@@ -739,9 +739,9 @@ plaindra au sujet d'un overfull hbox.
 \begindesc
 \easy\cts line {\<argument>}
 \explain
-Cette commande produit un \minref{hbox} contenant l'\<argument>. Cette 
+Cette commande produit une \minref{hbox} contenant l'\<argument>. Cette 
 hbox est exactement aussi large que la ligne courante, c'est-\`a-dire, 
-qu'il s'\'etend de la marge droite \`a la gauche.
+qu'elle s'\'e\-tend de la marge droite \`a la gauche.
 \example
 \line{ugly \hfil suburban \hfil sprawl}
 % Without \hfil you'd get an `underfull box' from this.
@@ -759,11 +759,11 @@ qu'il s'\'etend de la marge droite \`a la gauche.
 \explain
 Ces commandes vous permettent de produire un texte qui recouvre celui 
 qui est \`a gauche ou \`a droite de la position actuelle. |\llap| recule 
-par la largeur de l'\<argument> et puis compose l'\<argument>. le 
+par la largeur de l'\<argument> et puis compose l'\<argument>. Le 
 |\rlap| est semblable, sauf qu'il compose l'\<argument> d'abord et 
 recule. |\llap| et |\rlap| sont utiles pour placer du texte en dehors 
 des marges courantes. |\llap| et |\rlap| effectuent leur travail en 
-cr\'eant un \minref{box} de largeur z\'ero.
+cr\'eant une \minref{box} de largeur z\'ero.
 
 Vous pouvez \'egalement utiliser |\llap| ou |\rlap| pour construire des 
 caract\`eres sp\'eciaux par ^{surimpression}, mais ne l'essayez pas \`a 
@@ -806,7 +806,7 @@ $\Rightarrow$\vrule}\rlap{ off right}
 \explain
 Cette commande termine un paragraphe et met \TeX\ dans le mode 
 \minref{vertical}, pr\^et \`a ajouter plus d'articles sur la page. 
-Puisque \TeX\ convertis une ligne blanche dans votre fichier source 
+Puisque \TeX\ convertit une ligne blanche dans votre fichier source 
 en un \minref{token} |\par|, vous n'avez normalement pas besoin de 
 saisir |\par| explicitement pour finir un paragraphe. 
 
@@ -821,7 +821,7 @@ ins\`ere une quantit\'e d'espace vertical donn\'ee par le param\`etre
 horizontal donn\'e par |\parindent| (\xref{\parindent }). 
 
 Vous pouvez normalement effacer tout l'espace inter-paragraphe 
-produit avec |\par| en mettant la commande |\vskip -\lastskip|. Caci 
+produit avec |\par| en mettant la commande |\vskip -\lastskip|. Ceci 
 peut \^etre utile quand vous \'ecrivez une \minref{macro} cens\'e travailler 
 de la m\^eme mani\`ere si elle est pr\'ec\'ed\'ee ou non par une ligne blanche. 
 
@@ -829,7 +829,7 @@ Vous pouvez obtenir que \TeX\ prenne certaines mesures sp\'eciales au
 d\'ebut de chaque paragraphe en pla\c cant des instructions dans 
 ^|\everypar| (\xref\everypar). 
 
-Voir \knuth{pages~283 et 286}{999 et 999} pour les effets pr\'ecis de |\par|.
+Voir \knuth{pages~283 et 286}{328 et 332} pour les effets pr\'ecis de |\par|.
 
 \example
 \parindent = 2em
@@ -863,15 +863,15 @@ Ce param\`etre d\'esigne le ressort horizontal que \TeX\ insert \`a la fin
 d'un paragraphe. La valeur par d\'efaut de |\parfillskip| est |0pt plus 
 1fil|, qui fait que la derni\`ere ligne d'un paragraphe soit compl\'et\'ee 
 de l'espace vide. Une valeur de |0pt| force \TeX\ \`a finir la derni\`ere 
-ligne d'un paragraphe sur la marge droite. 
+ligne d'un paragraphe sur la marge gauche. 
 \enddesc
 
 \bix^^{indentation}
 \begindesc
 \easy\cts indent {}
 \explain
-Si \TeX\ est en mode verticale, comme il l'est apr\`es avoir fini un 
-paragraphe, cette commande ins\`ere le ressort inter-paragraphe 
+Si \TeX\ est en mode vertical, comme il l'est apr\`es avoir fini un 
+paragraphe, cette commande ins\`ert le ressort inter-paragraphe 
 ^|\parskip|, met \TeX\ en mode horizontal, d\'ebute un paragraphe et 
 indente ce paragraphe de |\parindent|. Si \TeX\ est d\'ej\`a en mode 
 horizontal, cette commande produit simplement  un espace blanc de 
@@ -910,7 +910,7 @@ is the third in the series.
 \easy\cts noindent {}
 \explain
 Si le \TeX\ est en mode vertical,  comme il l'est apr\`es la fin d'un 
-paragraphe, cette commande ins\`ere le ressort inter-paragraphe 
+paragraphe, cette commande ins\`ert le ressort inter-paragraphe 
 ^|\parskip|, met \TeX\ dans le mode horizontal, et commence 
 un paragraphe non indent\'e. Elle n'a aucun effet dans le mode horizontal, 
 c'est-\`a-dire, dans un paragraphe. Commencer un paragraphe avec 
@@ -972,7 +972,7 @@ Ce \minref{param\`etre} indique la quantit\'e par laquelle la premi\`ere
 ligne de chaque paragraphe doit \^etre indent\'ee. ^^{indentation} Comme 
 montr\'e dans l'exemple ci-dessous, placer |\parindent| et ^|\parskip| \`a 
 z\'ero est une mauvaise id\'ee puisque alors les coupures de paragraphe ne 
-sont plus \'evidente. 
+sont plus \'evidentes. 
 \example
 \parindent = 2em This paragraph is indented by 2 ems.
 \par \parindent=0pt This paragraph is not indented at all.
@@ -994,7 +994,7 @@ this paragraph isn't indented either.
 horizontal, par exemple, quand il commence un paragraphe. Par d\'efaut 
 |\everypar| est vide, mais vous pouvez prendre des mesures 
 suppl\'ementaires au d\'ebut de chaque paragraphe en mettant des commandes 
-pour ces actions dans un token list.
+pour ces actions dans un token list
 %
 % This \vglue makes the example overwrite the example, but since we are
 % not reprinting this page, it doesn't matter.  For reasons I did not
@@ -1028,11 +1028,11 @@ description actuelle combine les deux anciennes descriptions.}
 \easy\cts hsize {\param{dimension}}
 
 \explain
-Ce \minref{param\`etre} indique la longueur courante de la ^{ligne}, c'est-\`a-
-dire, la largeur habituelle des lignes dans un paragraphe commen\c cant \`a la 
-marge gauche. De grands beaucoup de \TeX \ commandes, par exemple, 
-|\centerline| (\xref{\centerline}) et |\hrule| (\xref{\hrule}), emploient 
-implicitement la valeur du |\hsize|. En changeant le |\hsize| chez un 
+Ce \minref{param\`etre} indique la longueur courante de la ^{ligne}, c'est-\`a-dire, 
+la largeur habituelle des lignes dans un paragraphe commen\c cant \`a la 
+marge gauche. Beaucoup de commandes \TeX emploient 
+implicitement la valeur de |\hsize|, comme par exemple, 
+|\center!-line| (\xref{\centerline}) et |\hrule| (\xref{\hrule}). En changeant le |\hsize| dans un 
 groupe vous pouvez changer la largeur des constructions produites par de 
 telles commandes. 
 
@@ -1110,7 +1110,7 @@ had we used just one ``narrower'' command.\par}
 
 \explain
 Ces param\`etres indiquent \`a \TeX\ combien de ressort placer aux extr\'emit\'es 
-gauches et \`a droites de chaque ligne du paragraphe courant. Nous n'expli\-%
+gauches et droites de chaque ligne du paragraphe courant. Nous n'expli\-%
 querons que le fonctionnement de |\leftskip| puisque |\rightskip| est 
 similaire.
 
@@ -1165,7 +1165,7 @@ get me executed as sure as ferrets are ferrets!''
 \explain
 Ces commandes font que \TeX\ compose votre document 
 ``^{cadr\'e \`a gauche}''.  Les espaces inter-mots ont tous 
-leur taille naturelle, c'est-\`a-dire, elles ont toutes la m\^eme largeur et
+leur taille naturelle, c'est-\`a-dire, ils ont tous la m\^eme largeur et
 ne s'\'etirent ni se r\'etr\'ecissent.
 En cons\'equence, leur marge droite n'est g\'en\'eralement pas la m\^eme.
 L'alternative, qui est le comportement par d\'efaut de \TeX, est de composer 
@@ -1175,7 +1175,7 @@ c'est-\`a-dire, avec des marges gauches et droites uniformes.
 Dans du texte justifi\'e, les espaces inter-mots sont \'etir\'es pour
 aligner des marges de droite.
 Certains typographes pr\'ef\`erent cadrer \`a gauche parce que
-cela \'evite des ``rivi\`eres'' distractive d'espace sur la page imprim\'ee.
+cela \'evite des ``rivi\`eres'' distractives d'espace sur la page imprim\'ee.
 \minrefs{justified text}
 
 Vous devez utiliser la commande |\ttraggedright| pour composer du texte dans 
@@ -1261,7 +1261,7 @@ paragraphe courant (si vous \^etes en mode horizontal).
 paragraphe, quand il coupe ce paragraphe en lignes.\minrefs{line
 break}
  
-\`a la diff\'erence de la plupart des autres param\`etres de mise en forme de paragraphe,
+\`A la diff\'erence de la plupart des autres param\`etres de mise en forme de paragraphe,
 |\hangafter| et |\hangindent| sont r\'einitialis\'es
 au d\'ebut de chaque paragraphe, soit,
 $1$ pour |\hangafter| et $0$ pour |\hangindent|.
@@ -1303,16 +1303,16 @@ hand, has been left unindented.
 \begindesc
 \cts parshape {$n\; i_1 l_1\; i_2 l_2\; \ldots \;i_n l_n$}
 \explain
-Cette commande sp\'ecifie le gabarit des $n$ premi\`eres lignes d'un para\-graphe---
+Cette commande sp\'ecifie le gabarit des $n$ premi\`eres lignes d'un para\-graphe.
 Le prochain si vous \^etes en mode vertical et le paragraphe courant si vous 
 \^etes en mode horizontal.
-Les $i$ et les $l$ sont tous des dimensions. La premi\`ere ligne est indent\'ee de
+Les $i$ et les $l$ sont toutes des dimensions. La premi\`ere ligne est indent\'ee de
 $i_1$ et a une longueur de $l_1$, la seconde ligne est indent\'ee de $i_2$ et a
 une longueur de $l_2$, et ainsi de suite.
 si le paragraphe a plus de $n$ lignes, la derni\`ere paire indentation\slash 
 longueur est utilis\'ee pour les autres lignes.
 Pour parachever des effets sp\'eciaux comme celui montr\'e ici, vous devrez
-normalement faire beaucoup d'essai, ins\'erer des cr\'enages ici et l\`a et
+normalement faire beaucoup d'essais, ins\'erer des cr\'enages ici et l\`a et
 choisir votre mot pour remplir le gabarit.
 
 |\parshape|, comme ^|\hangafter| et ^|\hangindent|, n'est effectif que pour
@@ -1343,7 +1343,7 @@ bons. Ceux que
 vo\kern -.1pt us de\kern -.1pt v\kern -.1pt ez 
 noter tr\`es tr\`es bons~: 
 1962, 1964, 1966. 1958, 1959, 1960, 1961, 1964, 1966 sont de bons crus 
-californien. \`A boire avec mod\'eration~! 
+californiens. \`A boire avec mod\'eration~! 
 |
 %\margin{Wineglass text replaced because of permissions problem.}
 \produces
@@ -1367,7 +1367,7 @@ bons. Ceux que
 vo\kern -.1pt us de\kern -.1pt v\kern -.1pt ez 
 noter tr\`es tr\`es bons~:  
 1962, 1964, 1966. 1958, 1959, 1960, 1961, 1964, 1966 sont de bons crus 
-californien. \`A boire avec mod\'eration~! \endexample
+californiens. \`A boire avec mod\'eration~! \endexample
 \eix^^{indentation}
 \enddesc
 
@@ -1380,7 +1380,7 @@ il sp\'ecifie le nombre de lignes dans le paragraphe pr\'ec\'edent.
 \TeX\ ne prend en compte |\prevgraf| qu'apr\`es avoir fini de couper du texte
 en ligne, c'est-\`a-dire, sur un affichage math\'ematique ou \`a la fin d'un 
 paragraphe.
-Voir la \knuth{page~103}{999} pour plus de d\'etails \`a son propos.
+Voir la \knuth{page~103}{121} pour plus de d\'etails \`a son propos.
 \enddesc
 
 \begindesc
@@ -1420,7 +1420,7 @@ to be found above the line and others are to be found below it.
 \bix^^{coupures de ligne//encouragement ou d\'ecouragement}
 \ctspecial break {} \xrdef{hbreak}
 \explain
-Cette commande force une coupure de ligne.
+Cette commande force une coupure de ligne,
 \`a moins que vous fassiez quelque chose pour remplir la ligne, 
 Vous recevrez vraisemblablement une plainte ``underfull hbox''.
 |\break| peut aussi \^etre utilis\'e en mode vertical.
@@ -1483,7 +1483,7 @@ L'\'el\'ement de p\'enalit\'e rend \TeX\ plus ou moins d\'esireux de couper une 
 \`a l'endroit o\`u cet \'el\'ement est plac\'e.
 Une p\'enalit\'e n\'egative, c'est-\`a-dire, un bonus, encourage une coupure de ligne~;
 une p\'enalit\'e positive d\'ecourage une coupure de ligne.  
-Une p\'enalit\'e de $10000$ ou plus emp\^eche une coupure quel qu'elle soit,
+Une p\'enalit\'e de $10000$ ou plus emp\^eche une coupure quelle qu'elle soit,
 tandis qu'une p\'enalit\'e de $-10000$ ou moins force une coupure.
 |\penalty| peut aussi \^etre utilis\'ee en mode vertical.
 %\secondprinting{\vfill\eject}
@@ -1511,7 +1511,7 @@ sinon,
 vous aurez une coupure de ligne suppl\'ementaire dans ces lignes.
 
 Parce que \TeX\ ins\`ere le ressort |\parskip| (\xref\parskip)
-entre des lignes contr\^ol\'ee par |\obeylines| (puisqu'il pense que chaque
+entre des lignes contr\^ol\'ees par |\obeylines| (puisqu'il pense que chaque
 ligne est un paragraphe), vous devrez normalement mettre |\parskip| \`a z\'ero 
 quand vous utiliserez |\obeylines|.
 
@@ -1570,7 +1570,7 @@ pour un paragraphe.
 La m\'ediocrit\'e est une mesure de combien l'espacement inter-mot d\'evie de
 l'id\'eal.
 |\pretolerance| sp\'ecifie la m\'ediocrit\'e tol\'erable pour
-des coupure de ligne sans c\'esure~;
+des coupures de ligne sans c\'esure~;
 |\tolerance| sp\'ecifie la m\'ediocrit\'e tol\'erable pour des coupures de ligne 
 avec c\'esure.
 La m\'ediocrit\'e tol\'erable peut \^etre d\'epass\'ee de deux fa\c cons~:
@@ -1608,7 +1608,7 @@ devient infiniment tol\'erant et accepte tout espacement, quelque soit sa laideu
 c\'esure).  Ainsi en changeant |\tolerance| vous pouvez \'eviter des 
 ``overfull hbox'' et ``underfull hbox'', mais au prix de mauvais espacements.
 En rendant |\pretolerance| plus grand vous pouvez faire que \TeX\ \'evite les 
-c\'esure (et s'ex\'ecute aussi plus rapidement),
+c\'esure et s'ex\'ecute aussi plus rapidement,
 mais, encore, au prix d'\'eventuels mauvais espacements.
 Si vous mettez |\pretolerance| \`a $-1$,
 \TeX\ n'essayera m\^eme pas de faire le paragraphe sans c\'esure.
@@ -1636,7 +1636,7 @@ ligne.
 L'effet du changement est de r\'eduire la m\'ediocrit\'e de chaque ligne,
 autorisant \TeX\ \`a faire des espaces plus larges qu'ils auraient \'et\'e autrement
 et ainsi de choisir des coupures de ligne qui seront aussi
-bonne que possible selon les circonstances.
+bons que possible selon les circonstances.
 \enddesc
 
 \begindesc
@@ -1673,8 +1673,8 @@ mettant un tilde (\xref{@not}) entre les deux derniers mots du paragraphe.
 
 Mettre |\looseness| est le meilleur moyen de forcer un paragraphe
 \`a occuper un nombre de lignes donn\'e.
-Le mettre a une valeur n\'egative est pratique quand vous essayez
-d'augmenter la quantit\'e de texte que vous pouvez placer que une page.
+Le mettre \`a une valeur n\'egative est pratique quand vous essayez
+d'augmenter la quantit\'e de texte que vous pouvez placer sur une page.
 Similairement, le mettre \`a une valeur positive
 est pratique quand vous essayez de diminuer la quantit\'e de texte sur 
 une page.
@@ -1693,15 +1693,15 @@ le faire individuellement pour chacun ou mettre le changement dans |\everypar|
 \minrefs{line break}
 Ce param\`etre sp\'ecifie les \minref{d\'em\'erites} que \TeX\ r\'epartit pour chaque coupure de ligne
 quand il coupe un paragraphe en lignes.
-La p\'enalit\'e est ind\'epen\-dante d'o\`u la coupure de ligne \`a lieu.
+La p\'enalit\'e est ind\'epen\-dante d'o\`u la coupure de ligne a lieu.
 Augmenter la valeur
 de ce param\`etre demande \`a \TeX\ d'essayer plus fortement de mettre un paragraphe avec 
 un nombre minimum de lignes, m\^eme au co\^ut d'autres consid\'erations esth\'etiques
-comme \'eviter des espacements inter-mots excessivement res\-serr\'e.
+comme \'eviter des espacements inter-mots excessivement res\-serr\'es.
 Les d\'em\'erites sont en unit\'es de \minref{m\'ediocrit\'e} au carr\'e, donc
 vous devez assigner une valeur plut\^ot large \`a ce param\`etre (dans les
 milliers) pour qu'elle ait un quelconque effet.
-\PlainTeX\ mets |\linepenalty| \`a $10$.
+\PlainTeX\ met |\linepenalty| \`a $10$.
 \enddesc
 
 \begindesc
@@ -1712,7 +1712,7 @@ milliers) pour qu'elle ait un quelconque effet.
 {\tighten
 Ce param\`etre sp\'ecifie des \minref{d\'em\'erites} additionnels que \TeX\ attache au
 point de coupure entre deux lignes adjacentes qui sont
-``incompatible visuellement''. 
+``incompatibles visuellement''. 
 De telles paires de lignes font qu'un paragraphe appara\^\i t in\'egal.
 Les incompatibilit\'es sont \'evalu\'ees en termes d'\'etroitesse ou de rel\^achement
 de lignes~:
@@ -1724,14 +1724,14 @@ de lignes~:
 \li Une ligne est tr\`es rel\^ach\'ee si son ressort doit tellement s'\'etirer
 que sa m\'ediocrit\'e d\'epasse $100$.
 \endolist
-Deux lignes adjacentes sont visuellement incompatible
+Deux lignes adjacentes sont visuellement incompatibles
 si leurs cat\'ego\-ries ne sont pas adjacentes, c'est-\`a-dire, une ligne resserr\'ee
 est apr\`es une rel\^ach\'ee ou une ligne d\'ecente apr\`es une tr\`es rel\^ach\'ee.
 
-Les d\'em\'erites sont en unit\'es de minref{m\'ediocrit\'e} au carr\'ee, donc 
+Les d\'em\'erites sont en unit\'es de \minref{m\'ediocrit\'e} au carr\'ee, donc 
 vous devez assigner une valeur plut\^ot large \`a ce param\`etre (dans les
 milliers) pour qu'elle ait un quelconque effet.
-\PlainTeX\ mets |\adjdemerits| \`a~$10000$.
+\PlainTeX\ met |\adjdemerits| \`a~$10000$.
 \enddesc
 
 \begindesc
@@ -1743,7 +1743,7 @@ Ce param\`etre sp\'ecifie la \minref{p\'enalit\'e} que \TeX\ attache \`a un
 point de coupure sur une c\'esure explicite comme celle de
 ``helter-skelter''.  Augmenter ce param\`etre a l'effet de d\'ecourager
 \TeX\ de finir une ligne sur une c\'esure explicite.
-\PlainTeX\ mets |\exhyphenpenalty| \`a $50$.
+\PlainTeX\ met |\exhyphenpenalty| \`a $50$.
 \enddesc
 
 \begindesc
@@ -1752,12 +1752,12 @@ point de coupure sur une c\'esure explicite comme celle de
 \minrefs{line break}
 Ce param\`etre sp\'ecifie la \minref{p\'enalit\'e} que \TeX\ attache \`a un 
 point de coupure sur une c\'esure implicite.
-des c\'esures implicites peuvent survenir du dictionnaire de c\'esure de \TeX\ ou
+Des c\'esures implicites peuvent survenir du dictionnaire de c\'esure de \TeX\ ou
 de ^{c\'esures optionnelles} que vous avez ins\'er\'e avec |\-|~(\xref{\@minus}).
 ^^|-//m\`ene \`a {\tt\\hyphenpenalty}|
 Augmenter ce param\`etre a l'effet de d\'ecourager
 \TeX\ de couper des mots.
-\PlainTeX\ mets |\hyphenpenalty| \`a $50$.
+\PlainTeX\ met |\hyphenpenalty| \`a $50$.
 \enddesc
 
 \begindesc
@@ -1765,15 +1765,15 @@ Augmenter ce param\`etre a l'effet de d\'ecourager
 \explain
 \minrefs{line break}
 {\tighten
-Ce param\`etre sp\'ecifie des \minref{d\'em\'erites} additionnels que \TeX\
+Ce param\`etre sp\'ecifie les \minref{d\'em\'erites} additionnels que \TeX\
 attache \`a un point de coupure quand ce point de coupure arrive \`a
-deux lignes cons\'ecu\-tives qui se termines sur une c\'esure.
-Augmenter la valeur de ce param\`etre a l'effet de d\'ecourager
+deux lignes cons\'ecu\-tives qui se terminent sur une c\'esure.
+Augmenter la valeur de ce param\`etre d\'ecourage
 \TeX\ de c\'esurer deux lignes \`a suivre.
 Les d\'em\'erites sont en unit\'es de \minref{m\'ediocrit\'e} au carr\'e, donc
 vous devez assigner une valeur plut\^ot large \`a ce param\`etre (dans les
 milliers) pour qu'elle ait un quelconque effet.
-\PlainTeX\ mets |\doublehyphendemerits| \`a $10000$.
+\PlainTeX\ met |\doublehyphendemerits| \`a $10000$.
 }
 \enddesc
 
@@ -1782,18 +1782,18 @@ milliers) pour qu'elle ait un quelconque effet.
 \explain
 \minrefs{line break}
 {\tighten
-Ce param\`etre sp\'ecifie des \minref{d\'em\'erites} additionnels que \TeX\
+Ce param\`etre sp\'ecifie les \minref{d\'em\'erites} additionnels que \TeX\
 attache \`a un point de coupure qui fait que l'avant derni\`ere ligne d'un
 paragraphe se termine avec une c\'esure.
 Une telle c\'esure est g\'en\'eralement consid\'er\'ee inesth\'etique
 parce que l'espace blanc \'eventuel provoqu\'e par une derni\`ere ligne courte
 la rend m\'eprisable.
-Augmenter la valeur de ce param\`etre a le effet de d\'ecourager
+Augmenter la valeur de ce param\`etre d\'ecourage
 \TeX\ de finir l'avant derni\`ere ligne avec une c\'esure.
 Les d\'em\'erites sont en unit\'es de \minref{m\'ediocrit\'e} au carr\'e, donc
 vous devez assigner une valeur plut\^ot large \`a ce param\`etre (dans les
 milliers) pour qu'elle ait un quelconque effet.
-\PlainTeX\ mets |\finalhyphendemerits| \`a $5000$.
+\PlainTeX\ met |\finalhyphendemerits| \`a $5000$.
 }
 \eix^^{c\'esure//p\'enalit\'es pour}
 \enddesc
@@ -1804,7 +1804,7 @@ milliers) pour qu'elle ait un quelconque effet.
 ^^{op\'erateurs}
 Ce param\`etre sp\'ecifie la p\'enalit\'e d'une coupure d'une formule math\'e\-ma\-tique
 apr\`es un op\'erateur binaire quand la formule appara\^\i t dans un paragraphe.
-\PlainTeX\ mets |\binoppenalty| \`a $700$.
+\PlainTeX\ met |\binoppenalty| \`a $700$.
 \enddesc
 
 \begindesc
@@ -1813,7 +1813,7 @@ apr\`es un op\'erateur binaire quand la formule appara\^\i t dans un paragraphe.
 ^^{relations}
 Ce param\`etre sp\'ecifie la p\'enalit\'e pour une coupure d'une formule math\'e\-ma\-tique
 apr\`es une relation quand la formule appara\^\i t dans un paragraphe.
-\PlainTeX\ mets |\rel!-penal!-ty| \`a~$500$.
+\PlainTeX\ met |\rel!-penal!-ty| \`a~$500$.
 
 \eix^^{coupures de ligne//param\`etres affectant les}
 \enddesc
@@ -1859,7 +1859,7 @@ un endroit o\`u \TeX\ peut couper une ligne.
 Elle dit aussi \`a \TeX\ quel texte mettre de chaque cot\'e de la coupure.
 \ulist
 \li Si \TeX\ ne doit pas couper l\`a, il utilise le \<no-break text>.
-\li Si \TeX\ doit couper l\`a, il mets le \<pre-break text> just avant
+\li Si \TeX\ doit couper l\`a, il met le \<pre-break text> juste avant
 la coupure et le \<post-break text> juste apr\`es la coupure.
 \endulist
 \noindent
@@ -1867,8 +1867,8 @@ Comme avec |\-|,
 \TeX\ n'est pas oblig\'e de couper une ligne sur une coupure optionnelle.
 En fait, |\-| est normalement \'equivalent \`a |\discretionary!allowbreak{-}{}{}|.
 
-Parfois, \TeX\ ins\`ere des coupure optionnelle de lui-m\^eme.
-Par exemple, il ins\`ere |\discretionary!allowbreak{}{}{}| apr\`es
+Parfois, \TeX\ ins\`ere des coupures optionnelles de lui-m\^eme.
+Par ex\-emple, il ins\`ere |\discretionary!allowbreak{}{}{}| apr\`es
 une c\'esure explicite ou un tiret.
 
 {\hyphenchar\tentt=-1 % needed to avoid weirdnesses
@@ -1896,15 +1896,15 @@ German ``fli\discretionary{k-}{k}{ck}en''
 Chaque entr\'ee du dictionnaire indique comment un mot particulier doit
 \^etre coup\'e.  
 La commande |\hyphenation| ajoute des mots au dictionnaire.
-Son argument est un suite de mots s\'epar\'ee par des blancs. 
-Les lettres majuscules et minuscules sont \'equivalent.
-Les c\'esures dans chaque mot indique les endroits
+Son argument est une suite de mots s\'epar\'ee par des blancs. 
+Les lettres majuscules et minuscules sont \'equivalentes.
+Les c\'esures dans chaque mot indiquent les endroits
 o\`u \TeX\ peut couper ce mot.
 Un mot sans c\'esure ne sera jamais coup\'e.
 Dans tous les cas, vous pouvez outrepasser le dictionnaire de c\'esure en
 utilisant |\-| pour une occurrence particuli\`ere d'un mot.
 Vous devez produire toutes les formes grammaticales d'un mot
-que vous voulez que \TeX\ coup, c'est-\`a-dire, le singulier et le pluriel.
+que vous voulez que \TeX\ coupe, c'est-\`a-dire, le singulier et le pluriel.
 
 \example
 \hyphenation{Gry-phon my-co-phagy}
@@ -1917,11 +1917,11 @@ que vous voulez que \TeX\ coup, c'est-\`a-dire, le singulier et le pluriel.
 \cts uchyph {\param{nombre}}
 \explain
 Une valeur positive de |\uchyph| (c\'esure majuscule)
-permet d\'ecouper des mots, comme des noms propre,
-qui commence par une lettre capital.
+permet d\'ecouper des mots, comme des noms propres,
+qui commencent par une lettre capitale.
 Une valeur \`a z\'ero ou n\'egative
-inhibe de telle coupure.  \PlainTeX\ mets |\uchyph| \`a $1$,
-donc \TeX\  essaye normalement de couper les mots qui commence par une lettre capital.
+inhibe de telle coupure.  \PlainTeX\ met |\uchyph| \`a $1$,
+donc \TeX\  essaye normalement de couper les mots qui commencent par une lettre capital.
 \enddesc
 
 \begindesc
@@ -1930,8 +1930,8 @@ donc \TeX\  essaye normalement de couper les mots qui commence par une lettre ca
 \explain
 Cette commande n'est habituellement pas utilis\'ee dans des documents, 
 mais vous pouvez l'utiliser sur votre terminal pour voir comment \TeX\ 
-couperait certain jeu de mots al\'eatoires.
-Les mots, avec les coupures visibles, apparaissent dans la log et sur
+couperait certains jeux de mots al\'eatoires.
+Les mots, avec les coupures visibles, apparaissent dans le log et sur
 votre terminal.  Vous obtiendrez une plainte \`a propos d'une ``underfull 
 hbox''---ignorez la.
 \example
@@ -1947,19 +1947,19 @@ Underfull \hbox (badness 10000) detected at line 0
 \begindesc
 \cts language {\param{number}}
 \explain
-Des langages diff\'erents ont diff\'erent jeux de r\`egles de c\'esure.
+Des langages diff\'erents ont diff\'erents jeux de r\`egles de c\'esure.
 Ce para\-m\`etre d\'etermine le jeu de ^{r\`egles de c\'esure} que \TeX\ utilise.
 En changeant |\language| vous pouvez obtenir que \TeX\
 coupe des portions de texte ou des documents entiers en accord avec les 
-r\`egles de c\'esure appropri\'ee \`a un langage particulier.
+r\`egles de c\'esure appropri\'ees \`a un langage particulier.
 ^^{langues europ\'eennes}
 Votre ^{support local} sur \TeX\ vous dira si des
 jeux additionnels de r\`egles de c\'esure sont accessibles (derri\`ere celui
 pour l'anglais)
-et quel sont les valeurs appropri\'ees de |\language|.
+et quelles sont les valeurs appropri\'ees de |\language|.
 La valeur par d\'efaut de |\language| est $0$.
 
-\TeX\ mets le langage courant \`a $0$ au d\'ebut de tous les paragraphes,
+\TeX\ met le langage courant \`a $0$ au d\'ebut de tous les paragraphes,
 et compare |\language| au langage courant \`a chaque fois qu'il ajoute
 un caract\`ere au paragraphe courant.
 Si ce n'est pas le m\^eme, \TeX\ ajoute un ^{\elementextra} indiquant 
@@ -1971,7 +1971,7 @@ peuvent changer.
 \begindesc
 \cts setlanguage {\<nombre>}
 \explain
-Cette commande mets le langage courant \`a \<nombre>
+Cette commande met le langage courant \`a \<nombre>
 en ins\'erant le m\^eme \'el\'ement extraordinaire que vous obtiendrez en changeant 
 ^|\language|.
 En outre, elle ne change pas la valeur de |\language|.
@@ -1992,13 +1992,13 @@ ce sont les valeurs recommand\'ees pour l'anglais.
 \cts hyphenchar {\<police>\param{nombre}}
 \explain
 \TeX\ n'utilise pas n\'ecessairement le caract\`ere `-' aux points de c\'esure.
-\`a la place, il utilise le |\hyphenchar| de la police courante, qui est 
+A la place, il utilise le |\hyphenchar| de la police courante, qui est 
 habituellement `-' mais pas n\'ecessairement. Si une police a une valeur
  |\hyphenchar| n\'egative,
 \TeX\ ne coupe pas de mots dans cette police.
 
 Notez que \<police> est une s\'equence de contr\^ole
-qui nommes une police, pas un \<nom de police> qui nommes des fichiers de
+qui nomme une police, pas un \<nom de police> qui nomme des fichiers de
 police.
 Attention~: 
 un assignement \`a |\hyphenchar| n'est \emph{pas} r\'einitialis\'e \`a la fin
@@ -2021,13 +2021,13 @@ sauvegarder et restaurer sa valeur originale explicitement.
 Quand \TeX\ lit le fichier de m\'etriques
 ^^{fichiers de m\'etriques//tiret de c\'esure par d\'efaut dans}
 pour une police en r\'eponse \`a une commande
-^|\font|, il mets le ^|\hyphenchar| de la police dans
+^|\font|, il met le ^|\hyphenchar| de la police dans
 |\default!-hyphen!-char|.
 Si la valeur de |\default!-hyphen!-char| n'est
 pas dans la fourchette $0$--$255$ quand vous chargez une police,
 \TeX\ ne coupera aucun mot dans cette police \`a moins que vous
 outrepassiez la d\'ecision en mettant le |\hyphenchar| de la police apr\`es.
-\PlainTeX\  mets |\default!-hyphen!-char| \`a $45$, le code \ascii\ 
+\PlainTeX\  met |\default!-hyphen!-char| \`a $45$, le code \ascii\ 
 pour `|-|'.
 \example
 \defaulthyphenchar = `-
@@ -2055,7 +2055,7 @@ pour `|-|'.
 Vous pouvez utiliser cette commande pour d\'ebuter une subdivision majeure de votre document.
 \<argument> est pr\'evu pour servir de titre de section.
 |\beginsection| amplifie \<argument>
-par de l'espace vertical suppl\'ementaire et le mets en
+par de l'espace vertical suppl\'ementaire et le met en
 police grasse, justifi\'e \`a gauche.
 Vous pouvez produire le |\par| qui termine \<argument> avec une ligne blanche.
 \let\message = \gobble % Don't bother to tell us about Pig and Pepper.
@@ -2082,7 +2082,7 @@ For a minute or two she stood looking at the house $\ldots$
 \cts itemitem {\<argument>}
 \explain
 ^^{listes d'\'el\'ements}
-Cette commandes est utile pour cr\'eer des ^{listes d'\'el\'ements}.  Tout le paragraphe
+Cette commande est utile pour cr\'eer des ^{listes d'\'el\'ements}.  Tout le paragraphe
 suivant \<argument> est indent\'e de |\parindent|
 ^^|\parindent//indentation pour listes d'\'el\'ements|
 (pour |\item|) ou par |2\parindent| (pour |\itemitem|).
@@ -2126,10 +2126,10 @@ but with the yolks removed.
 ^^{lemmes}
 ^^{hypoth\`eses}
 Cette commande ``proclame'' un th\'eor\`eme, un lemme, une hypoth\`ese, etc.
-Elle mets \<argument> en police grasse et le paragraphe suivant en
-italiques.  \<arg\-u\-ment> doit \^etre suivi par un point et un token espace,
+Elle met \<argument> en police grasse et le paragraphe suivant en
+italique.  \<arg\-u\-ment> doit \^etre suivi par un point et un token espace,
 qui servent \`a s\'eparer \<argument> du \<texte g\'en\'eral>.
-\<texte g\'en\'eral> est constitu\'e du texte jusqu'au fronti\`eres du paragraphe suivant,
+\<texte g\'en\'eral> est constitu\'e du texte jusqu'\`a la fronti\`ere du paragraphe suivant,
 sauf que vous pouvez inclure des paragraphes multiples en les mettant
 entre accolades et terminer un paragraphe apr\`es l'accolade droite fermante.
 \example

@@ -29,16 +29,16 @@ voir \headcit{Descriptions des commandes}{cmddesc}.
 \bix^^|\lineskip|
 \bix^^|\lineskiplimit|
 Ces trois param\`etres d\'eterminent ensemble combien d'espace \TeX\ laisse entre
-des \minref{bo\^\i te}s cons\'ecutive d'une \minref{liste verticale} ordinaire,
+des \minref{bo\^\i te}s cons\'ecutives d'une \minref{liste verticale} ordinaire,
 c'est-\`a-dire, les lignes d'un paragraphe.  
 Cet espace est appel\'e ``\minref{ressort inter-ligne}''.
 Il est aussi ins\'er\'e entre les bo\^\i tes composant une vbox construite en
 mode vertical interne.
 ^^{vbox//ressort inter-ligne pour}
 
-Danq le cas courant, quand les bo\^\i tes ne sont pas anormalement hautes ou profonde, \TeX\
+Dans le cas courant, quand les bo\^\i tes ne sont pas anormalement hautes ou profondes, \TeX\
 rend la distance de la ligne de base d'une bo\^\i te \`a la ligne de base de la
-suivante \'egal \`a |\baselineskip|.  Il fait cela en ins\'erant un ressort inter-ligne
+suivante \'egale \`a |\baselineskip|.  Il fait cela en ins\'erant un ressort inter-ligne
 \'egal \`a |\baselineskip| moins la profondeur de la bo\^\i te sup\'erieure (ainsi donn\'e
 par ^|\prevdepth|) et la hauteur de la bo\^\i te du dessous.  Mais si ce ressort
 inter-ligne doit \^etre inf\'erieur \`a |\lineskiplimit|, indiquant que les deux
@@ -47,13 +47,13 @@ place.\footnote
 {\TeX\ d\'ebute normalement le d\'ebut d'une liste verticale en mettant
 |\prevdepth| \`a $-1000$\pt\ et en testant
 |\prevdepth| avant \emph{toutes} les bo\^\i tes.  Si |\prevdepth|$\>\le-1000$\pt\
-il ne doit ins\'erer aucun ressort inter-ligne.} Voir les \knuth{pages~79--80}{99--99} pour une
+il ne doit ins\'erer aucun ressort inter-ligne.} Voir les \knuth{pages~79--80}{93} pour une
 description pr\'ecise.
 
 Notez que |\baselineskip| et |\lineskip| mesurent des \emph{choses diff\'e\-rentes}~: 
 La distance entre des lignes de base d'un cot\'e et la distance
 entre le bas d'une bo\^\i te et le haut de la bo\^\i te suivante d'un autre
-cot\'e.  Voir la \knuth{page~78}{99} pour d'autres d\'etails.  Le premier exemple ci-dessous
+cot\'e.  Voir la \knuth{page~78}{91--92} pour d'autres d\'etails.  Le premier exemple ci-dessous
 montre les effets de |\lineskiplimit|.
 
 Vous pouvez obtenir l'effet d'un ^{double espacement} en doublant la valeur
@@ -99,7 +99,7 @@ we'd only get extra space above the line.)
 \cts prevdepth {\param{dimension}}
 \explain
 Quand \TeX\ ajoute une bo\^\i te \`a une liste verticale, il r\`egle |\prevdepth| \`a la
-largeur de cette bo\^\i te. \TeX\ met |\prevdepth| \`a $-10000$\pt\ au d\'ebut d'une
+hauteur de cette bo\^\i te. \TeX\ met |\prevdepth| \`a $-10000$\pt\ au d\'ebut d'une
 liste verticale, indiquant que le ressort inter-ligne normal doit \^etre supprim\'e.
 \enddesc
 
@@ -109,11 +109,11 @@ liste verticale, indiquant que le ressort inter-ligne normal doit \^etre supprim
 \cts normallineskip {\param{ressort}}
 \cts normalbaselines {}
 \explain
-Ces trois param\`etres contienne des valeurs pour |\base!-line!-skip|,
-|\line!-skip| et |\line!-skip!-limit| respectivement.
+Ces trois param\`etres contiennent des valeurs pour |\base!-line!-skip|,
+|\li!-neskip| et |\line!-skip!-limit| respectivement.
 ^^|\baselineskip| ^^|\lineskip| ^^|\lineskiplimit|
-La commande |\normalbase!-lines| mets |\base!-line!-skip|,
-|\line!-skip| et |\line!-skip!-limit| aux valeurs contenues dans les
+La commande |\normal!-base!-lines| met |\base!-line!-skip|,
+|\line!-skip| et |\line!-skip!-limit| aux va\-leurs contenues dans les
 trois param\`etres.
 \enddesc
 
@@ -121,7 +121,7 @@ trois param\`etres.
 \cts offinterlineskip {}
 \explain
 Cette commande demande \`a \TeX\ d'arr\^eter d'ins\'erer des ressorts inter-ligne \`a partir
-de maintenant.  \`a moins que vous vouliez qu'il soit effectif pour le reste du document
+de maintenant.  \`A moins que vous vouliez qu'il soit effectif pour le reste du document
 (ce que vous ne voulez probablement pas), vous devez l'englober dans un groupe
 avec le texte que vous voulez qu'il affecte.
 Son principal usage est de vous laisser faire l'espacement inter-ligne vous-m\^eme,
@@ -168,18 +168,18 @@ vous construisez un \minref{alignement} horizontal.
 \explain
 Cette commande demande \`a \TeX\ de ne pas ins\'erer de ressort inter-ligne devant la
 prochaine ligne.
-Elle n'a aucun effet sur les lignes suivante.
+Elle n'a aucun effet sur les lignes suivantes.
 \enddesc
 
 \begindesc
 \cts openup {\<dimension>}
 \explain
 Cette commande augmente ^|\baselineskip| de \<dimension>.
-Une commande |\openup| avent la fin d'un paragraphe affecte
+Une commande |\openup| avant la fin d'un paragraphe affecte
 tout le paragraphe, donc vous ne devez pas utiliser |\openup| pour
 changer |\baseline!-skip| dans un paragraphe.  |\openup| est
-plus utile pour composer des tables et des affichages math\'ematique---un
-petit espace suppl\'ementaire entre des rang\'es les rend souvent plus lisibles.
+plus utile pour composer des tables et des affichages math\'ematiques---un
+petit espace suppl\'ementaire entre des rang\'ees les rend souvent plus lisibles.
 ^^{alignements//espace entre rang\'ees d'}
 \example
 Alice picked up the White King very gently, and lifted him 
@@ -264,9 +264,9 @@ c'est un bon endroit pour couper la page.
 \cts medbreak {}
 \cts bigbreak {}
 \explain
-Ces commandes indique des endroits de plus en plus d\'esirable pour \TeX\ de
+Ces commandes indiquent des endroits de plus en plus d\'esirables pour \TeX\ de
 couper une page.  Elles demande aussi \`a \TeX\ 
-d'ins\'erer un ^|\smallskip|, ^|\medskip| ou
+d'ins\'erer respectivement un ^|\smallskip|, ^|\medskip| ou
 ^|\bigskip| (\xref \smallskip) si la coupure de page ne se produit pas l\`a.  
 \TeX\ supprime ce saut s'il se produit juste apr\`es un saut \'egal ou plus grand.
 \enddesc
@@ -275,7 +275,7 @@ d'ins\'erer un ^|\smallskip|, ^|\medskip| ou
 \easy\cts eject {}
 \cts supereject {}
 \explain
-Ces commandes force une coupure de page \`a la position courante
+Ces commandes forcent une coupure de page \`a la position courante
 et terminent le paragraphe courant.
 Si vous ne les pr\'ec\'edez pas de |\vfil| (\xref \vfil),
 ^^|\vfil//n\'ecessaire avec {\tt\\eject}|
@@ -286,7 +286,7 @@ enclenche la routine de sortie de \plainTeX\ pour
 faire sortir toutes insertions en surplus,
 ^^{insertions//forc\'es par \b\tt\\supereject\e}
 telles que de longues notes de pied de page,
-ainsi elle sont produites avant que tout autre entr\'ee soit ex\'ecut\'ee. 
+ainsi elle sont produites avant que toute autre entr\'ee soit ex\'ecut\'ee. 
 Donc |\supereject| est un bonne commande \`a utiliser \`a la fin de chaque
 chapitre ou autre division majeure de votre document.
 \enddesc
@@ -310,11 +310,11 @@ Voir \xrefpg{filbreak} pour plus de conseil sur ce sujet.
 \cts normalbottom {}
 \explain
 Normalement \TeX\ essaye fortement de s'assurer que toutes les pages 
-ait la m\^eme profondeur, c'est-\`a-dire, que leurs marges du bas soient \'egales.
+aient la m\^eme profondeur, c'est-\`a-dire, que leurs marges du bas soient \'egales.
 La commande |\raggedbottom| demande \`a \TeX\ d'autoriser
 quelques variations parmi les marges du bas sur diff\'erentes pages.
 Il est souvent appropri\'e d'utiliser |\raggedbottom| quand vous avez du mat\'eriel 
-qui contient de large blocs de mat\'eriel qui ne doit pas \^etre s\'epar\'e sur deux pages.
+qui contient de larges blocs de mat\'eriel qui ne doivent pas \^etre s\'epar\'es sur deux pages.
 La commande |\normalbottom| efface l'effet de |\raggedbottom|.
 
 \eix^^{coupures de page//encourager ou d\'ecourager}
@@ -330,7 +330,7 @@ La commande |\normalbottom| efface l'effet de |\raggedbottom|.
 Ce param\`etre sp\'ecifie la \minref{p\'enalit\'e} pour une
 coupure de page entre les lignes d'un paragraphe.
 En le mettant \`a $10000$ vous pouvez forcer toutes les coupures de page \`a se faire
-entre les paragraphes, en esp\'erant que les pages ait assez d'\'etirement pour
+entre les paragraphes, en esp\'erant que les pages aient assez d'\'etirement pour
 que \TeX\ puisse les composer d\'ecemment.
 \PlainTeX\ laisse |\inter!-linepenalty| \`a~$0$.
 \enddesc
@@ -360,7 +360,7 @@ Une ligne seule en haut d'une page est appel\'ee une ``ligne veuve''.
 \explain
 ^^{ligne veuve}^^{math\'ematiques affich\'ees}
 Ce param\`etre sp\'ecifie la \minref{p\'enalit\'e} pour une 
-coupure de page juste avant la derni\`ere ligne d'une paragraphe partiel
+coupure de page juste avant la derni\`ere ligne d'un paragraphe partiel
 qui pr\'ec\`ede imm\'ediatement un affichage math\'ematique.
 \PlainTeX\ met |\displaywidowpenalty| \`a $50$.
 
@@ -405,27 +405,27 @@ Ce param\`etre contient la somme de certaines p\'enalit\'es \minrefs{p\'enalit\'
 que \TeX\ accumule quand il place des insertions sur la page courante.
 Ces p\'enalit\'es encourent une plainte quand \TeX\ ex\'ecute une commande 
 |\insert|
-et d\'ecouvre qu'un insertion pr\'ec\'edente du m\^eme type sur cette page a
+et d\'ecouvre qu'une insertion pr\'ec\'edente du m\^eme type sur cette page a
 \'et\'e s\'epar\'ee, laissant une partie pour les page suivantes.
-Voir les \knuth{pages~123--125}{999--999} pour les d\'etails de ce
+Voir les \knuth{pages~123--125}{143--146} pour les d\'etails de ce
 calcul.
 
 \margin{Material moved from a footnote to the main text.}
 |\insertpenalties| a une signification enti\`erement diff\'erente pendant une
 ^^{routine de sortie//signification de \b\tt\\insertpenalties\e\ dans la}
-routine de sortie---c'est le nombre d'insertions qui ont \'et\'e vu
-mais qui ne tiennent pas sur la page courante (voir la \knuth{page~125}{999}).
+routine de sortie---c'est le nombre d'insertions qui ont \'et\'e vues
+mais qui ne tiennent pas sur la page courante (voir la \knuth{page~125}{146}).
 \enddesc
 
 \begindesc
 \cts floatingpenalty {\param{nombre}}
 \explain
-Ce param\`etre sp\'ecifies la \minref{p\'enalit\`e} que
+Ce param\`etre sp\'ecifie la \minref{p\'enalit\'e} que
 \TeX\ ajoute \`a |\insertpenalties|
 ^^|\insertpenalties|
 quand le constructeur de page  ajoute une insertion \`a la page courante
 et d\'ecouvre qu'une insertion pr\'ec\'edente du m\^eme type sur cette page a
-\'et\'e coup\'e, en laissant une partie d'elle pour des pages suivantes.
+\'et\'e coup\'ee, en laissant une partie d'elle pour des pages suivantes.
 \PlainTeX\ laisse |\floatingpenalty| \`a~$0$.
 \eix^^{insertions//p\'enalit\'es pour}
 \eix^^{mat\'eriel flottant}
@@ -436,7 +436,7 @@ et d\'ecouvre qu'une insertion pr\'ec\'edente du m\^eme type sur cette page a
 \cts pagegoal {\param{dimension}}
 \explain
 Ce param\`etre sp\'ecifie la hauteur d\'esir\'ee pour la page courante.
-\TeX\  mets
+\TeX\  met
 |\pagegoal| \`a la valeur courante de |\vsize|
 quand il met en premier une bo\^\i te ou une insertion sur la page courante.
 Vous pouvez raccourcir une page tant que \TeX\ travaille sur elle en
@@ -480,14 +480,14 @@ dans les \minref{ressort} accumul\'es sur la page courante.
 \cts pagefillstretch {\param{dimension}}
 \cts pagefilllstretch {\param{dimension}}
 \explain
-Ces quatre param\`etres sp\'ecifie ensemble le montant d'\minref{\'etirement}
-dans les \minref{ressort} de la page courante.  Le montant d'\'etirement a
+Ces quatre param\`etres sp\'ecifient ensemble le montant d'\minref{\'etirement}
+dans les \minref{ressort}s de la page courante.  Le montant d'\'etirement a
 la forme
 {\def\f#1{\hbox{\tt fi#1}}%
 $n_0 + n_1\f{l} + n_2\f{ll} + n_3\f{lll}$}, avec les quatre param\`etres
 donnant les valeurs des quatre $n_i$.
 \TeX\ met \`a jour ces param\`etres quand il ajoute des
-\'el\'ements \`a la \minref{liste vertical} principale.
+\'el\'ements \`a la \minref{liste verticale} principale.
 
 \eix^^{coupures de page//param\`etres de}
 \eix^^{coupures de page}
@@ -520,7 +520,7 @@ vous en \^etes au milieu, vous pouvez assigner la nouvelle hauteur
 \`a ^|\pagegoal| (\xref \pagegoal) \`a la place.  (Si vous
 voulez que le changement affecte aussi les pages suivantes, vous devez
 changer \emph{ensemble} |\vsize| et |\pagegoal|.)
-\PlainTeX\ mets |\vsize| \`a |8.9in|.
+\PlainTeX\ met |\vsize| \`a |8.9in|.
 \eix^^{dimensions de page}
 \enddesc
 
@@ -532,12 +532,12 @@ changer \emph{ensemble} |\vsize| et |\pagegoal|.)
 \idxsee{origine}{origine de la page}
 \explain
 \TeX\ prend normalement l'``origine'' d'une page, qui est le point o\`u
-il d\'ebut l'impression, comme \'etant \`a un pouce sous le haut de la page et \`a un 
+il d\'ebute l'impression, comme \'etant \`a un pouce sous le haut de la page et \`a un 
 pouce \`a droite du bord gauche de la page.\footnote{
 \TeX\ lui-m\^eme est indiff\'erent d'o\`u est l'origine de la page,
 mais cette information doit \^etre inscrite pour les drivers du syst\`eme
 ^^{drivers de p\'eriph\'erique//origine de la page connu des}
-qui convertissent les \dvifile en forme imprimable, ainsi ces diff\'erents syst\`emes
+qui convertissent les \dvifile\ en forme imprimable, ainsi ces diff\'erents syst\`emes
 donneront les m\^eme r\'esultats.}
 Les valeurs de |\hoffset| et
 |\voffset| donnent l'offset horizontal et vertical de l'origine actuelle
@@ -572,11 +572,11 @@ n'a ni \'etirement ni r\'etr\'ecissement et que le premier \'el\'ement sur la pa
 soit vraiment une bo\^\i te. Alors si la hauteur de cette bo\^\i te n'est pas plus 
 grande que |\topskip|, sa ligne de base sera \`a |\topskip| du haut de la page
 ind\'ependamment de sa hauteur.  D'un autre cot\'e,
-si la hauteur de la bo\^\i te est $e$, plus grand que |\topskip|, sa ligne de base 
+si la hauteur de la bo\^\i te est $e$, plus grande que |\topskip|, sa ligne de base 
 sera \`a |\topskip|\tplus$e$ du haut de la page.
-Voir les \knuth{pages~113--114}{999--999} pour les autres d\'etails  sur le
+Voir les \knuth{pages~113--114}{132} pour les autres d\'etails  sur le
 fonctionnement de |\topskip|.
-\PlainTeX\ mets |\topskip| \`a |10pt|.
+\PlainTeX\ met |\topskip| \`a |10pt|.
 \enddesc
 
 
@@ -588,7 +588,7 @@ ressort vertical que \TeX\ ins\`ere au d\'ebut d'un paragraphe.
 ^^{paragraphes//ressort entre}
 Voir |\par| (\xref{\@par}) pour plus d'information sur ce qui se passe
 quand \TeX\ d\'ebute un paragraphe.
-\PlainTeX\ mets |\parskip| \`a |0pt plus 0.1pt|.
+\PlainTeX\ met |\parskip| \`a |0pt plus 0.1pt|.
 \enddesc
 
 \begindesc
@@ -599,9 +599,9 @@ d'une page.  Il est reli\'e \`a |\boxmaxdepth| (\xref \boxmaxdepth).  Si la
 profondeur de la bo\^\i te du bas d'une page d\'epasse |\maxdepth|, \TeX\ 
 descend le point de r\'ef\'erence de la bo\^\i te pour qu'il soit \`a
 |\maxdepth| du bas de cette bo\^\i te.
-Sans cette ajustement, la bo\^\i te du bas d'une 
+Sans cet ajustement, la bo\^\i te du bas d'une 
 page pourrait bien s'\'etendre dans la marge du bas ou m\^eme recouvrir
-la page enti\`erement.  \PlainTeX\ mets |\maxdepth| \`a |4pt|.
+la page enti\`erement.  \PlainTeX\ met |\maxdepth| \`a |4pt|.
 \enddesc
 
 %==========================================================================
@@ -750,9 +750,9 @@ construction ``interne'' comme une formule math\'ematique ou une \minref{bo\^\i 
 que vous avez construit avec une commande |\hbox|, |\vbox| ou |\vtop|, parce
 que \TeX\ ne verra pas la marque quand il construira la bo\^\i te principale 
 de la page.  Mais si vous utilisez |\mark| en \minref{mode} horizontal ordinaire
-ou directement dans une hbox qu fait partie de la liste vertical principale,
-la marque migrera vers la \minref{liste vertical} principale.
-Voir les \knuth{pages~259--260}{999-999} pour des exemples montrant comment |\mark| 
+ou directement dans une hbox qui fait partie de la liste verticale principale,
+la marque migrera vers la \minref{liste verticale} principale.
+Voir les \knuth{pages~259--260}{304--305} pour des exemples montrant comment |\mark| 
 peut \^etre utilis\'e.
 \enddesc
 
@@ -764,7 +764,7 @@ peut \^etre utilis\'e.
 Ces commandes d\'eveloppent le texte de la marque dans un \'el\'ement g\'en\'er\'e par une
 pr\'ec\'edente commande ^|\mark|. 
 Le texte de la marque a la forme d'une liste de token.
-\TeX\ mets les valeurs de ces commandes quand il
+\TeX\ met la valeur de ces commandes quand il
 termine le placement du contenu d'une page dans ^|\box255|, 
 juste avant d'appeler la \minref{routine de sortie}
 comme une partie de son action de \minref{coupure de page}.  \TeX\ d\'etermine
@@ -782,7 +782,7 @@ Il est vide si aucune page ne pr\'ec\`ede la page.
 \noindent
 Si une page n'a aucune marque sur elle, \TeX\ mettra |\firstmark| et |\botmark| 
 avec la m\^eme marque que |\topmark|, c'est-\`a-dire, la plus r\'ecente marque pr\'ec\'edente.
-La table en bas de la \knuth{page~258}{999} illustre la relation entre
+La table en bas de la \knuth{page~258}{303} illustre la relation entre
 |\firstmark|, |\botmark| et |\topmark|.
 \enddesc
 
@@ -796,7 +796,7 @@ Ces commandes d\'eveloppent le ^{texte de marque} g\'en\'er\'e par une commande
 Le texte de marque a la forme d'une liste de token.
 Quand \TeX\ 
 s\'epare $V$ en r\'eponse \`a une commande ^|\vsplit| (\xref \vsplit),
-il mets les valeurs de ces commandes comme suit~:
+il met les valeurs de ces commandes comme suit~:
 \ulist\compact
 \li |\splitfirstmark| contient les tokens de la premi\`ere marque dans 
 la liste d'\'el\'ement de $V$.
@@ -823,18 +823,18 @@ pour la note de pied de page et \<argument$_2$> est son texte.
 Le texte peut faire plusieurs paragraphes de long si n\'ecessaire et peut contenir
 des constructions comme des affichages math\'ematiques, mais ne peut contenir 
 aucune 
-\minref{insertion}s (comme d'autres notes de pied de page).
+\minref{insertion} (comme d'autres notes de pied de page).
 
 Vous ne pouvez pas utiliser ces commandes \`a l'int\'erieur d'une sous-formule d'une 
 formule math\'ematique,
 dans une bo\^\i te \`a l'int\'erieur d'une bo\^\i te contribuant \`a une page
 ou dans une insertion de toute sorte. 
-Si vous n'\^etes pas sur de la mani\`ere dont ces restrictions s'applique, il 
+Si vous n'\^etes pas s\^ur de la mani\`ere dont ces restrictions s'appliquent, il 
 peut \^etre sage de n'utiliser
 |\footnote| et |\vfootnote| que directement dans un paragraphe ou
 entre des paragraphes.
 
-Ces restrictions ne sont pas aussi s\'ev\`ere qu'elles ne le semblent parce que 
+Ces restrictions ne sont pas aussi s\'ev\`eres qu'elles ne le semblent parce que 
 vous pouvez utiliser
 |\vfootnote| pour mettre en note de pied de page la plupart des choses.
 |\foot!-note| et |\vfoot!-note| ins\`erent tous les deux des marques de r\'ef\'erence 
@@ -847,7 +847,7 @@ et placer le |\vfootnote| dans le paragraphe suivant.
 Si vous trouvez que la note de bas de page atterrit sur
 la page suivant celle o\`u elle devrait, d\'eplacez le |\vfootnote| 
 vers le paragraphe pr\'ec\'edent.
-Il y a de rare circonstances o\`u vous devez alt\'erer
+Il y a de rares circonstances o\`u vous devez alt\'erer
 le texte de votre document pour qu'une note de bas de page apparaisse sur
 la m\^eme page que sa marque de r\'ef\'erence.
 \example
@@ -896,7 +896,7 @@ d\'eplacera le mat\'eriel vers le prochain haut de page possible.
 \li |\midinsert| essaye de mettre le mat\'eriel \`a la position courante.
 S'il ne peut pas s'y ajuster, |\midinsert|
 d\'eplacera le mat\'eriel vers le prochain haut de page possible.
-\li |\pageinsert| mets le mat\'eriel lui-m\^eme sur la page suivante.
+\li |\pageinsert| met le mat\'eriel lui-m\^eme sur la page suivante.
 Pour \'eviter une page pas assez pleine, assurez vous de terminer le mat\'eriel ins\'er\'e avec
 |\vfil| ou remplissez l'espace excessif d'une autre mani\`ere.
 % Knuth doesn't say this, but I tried an experiment that verified it.
@@ -906,11 +906,11 @@ Pour \'eviter une page pas assez pleine, assurez vous de terminer le mat\'eriel 
 Le \<mat\'eriel en mode vertical>
 est dit \^etre ``flottant'' ^^{mat\'eriel flottant} parce que \TeX\
 peut le d\'eplacer d'une place \`a une autre.
-Des insertions sont tr\`es pratique pour du mat\'eriel tel que des figures et des
+Des insertions sont tr\`es pratiques pour du mat\'eriel tel que des figures et des
 tables parce que vous pouvez positionner ce mat\'eriel o\`u vous voulez sans
 savoir o\`u les coupures de page tomberont.
 
-Chacune de ces commandes terminent implicitement le paragraphe courant, donc 
+Chacune de ces commandes termine implicitement le paragraphe cou\-rant, donc 
 vous ne devez les utiliser qu'entre des paragraphes.
 Vous ne devez pas les utiliser dans une bo\^\i te ou dans d'autres insertions.  
 Si vous avez plusieurs insertions en comp\'etition pour
@@ -943,12 +943,12 @@ elle n'est presque jamais utilis\'ee en dehors d'un d\'efinition de \minref{macr
 Les d\'efinitions des commandes
 |\foot!-note|, |\vfoot!-note|,
 |\top!-insert|, |\mid!-insert| et |\page!-insert| sont 
-toutes construite autour d'|\insert|.
+toutes construites autour d'|\insert|.
 ^^|\topinsert|
 ^^|\midinsert| ^^|\pageinsert| ^^|\footnote| ^^|\vfootnote|
 
-Quand vous concevez des insertions pour un document, vous devez assigner un diff\'erent
-code entier\footnote
+Quand vous concevez des insertions pour un document, vous devez assigner un 
+code entier diff\'erent\footnote
 {\texbook{} utilise le terme ``classe'' pour un code.
 Nous pr\'ef\'erons un terme diff\'erent pour \'eviter toute confusion avec l'autre signification 
 de ``classe'' (\xref{classe}).}
@@ -966,7 +966,7 @@ vers la page de sortie.
 Chaque code d'insertion $n$ a quatre \minref{registre}s qui lui sont associ\'es~:
 \ulist
 \li |\box|$\,n$ est l'endroit o\`u \TeX\ accumule le mat\'eriel pour des insertions
-avec le code $n$.  Quand \TeX\ coupe une page, il mets dans |\box|$\,n$
+avec le code $n$.  Quand \TeX\ coupe une page, il met dans |\box|$\,n$
 autant de mat\'eriel d'insertion $n$ qu'il pourra sur la page.
 Notre routine de sortie devra alors d\'eplacer ce mat\'eriel vers la page actuelle.
 Vous pouvez utiliser ^|\ifvoid| \ctsref{\@ifvoid}
@@ -990,7 +990,7 @@ Par exemple, il justifiera l'espace sur la page au-dessus des notes de pied de p
 \TeX\ d\'eclare |\box|$\,n$ et vous devez d\'eclarer les trois autres registres
 pour que \TeX\ puisse calculer correctement l'espace vertical requis par 
 l'inser\-tion.
-Voir les \knuth{pages~122--125}{999--999} Pour d'autres d\'etails sur la fa\c con dont \TeX\ 
+Voir les \knuth{pages~122--125}{142--146} Pour d'autres d\'etails sur la fa\c con dont \TeX\ 
 ex\'ecute ces commandes et comment des insertions interagissent avec les coupures de page.
 \xrdef{endofinsert}
 \enddesc
@@ -1008,20 +1008,20 @@ ex\'ecute ces commandes et comment des insertions interagissent avec les coupure
 \explain
 Ce param\`etre contient la \minref{routine de sortie} courante, c'est-\`a-dire, 
 La liste de token que \TeX\ d\'eveloppe quand il trouve une coupure de page.
-\TeX\ mets la page dans la ^|\box255|, ainsi |\output| est responsable
+\TeX\ met la page dans la ^|\box255|, ainsi |\output| est responsable
 de faire quelque chose avec la |\box255|---soit la sortir, soit
 la mettre ailleurs.
 La routine de sortie est aussi responsable d'attacher des choses comme des
-ent\^ete ou des pieds de page.
+ent\^etes ou des pieds de page.
 \enddesc
 
 \begindesc
 \cts plainoutput {}
 \explain
-Cette command invoque la routine de sortie de \plainTeX.
+Cette commande invoque la routine de sortie de \plainTeX.
 ^^{routine de sortie//par d\'efaut dans \plainTeX}
 \PlainTeX\ d\'efinit ^|\output| comme
-une liste de token contenant le seule et unique token |\plainoutput|.
+une liste de token contenant le seul et unique token |\plainoutput|.
 \enddesc
 
 \begindesc
@@ -1041,7 +1041,7 @@ l'utiliser n'importe o\`u.
 Ce param\`etre contient le nombre de fois que \TeX\ a lanc\'e
 la \minref{routine de sortie} depuis la derni\`ere fois qu'il a fait un
 ^^|\shipout| |\ship!-out|.\footnote{
-Plus pr\'ecis\'ement, \TeX\ mets |\dead!-cyles| \`a $0$ \`a chaque fois qu'il ex\'ecute
+Plus pr\'ecis\'ement, \TeX\ met |\dead!-cyles| \`a $0$ \`a chaque fois qu'il ex\'ecute
 |\ship!-out|
 et l'incr\'emente de $1$ \`a chaque fois qu'il ex\'ecute |\output|.}
 Si |\deadcycles| devient trop grand, \TeX\ est probablement entr\'e dans une
@@ -1057,16 +1057,16 @@ Si la valeur de |\deadcycles| d\'epasse la valeur de |\maxdeadcycles|,
 \TeX\ se plaint alors et effectue sa propre et simple routine de sortie,
 \'equivalente \`a |\shipout!allowbreak\box255|, 
 Ce qui brisera vraisemblablement la boucle.
-\PlainTeX\ mets |\maxdeadcycles| \hbox{\`a $25$}.
+\PlainTeX\ met |\maxdeadcycles| \hbox{\`a $25$}.
 \enddesc
 
 \begindesc
 \cts outputpenalty {\param{nombre}}
 \explain
-\TeX\ mets ce param\`etre quand il coupe une page.  Si le point de coupure \'etait sur un
+\TeX\ met ce param\`etre quand il coupe une page.  Si le point de coupure \'etait sur un
 \'el\'ement de \minref{p\'enalit\'e}, \TeX\ enl\`eve l'\'el\'ement de p\'enalit\'e et
-mets |\outputpenalty| \`a la valeur de la p\'enalit\'e au point de coupure~; 
-autrement, il mets |\outputpenalty| \hbox{\`a $0$}.
+met |\outputpenalty| \`a la valeur de la p\'enalit\'e au point de coupure~; 
+autrement, il met |\outputpenalty| \hbox{\`a $0$}.
 
 Supposez que vous d\'efaites une coupure de page
 pour couper la page \`a un endroit diff\'erent que celui que \TeX\
@@ -1083,7 +1083,7 @@ Si ce param\`etre est plus grand que $0$ quand \TeX\
 ex\'ecute une coupure de page, \TeX\ s'abstiendra \`a ex\'ecuter des insertions.
 Mettre ce param\`etre \`a $1$
 peut \^etre utile quand vous \'ecrivez une routine de sortie
-que \`a besoin de refaire le contenu de la page, par exemple,
+qui \`a besoin de refaire le contenu de la page, par exemple,
 une routine de sortie qui utilise une valeur de |\vsize| (\xref \vsize) diff\'erente de
 celle utilis\'ee par le constructeur de page.
 
@@ -1099,11 +1099,11 @@ celle utilis\'ee par le constructeur de page.
 Cette commande fait que \TeX\ s\'epare la \minref{bo\^\i te} num\'ero
 \<number>, que nous appellerons $B_2$, en deux parties.
 Il utilise le m\^eme algorithme que celui qu'il utiliserait si $B_2$ \'etait une page
-et qu'il coupait cette page~;
-Le point de division alors correspond \`a la coupure de page qu'il trouverait.
+et qu'il coupait cette page.
+Le point de division correspond alors \`a la coupure de page qu'il trouverait.
 La bo\^\i te $B_2$ doit \^etre une vbox, pas une hbox.
 % we avoid starting the previous sentence with a symbol, a copyediting no-no.
-\TeX\ mets le mat\'eriel pr\'ec\'edant le point de  division dans
+\TeX\ met le mat\'eriel pr\'ec\'edant le point de  division dans
 un autre bo\^\i te $B_1$ et laisse le mat\'eriel apr\`es le point de division dans $B_2$.
 La commande |\vsplit| alors produit $B_1$.
 Normalement vous assignerez $B_1$ \`a un registre de bo\^\i te diff\'erent, 
@@ -1116,7 +1116,7 @@ $B_2$ sera vide apr\`es le |\vsplit|.
 pour la division.
 Il utilise \<dimension> pour ^|\pagegoal|, la hauteur d\'esir\'ee de $B_1$.
 L'extension verticale de $B_1$ peut ne pas \^etre  exactement \'egale \`a
-\<dimension> parce que \TeX\ peut ne pas \^etre capable de achever son but de page parfaitement.
+\<dimension> parce que \TeX\ peut ne pas \^etre capable d\'~ achever son but de page parfaitement.
 \TeX\ ne prend pas en compte les insertions dans le calcul de la division,
 donc des insertions dans la liste verticale originale de $B_2$ 
 seront maintenues mais n'affecteront pas le point de division.

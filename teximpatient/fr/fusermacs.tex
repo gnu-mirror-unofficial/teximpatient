@@ -10,9 +10,9 @@
 
 Cette section d\'ecrit |eplain.tex|, une collection de macros et autres 
 d\'efi\-nitions qui prolongent le plain \TeX. \bix^^|eplain.tex| Les 
-noms des divers macros expliquent leurs buts, mais habituellement 
+noms des diverses macros expliquent leurs buts, mais habituellement 
 n'expliquent pas comment elles fonctionnent, ou ne fournissent pas de 
-d\'etails explicites sur la fa\c con dont les employer. cette information 
+d\'etails explicites sur la fa\c con dont les employer. Cette information 
 est contenue dans les fichiers source de |eplain.tex| et dans la 
 documentation qui l'accompagne. Voir  \headcit{Ressources}{ressources} 
 pour la fa\c con d'obtenir |eplain.tex|. 
@@ -42,8 +42,7 @@ d\'efini\-tion dans un groupe et appeler quelques moyens
 suppl\'ementaires. 
 \ttidxref{^^M} 
 La macro \pix^|\letreturn| vous permet de d\'efinir `|^^M|' sans ce code 
-suppl\'emen\-taire (que vous le pouvez voir dans la d\'efinition ci-
-dessous).
+suppl\'emen\-taire que vous pouvez voir dans la d\'efinition ci-dessous.
 
 \csdisplay
 {\makeactive\^^M \long\gdef\letreturn#1{\let^^M = #1}}%
@@ -62,7 +61,7 @@ Ces macros consomment un, deux, ou trois arguments.
 Maintenant nous \'etablissons quelques conventions pour lire le reste du 
 fichier. Dans le fichier nous autorisons des s\'equences de contr\^ole 
 ``priv\'es'' qui contiennent `|@|' dans leurs noms. Ces s\'equences de 
-contr\^ole ne sont pas accessible de l'ext\'erieur de ce fichier (\`a moins 
+contr\^ole ne sont pas accessibles de l'ext\'erieur de ce fichier (\`a moins 
 que vous rechangez le code de cat\'egorie du `|@|'). 
 \xrdef{eplainconv}
 
@@ -73,8 +72,8 @@ que vous rechangez le code de cat\'egorie du `|@|').
 \newlinechar = `^^J
 |
 
-Les deux macros suivantes fournissent un formulation pratiques de 
-r\'esultat de diagnostique. \pix^|\loggingall| d\'eclenche tout le 
+Les deux macros suivantes fournissent une formulation pratique de 
+r\'esultat de diagnostic. \pix^|\loggingall| d\'eclenche tout le 
 tra\c cage, mais ne provoque le r\'esultat de la trace que dans le \logfile 
 et pas sur votre terminal. \pix^|\tracingboxes| montre compl\`etement 
 les bo\^\i tes quand elles sont trac\'ees. (\TeX\ ne montre normalement que 
@@ -93,7 +92,7 @@ trois niveaux de bo\^\i te et cinq items dans chaque bo\^\i te.)
 
 
 L'\'epaisseur par d\'efaut des traits est de $0.4$\pt. Vous pouvez produire des traits de n'importe quelle \'epaisseur par 
-d\'efaut que vous voulez en la red\'efinissant |\vruledefaultwidth|, |\hruledefaultheight| et |\hruledefaultdepth| et 
+d\'efaut que vous voulez en red\'efinissant |\vruledefaultwidth|, |\hruledefaultheight| et |\hruledefaultdepth| et 
 en employant 
 \pix^^|\ehrule|
 |\eh!-rule| et 
@@ -131,7 +130,7 @@ dans l'\oe sophage de \TeX. Cette propri\'et\'e est lui n\'ecessaire
 pour travailler avec |\edef|. Elle est utilis\'ee par les macros 
 de r\'ef\'erences crois\'ees (\xref{xrefs}). 
 
-Pour Fractionner l'argument sur l'espace, nous devons 
+Pour fractionner l'argument sur l'espace, nous devons 
 utiliser deux macros subsidiaires. |\@ttsA| trouve les espaces et 
 |\@ttsB| manipule une s\'equence de token sans aucun espace. Chaque 
 espace est remplac\'e par le d\'eveloppement de \pix^|\spacesub|. 
@@ -159,7 +158,7 @@ espace est remplac\'e par le d\'eveloppement de \pix^|\spacesub|.
 |
 
 La macro ^|\for| impl\'emente une version \TeX\ du ``^{for loop}'' des
-langages de programmation traditionnel.  ces macros viennent directement de
+langages de programmation traditionnels.  Ces macros viennent directement de
 \LaTeX.
 
 \csdisplay
@@ -203,7 +202,7 @@ produisent toujours un ressort normal.
 \pix^|\frac| est une bonne fa\c con d'afficher des fractions dans du 
 texte quand vous ne voulez pas utiliser |\over| et que mettre simplement ``1/2''
 ne semble pas beau. Cette macro est la r\'eponse \`a 
-\knuth{Exercise~11.6}{}.^^{fractions//en forme de slash} 
+l'exercise~11.6 de \texbook.^^{fractions//en forme de slash} 
 
 \csdisplay
 \def\frac#1/#2{\leavevmode
@@ -212,13 +211,13 @@ ne semble pas beau. Cette macro est la r\'eponse \`a
    \kern-.15em \lower .25ex \hbox{\the\scriptfont0 #2}}%
 |
 
-Les macros suivants produisent des logos qui sont utiles dans le monde \TeX. 
-Le logo \AMSTeX\ viens de la \knuth{page~420}{999}. Le logo \LaTeX\ 
+Les macros suivantes produisent des logos qui sont utiles dans le monde \TeX. 
+Le logo \AMSTeX\ vient de la \knuth{page~420}{483}. Le logo \LaTeX\ 
 est l\'eg\`erement modifi\'e par rapport \`a celui de |latex.tex| (nous utilisons une 
 police diff\'erente pour le `A')~; de m\^eme, le logo \BibTeX\ 
-emploie |\sevenrm| au lieu d'une v\'eritable police de capitale-et-
+emploit |\sevenrm| au lieu d'une v\'eritable police de capitale-et-
 petite-capitale. Le fichier source |.mf| pour le logo \MF\ est 
-donn\'e dans le manuel \MF\ manuel~: 
+donn\'e dans le manuel \MF\~: 
 
 \smallskip
 {\narrower\noindent
@@ -244,9 +243,9 @@ donn\'e dans le manuel \MF\ manuel~:
 
 Les deux macros suivantes produisent des bo\^\i tes. \pix^|\blackbox| 
 produit une ``bulle carr\'ee'', utilis\'e dans les macros de liste 
-(\xref{listmacs}). \pix^|\makeblankbox| (de \knuth{page~311}{999}) 
+(\xref{listmacs}). \pix^|\makeblankbox| (de \knuth{page~311}{363--364}) 
 produit un rectangle non rempli, avec l'\'epaisseur des traits de 
-bordure donn\'ees par les arguments. 
+bordure donn\'ee par les arguments. 
 
 \csdisplay
 \def\blackbox{\vrule height .8ex width .6ex depth -.2ex}%
@@ -264,9 +263,9 @@ bordure donn\'ees par les arguments.
    \advance\dimen0 by #2 \vrule width\dimen0}\kern-#2}%
 |
 
-\pix^|\numbername| produit la forme en toute lettre d'un nombre. (si 
+\pix^|\numbername| produit la forme en toute lettres d'un nombre. Si 
 le nombre est plus grands que dix, la macro ne reproduit que les 
-chiffres de son argument.) 
+chiffres de son argument. 
 
 \csdisplay
 \def\numbername#1{\ifcase#1%
@@ -294,7 +293,7 @@ fournit la marque d'espace.
 
 \section Affichages
 
-Par d\'efaut, \TeX\ centres le mat\'eriel affich\'e (le mat\'eriel 
+Par d\'efaut, \TeX\ centre le mat\'eriel affich\'e (le mat\'eriel 
 entre |$$|). ^^{affichages, formatage}  \pix^|\leftdisplays| provoque 
 des affichages justifi\'es \`a gauche par d\'efaut. Vous pouvez 
 retourner aux affichages centr\'es avec \pix^|\centereddisplays|.
@@ -302,12 +301,12 @@ retourner aux affichages centr\'es avec \pix^|\centereddisplays|.
 Les macros ici sont plus g\'en\'eralistes qu'elles doivent l'\^etre pour ne faire 
 que des affichages justifi\'es \`a gauche. Pour chaque affichage, 
 \pix^|\ifeqno| sera vrai si un |\eqno| appara\^\i t dans l'affichage. 
-\pix^|\ifleqno| sera vrai si un |\leqno| appara\^\i t. Si l'un ou l'autre 
-sorte d'\'equation num\'erot\'ee se appara\^\i t, \pix^|\eqn| produit le texte 
+\pix^|\ifleqno| sera vrai si un |\leqno| appara\^\i t. Si l'une ou l'autre 
+sorte d'\'equation num\'erot\'ee appara\^\i t, \pix^|\eqn| produit le texte 
 du num\'ero de l'\'equation. \pix^|\eq| produit toujours le texte de 
 l'\'equation lui-m\^eme. 
 
-Ces macros sont bas\'ees sur le code de la \knuth{page~376}{999}.
+Ces macros sont bas\'ees sur le code de la \knuth{page~376}{434}.
 
 \csdisplay
 \newif\ifeqno \newif\ifleqno
@@ -448,7 +447,7 @@ p.m.''. \pix^|\timestamp| produit le texte de la date compl\`ete, comme dans
 termine.
 \pix^|\unorderedlist| est analogue.
 Pour l'une ou l'autre de ces derni\`eres, les items \`a l'int\'erieur des listes 
-commencent par \pix^|\li| (``list item''). Vous peut mettre 
+commencent par \pix^|\li| (``list item''). Vous pouvez mettre 
 \pix^|\listcompact| au d\'ebut d'une liste si vous ne voulez aucun espace 
 additionnel entre les \'el\'ements de cette liste. Des listes peuvent \^etre 
 imbriqu\'ees arbitrairement.
@@ -459,8 +458,7 @@ ci-dessous. Si les \'el\'ements de vos listes tendent \`a \^etre
 longs, vous pourriez vouloir rendre |\interitemskip| diff\'erent de 
 z\'ero. L'indentation gauche de chaque \'el\'ement de liste est 
 donn\'ee par |\par!-indent| plus |\list!-left!-indent|~; l'indentation 
-droite de chaque \'el\'ement de liste est donn\'ee par |\list!-right!-%
-indent|.
+droite de chaque \'el\'ement de liste est donn\'ee par |\list!-right!|% indent|.
 
 \csdisplay
 \newskip\abovelistskip  \abovelistskip = .5\baselineskip 
@@ -563,8 +561,8 @@ ces d\'efini\-tions ont la m\^eme structure.
 
 La macro \pix^|\listing| produit le listing verbatim d'un fichier sp\'ecifi\'e
 en police |\tt|.
-Elle est bas\'ee sur le code de la \knuth{page~380}{999}.
-Les tabulations produisent un montant d'espace fixe et les sauts de pages 
+Elle est bas\'ee sur le code de la \knuth{page~380}{439}.
+Les tabulations produisent un montant d'espace fixe et les sauts de page 
 produisent une coupure de page.  D'autres caract\`eres de contr\^ole produisent 
 ce qui s'av\`ere \^etre \`a cette position dans la police, qui n'est g\'en\'eralement 
 pas tr\`es utile. En red\'efinissant |\setup!-listing!-hook|, 
@@ -672,7 +670,7 @@ table des mati\`eres.
 
 \null ^^{r\'ef\'erences crois\'ees}
 \xrdef{xrefs}
-Les macros qui suivent fournissent des r\'ef\'erences crois\'ees symbolique, pour 
+Les macros qui suivent fournissent des r\'ef\'erences crois\'ees symboliques, pour 
 que vous puissiez vous r\'ef\'erer \`a quelque chose dans une autre partie d'un 
 document par son nom et non son num\'ero de page r\'eel. \pix^|\xrdef||{foo}| 
 d\'efinit une \'etiquette |foo| comme \'etant le num\'ero de page courant et 
@@ -801,7 +799,7 @@ num\'ero du chapitre.
 \section Environnements
 
 \null ^^{environnements} Ces macros vous permettent de d\'efinir vos propres 
-groupes appel\'es (environnements) pour des parties de votre manuscrit. Comme 
+groupes appel\'es environnements pour des parties de votre manuscrit. Comme 
 les groupes de \TeX, ces groupes peuvent \^etre embo\^\i t\'es, et en fait leur 
 embo\^\i tement peut \^etre entrelac\'e avec l'embo\^\i tement des groupes de \TeX. Si 
 les noms au d\'ebut et \`a la fin d'un environnement ne s'assortissent pas, 
@@ -868,8 +866,8 @@ ci-dessus. ^^|\newhelp|
 |
 
 Certains environnements ne doivent pas se produire dans d'autres 
-environnements. Appelons ces derniers ``environnements externes 
-[outer]''. |\check!-env| v\'erifie qu'aucun environnement externe n'est 
+environnements. Appelons ces derniers ``environnements externes''
+(outer). |\check!-env| v\'erifie qu'aucun environnement externe n'est 
 actuellement effectif, sinon il se plaint. Pour utiliser |\check!-env|, 
 vous devez mettre la commande |\environment!-true| au d\'ebut de chaque 
 environnement externe. 
@@ -902,7 +900,7 @@ appara\^\i tre seule sur une ligne. La commande et le texte
 doivent \^etre enferm\'es dans un groupe---% 
 la fin du groupe 
 indique la fin du texte. Le groupe entier est plac\'e comme un paragraphe 
-simple, avec des lignes compl\'et\'ees d'un c\^ot\'e ou de l'autres comme 
+simple, avec des lignes compl\'et\'ees d'un c\^ot\'e ou de l'autre comme 
 indiqu\'e. Les lignes blanches sont reproduites.
 
 \csdisplay
@@ -1021,10 +1019,10 @@ Des notes de bas de page sont compos\'ees le plus g\'en\'eralement en utilisant 
 num\'ero incr\'ement\'e comme marque de r\'ef\'erence. Nous d\'efinissons la macro 
 \pix^|\numberedfootnote| pour faire cela. Il red\'efinit \'egalement 
 ^|\vfootnote| pour permettre un formatage l\'eg\`erement plus g\'en\'erique des 
-notes de bas de page que ne le fait \plainTeX \. Le registre de dimension 
+notes de bas de page que ne le fait \plainTeX. Le registre de dimension 
 |\foot!-note!-mark!-sepa!-ra!-tion| 
 \pix^^|\footnotemarkseparation| contr\^ole
-l'espace entre la marque de la notes de bas de page (par exemple, le num\'ero) et le 
+l'espace entre la marque de la note de bas de page (par exemple, le num\'ero) et le 
 d\'ebut du texte. Les tokens \pix^|\everyfootnote| sont 
 ins\'er\'es avant de produire la notes de bas de page.
 
@@ -1051,17 +1049,17 @@ Les d\'efinitions \plainTeX \ de |\footnote| et |\vfootnote| sont pr\'eserv\'es 
 |
 
 
-\section Double colonnes
+\section Double colonne
 
 \null ^^{double colonnes} La commande |\doublecolumns| commence la 
-composition en double colonnes, alors que la commande 
+composition en double colonne, alors que la commande 
 \pix^^|\singlecolumn| |\single!-column| remet la composition en 
 colonne simple. Vous pouvez commuter dans les deux sens entre elles 
 sur la m\^eme page. Le ressort sp\'ecifi\'e par |\above!-double!-column!-%
-skip| et |\below!-double!-column!-skip| est ins\'er\'ee avant.et.apr\`es la 
-composition en double colonnes. 
+skip| et |\below!-double!-column!-skip| est ins\'er\'ee avant et apr\`es la 
+composition en double colonne. 
 
-L'approche est d\'eriv\'ee de la \knuth{page~417}{999}.
+L'approche est d\'eriv\'ee de la \knuth{page~417}{480}.
 
 \csdisplay
 \newskip\abovedoublecolumnskip
@@ -1089,8 +1087,8 @@ Le macro |\@double!-column!-split| fait le d\'edoublement r\'eel. On
 suppose que le source est ins\'er\'ee en colonne simple. Si vous ne 
 voulez pas que cela soit le cas, vous devrez modifier la routine de 
 r\'esultat. Apr\`es que |\@double!-column!-split| ait effectu\'e son 
-travail, |\box255| aura le mat\'eriel en double colonnes. Le mat\'eriel en 
-double colonnes sera pr\'ec\'ed\'e par n'importe quel mat\'eriel en colonne simple 
+travail, |\box255| aura le mat\'eriel en double colonne. Le mat\'eriel en 
+double colonne sera pr\'ec\'ed\'e par n'importe quel mat\'eriel en colonne simple 
 qui aura \'et\'e compos\'e avant que |\doublecolumns| ait \'et\'e appel\'e. 
 |\box4| aura le mat\'eriel qui ne s'est pas adapt\'e \`a la page. 
 

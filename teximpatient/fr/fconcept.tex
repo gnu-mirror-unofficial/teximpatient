@@ -26,7 +26,7 @@ terminologie coh\'erente avec celle de \texbook.\idxref{\texbook}
 \concept alignement
 
 \bix^^{tables}
-Un \defterm{alignement} est une construction pour aligner du mat\'e\-riel tels
+Un \defterm{alignement} est une construction pour aligner du mat\'e\-riel tel
 qu'un tableau, en colonne ou en rang\'ee. Pour former un alignement vous devez
 (a)~d\'ecrire le format des colonnes ou des rang\'ees et (b)~ dire \`a \TeX\ quel
 mat\'eriel va dans les colonnes ou les rang\'ees. Un alignement tabul\'e ou un
@@ -35,7 +35,7 @@ vertical est organis\'e comme une suite de colonnes. Nous d\'ecrirons d'abord
 les alignements tabul\'es et horizontaux et ensuite, plus bri\`evement, les
 alignements verticaux.
 
-Les alignements tabul\'es sont d\'efinit par \plainTeX. Ils sont plus simples
+Les alignements tabul\'es sont d\'efinis par \plainTeX. Ils sont plus simples
 mais moins flexibles que les alignements horizontaux. Ils diff\`erent 
 principalement sur la fa\c con de d\'ecrire leurs formats.
 
@@ -45,7 +45,7 @@ principalement sur la fa\c con de d\'ecrire leurs formats.
 
 Pour construire un alignement tabul\'e vous devez tout d'abord former une 
 commande |\settabs| \ctsref{\settabs} qui sp\'ecifie comment \TeX\ doit
-diviser l'es\-pace horizontal disponible en colonne. Ensuite vous procurez
+diviser l'es\-pace horizontal disponible en colonne, ensuite vous procurer
 une suite de rang\'ees \`a tabuler. Chaque rang\'ee consiste en une s\'equence de 
 contr\^ole |\+| \ctsref{\@plus} suivi par une liste d'``entr\'ees'', c'est-\`a-dire
 des intersections rang\'ees\slash colonnes.
@@ -60,8 +60,8 @@ Si une rang\'ee a moins d'entr\'ees qu'il y a de colonnes dans l'alignement,
 
 Tant qu'il est pr\'ec\'ed\'e d'une commande |\settabs|, vous pouvez mettre une 
 rang\'ee d'un alignement tabul\'e n'importe o\`u dans votre document. En particulier,
-vous pouvez mettre autres choses entre les rang\'ees d'aligne\-ment tabul\'e ou
-d\'ecrire plusieurs alignement tabul\'e avec un seul |\settabs|. Voici un exemple
+vous pouvez mettre autres choses entre les rang\'ees d'aligne\-ments tabul\'es ou
+d\'ecrire plusieurs alignements tabul\'es avec un seul |\set!-tabs|. Voici un exemple
 d'alignement tabul\'e~:
 
 \xrdef{tabbedexample}\csdisplay
@@ -181,7 +181,7 @@ derni\`ere.)
 
 Vous pouvez aussi construire un alignement vertical avec la commande ^|\valign|
 \ctsref{\valign}. Un alignement vertical est organis\'e comme une s\'erie de
-colonne plut\^ot que comme une s\'erie de rang\'ee. Un alignement vertical suit
+colonnes plut\^ot que comme une s\'erie de rang\'ees. Un alignement vertical suit
 les m\^eme r\`egles qu'un alignement horizontal sauf que le r\^ole des rang\'ees et
 des colonnes est invers\'e. Par exemple, l'alignement vertical~:
 
@@ -231,21 +231,21 @@ peut contenir des commandes ^|\input| \ctsref{\input},
 \li En utilisant sa ``\pix^{bouche}'', {\TeX} assemble les caract\`eres en
 \refterm{tokens:token} et les passe \`a son \oesophage.
 Chaque token est soit une \refterm{s\'equence de contr\^ole} ou un simple
-caract\`ere.  Une s\'equence contr\^ole commence toujours par un \refterm{caract\`ere
+caract\`ere.  Une s\'equence de contr\^ole commence toujours par un \refterm{caract\`ere
 d'\'echappement}.  Notez que les espaces et les fins de ligne sont des caract\`eres 
-de plein droit, de plus \TeX\ compresse une suite d'espace en un seul token
-d'espace.  Voir \knuth{pages~46--47}{99--99} pour les r\`egles avec lesquelles \TeX\ 
+de plein droit, de plus \TeX\ compresse une suite d'espaces en un seul token
+d'espace.  Voir \knuth{pages~46--47}{56--58} pour les r\`egles avec lesquelles \TeX\ 
 assemble les caract\`eres en tokens.
 ^^{tokens//assembl\'ee \`a partir de caract\`eres}
 
 \li En utilisant son ``\pix^{\oesophage}'', {\TeX} d\'eveloppe chaque macro, conditions, et
 ^^{macros//d\'evelopp\'ees dans l'estomac de \TeX}
 ^^{tokens//pass\'ee \`a l'estomac de \TeX}
-constructions similaires qu'il trouve (voir \knuth{pages~212--216}{999--999}) et passe
+constructions similaires qu'il trouve (voir \knuth{pages~212--216}{249--253}) et passe
 la suite de \refterm{tokens:token} r\'esultante 
 \`a l'estomac de \TeX.  D\'evelopper un token
 peu faire appara\^\i tre d'autres tokens qui \`a leur tour ont besoin d'\^etre 
-d\'evelopp\'es.  {\TeX} parcoure ce d\'eveloppement de gauche \`a droite \`a moins 
+d\'evelopp\'es.  {\TeX} parcourt ce d\'eveloppement de gauche \`a droite \`a moins 
 que l'ordre soit modi\-fi\'e par
 une commande telle que |\expandafter| \ctsref{\expandafter}.
 En d'autres mots, l'\oe sophage de \TeX\ d\'eveloppe toujours le token le plus \`a
@@ -265,12 +265,12 @@ L'estomac de \TeX\ ex\'ecute les taches de \refterm{coupure de ligne}---%
 ^^{coupures de ligne}
 c'est-\`a-dire, couper chaque paragraphe en suite de lignes---%
 et de \refterm{coupure de page}---c'est-\`a-dire, 
-couper une suite continues de lignes
+couper une suite continue de lignes
 et autres mat\'eriels de mode vertical en pages. 
 
 \li En utilisant ses ``\pix^{intestin}'', \TeX\ transforme les pages produites par son
 estomac en une forme destin\'ee \`a \^etre lue
-par d'autres program\-mes.  Il envoi alors la sortie transform\'ee dans le 
+par d'autres program\-mes.  Il envoit alors la sortie transform\'ee dans le 
 \dvifile.
 ^^{\dvifile//cr\'e\'e par l'intestin de \TeX}
 
@@ -278,7 +278,7 @@ par d'autres program\-mes.  Il envoi alors la sortie transform\'ee dans le
 
 La plupart du temps, vous pouvez penser que les processus qui prennent place dans
 les yeux, bouches, \oesophage, estomac et intestin de \TeX\ ont lieu les uns apr\`es
-les autres. mais la v\'erit\'e en la mati\`ere est que des commandes ex\'ecut\'ees dans l'estomac 
+les autres. La v\'erit\'e en la mati\`ere est que des commandes ex\'ecut\'ees dans l'estomac 
 de \TeX\ peuvent influencer les \'etapes suivantes de la digestion. Par exemple,
 quand l'estomac de \TeX\ rencontre la commande |\input| \ctsref{\input}, ses
 yeux commencent \`a lire un fichier diff\'erent~; quand l'estomac de \TeX\ 
@@ -324,7 +324,7 @@ consiste en la commande `|\hskip|' et les arguments
 |
 vous obtiendrez un effet enti\`erement diff\'erent.
 \TeX\ traitera `|\count11|' comme une commande avec un argument `|3|',
-suivi par les tokens de texte ordinaires `|pc plus 1em|'
+suivi par les tokens de texte ordinaire `|pc plus 1em|'
 (parce que les registres de compteur attendent l'affectation d'un nombre)%
 ---probablement pas ce dont vous aviez 
 intention.  L'effet de la commande, donc, sera d'assigner 
@@ -372,7 +372,7 @@ finir l'argument (voir \xref{mismatched}).
 \noindent 
 Voir \conceptcit{macro} pour plus d'information sur les param\`etres et les
 arguments. Vous trouverez les r\`egles pr\'ecises concernant les arguments 
-d\'elimit\'es et non d\'elimit\'es dans \knuth{pages~203--204}{999--999}.
+d\'elimit\'es et non d\'elimit\'es dans \knuth{pages~203--204}{237--239}.
 \endconcept
 
 
@@ -381,11 +381,11 @@ d\'elimit\'es et non d\'elimit\'es dans \knuth{pages~203--204}{999--999}.
 \defterm{\ascii} est l'abr\'eviation de ``American Standard Code for
 Information Interchange''.  Il y a $256$ ^{caract\`eres} \ascii, chacun avec
 son propre num\'ero de code, mais seuls les~$128$ premiers
-ont \'et\'e standardis\'es. Vous pouvez trouver leurs significations dans une ``table
-de codes'' \ascii\ comme celle  de la \knuth{page~367}{999}.
+ont \'et\'e standardis\'es. Vous pouvez trouver leur signification dans une ``table
+de codes'' \ascii\ comme celle  de la \knuth{page~367}{425}.
 Les caract\`eres $32$--$126$ sont des ``caract\`eres imprimables'',
 ^^{caract\`eres imprimables} comme les lettres, les chiffres et les signes de 
-ponctuation. les caract\`eres restants sont des ``^{caract\`eres de contr\^ole}''
+ponctuation. Les caract\`eres restants sont des ``^{caract\`eres de contr\^ole}''
 qui sont utilis\'es sp\'ecialement (dans l'industrie informatique, pas dans \TeX)
 pour contr\^oler les entr\'ees\slash sorties et les instruments de communication
 de donn\'ees.
@@ -420,8 +420,8 @@ valeur \`a un registre,
 \`a un de ces
 \refterm{param\`etres:param\`etre} internes,
 ^^{param\`etres//assignements \`a des}
-\`a une entr\'e dans une de ces tables internes
-ou \`a une \refterm{s\'equence de contr\^ole}. quelques exemples d'assignements sont~:
+\`a une entr\'ee dans une de ces tables internes
+ou \`a une \refterm{s\'equence de contr\^ole}. Quelques exemples d'assignements sont~:
 
 \csdisplay
 \tolerance = 2000
@@ -443,7 +443,7 @@ assignement plus bri\`evement~:
 \tolerance2000
 |
 
-Voir \knuth{pages~276--277}{999--999} pour la syntaxe d\'etaill\'ee des assignements.
+Voir \knuth{pages~276--277}{321--322} pour la syntaxe d\'etaill\'ee des assignements.
 \endconcept
 
 
@@ -469,13 +469,13 @@ construit une bo\^\i te en assemblant des plus petites bo\^\i tes horizontalemen
 il op\`ere sur une \refterm{liste horizontale} et donne
 une \refterm{hbox} ^^{hbox} (bo\^\i te horizontale).
 ^^{listes horizontales}
-les commandes ^|\vbox| et |\vtop| 
+Les commandes ^|\vbox| et |\vtop| 
 construisent une bo\^\i te en assemblant de plus petites bo\^\i tes verticalement de haut en bas~;
 ^^{vbox}
 elles op\`erent sur une \refterm{liste verticale}
-et donne une \refterm{vbox} ^^{vbox} (bo\^\i te verticale).
+et donnent une \refterm{vbox} ^^{vbox} (bo\^\i te verticale).
 ^^{listes verticales}
-ces listes horizontales et verticales peuvent ne pas inclure que des bo\^\i tes plus petites mais
+Ces listes horizontales et verticales peuvent ne pas inclure que des bo\^\i tes plus petites mais
 plusieurs autres sortes d'entit\'es, par exemple,  un \refterm{ressort} et
 des cr\'enages.
 ^^{cr\'enages//comme \'el\'ements de liste}
@@ -509,7 +509,7 @@ comme ceci~:
 
 ^^{lignes de base}
 La \refterm{ligne de base} est comme une des
-lignes-guide claires d'un bloc de papier lign\'e.  
+lignes-guide claire d'un bloc de papier lign\'e.  
 Les bo\^\i tes de lettres telles qu'un `g'
 s'\'etendent sous la ligne de base~; Les bo\^\i tes de lettres telles qu'un `h' ne le font pas. 
 La hauteur d'une bo\^\i te est la distance par laquelle une bo\^\i te s'\'etend au-dessus de sa
@@ -532,7 +532,7 @@ profonde de la liste. La largeur de $H$ est la somme des largeurs de tous
 les items dans la liste. Si quelques-uns de ces items sont des 
 \refterm{ressort}s et que \TeX\ a besoin de r\'etr\'ecir ou d'\'etirer le ressort, la 
 largeur de $H$ sera plus large ou plus \'etroite en cons\'equence. Voir la 
-\knuth{page~77}{99} pour les~d\'etails.
+\knuth{page~77}{90} pour les~d\'etails.
 \par}
 
 De m\^eme, \TeX\ construit une vbox $V$ d'une liste verticale en d\'esignant un
@@ -576,7 +576,7 @@ du vbox et |\vtop| le met pr\`es du haut.
 Quand vous voulez aligner une rang\'ee de vbox pour que leur sommet
 s'aligne horizontalement,
 vous utiliserez normalement |\vtop| plut\^ot que |\vbox|. 
-Voir les \knuth{pages~78 et 80--81}{99 et 99--99} pour les
+Voir les \knuth{pages~78 et 80--81}{91 et 94--95} pour les
 d\'etails sur comment \TeX\ construit des vbox.
 \eix^^|\vbox|
 \eix^^|\vtop|
@@ -588,7 +588,7 @@ dans une bo\^\i te peut s'\'etendre au-del\`a des bords de la bo\^\i te comme il
 pour certaines lettres (pour la plupart italiques ou pench\'ees). Les composants 
 bo\^\i tes des grandes bo\^\i tes peuvent se chevaucher.  
 Une bo\^\i te peut avoir une largeur, une profondeur ou une hauteur n\'egative,
-des bo\^\i tes comme celle-ci ne sont pas souvent utiles.
+des bo\^\i tes comme celles-ci ne sont pas souvent utiles.
 
 Vous pouvez sauvegarder une bo\^\i te dans un \refterm{registre} de bo\^\i te et la rappeler plus tard.
 Avant d'utiliser un registre de bo\^\i te,
@@ -612,8 +612,8 @@ Ce n'est pas le cas, n\'eanmoins, pour un caract\`ere saisi tel que `|$|' qui
 a une signification sp\'eciale.
 \par}
 
-\TeX\ obtient ses caract\`eres saisis en les lisant \`a partir fichier source 
-(ou de votre terminal) et en d\'eveloppement des \refterm{macros:macro}. Ce
+\TeX\ obtient ses caract\`eres saisis en les lisant \`a partir du fichier source 
+(ou de votre terminal) et en d\'eveloppant les \refterm{macros:macro}. Ce
 sont les seuls moyens par lesquels \TeX\  puisse acqu\'erir un caract\`ere saisi.
 Chaque caract\`ere d'entr\'ee a un num\'ero de code correspondant \`a sa position 
 dans la table de code \refterm{\ascii}. ^^{\ascii}
@@ -626,10 +626,10 @@ une fois qu'il a \'et\'e lu. \TeX\ d\'etermine (et se souvient) des codes de
 cat\'egorie des caract\`eres d'une macro quand il lit sa d\'efinition. Comme \TeX\
 lit les caract\`eres avec ses yeux \seeconcept{\anatomy} il fait quelques
 ``filtrages'' comme condenser des suites de caract\`eres espace en un espace
-seul. Voir les \knuth{pages~46--48}{99--99} pour les d\'etails de ce filtrage.
+seul. Voir les \knuth{pages~46--48}{56--59} pour les d\'etails de ce filtrage.
 
 Les ``^{caract\`eres de contr\^ole}'' \ascii\ ont les codes $0$--$31$ et $127$--$255$.
-Ils ne sont pas visualisables ou provoque des choses \'etranges si vous essayez
+Ils ne sont pas visualisables ou provoquent des choses \'etranges si vous essayez
 de les afficher. 
 N\'eanmoins, on en a parfois besoin dans les sources \TeX, donc \TeX\ a une
 fa\c con sp\'eciale de les noter.
@@ -651,7 +651,7 @@ qui fonctionne pour tous les codes de caract\`ere de $0$ \`a $255$.
 \xrdef{hexchars}
 Si vous saisissez `|^^|$xy$', o\`u $x$ et $y$ sont des ^{chiffres
 hexad\'ecimaux} `|0123456789abcdef|', vous obtenez le caract\`ere dont le 
-code est sp\'ecifi\'e.(Des lettres minuscules sont n\'ecessaires ici.)
+code est sp\'ecifi\'e. Des lettres minuscules sont n\'ecessaires ici.
 \TeX\ opte pour l'interpr\'etation des ``chiffres hexad\'ecimaux'' quand il
 a le choix, donc vous ne devez pas faire suivre un caract\`ere comme `|^^a|' 
 par un chiffre hexad\'ecimal minuscule---si vous le faites, vous aurez la
@@ -662,10 +662,10 @@ d'avoir une table des codes \ascii.
 
 Un caract\`ere de sortie est un caract\`ere de composition.
 Une commande qui produit un caract\`ere de sortie signifie
-``Produit une \refterm{bo\^\i te} contenant un caract\`ere num\'ero $n$ dans
+``produit une \refterm{bo\^\i te} contenant un caract\`ere num\'ero $n$ dans
 la \refterm{police} courante'', o\`u $n$ est d\'etermin\'e par la commande.
 \TeX\ produit votre document compos\'e en combinant de telles bo\^\i tes avec 
-d'autres \'el\'ements typographiques et les arrangent sur la page.
+d'autres \'el\'ements typographiques et les arrange sur la page.
 
 Un caract\`ere d'entr\'ee dont le code de cat\'egorie est $11$ (^{lettre}) ou
 $12$ (autre)
@@ -693,13 +693,13 @@ qui n'a pas de d\'efinition associ\'ee, il se plaindra d'un ``undefined control
 sequence''.
 
 Un caract\`ere actif a un \refterm{code de cat\'egorie} \`a $13$ (la valeur
-d ^|\active|).
+d'^|\active|).
 Pour d\'efinir un caract\`ere actif, vous devez d'abord
 utiliser la commande ^|\catcode|
 \ctsref{\catcode} pour le rendre actif
 et ensuite donner la d\'efini\-tion du caract\`ere, en utilisant
 une commande comme |\def|, |\let| ou |\chardef|.
-La d\'efinition d'un caract\`ere actif \`a la m\^eme forme que
+La d\'efinition d'un caract\`ere actif a la m\^eme forme que
 la d\'efinition d'une \refterm{s\'equence de contr\^ole}.
 ^^{codes de cat\'egorie//de caract\`eres actifs}
 Si vous essayez de d\'efinir la macro pour un caract\`ere actif
@@ -784,7 +784,7 @@ La \defterm{classe} d'un \refterm{caract\`ere} sp\'ecifie le r\^ole de ce caract
 dans les formules math\'ematiques.  La classe d'un caract\`ere est encod\'ee dans son
 \refterm{mathcode}.  ^^{mathcodes//classe encod\'ee en} Par exemple, le
 signe \'egal `|=|' est dans la classe $3$ (Relation).  \TeX\ utilise sa
-connaissance de classes de caract\`ere pour d\'ecider combien d'espace mettre
+connaissance de classe de caract\`ere pour d\'ecider combien d'espace mettre
 entre diff\'erents composants d'une formule math\'ematique.  \margin{clarifying 
 material added} Par exemple, voici une formule math\'ematique affich\'ee comme
 \TeX\ l'im\-prime normalement et avec la classe de chaque caract\`ere modifi\'e
@@ -794,7 +794,7 @@ $$\strut a+(b-a)=a \qquad
    \mathop{a}\mathopen{)}\mathord{=}\mathopen{a}$$
 
 Voir \xrefpg\mathord\ de ce livre pour une liste des classes et la
-\knuth{page~154}{999} pour leurs significations.
+\knuth{page~154}{180} pour leurs significations.
 
 \endconcept
 
@@ -810,9 +810,9 @@ lettres, un autre au caract\`ere espace, et ainsi de suite.  \TeX\ attache un
 code \`a chaque caract\`ere qu'il lit.  Quand \TeX\ lit la
 lettre `|r|', par exemple, il lui attache normalement
 le code de cat\'egorie $11$ (lettre). 
-Pour de si simple applications \TeX\ vous n'avez pas \`a vous pr\'eoccuper des
-codes de cat\'egorie, mais ils deviennent importants quand vous essayez de 
-terminer des effets sp\'eciaux.
+Pour de simples applications \TeX\ vous n'avez pas \`a vous pr\'eoccuper des
+codes de cat\'egorie, mais ils deviennent importants quand vous essayez 
+des effets sp\'eciaux.
 
 Les codes de cat\'egorie ne s'appliquent qu'aux caract\`eres que \TeX\ lit dans les
 fichiers source.  Une fois qu'un caract\`ere a pass\'e l'^{\oesophage} de \TeX\ 
@@ -883,7 +883,7 @@ ainsi que les caract\`eres de chaque cat\'egorie~:
 11&Lettre  \quad |A| \dots |Z| et |a| \dots |z| ^^{lettre}\cr
 12&Autres caract\`eres \quad (tout ce qui n'est pas ci-dessus ou ci-dessous) 
   ^^{autres caract\`eres}\cr
-13&Caract\`ere actif  \quad |~| et |^^L| \tequiv\ascii\ \asciichar{saut de page} 
+13&Caract\`ere actif  \quad |~| et |^^L| \tequiv\ascii\ \asciichar{saut\ de\ page} 
    ^^{caract\`eres actifs} ^^{retour chariot} \indexchar ~ \indexchar ^^L \cr
 14&Caract\`ere de commentaire  \quad |%| ^^{commentaires}
    {\recat!ttidxref[%//code de cat\'egorie]]
@@ -894,7 +894,7 @@ ainsi que les caract\`eres de chaque cat\'egorie~:
 \vskip\belowdisplayskip
 %k \vskip 0pt plus 2pt % to fix bad page break
 
-\noindent Mise \`a par ceux des cat\'egories $11$--$13$,
+\noindent Mise \`a part ceux des cat\'egories $11$--$13$,
 tous les caract\`eres d'une cat\'egorie particuli\`ere produisent le m\^eme effet.
 \margin{Misleading material removed.}
 Par exemple, supposez
@@ -902,14 +902,14 @@ que vous saisissiez~:
 \csdisplay
 \catcode`\[ = 1 \catcode`\] = 2
 |
-Alors les caract\`eres crochets droits et gauches deviennent \'equivalent aux caract\`eres de
+Alors les caract\`eres crochets droits et gauches deviennent \'equivalents aux caract\`eres de
 d\'ebut et de fin d'un groupe, les caract\`eres accolades droites et gauches.
 Avec ces d\'efinitions `|[a b]|'
 est un groupe valide, ainsi que \hbox{`|[a b}|'} et~\hbox{`|{a b]|'}.
 
 Les caract\`eres des cat\'egories $11$ (lettre) et $12$ 
 (autres caract\`eres) agis\-sent comme des \refterm{commandes:commande}
-ce qui signifie
+qui signifient
 ``produit une \refterm{bo\^\i te} contenant ce caract\`ere 
 compos\'e dans la police courante''.
 La seule distinction entre les lettres et les ``autres'' caract\`eres est
@@ -927,7 +927,7 @@ dans votre source, il s'en plaindra.
 Les caract\`eres `|^^K|' et `|^^A|' ont \'et\'e inclus dans les cat\'egories 
 $8$ (indice) et $9$ (exposant), m\^eme si ces significations
 ne suivent pas l'interpr\'etation du standard \refterm{\ascii}.
-C'est parce que certains claviers, tout du moins certain \`a 
+C'est parce que certains claviers, tout du moins certains \`a 
 l'universit\'e de Stanford d'o\`u \TeX\ est originaire, n'ont pas
 de touche fl\`eche vers le bas et fl\`eche vers le haut qui g\'en\`erent ces caract\`eres.
 \ttidxref{^^A}
@@ -974,7 +974,7 @@ ligne de $\ell$ comme un caract\`ere actif.
 
 Une \defterm{commande} demande \`a \TeX\ de faire une certaine action.
 Chaque \refterm{token} qui atteint l'estomac de \TeX\seeconcept{\anatomy}
-agit comme une commande, sauf celles qui font partie des arguments d'une
+agit comme une commande, sauf celui qui fait partie des arguments d'une
 autre commande (voir dessous).
 ^^{tokens//comme commandes}
 Une commande peut \^etre appel\'ee par une
@@ -998,7 +998,7 @@ sans sp\'ecifier de combien elle est suppos\'ee sauter.
 Les tokens dans les arguments d'une commande ne sont pas consid\'er\'es 
 eux-m\^emes comme des commandes.
 
-Quelques exemples de diff\'erentes sortes de commande de \TeX\ sont~: 
+Quelques exemples de diff\'erentes sortes de commandes de \TeX\ sont~: 
 \ulist\compact
 \li Des caract\`eres ordinaires, comme `|W|', qui demande \`a \TeX\
 de produire une bo\^\i te contenant un `W' compos\'e.
@@ -1007,7 +1007,7 @@ telles que |\bf|, qui commence une composition en gras
 \li Des accents, tels que |\`|, qui produit un accent grave comme dans `\`e'
 \li Des symboles sp\'eciaux et des ligatures, comme |\P| (\P) et |\ae| (\ae)
 \li Des param\`etres, tels que |\parskip|, le montant du ressort que
-\TeX\ mets entre les paragraphes
+\TeX\ met entre les paragraphes
 \li des symboles math\'ematiques, tels que |\alpha| ($\alpha$) et |\in| ($\in$)
 \li Des op\'erateurs math\'ematiques, tels que |\over|, qui produit une fraction
 \endulist
@@ -1037,7 +1037,7 @@ possibles. \TeX\ associe des ``^{d\'em\'erites}'' avec diff\'erents sympt\^omes 
 coupure de ligne non attractive---des lignes ayant trop ou trop peu d'espace
 entre les mots, des lignes cons\'ecutives se terminant par des c\'esures, et 
 ainsi de suite. Il choisit alors les coupures de lignes de mani\`ere \`a minimiser
-le nombre total de d\'em\'erites. Voir les \knuth{pages~96--101}{99--999} pour une 
+le nombre total de d\'em\'erites. Voir les \knuth{pages~96--101}{112--118} pour une 
 description compl\`ete des r\`egles de coupure de ligne de \TeX.
 
 Vous pouvez contr\^oler le choix des coupures de ligne de \TeX\ de plusieurs mani\`eres~:
@@ -1049,10 +1049,10 @@ dans la liste horizontale que \TeX\ construit quand il forme un paragraphe.
 Une p\'enalit\'e
 positive d\'ecourage \TeX\ de couper la ligne \`a cet endroit, tandis qu'une
 p\'enalit\'e n\'egative---un bonus, en quelque sorte---encourage \TeX\ \`a couper
-la line \`a cet endroit.  Une p\'enalit\'e de $10000$ ou plus emp\^eche une coupure de
+la ligne \`a cet endroit.  Une p\'enalit\'e de $10000$ ou plus emp\^eche une coupure de
 ligne, tandis qu'une p\'enalit\'e de $-10000$ ou moins force une coupure de ligne.
 Vous pouvez obtenir les m\^emes effets avec les commandes ^|\break| et
-^|\nobreak| (\pp\xrefn{hbreak},~\xrefn{hnobreak}).
+^|\nobreak| (voir \pp\xrefn{hbreak} et~\xrefn{hnobreak}).
 
 \li Vous pouvez dire \`a \TeX\ d'autoriser une c\'esure \`a un endroit particulier 
 en ins\'erant une c\'esure optionnelle
@@ -1072,7 +1072,7 @@ ins\'erant une ^{punaise} (|~|) entre ces mots.
 ^^|~//sur une coupure de ligne|
 
 \li Vous pouvez ajuster les p\'enalit\'es associ\'ees avec les coupures de ligne en
-assignant des valeurs diff\'erentes aux \refterm{param\`etres:param\`etre} de coupures de lignes de \TeX. 
+assignant des valeurs diff\'erentes aux \refterm{param\`etres:param\`etre} de coupures de ligne de \TeX. 
 
 \li Vous pouvez englober un mot ou une s\'equence de mots dans une \refterm{hbox}, 
 emp\^echant ainsi \TeX\ de couper la ligne o\`u que cela soit dans l'hbox.
@@ -1115,7 +1115,7 @@ termine une page et (sauf \`a la fin du document) en commence une nouvelle.
 Voir \conceptcit{page} pour le processus que \TeX\ traverse pour choisir
 une coupure de page.
 
-Vous pouvez contr\^oler le choix de coupure de page de \TeX\ de plusieurs fa\c con~:
+Vous pouvez contr\^oler le choix de coupure de page de \TeX\ de plusieurs fa\c cons~:
 \ulist
 \li Vous pouvez ins\'erer une p\'enalit\'e (\xref{vpenalty}) 
 ^^{p\'enalit\'es//en listes verticales}
@@ -1138,7 +1138,7 @@ couper la page n'importe o\`u dans la suite.
 
 Une fois que \TeX\ a choisi une coupure de page, il place la portion 
 de la liste verticale principale qui pr\'ec\`ede la coupure en |\box255|.
-Il appelle alors la \refterm{routine de sortie} courante pour ex\'ecute |\box255| 
+Il appelle alors la \refterm{routine de sortie} courante pour ex\'ecuter |\box255| 
 et \'eventuellement envoyer son contenu dans le \dvifile.
 ^^{\dvifile//mat\'eriel de la routine de sortie}
 La routine de sortie doit aussi inclure des \refterm{insertions}, telles 
@@ -1184,7 +1184,7 @@ ins\`erent ou enl\`event de l'espace entre deux \'el\'ements voisins. La diff\'e
 essentielle est que \TeX\ consid\`ere deux bo\^\i tes n'ayant qu'un cr\'enage entre 
 elles comme \'etant li\'ees. Cela fait que, \TeX\ ne coupe pas une ligne ou une
 page sur un cr\'enage sauf si le cr\'enage est imm\'ediatement suivi d'un ressort.
-garder cette diff\'erence \`a l'esprit quand vous choisissez d'utiliser un
+Garder cette diff\'erence \`a l'esprit quand vous choisissez d'utiliser un
 cr\'enage ou un \'el\'ement ressort pour un usage particulier.
 
 \TeX\ ins\`ere automatiquement des cr\'enages entre des paires particuli\`eres de
@@ -1213,7 +1213,7 @@ d'une ligne.  Les imprimeurs dans les pays de langue Anglaise mesurent tradition
 les distances en points et en picas, tandis que les imprimeurs d'Europe continentale
 mesurent traditionnellement les distances en points Didot et en ciceros.  
 Vous pouvez utiliser ces mesures ou d'autres, comme les pouces, qui peuvent
-vous \^etre plus familier. Les ^{unit\'es de mesure} ind\'ependante des polices
+vous \^etre plus familier. Les ^{unit\'es de mesure} ind\'ependantes des polices
 que \TeX\ comprend sont~:
 
 \xrdef{dimdefs}
@@ -1231,7 +1231,7 @@ sp&^{point d'\'echelle} (65536 points d'\'echelle = 1 point)\cr
 }
 \vskip\belowdisplayskip
 
-Deux unit\'es de mesure suppl\'ementaire sont associ\'ees avec chaque police~: `^|ex|',
+Deux unit\'es de mesure suppl\'ementaires sont associ\'ees avec chaque police~: `^|ex|',
 une mesure verticale correspondant habituellement \`a la hauteur de la lettre `x'
 de la police et `^|em|', une mesure
 horizontale habituellement \'egale \`a la taille du point de la police et
@@ -1251,7 +1251,7 @@ peut \^etre positive ou n\'egative.
 L'unit\'e de mesure doit \^etre l\`a, m\^eme si le nombre est
 z\'ero.  Des espaces entre le nombre et l'unit\'e de mesure sont permis
 mais facultatifs.  Vous trouverez une d\'efinition pr\'ecise d'une
-dimension sur la \knuth{page~270}{999}.  Voici quelques exemples de dimensions~:
+dimension sur la \knuth{page~270}{315}.  Voici quelques exemples de dimensions~:
 
 \csdisplay
 5.9in    0pt    -2,5 pc    2fil
@@ -1288,7 +1288,7 @@ Quand vous concevez un document, vous devez d\'ecider de son
 quatre cot\'es, les ent\^etes et pieds de page, s'il y en a, qui
 apparaissent en haut et en bas de la page et la taille de l'espace
 entre le corps du texte et l'ent\^ete ou le pied de page. \TeX\ en 
-d\'efini par d\'efaut. Il d\'efinit une page de $8 \frac1/2$
+d\'efinit par d\'efaut. Il d\'efinit une page de $8 \frac1/2$
 par $11$ pouces avec des marges d'approximativement un pouce de
 chaque cot\'e, sans ent\^ete et avec un pied de page constitu\'e d'un
 num\'ero de page centr\'e.
@@ -1367,10 +1367,10 @@ $$({a \over b})$$
 vous aurez~:
 $$({a \over b})$$
 Puisque les parenth\`eses ne sont pas dans un contexte de d\'elimiteur, elles ne
-sont \emph{pas} \'elargie.  
+sont \emph{pas} \'elargies.  
 
 Les d\'elimiteurs vont par paires~:
-Un d\'elimiteur ouvrant \`a la gauche de la sous-formule
+un d\'elimiteur ouvrant \`a la gauche de la sous-formule
 et un d\'elimiteur fermant \`a sa droite.
 Vous pouvez choisir explicitement une hauteur plus grande pour un
 d\'elimiteur avec les commandes |\bigl|, ^|\bigr|, et leurs
@@ -1389,7 +1389,7 @@ que leurs internes, vous devez \'ecrire~:
 $$\bigl( f(x) - x \bigr) \bigl( f(y) - y \bigr)$$
 |
 
-Les $22$ d\'elimiteurs \plainTeX, montr\'e \`a leur taille normale, sont~:
+Les $22$ d\'elimiteurs \plainTeX, montr\'es \`a leur taille normale, sont~:
 \display{%
 $( \>) \>[ \>] \>\{ \>\}
 \>\lfloor \>\rfloor \>\lceil \>\rceil
@@ -1423,7 +1423,7 @@ Les d\'elimiteurs (sauf pour `|(|', `|)|', et
 `|/|')
 sont les symboles list\'es sur les
 pages~\xrefn{\lbrace}--\xrefn{\Uparrow}.
-Ils sont list\'es \`a un seul endroit sur la \knuth{page~146}{999}.
+Ils sont list\'es \`a un seul endroit sur la \knuth{page~146}{170--171}.
 
 Un d\'elimiteur peut appartenir \`a n'importe quelle classe.
 ^^{classe//d'un d\'elimiteur}
@@ -1437,7 +1437,7 @@ c'est-\`a-dire, |\Big|.
 Vous  pouvez obtenir un d\'elimiteur de deux diff\'erentes mani\`eres~:
 \olist
 \li Vous pouvez rendre un caract\`ere d\'elimiteur en lui assignant un
-code de d\'elimiteur non n\'egatif
+codes de d\'elimiteur non n\'egatif
 \bix^^{codes d\'elimiteurs}
 (voir plus bas) avec la commande ^|\delcode| (\xref\delcode).
 N\'eanmoins le caract\`ere n'agit comme d\'elimiteur que si vous l'utilisez dans un
@@ -1445,7 +1445,7 @@ contexte de d\'elimiteur\footnote{%
 Il est possible d'utiliser un caract\`ere avec un code de d\'elimiteur non n\'egatif 
 dans un contexte o\`u il n'est pas un d\'elimiteur. Dans ce cas \TeX\ ne fait pas
 la recherche~; \`a la place, il utilise simplement le caract\`ere de fa\c con ordinaire
-(voir la \knuth{page~156}{999}).}.
+(voir la \knuth{page~156}{181--282}).}.
 \li Vous pouvez produire un d\'elimiteur explicitement avec la commande 
 ^|\delimiter| 
 (\xref\delimiter), en analogie avec la mani\`ere par laquelle vous pouvez produire un 
@@ -1462,8 +1462,8 @@ Un code de d\'elimiteur dit \`a
 \TeX\ comment chercher un caract\`ere de sortie appropri\'e pour repr\'esenter
 un d\'elimiteur.
 Les r\`egles de cette recherche sont assez compliqu\'ees
-(voir les \knuth{pages~156 et 442}{999 et 999}).
-Une compr\'ehension compl\`ete de ces r\`egles requi\`ere des connaissances
+(voir les \knuth{pages~156 et 442}{181--282 et 506--507}).
+Une compr\'ehension compl\`ete de ces r\`egles requiert des connaissances
 sur l'organisation des ^{fichiers de m\'etriques} des polices, un sujet qui n'est pas seulement en dehors
 de l'objectif de ce livre mais \'egalement en dehors de l'objectif de \texbook.
 
@@ -1506,7 +1506,7 @@ Le but de \TeX\ dans le choix d'un arrangement particulier de lignes est de
 minimiser le total des
 d\'em\'erites pour le paragraphe, qu'il calcule en additionnant les d\'em\'erites
 des lignes individuelles.
-voir les \knuth{pages~97--98}{99--99} pour les d\'etails sur comment \TeX\
+voir les \knuth{pages~97--98}{114--115} pour les d\'etails sur comment \TeX\
 coupe un paragraphe en lignes.  
 \TeX\ n'utilise pas de d\'em\'erites quand il choisit des coupures de page~; 
 \`a la place, il utilise
@@ -1530,33 +1530,33 @@ qui n'entre pas dans le sch\'ema ordinaire des choses.
 un \'el\'ement extraordinaire peut appara\^\i tre dans une liste horizontale ou 
 verticale, comme une bo\^\i te ou un \'el\'ement ressort.
 \TeX\ compose un \'el\'ement extraordinaire
-comme une \refterm{bo\^\i te} de largeur, hauteur et profondeur \`a z\'ero---en d'autre
+comme une \refterm{bo\^\i te} de largeur, hauteur et profondeur \`a z\'ero---en d'autres
 termes, une bo\^\i te qui ne contient rien et n'occupe pas d'espace.
 
-Trois sortes d'\'el\'ements extraordinaires sont construit dans \TeX~: 
+Trois sortes d'\'el\'ements extraordinaires sont construits dans \TeX~: 
 \ulist
 \li Les commandes |\openout|, |\closeout| et |\write|
 (\p\xrefn{\openout})
 % (2nd) removed \xref to \write, since it's on the same page
-produit un \'el\'ement extraordinaire pour agir sur un fichier de sortie.
+produisent un \'el\'ement extraordinaire pour agir sur un fichier de sortie.
 ^^|\openout//\elementextra\ produit par|
 ^^|\write//\elementextra\ produit par|
 ^^|\closeout//\elementextra\ produit par|
-\TeX\ diff\`ere l'op\'eration jusqu'a ce qu'il envoi la prochaine page
+\TeX\ diff\`ere l'op\'eration jusqu'a ce qu'il envoit la prochaine page
 dans le {\dvifile}
 ^^{\dvifile//\elementextra\ en}
 (\`a moins que l'op\'eration soit pr\'ec\'ed\'ee par ^|\immediate|).
-\TeX\ utilise un \'el\'ement extraordinaire pour ces commandes parce que 
-elles n'ont rien \`a faire avec ce qu'il compose quand il les rencontre.
+\TeX\ utilise un \'el\'ement extraordinaire pour ces commandes parce qu'elles
+ n'ont rien \`a faire avec ce qu'il compose quand il les rencontre.
 \li La commande ^|\special| \ctsref{\special} demande \`a \TeX\ 
 d'ins\'erer un certain texte directement dans le \dvifile.
 comme avec la commande |\write|, \TeX\ diff\`ere l'op\'eration jusqu'a ce 
-qu'il envoi la prochaine page dans le {\dvifile}
+qu'il envoit la prochaine page dans le {\dvifile}
 ^^{\dvifile//mat\'eriel ins\'er\'e par \b\tt\\special\e}
 Une utilisation typique de |\special| serait de 
 nommer un fichier graphique que le driver d'affichage pourrait incorporer dans
 votre sortie finale.
-\li Quand vous changez de langages avec les commandes ^|\language| ou ^|\setlanguage|
+\li Quand vous changez de langage avec les commandes ^|\language| ou ^|\setlanguage|
 \ctsref{\language},
 \TeX\ ins\`ere un \'el\'ement extraordinaire qui l'instruit de l'usage d'un
 certain jeu de r\`egle de c\'esure \`a suivre quand il coupe un paragraphe
@@ -1571,21 +1571,20 @@ Une impl\'ementation particuli\`ere de \TeX\ peut procurer des \'el\'ements extr
 \concept ent\^ete
 
 Un \defterm{ent\^ete} est un mat\'eriel que \TeX\ met en haut de chaque page,
-Au-dessus du texte de cette page. L'ent\^ete pour un simple rapport
+au-dessus du texte de cette page. L'ent\^ete pour un simple rapport
 peut \^etre constitu\'e du titre du cot\'e gauche de la page et du 
 texte ``Page $n$'' du cot\'e droite de la page.
 D'habitude, un ent\^ete est constitu\'e d'une seule ligne, que vous pouvez mettre en
 assignant une liste de tokens \`a ^|\headline| \ctsref\headline.
 L'ent\^ete par d\'efaut de \plainTeX\  est \`a blanc.
-Il est aussi possible de produire des ent\^ete multiligne~; voir \xrefpg{bighead} pour
-voir comment faire.
+Il est aussi possible de produire des ent\^ete multiligne~ (voir \xrefpg{bighead}) 
 \endconcept
 
 
 \concept espace
 
 Vous pouvez demander \`a \TeX\ de mettre un \defterm{espace} entre deux \'el\'ements de 
-plusieurs fa\c con~: 
+plusieurs fa\c cons~: 
 
 \olist
 ^^{fin de ligne}
@@ -1602,7 +1601,7 @@ requise par le contexte.
 
 ^^{ressort//cr\'eer de l'espace avec}
 \li Vous pouvez \'ecrire une commande de saut qui produit le ressort
-que vous sp\'ecifie dans la commande.  Le ressort peut
+que vous sp\'ecifiez dans la commande.  Le ressort peut
 s'\refterm{\'etirer} ou se \refterm{r\'etr\'ecir},
 produisant plus ou moins d'espace.  Vous pouvez avoir un ressort vertical 
 comme un ressort horizontal.  Le ressort dispara\^\i t \`a chaque fois qu'il
@@ -1611,7 +1610,7 @@ est apr\`es une coupure de ligne ou de page.
 ^^{cr\'enages//cr\'eer de l'espace avec}
 \li Vous pouvez \'ecrire un \refterm{cr\'enage}.  Un cr\'enage produit un montant
  d'espace fixe qui ne s'\'etire ni se r\'etr\'ecit et ne dispara\^\i t pas sur un
-une coupure de ligne ou de page (\`a moins d'\^etre suivi imm\'ediatement par un 
+une coupure de ligne ou de page (\`a moins d'\^etre suivie imm\'ediatement par 
 ressort). L'usage le plus courant du cr\'enage est d'\'etablir une relation
 spatiale fixe entre deux \refterm{bo\^\i te}s adjacentes.
 \endolist
@@ -1643,8 +1642,8 @@ et sous-indices, sur-exposants, etc.\
 ^^{taille scriptscript}
 Par exemple, le nombre `|2|' compos\'e dans ces trois polices vous donnera 
 `$2$', `$\scriptstyle 2$' et `$\scriptscriptstyle 2$' (en \plainTeX). 
-Normalement vous fixerez les trois polices d'une famille \`a diff\'erents 
-taille du m\^eme type de police, mais rien ne vous emp\^eche d'utiliser des 
+Normalement vous fixerez les trois polices d'une famille \`a diff\'erentes 
+tailles du m\^eme type de police, mais rien ne vous emp\^eche d'utiliser des 
 types diff\'erents pour les trois polices ni d'utiliser la m\^eme police 
 deux fois dans une famille.
 
@@ -1674,7 +1673,7 @@ polices \`a cette famille.
 
 Un \defterm{fichier} est un flot d'information que \TeX\ interpr\`ete ou
 cr\'ee.  Des fichiers sont g\'er\'es par le ^{syst\`eme d'exploitation} qui supervise votre
-ex\'ecution de \TeX.  \TeX\ manipule des fichiers dans quatre contextes diff\'erent~:
+ex\'ecution de \TeX.  \TeX\ manipule des fichiers dans quatre contextes diff\'erents~:
 \olist
 \li Un ``^{fichier source}'' est celui que \TeX\ lit avec ses ``yeux''
 \seeconcept{\anatomy} et interpr\`ete en accord avec ses r\`egles ordinaires.
@@ -1685,13 +1684,13 @@ appelez avec une commande ^|\input| \ctsref \input.
 
 \li Un ``^{fichier r\'esultat}'' est celui qui contient les r\'esultats de 
 l'ex\'ecution de \TeX.  \TeX\ cr\'ee deux fichiers r\'esultat~: Le
-\dvifile\ et le fichier log.
+\dvifile\ et le fichier .log.
 ^^{\dvifile//comme un fichier r\'esultat}
 ^^{\logfile//comme un fichier r\'esultat}
-Le \dvifile\ contient l'information n\'ecessaire pour imprimer votre document~;
+Le \dvifile\ contient l'information n\'ecessaire pour imprimer votre document.
 Le fichier
-log contient un enregistrement de ce qui s'est pass\'e pendant l'ex\'ecution, 
-incluant tout messages d'erreur que \TeX\ a g\'en\'er\'e.
+.log contient un enregistrement de ce qui s'est pass\'e pendant l'ex\'ecution, 
+incluant tout message d'erreur que \TeX\ a g\'en\'er\'e.
 Si votre fichier source primaire s'appelle
 |screed.tex|, vos \dvifiles\ et log se nommeront |screed.dvi|
 et |screed.log|\footnote{C'est la convention usuelle, mais 
@@ -1700,15 +1699,15 @@ des impl\'ementations particuli\`eres de \TeX\ sont libres de changer cela.}.
 \li Pour lire un fichier avec la commande ^|\read|
 \ctsref{\read} vous devez associer le fichier avec un flot d'entr\'ee.
 ^^{flots d'entr\'ee//lire avec \b\tt\\read\e}
-Vous pouvez avoir jusqu'a $16$ flots d'entr\'ee actif 
-\`a la fois, num\'erot\'e de $0$ \`a $15$. 
+Vous pouvez avoir jusqu'a $16$ flots d'entr\'ee actifs 
+\`a la fois, num\'erot\'es de $0$ \`a $15$. 
 La commande |\read| lit un seul fichier et le fait avec la valeur d'une
 \refterm{s\'equence de contr\^ole} d\'esign\'ee, donc lire avec 
 |\read| est tr\`es diff\'erent de lire avec ^|\input| (qui apporte un
 fichier entier).
 \TeX\ prend tout flot d'entre qui n'est pas num\'erot\'e entre
 $0$ et $15$ comme r\'ef\'erence au terminal,
-donc `|\read16|', disons, lit le prochaine ligne que vous saisissez sur le 
+donc `|\read16|', disons, lit la prochaine ligne que vous saisissez sur le 
 terminal.
 
 \li Pour \'ecrire dans un fichier avec la commande |\write|
@@ -1717,13 +1716,13 @@ avec un flot de sortie.
 ^^|\write//flot d'entr\'ee pour|
 ^^{flots de sortie}
 Vous pouvez avoir jusqu'a $16$ flots de sortie actifs
-\`a la fois, num\'erot\'e de $0$ \`a $15$.  
-les flots d'entr\'ee et de sortie sont ind\'ependant.
+\`a la fois, num\'erot\'es de $0$ \`a $15$.  
+Les flots d'entr\'ee et de sortie sont ind\'ependants.
 Tout ce qui est envoy\'e vers un flot de sortie avec un num\'ero n\'egatif va vers le
 fichier log~; tout ce qui est envoy\'e vers un flot de sortie avec un num\'ero 
 sup\'erieur \`a $15$
 va \`a la fois vers le fichier log et le terminal.
-Ainsi `|\write16|', disons, \'ecrit une ligne sur le terminal et aussi envoie
+Ainsi `|\write16|', disons, \'ecrit une ligne sur le terminal et aussi envoit
 cette ligne vers le fichier~log.
 
 \endolist
@@ -1738,10 +1737,10 @@ vous devez fermer un fichier de flot quand vous en avez fini avec lui, n\'eanmoi
 Les deux commandes pour fermer un fichier de flot sont ^|\closein| \ctsref\closein\
 et ^|\closeout| \ctsref\closeout.
 Un avantage de fermer un flot quand vous en avez fini avec lui
-est que vous pouvez le r\'eutiliser le flot pour un autre fichier.
+est que vous pouvez r\'eutiliser le flot pour un autre fichier.
 Ceci peut \^etre essentiel quand vous lisez un longue suite de fichiers.
 
-De plus vous pouvez assigner des num\'eros vous-m\^eme aux flot d'entr\'ee et de sortie,
+De plus vous pouvez assigner des num\'eros vous-m\^eme aux flots d'entr\'ee et de sortie,
 Il est pr\'ef\'erable de le faire avec les commandes ^|\newread| et
 ^|\newwrite| \ctsref{\@newwrite}.
 Vous pouvez avoir plus d'un flot associ\'e avec un seul fichier,
@@ -1752,9 +1751,9 @@ usages diff\'erents.
 
 D'habitude, \TeX\ diff\`ere les actions d'ouverture, d'\'ecriture et de fermeture
 d'un flot de sortie jusqu'a ce qu'il enregistre une page avec ^|\shipout|
-(voir la \knuth{page~227}{999}
-pour les d\'etails).  Cette propri\'et\'e s'applique m\^eme aux messages \'ecrit sur le
-terminal avec |\write|.  Mais vous pouvez demande \`a \TeX\ pour faire une action
+(voir la \knuth{page~227}{266}
+pour les d\'etails).  Cette propri\'et\'e s'applique m\^eme aux messages \'ecrits sur le
+terminal avec |\write|.  Mais vous pouvez demander \`a \TeX\ de faire une action
 sur un flot de sortie imm\'ediatement en faisant pr\'ec\'eder la commande d'action de
 ^|\immediate| \ctsref\immediate.  Par exemple~:
 \csdisplay
@@ -1774,16 +1773,16 @@ des d\'efinitions (de \refterm{polices:police}, \refterm{macros:macro}, etc.)
 qui \'etaient pr\'esentes quand le dump a \'et\'e effectu\'e.
 En utilisant ^|virtex|, un forme sp\'eciale ``vierge'' de \TeX,
 vous pouvez recharger le fichier format \`a haute vitesse et 
-continuer dans le m\^eme \'etat dans lequel \'etait \TeX\ au moment du dump.
+continuer avec le m\^eme \'etat dans lequel \'etait \TeX\ au moment du dump.
 L'avantage du fichier format sur un fichier d' entr\'ee ordinaire
 contenant la m\^eme information est que \TeX\ peut la charger beaucoup plus
 vite.
 \par}
 
-Des fichiers de format doivent \^etre cr\'e\'es que ^|initex|, une  
+Des fichiers de format doivent \^etre cr\'e\'es par ^|initex|, une  
 forme sp\'eciale de \TeX\ \'ecrite \`a cette intention.
 Ni |virtex|, ni |initex| n'ont d'outils autres que les primitives 
-construite dans le programme \TeX\ lui-m\^eme.
+construites dans le programme \TeX\ lui-m\^eme.
 
 Une forme ^{pr\'echarg\'ee} de \TeX\ est celle qui a un fichier format conforme
 charg\'e et est pr\^et \`a accepter l'entr\'ee de l'utilisateur.
@@ -1791,7 +1790,7 @@ La forme de \TeX\ qui se nomme |tex|
 a souvent les d\'efinitions \plainTeX\ pr\'echarg\'ees.
 (\PlainTeX\ est normalement fourni sous deux autres formes~:
 comme une fichier de format et comme une fichier source de \TeX.
-Dans certain environnements, |tex| est \'equivalent \`a appeler |virtex|
+Dans certains environnements, |tex| est \'equivalent \`a appeler |virtex|
 et charge alors |plain|.)
 Cr\'eer des formes pr\'echarg\'ees de \TeX\ n\'ecessite un programme sp\'ecial~;
 il ne peut pas \^etre fait en n'utilisant que les outils de \TeX\ lui-m\^eme.
@@ -1811,7 +1810,7 @@ Voir \conceptcit{fichier}.
 Un \defterm{filet} est un rectangle plein noir.
 Un filet, comme une \refterm{bo\^\i te},
 a une \refterm{largeur}, une \refterm{hauteur} et une \refterm{profondeur}.
-La dimension vertical du rectangle
+La dimension verticale du rectangle
 est la somme de sa hauteur et de sa profondeur.
 Une ligne droite horizontale ou verticale est un cas sp\'ecial de filet.
  
@@ -1823,7 +1822,7 @@ Un filet peut \^etre soit horizontal, soit vertical.  La distinction entre un
 filet horizontal et un vertical diff\`ere selon la fa\c con de produire le
 filet, un filet vertical peut \^etre court et \'epais (et donc ressembler
 \`a une ligne horizontale), tandis qu'un filet horizontal peut \^etre grand et maigre
-(et donc ressembler \`a une ligne verticale).  la notion de filet de \TeX\ est
+(et donc ressembler \`a une ligne verticale).  La notion de filet de \TeX\ est
 plus g\'en\'erale que celle des typographes, qui pensent \`a un filet comme \`a une ligne
 et ne veulent habituellement pas appeler filet une bo\^\i te noire carr\'ee.
  
@@ -1882,7 +1881,7 @@ filet au look horizontal~:
 \medskip}
 
 Vous trouverez un \'etat pr\'ecis du traitement des filets de \TeX\  dans les
-\knuth{pages~221--222}{999--999}.
+\knuth{pages~221--222}{259--260}.
 \eix^^{filets horizontaux}
 \eix^^{filets verticaux}
 \eix^^|\hrule|
@@ -1936,12 +1935,12 @@ globale.  Parce que, `^|\gdef|' est \'equivalent \`a `|\global\def|' et
 Un \defterm{groupe} est une partie de votre manuscrit que \TeX\ traite comme
 une unit\'e.
 Vous indiquez un groupe en l'entourant avec les accolades
-`|{|' et `|}|' (ou tout autre caract\`eres avec le 
+`|{|' et `|}|' (ou tout autre caract\`ere avec le 
 \refterm{code de cat\'egorie} appropri\'e).
 ^^|{//d\'ebuter un groupe|
 ^^|}//terminer un groupe|
 
-La plus importante propri\'et\'e d'un groupe est que tout d\'efinition
+La plus importante propri\'et\'e d'un groupe est que toute d\'efinition
 ou assignation non globale que vous faites dans un groupe dispara\^\i t quand
 le groupe se termine.  Par exemple, si vous \'ecrivez~:
 
@@ -1951,7 +1950,7 @@ Please don't pour {\it any} more tea into my hat.
 La \refterm{s\'equence de contr\^ole} |\it| demande \`a \TeX\ de mettre le mot
 `|any|' en police italique mais n'affecte pas le reste du texte.
 Comme autre exemple, si vous utilisez le param\`etre |\hsize| 
-\ctsref{\hsize} pour changer la longueur de la ligne dans un groupe, La longueur de ligne
+\ctsref{\hsize} pour changer la longueur de la ligne dans un groupe, la longueur de ligne
 retourne \`a sa valeur pr\'ec\'edente un fois que \TeX\ est sorti du groupe.
 
 Les groupes sont aussi pratiques comme moyen de contr\^oler l'espace\-ment.  
@@ -1993,7 +1992,7 @@ s'\'etend au dessus de sa \refterm{ligne de base}.
 \concept hbox
 
 Une \defterm{hbox} (bo\^\i te horizontale) est une \refterm{bo\^\i te} que \TeX\
-construit en plaquant les articles d'une \refterm{liste horizontale} l'une 
+construit en plaquant les articles d'une \refterm{liste horizontale} l'un 
 apr\`es l'autre, de la gauche vers la droite.
 ^^{listes horizontales//hbox form\'es \`a partir de}
 Une hbox, prise comme unit\'e, n'est ni
@@ -2023,18 +2022,18 @@ deux groupes~: le mat\'eriel qui passe sur la page courante et le mat\'eriel qui
 ne passe pas.
 ^^{coupures de page//insertions sur des}
 Le mat\'eriel qui passe sur la page est plac\'e dans des registres de bo\^\i te, un
-par insertion et le mat\'eriel qui ne passe pas est transf\'erer sur la page
+par insertion et le mat\'eriel qui ne passe pas est transf\'er\'e sur la page
 suivante.
-Cette proc\'edure autorise \TeX\ de faire des choses comme distribuer des parties 
+Cette proc\'edure autorise \TeX\ \`a faire des choses comme distribuer des parties 
 d'une longue note de pied de page sur plusieurs pages cons\'ecutives.}. Des
-exemple de telles insertions sont les notes de pied de page et les figures. 
+exemples de telles insertions sont les notes de pied de page et les figures. 
 Les commandes \refterm{\plainTeX} pour cr\'eer des insertions sont 
 ^|\footnote|, ^|\topinsert|, |\mid!-insert|,
 ^^|\midinsert|
 et ^|\pageinsert|, aussi bien que la commande primitive ^|\insert|
 elle-m\^eme (\pp\xrefn\footnote--\xrefn{endofinsert}).
 Le m\'ecanisme de \TeX\ pour manipuler des insertions est plus compliqu\'e~;
-voir les \knuth{pages~122--125}{999--999} pour les d\'etails.
+voir les \knuth{pages~122--125}{142--146} pour les d\'etails.
 \endconcept
 
 
@@ -2057,8 +2056,8 @@ Par exemple, le mot `|office|' est compos\'e \hbox{``office''} et non
 \hbox{``of{f}ice''}, par les syst\`emes de composition de haute qualit\'e.
 La connaissance des ligatures est construite dans les \refterm{polices:police}
 que vous utilisez, donc vous n'avez rien \`a faire pour que \TeX\
-les produisent. (Vous pouvez emp\^echer la ligature d'``office'', comme nous
-l'avons dit plut\^ot, en saisissant `|of{f}ice|' dans votre entr\'ee.)
+les produise. (Vous pouvez emp\^echer la ligature d'``office'', comme nous
+l'avons dit plus t\^ot, en saisissant `|of{f}ice|' dans votre entr\'ee.)
 \TeX\ est aussi capable d'utiliser son m\'ecanisme de ligature pour composer
 la premi\`ere ou la derni\`ere lettre d'un mot diff\'eremment de la m\^eme lettre
 qui appara\^\i t au milieu d'un mot
@@ -2086,14 +2085,14 @@ assemble les bo\^\i tes d'une \refterm{liste horizontale} en  une bo\^\i te plus
 il aligne les bo\^\i tes de la liste pour que leurs lignes de base co\"\i ncident.
 Par analogie, pensez que vous \'ecrivez sur un bloc de papier lign\'e.  Chaque lettre 
 que vous \'ecrivez a
-une lignes de base implicite.
+une ligne de base implicite.
 Pour aligner les lettres horizontalement,
-vous les placez sur le bloc pour que leur lignes de base
-s'ajuste avec les lignes-guides claires imprim\'ees sur le bloc.
+vous les placez sur le bloc pour que leurs lignes de base
+s'ajustent avec les lignes-guides claires imprim\'ees sur le bloc.
 
 Une bo\^\i te peut et souvent doit s'\'etendre sous sa ligne de base.
 Par exemple, la lettre `g' s'\'etend sous la ligne de base de sa bo\^\i te parce
-qu'il a une descendante (la boucle du dessous du `g').
+qu'elle a une descendante (la boucle du dessous du `g').
 \endconcept
 
 
@@ -2135,7 +2134,7 @@ Une \defterm{liste verticale} est une liste d'\'el\'ements que \TeX\ a produit q
 {% Use a brace here so that definitions of explanatory macros remain local.
 % The closing brace is at the end of the concept.
 Une \defterm{macro} est une d\'efinition qui donne un nom \`a un mod\`ele de texte 
-d'entr\'ee de \TeX\footnote{Plus pr\'ecis\'ement, La d\'efinition donne un nom
+d'entr\'ee de \TeX\footnote{Plus pr\'ecis\'ement, la d\'efinition donne un nom
 \`a une s\'equence de tokens.}. Le nom peut \^etre soit une \refterm{s\'equence de
 contr\^ole} soit un \refterm{caract\`ere actif}.  Le mod\`ele est appel\'e le
 ``texte de remplacement''.  La commande primaire pour d\'efinir des macros est 
@@ -2200,7 +2199,7 @@ un \refterm{groupe} soit un autre argument de macro.}.
 Quand \TeX\ rencontre une macro, il d\'eveloppe la macro dans son \oe so\-phage
 \seeconcept{\anatomy}
 en substituant chaque argument par le param\`etre correspondant
-dans le texte de remplacement.  Le texte r\'esultant peut contenir d'autre 
+dans le texte de remplacement.  Le texte r\'esultant peut contenir d'autres 
 appels de macro. Quand \TeX\ rencontre un tel appel de macro imbriqu\'e, il
 d\'eveloppe cet appel imm\'ediatement sans regarder ce qui suit l'appel
 \footnote{En terminologie informatique, le d\'eveloppement est ``profondeur
@@ -2209,7 +2208,7 @@ du d\'eveloppement avec des commandes telles que |\expandafter|.}. Quand
 l'\oesophage de \TeX\ tombe sur une \refterm{commande} \refterm{primitive} 
 qui ne peut \^etre d\'evelopp\'ee plus loin, \TeX\ passe cette commande \`a l'estomac 
 de \TeX. L'ordre de d\'eveloppement est parfois critique, donc de fa\c con \`a vous 
-aider \`a le comprendre, nous vous donnerons un exemple de \TeX\ au travail.
+aider \`a le comprendre, nous vous donnons un exemple de \TeX\ au travail.
 
 Supposez que vous procurez \`a \TeX\ l'entr\'ee suivante~:
 \csdisplay
@@ -2243,7 +2242,7 @@ primitives qui ne peuvent \^etre d\'evelopp\'ees.
 \bix^^{param\`etres//d\'elimit\'es}
 Une macro peut aussi avoir des ``param\`etres d\'elimit\'es'', qui peuvent \^etre m\'elang\'es avec
 des non d\'elimit\'es dans toutes les combinaisons.  L'id\'ee d'un param\`etre 
-d\'elimit\'es est que \TeX\ trouve l'argument correspondant en recherchant
+d\'elimit\'e est que \TeX\ trouve l'argument correspondant en recherchant
 une certaine s\'equence de tokens qui marquent la fin de l'argument---le
 d\'elimiteur.  Cela fait, quand \TeX\ recherche un tel argument, il
 prend comme argument tout les tokens \`a partir de la position courante de \TeX\ 
@@ -2252,7 +2251,7 @@ mais sans inclure le d\'elimiteur.
 Vous indiquez un param\`etre d\'elimit\'e en \'ecrivant `|#|$n$' ($n$ 
 doit \^etre entre $0$
 et $9$) suivi par un ou plusieurs tokens qui agissent comme le d\'elimiteur.  
-Le d\'elimiteur s'\'etend jusqu'au prochains `|#|' ou `|{|'---qui ont un sens
+Le d\'elimiteur s'\'etend jusqu'au prochain `|#|' ou `|{|'---qui ont un sens
 car `|#|' d\'ebute un autre param\`etre et `|{|' le texte de remplacement.
 
 Le d\'elimiteur ne peut \^etre `|#|' ou `|{|', donc vous pouvez appeler un param\`etre
@@ -2263,7 +2262,7 @@ param\`etre non d\'elimit\'e~; autrement il sera  d\'elimit\'e.  Notez
 la diff\'erence dans les arguments pour  les deux sortes de param\`etres---un
 param\`etre non d\'elimit\'e est d\'esign\'e soit par un simple token, soit par une
 s\'equence de tokens englob\'es entre des accolades, tandis qu'un param\`etre
-d\'elimit\'e est d\'esign\'e par n'importe que nombre de tokens, m\^eme aucun.
+d\'elimit\'e est d\'esign\'e par n'importe quel nombre de tokens, m\^eme aucun.
 
 Un exemple de macro utilisant deux param\`etres d\'elimit\'es est~:
 \def\diet#1 #2.{On #1 we eat #2!}
@@ -2277,14 +2276,14 @@ second param\`etre est d\'elimit\'e par un point.  Si vous saisissez~:
 |
 vous obtiendrez le texte ``\diet Tuesday turnips.''.
 Mais si les tokens d\'elimitants sont englob\'es dans un groupe, \TeX\ 
-ne les consid\`erent pas d\'elimit\'es.  Donc si vous \'ecrivez~:
+ne les consid\`ere pas d\'elimit\'es.  Donc si vous \'ecrivez~:
 \csdisplay
 \diet {Sunday mornings} pancakes.
 |
 vous obtiendrez le texte `\diet {Sunday mornings} pancakes.'
 m\^eme s'il y a un espace entre `|Sunday|' et `|morning|'.
 Quand vous utilisez un espace comme d\'elimiteur,
-une caract\`ere fin de ligne d\'elimite aussi normalement l'argument
+un caract\`ere fin de ligne d\'elimite aussi normalement l'argument
 car \TeX\ convertit la fin de ligne en espace avant que le m\'ecanisme de
 macro ne le voit.
 \eix^^{param\`etres//d\'elimit\'es}
@@ -2293,7 +2292,7 @@ macro ne le voit.
 Il arrivera que vous ayez \`a d\'efinir une macro qui ait `|#|' comme caract\`ere
 significatif. Vous aurez plus de chance d'avoir besoin de faire cela quand 
 vous d\'efinirez une macro qui \`a son tour d\'efinit une seconde macro. Comment
-alors faire \`a propos des param\`etres de la seconde macro sans mettre \TeX\
+faire \`a propos des param\`etres de la seconde macro sans mettre \TeX\
 dans la confusion~? La r\'eponse est que vous saisissez deux `|#|' pour chacun
 de ceux que vous voulez quand la premi\`ere macro est d\'evelopp\'ee. Par exemple,
 supposons que vous \'ecriviez la d\'efinition de macro~:
@@ -2311,7 +2310,7 @@ et l'appel cons\'ecutif `|\second{Two}|' produit le texte
 
 Un certain nombre de commandes fournissent des moyens suppl\'emen\-taires pour d\'efinir des macros
 (voir pp.~\xrefn{mac1}--\xrefn{mac2}).
-Pour les r\`egles com\-pl\`etes concernant les macros, voir le \knuth{chapitre~20}{}.
+Pour les r\`egles com\-pl\`etes concernant les macros, voir le \knuth{chapitre~20}{}
 }% close brace at the start of the `macro' concept.
 \endconcept
 
@@ -2330,10 +2329,10 @@ qui sera r\'eduit photographiquement.
 Vous pouvez aussi appliquer de la magnification sur une seule \refterm{police} 
 pour avoir une version plus petite ou plus grande de cette police que sa
 ``^{taille d'origine}''.  Vous
-devez procurer au driver d'impression un^{fichier de forme}
+devez procurer au driver d'impression un ^{fichier de forme}
 \seeconcept{police} pour 
 chaque magnification de police que vous utilisez---%
-a moins que la police soit construite dans votre imprimante et que votre driver
+a moins que la police ne soit construite dans votre imprimante et que votre driver
 d'impression la connaisse.
 Quand vous d\'efinissez une police avec la commande
 |\font| \ctsref{\font}, vous pouvez sp\'ecifier une magnification avec
@@ -2380,7 +2379,7 @@ mais uniquement en demandant des actions explicites qui d\'eplacent le mat\'erie
 en dehors des marges.
 
 Le rectangle est d\'efini en fonction de son coin en haut \`a gauche, de sa largeur, et
-de sa profondeur.  l'emplacement du coin en haut \`a gauche est d\'efini par
+de sa profondeur.  L'emplacement du coin en haut \`a gauche est d\'efini par
 les param\`etres ^|\hoffset|
 et ^|\voffset| 
 \ctsref\voffset.  L'usage est de placer ce coin \`a un pouce du haut
@@ -2404,7 +2403,7 @@ Les implications de ces conventions sont~:
 A partir de ces informations vous pouvez voir quels param\`etres vous devez 
 changer pour modifier les marges.
 
-Chaque changements que vous faites \`a |\hoffset|, |\voffset| ou |\vsize| prendra
+Chaque changement que vous faites \`a |\hoffset|, |\voffset| ou |\vsize| prendra
 effet la prochaine fois que \TeX\ d\'ebutera une page.  En d'autres termes, si vous 
 les changez dans une page, le changement n'affectera que la page \emph{suivante}.
 Si vous changez |\hsize|, le changement deviendra effectif imm\'ediatement.
@@ -2437,7 +2436,7 @@ Supposez que vous d\'efinissiez une macro d'ent\^ete de section comme suit~:
 % #1 is the name of the section
 |
 ^^|\mark|
-Cette macro, quand elle est appel\'ee, produira un ent\^ete de section en caract\`ere gras et
+Cette macro, quand elle est appel\'ee, produira un ent\^ete de section en caract\`eres gras et
 enregistrera aussi le nom de la section comme marque.
 Vous pouvez maintenant d\'efinir l'ent\^ete de chaque page imprim\'ee
 comme suit~:
@@ -2448,8 +2447,8 @@ comme suit~:
 Chaque page paire (celle de gauche) aura maintenant le num\'ero de page suivi par 
 le nom de la premi\`ere section de cette page, tandis que chaque page impaire (celle de droite)
 aura le num\'ero de page suivi du nom de la derni\`ere section de cette page.
-Les cas sp\'eciaux, par exemple, pas de sections commen\c cant sur une page, 
-s'affichera g\'en\'eralement correctement gr\^ace \`a la mani\`ere dont travaillent
+Les cas sp\'eciaux, par exemple, pas de section commen\c cant sur une page, 
+s'afficheront g\'en\'eralement correctement gr\^ace \`a la mani\`ere dont travaillent
 ^|\firstmark| et ^|\botmark|.
 
 Quand vous partagez une page en utilisant la commande |\vsplit| \ctsref{\vsplit} vous
@@ -2457,7 +2456,7 @@ pouvez retrouver les textes de la premi\`ere et de la derni\`ere marque de la
 portion non partag\'ee avec les commandes ^|\splitfirstmark| et ^|\splitbotmark| 
 \ctsref{\splitfirstmark}.
 
-Voir les \knuth{pages~258--260}{999--999} pour une explication plus pr\'ecise sur la
+Voir les \knuth{pages~258--260}{302--305} pour une explication plus pr\'ecise sur la
 fa\c con de cr\'eer et retrouver des marques.
 \endconcept
 
@@ -2471,9 +2470,9 @@ d\'ecrire un caract\`ere math\'ematique,
 c'est-\`a-dire, un caract\`ere qui a un
 r\^ole particulier dans une formule math\'ematique.  Un mathcode 
 transmet trois sortes 
-d'information sur un caract\`ere~: sa position dans la \refterm{police}, sa
+d'informations sur un caract\`ere~: sa position dans la \refterm{police}, sa
 \refterm{famille} et sa \refterm{classe}.
-chacun des $256$ caract\`eres entr\'es possibles
+Chacun des $256$ caract\`eres entr\'es possibles
 a un mathcode, qui est d\'efini par le programme \TeX\
 mais peut \^etre chang\'e.
 
@@ -2483,13 +2482,13 @@ famille con\-tient trois polices~: une pour la \refterm{taille texte}, une pour
 la \refterm{taille script} et une pour la \refterm{taille scriptscript}.  \TeX\
 choisi la taille d'un caract\`ere particulier et donc sa police,
 en fonction du contexte.  La classe d'un caract\`ere sp\'ecifie son r\^ole
-dans une formule (voir la \knuth{page~154}{999}).  Par exemple, le signe \'egal `|=|'
-est dans la classe $3$ (Relation).  \TeX\ utilise sa connaissance des classes 
-de caract\`ere quand il d\'ecide combien d'espace mettre entre diff\'erent
+dans une formule (voir la \knuth{page~154}{180}).  Par exemple, le signe \'egal `|=|'
+est dans la classe $3$ (relation).  \TeX\ utilise sa connaissance des classes 
+de caract\`eres quand il d\'ecide combien d'espace mettre entre diff\'erents
 composants d'une formule math\'ematique.
 
-La meilleur fa\c con de comprendre tout ce que sont les mathcodes est de voit comment
-\TeX\ les utilise. Donc nous vous montrerons ce que \TeX\ fait avec un
+La meilleure fa\c con de comprendre ce que sont les mathcodes est de voir comment
+\TeX\ les utilise. Nous montrons ce que \TeX\ fait avec un
 token de caract\`ere $t$ de \refterm{code de cat\'egorie}~11 ou~12 dans une
 formule math\'ematique~:
 
@@ -2508,7 +2507,7 @@ du contexte ambiant.
 
 La d\'ependance du contexte dans les \'etapes
 (3) et (7) implique que \TeX\ ne peut pas composer un caract\`ere math\'ematique
-tant qu'il n'a pas vu tout la formule contenant le
+tant qu'il n'a pas vu toute la formule contenant le
 caract\`ere math\'ematique.  Par exemple, dans la formule
 `|$a\over b$|', \TeX\ ne sait pas quelle taille aura le `|a|' tant qu'il 
 n'aura pas vu le |\over|.
@@ -2517,7 +2516,7 @@ n'aura pas vu le |\over|.
 Le mathcode d'un caract\`ere est encod\'e en fonction de la formule $4096c
 + 256f + n$, o\`u $c$ est la classe du caract\`ere, $f$ sa
 \refterm{famille} et $n$ son code de \refterm{caract\`ere \ascii} dans
-la famille.  vous pouvez changer l'interpr\'etation de \TeX\ pour un caract\`ere entr\'e
+la famille.  Vous pouvez changer l'interpr\'etation de \TeX\ pour un caract\`ere entr\'e
 dans un mode math\'ematique en assignant une valeur \`a la table d'entr\'ee des ^|\mathcode|
 \ctsref{\mathcode} pour ce
 caract\`ere.  Le caract\`ere doit avoir un
@@ -2527,7 +2526,7 @@ recherche son |\mathcode|.
 
 ^^{famille//variable}
 Vous pouvez d\'efinir un caract\`ere math\'ematique pour avoir une famille ``variable'' en
-lui donnant une classe de $7$.  \`a chaque fois que \TeX\ rencontre ce caract\`ere dans une
+lui donnant une classe de $7$.  A chaque fois que \TeX\ rencontre ce caract\`ere dans une
 formule math\'ematique, il prend la famille du caract\`ere comme \'etant la valeur 
 courante du param\`etre |\fam| \ctsref{\fam}.  Une famille variable vous autorise
 \`a sp\'ecifier la police de texte ordinaire dans une formule math\'ematique.  Par
@@ -2549,14 +2548,14 @@ place sur une ligne seule avec de l'espace suppl\'ementaire dessus et dessous
 pour le s\'eparer du texte l'environnant.
 Une formule math\'ematique affich\'ee est entour\'ee de `|$$|'.
 \ttidxref{$$}
-\TeX\ lit es math\'ematiques affich\'ees dans le \refterm{mode} math\'ematiques affich\'ees.
+\TeX\ lit les math\'ematiques affich\'ees dans le \refterm{mode} math\'ematiques affich\'ees.
 \endconcept
 
 
 \concept m\'ediocrit\'e
 
 La \defterm{m\'ediocrit\'e} d'une ligne mesure combien les tailles des espaces 
-inter-mot ^^{espacement inter-mots} de la ligne d\'evient de leur valeurs 
+inter-mot ^^{espacement inter-mots} de la ligne d\'evient de leurs valeurs 
 naturelles, c'est-\`a-dire, des valeurs sp\'ecifi\'ees dans les 
 \refterm{polices:police} utilis\'ees dans la ligne. Plus grande est la 
 d\'eviation, plus grande est la m\'ediocrit\'e.  Similairement, la m\'ediocrit\'e d'une 
@@ -2573,44 +2572,44 @@ r\'etr\'ecir le ressort pour composer une ligne ou une page de la taille d\'esir
 \'etirer le ressort par deux fois son \'etat d'\'etirement  signifie un ratio de 
 $2$ et une m\'ediocrit\'e de $800$~; la r\'etr\'ecir de moiti\'e son \'etat de r\'etr\'ecissement 
 signifie un ratio de $.5$ et une m\'ediocrit\'e de $13$. \TeX\ traite une m\'ediocrit\'e 
-plus grand que $10000$ comme \'etant \'egal \`a $10000$.
+sup\'erieure \`a $10000$ comme \'etant \'egale \`a $10000$.
 
 \TeX\ utilise la m\'ediocrit\'e d'une ligne quand il coupe un paragraphe en lignes
 \seeconcept{coupure de ligne}.  Il utilise cette information en deux \'etapes~:
 
 \olist
 \li Quand \TeX\ choisi des coupures de ligne,
-il acceptera \'eventuellement des lignes dont la m\'ediocrit\'e est inf\'erieur ou \'egal \`a
+il acceptera \'eventuellement des lignes dont la m\'ediocrit\'e est inf\'erieure ou \'egale \`a
 la valeur de |\tole!-rance| (\xref \tolerance).  Si \TeX\ ne peut pas diminuer la conception
 d'une ligne dont la m\'ediocrit\'e d\'epasse cette valeur, 
 il lui mettra  un ``underfull ou overfull \refterm{hbox}''.
 \TeX\ ne mettra
 un ``overfull ou underfull hbox'' qu'en dernier ressort, c'est-\`a-dire, seulement s'il n'y a
-pas d'autre moyen d\'ecouper le paragraphe en lignes.
-\li En assumant que toutes les lignes sont tol\'erablement mauvaise, \TeX\ utilise la m\'ediocrit\'e des lignes
+pas d'autre moyen de d\'ecouper le paragraphe en lignes.
+\li En assumant que toutes les lignes sont tol\'erablement mauvaises, \TeX\ utilise la m\'ediocrit\'e des lignes
 pour \'evaluer les diff\'erents moyens de couper le paragraphe en lignes.
 Durant cette \'evaluation il associe des ``d\'em\'erites'' avec chaque ligne potentielle.
 La m\'ediocrit\'e augmente le nombre de \refterm{d\'em\'erites}.
 \TeX\ alors
-coupe le paragraphe en lignes d'une fa\c con qui minimise les 
+coupe le paragraphe en lignes d'une fa\c con qui minimise 
 le total des d\'em\'erites pour le paragraphe.
 Plus
 souvent \TeX\ arrange le paragraphe pour minimiser la m\'ediocrit\'e de la
-ligne la pire.  Voir \knuth{pages~97--98}{99--99} pour les d\'etails de comment \TeX\
+ligne la pire.  Voir \knuth{pages~97--98}{114--115} pour les d\'etails comment \TeX\
 coupe un paragraphe en lignes.  
 \endolist
 
-La proc\'edure de \TeX\ pour assembler une s\'equence de lignes et autres mati\`ere en modes verticaux
+La proc\'edure de \TeX\ pour assembler une s\'equence de lignes et autres mati\`eres en modes verticaux
 en pages est similaire \`a sa proc\'edure de coupure de ligne.
 De toutes fa\c cons, assembler des pages n'est pas aussi compliqu\'e parce que
 \TeX\ ne consid\`ere qu'une page \`a la fois
 quand il cherche des coupures de page.
 Donc la seule d\'ecision qu'il doit prendre est o\`u finir la page courante.
-De plus, quand \TeX\ choisi des coupures de ligne il en
+De plus, quand \TeX\ choisit des coupures de ligne il en
 consid\`ere plusieurs simultan\'ement.
 (La plupart des traitements de texte choisissent des coupures de ligne une \`a la fois,
 et donc ne font pas un aussi bon boulot que celui que fait \TeX\.)
-Voir \knuth{pages~111--113}{999--999} pour les d\'etails sur comment \TeX\ choisi ses
+Voir \knuth{pages~111--113}{129--131} pour les d\'etails sur comment \TeX\ choisit ses
 coupures de page.
 \endconcept
 
@@ -2632,7 +2631,7 @@ il est dans un des six \defterm{modes}~:
 \endulist
 Le mode d\'ecrit une sorte d'entit\'e que \TeX\ rassemble.
 
-Parce que vous pouvez encastrer une sorte d'entit\'e avec une autre, c'est-\`a-dire, un vbox
+Parce que vous pouvez encastrer une sorte d'entit\'e avec une autre, c'est-\`a-dire, une vbox
 dans une formule, \TeX\ garde trace non seulement d'un mode mais d'une
 liste enti\`ere de modes (ce qu'un informaticien appelle une ``pile'').
 Supposez que \TeX\ soit en mode $M$ et rencontre quelque chose qui le
@@ -2655,11 +2654,11 @@ d'articles (bo\^\i tes, ressort, p\'enalit\'es, etc.).
 l'un apr\`es l'autre, de gauche \`a droite.
 
 Une liste horizontale ne peut contenir aucun
-articles produit par des commandes verticales internes, par exemple, |\vskip|.
+article produit par des commandes verticales internes, par exemple, |\vskip|.
 ^^{listes horizontales//ne peuvent contenir de commandes verticales}
 
 \ulist
-\li Si \TeX\ assemble une liste horizontal dans le mode horizontal ordinaire et
+\li Si \TeX\ assemble une liste horizontale dans le mode horizontal ordinaire et
 rencontre une commande verticale interne, \TeX\ termine le paragraphe et
 entre dans le \refterm{mode vertical}.
 
@@ -2672,13 +2671,13 @@ sont en fait verticales internes~: |\halign| \ctsref{\halign}
 et |\hrule| \ctsref{\hrule}.
 ^^|\hrule//vertical par nature|
 ^^|\halign//vertical par nature|
-voir la \knuth{page~286}{999} pour une liste 
+voir la \knuth{page~286}{332} pour une liste 
 des commandes verticales internes.
 
 {\tighten
 Vous devez faire attention \`a une subtile mais importante propri\'et\'e du mode
 horizontal interne~: \emph{vous ne pouvez pas entrer en mode horizontal interne
-quand vous \^etes en mode horizontal normal} Ce que cela signifie en pratique
+quand vous \^etes en mode horizontal normal}. Ce que cela signifie en pratique
 est que quand \TeX\ assemble une hbox il n'appr\'ehendera pas un texte en
 paragraphe, c'est-\`a-dire, du texte pour lequel il ferait une \refterm{coupure
 de ligne}. Vous pouvez contourner cette restriction en englobant le texte en
@@ -2693,19 +2692,19 @@ un~hbox.
 \concept {mode math\'ematique}
 
 {\tighten
-Un \defterm{mode math\'ematique} est un \refterm{mode} dans lequel est \TeX\ quand il 
-construit une formule math\'ematique.  \TeX\ a deux modes math\'ematiques diff\'erent~: Le 
-^{mode math\'ematique de texte} pour construire une formule devant \^etre englob\'ee dans une ligne de texte,
-et le ^{mode math\'ematique d'affichage} pour construire une formule devant 
-appara\^\i tre seule sur une ligne.  Vous indiquez le mode math\'ematique de texte
+Un \defterm{mode math\'ematique} est un \refterm{mode} dans lequel \TeX\ 
+construit une formule math\'ematique.  \TeX\ a deux modes math\'ematiques diff\'erents~: Le 
+^{mode math\'ematique de texte} construit une formule devant \^etre englob\'ee dans une ligne de texte,
+tanfis que le ^{mode math\'ematique d'affichage} construit une formule devant 
+appara\^\i tre seul sur une ligne.  Vous indiquez le mode math\'ematique de texte
 en englobant la formule entre |$| et dans le mode math\'ematique d'affichage en
 englobant la formule entre |$$|.
 %\TeX\ will accept most \refterm{commands:command} in
 %math mode. If it encounters a command in math mode that doesn't make
 %sense in a formula, it will complain.
 Une propri\'et\'e importante des deux modes math\'ematiques est que les 
-\emph{espace saisis ne compte pas}.  Voir les 
-\knuth{pages~290--293}{999--999} pour des d\'etails sur la fa\c con dont \TeX\ r\'eponds aux 
+\emph{espace saisis ne comptent pas}.  Voir les 
+\knuth{pages~290--293}{338--342} pour des d\'etails sur la fa\c con dont \TeX\ r\'epond aux 
 diff\'erentes commandes en mode math\'ematique.
 \par}
 
@@ -2714,7 +2713,7 @@ diff\'erentes commandes en mode math\'ematique.
 
 \concept {mode ordinaire}
 
-Un \defterm{mode ordinaire} est un \refterm{mode} dans lequel est \TeX\ quand
+Le \defterm{mode ordinaire} est le \refterm{mode} dans lequel est \TeX\ quand
 il assemble un paragraphe en lignes ou assemble des lignes
 en une page.  Voir \conceptcit{mode horizontal}, \conceptcit{mode vertical}.
 \endconcept
@@ -2722,7 +2721,7 @@ en une page.  Voir \conceptcit{mode horizontal}, \conceptcit{mode vertical}.
 
 \concept {mode restreint}
 
-Un \defterm{mode restreint} est un \refterm{mode} dans lequel est \TeX\ quand
+Le \defterm{mode restreint} est le \refterm{mode} dans lequel est \TeX\ quand
 il assemble une \refterm{hbox} ou une \refterm{vbox}.
 Nous suivons \texbook\ dans l'utilisation du terme ``mode vertical interne''
 pour ce que vous vous attendez \^etre un ``mode vertical restreint''.
@@ -2734,15 +2733,15 @@ Voir \conceptcit{mode horizontal} et \conceptcit{mode vertical}.
 
 ^^{vbox//mode vertical pour} Quand \TeX\ assemble soit une
 \refterm{vbox} soit la liste verticale principale dont les pages sont d\'eriv\'ees,
-il est dans un des deux \defterm{modes verticaux}~: Le ^{mode vertical ordinaire} 
+il est dans un des deux \defterm{modes verticaux}~: le ^{mode vertical ordinaire} 
 pour assembler la liste verticale principale et le ^{mode vertical restreint} 
-pour assembler les vbox.  \`a chaque fois que \TeX\ est en mode vertical 
+pour assembler les vbox.  A chaque fois que \TeX\ est en mode vertical 
 son estomac \seeconcept{\anatomy} construit une \refterm{liste verticale} 
 d'\'el\'ements (bo\^\i tes, ressort, p\'enalit\'es, etc.).
 \TeX\ compose les \'el\'ements de la liste
 l'un apr\`es l'autre, de haut en bas.
 
-Une liste verticale ne peut pas contenir tous les \'el\'ements produit par 
+Une liste verticale ne peut pas contenir tous les \'el\'ements produits par 
 des commandes fondamentalement horizontales, c'est-\`a-dire,
 ^^{listes verticales//ne peuvent contenir de commandes horizontales}
 |\hskip| ou un caract\`ere ordinaire (pas un espace)
@@ -2757,16 +2756,16 @@ rencontre une commande fondamentalement horizontale, il bascule vers le
 rencontre une commande fondamentalement horizontale, il rousp\`ete.
 \endulist
 
-Deux commandes auxquelles vous devez penser en premier qu'elles sont fondamentalement verticale sont
-en fait fondamentalement horizontale~: |\valign| \ctsref{\valign} et |\vrule|
+Deux commandes auxquelles vous devez penser en premier qu'elles sont fondamentalement verticales sont
+en fait fondamentalement horizontales~: |\valign| \ctsref{\valign} et |\vrule|
 \ctsref{\vrule}.
 ^^|\valign//horizontal par nature|
 ^^|\vrule//horizontal par nature|
-Voir la \knuth{page~283}{999} pour une liste des commandes
+Voir la \knuth{page~283}{329} pour une liste des commandes
 fondamentalement horizontales.
 
 Il est particuli\`erement important d'avoir conscience que \TeX\ consid\`ere un
-caract\`ere ordinaire autre qu'un espace comme \'etant fondamentalement horizontal
+caract\`ere ordinaire autre qu'un espace comme \'etant fondamentalement horizontal.
 Si \TeX\ d\'ebute soudainement un nouveau paragraphe quand vous ne vous y
 attendez pas une cause vraisemblable est un caract\`ere que \TeX\ a rencontr\'e
 en \'etant en mode vertical. Vous pouvez convaincre \TeX\ de ne pas traiter ce
@@ -2814,17 +2813,17 @@ espace naturel de quatre |mu| et un \refterm{\'etirement} de cinq |mu|.
 
 Un \defterm{nom de fichier} nomme un 
 \refterm{fichier} qui est connu du ^{syst\`eme d'exploitation}
-qui \`a son tour 
+qui 
 supervise votre ex\'ecution de \TeX.  La syntaxe d'un nom de fichier ne doit \emph{pas}
 suivre les r\`egles usuelles de la syntaxe de \TeX\ et en fait est diff\'erente
 selon les diff\'erentes impl\'emen\-ta\-tions de \TeX.
-En particulier, la plupart des impl\'ementations de \TeX\ consid\`ere un nom de fichier 
+En particulier, la plupart des impl\'ementations de \TeX\ consid\`erent un nom de fichier 
 comme \'etant
 termin\'e par un blanc ou une fin de ligne.  Ainsi \TeX\ est susceptible de
 mal interpr\'eter `|{\input chapter2}|' 
 en prenant l'accolade droite comme partie du nom de fichier.
 Comme r\`egle g\'en\'erale, vous devez faire suivre un nom de fichier d'un blanc ou 
-d'une fin de ligne comma dans `|{\input chapter2!visiblespace}|'.
+d'une fin de ligne comme dans `|{\input chapter2!visiblespace}|'.
 
 \endconcept
 
@@ -2852,7 +2851,7 @@ les valeurs de $0$ \`a $15$.
 ^^{nombres hexad\'ecimaux}
 Vous ne pouvez, h\'elas, utiliser de lettres minuscules quand vous \'ecrivez un nombre hexad\'ecimal.
 Si vous voulez des explications sur les nombres octaux et hexad\'ecimaux,
-vous en trouverez dans les \knuth{pages~43--44}{99--99}.
+vous en trouverez dans les \knuth{pages~43--44}{53--54}.
 
 Un nombre d\'ecimal, octal ou hexad\'ecimal 
 se termine au premier caract\`ere qui ne peut faire partie du nombre.
@@ -2888,7 +2887,7 @@ $78$~:
 
 Vous ne pouvez utiliser un nombre dans du texte par lui-m\^eme car un nombre n'est pas
 une commande.
-N\'eanmoins, vous pouvez ins\'erer la forme d\'ecimal d'un nombre dans du texte
+N\'eanmoins, vous pouvez ins\'erer la forme d\'ecimale d'un nombre dans du texte
 en mettant une commande ^|\number| (\xref\number) devant lui
 ou la forme num\'erique romaine en mettant une commande ^|\romannumeral|
 devant lui.
@@ -2903,7 +2902,7 @@ Une constante d\'ecimale peut \^etre pr\'ec\'ed\'ee par un signe plus ou moins.
 Ainsi `|.5in|', 
 `|-3.22pt|' et `|+1,5\baselineskip|' sont des dimensions valides.
 Vous ne pouvez, par contre, utiliser de constantes d\'ecimales
-dans tous les contextes \emph{autre} que comme la partie ``facteur'' d'une dimension,
+dans tous les contextes \emph{autres} comme la partie ``facteur'' d'une dimension,
 c'est-\`a-dire, son multiplicateur.
 
 
@@ -2966,13 +2965,13 @@ est fait pour la prochaine fois.
 
 Autrement, le constructeur de page analyse la liste verticale principale pour 
 trouver ce qu'il consid\`ere comme \'etant la meilleure coupure de page possible.
-Il associe p\'enalit\'es avec plusieurs types de coupure de page peu attirante---une 
+Il associe des p\'enalit\'es avec plusieurs types de coupure de page peu attirantes---une 
 coupure qui laisse une ligne isol\'ee en haut ou en bas de la page, une coupure 
 juste avant un affichage math\'ematique, et ainsi de suite.  Il choisit alors
 la coupure de page la moins ch\`ere
 o\`u le co\^ut d'une coupure est augment\'e  de toute p\'enalit\'e associ\'ee avec cette
 coupure et par la m\'ediocrit\'e de la page qui en r\'esulte
-(voir la \knuth{page~111}{999} pour la formule du co\^ut).  S'il trouve plusieurs
+(voir la \knuth{page~111}{130} pour la formule du co\^ut).  S'il trouve plusieurs
 coupures de page de co\^ut identique, il choisit la derni\`ere.
 
 {\tighten
@@ -2984,7 +2983,7 @@ aux lettres, avec le constructeur de page comme exp\'editeur et la routine de
 sortie comme destinataire.
 Ordinairement la routine de sortie traite la |\box255|, ajoute
 d'autres \'el\'ements, comme des insertions, ent\^ete et pieds de page \`a la page et
-envoi la page vers le \dvifile\
+envoit la page vers le \dvifile\
 ^^{\dvifile//mat\'eriel de la routine de sortie}
 avec une commande |\shipout|.
 (Des routines de sortie sp\'ecialis\'ees peuvent agir diff\'eremment.)
@@ -2997,17 +2996,17 @@ ou d'une autre.
 
 {\tighten
 Il est important de r\'ealiser que le meilleur endroit pour couper une page
-n'est pas n\'ecessairement le dernier endroit possible de couper la page.
+n'est pas n\'ecessairement le dernier endroit possible pour couper la page.
 Des p\'enalit\'es et autres consid\'erations peuvent faire que la coupure de page
-ait lieue plus t\^ot. De plus, \TeX\ appr\'ehende les \'el\'ements de la liste verticale
+ait lieu plus t\^ot. De plus, \TeX\ appr\'ehende les \'el\'ements de la liste verticale
 principale en batch, pas seulement un par un. Les lignes d'un paragraphe sont
 un exemple d'un tel batch. Pour ces raisons, le constructeur de page garde
 des \'el\'ements sous le coude quand il coupe une page. Ces \'el\'ements mis en r\'eserve
 forment alors le d\'ebut de la liste verticale principale de la page suivante
 (vraisemblablement au milieu d'un batch). Parce que des \'el\'ements sont d\'eplac\'es
-d'un page \`a une autre, vous pouvez \^etre s\^ur comme \TeX\ ex\'ecute l'entr\'ee, que
+d'une page \`a une autre, vous pouvez \^etre s\^ur que quand \TeX\ ex\'ecute l'entr\'ee, 
 le num\'ero de la page courante refl\`ete la page sur laquelle la sortie correspondante
-appara\^\i tra. Voir les \knuth{pages~110--114}{999--999} pour une description compl\`ete
+appara\^\i tra. Voir les \knuth{pages~110--114}{128--133} pour une description compl\`ete
 des r\`egles de coupure de page de \TeX.
 \par}
 
@@ -3017,7 +3016,7 @@ des r\`egles de coupure de page de \TeX.
 \conceptindex{paragraphes}
 \concept paragraphe
 
-Intuitivement, un \defterm{paragraphe} est une suite de ligne de saisie 
+Intuitivement, un \defterm{paragraphe} est une suite de lignes de saisie 
 se terminant par une ligne blanche, une commande |\par| \ctsref{\@par}
 ^^|\par//terminer un paragraphe avec|
 ou par une commande intrins\`equement verticale, telle que |\vskip|.
@@ -3031,11 +3030,11 @@ Chaque hbox est une simple ligne et le ressort est le ressort inter-ligne.
 
 %\eject
 \TeX\ d\'ebute un paragraphe quand il est dans un mode vertical et 
-rencontre une commande fondamentalement horizontal.
-En particulier, il est en mode vertical juste apr\`es avoir termine un 
+rencontre une commande fondamentalement horizontale.
+En particulier, il est en mode vertical juste apr\`es avoir termin\'e un 
 paragraphe, donc le mat\'eriel horizontal sur la ligne suivant une ligne 
 blanche d\'ebute le paragraphe suivant de mani\`ere naturelle.
-Il y a plusieurs types de commande fondamentalement horizontale, mais le
+Il y a plusieurs types de commandes fondamentalement horizontales, mais le
 type le plus commun est un caract\`ere ordinaire, c'est-\`a-dire, une lettre.
 
 \looseness = -1
@@ -3043,13 +3042,13 @@ Les commandes ^|\indent| et ^|\noindent|
 (\pp\xrefn{\indent},~\xrefn{\noindent})
 sont aussi des commandes fondamentalement horizontales qui demandent \`a
 \TeX\ d'in\-denter ou non le d\'ebut d'un paragraphe.
-Tout autre commande horizontal en mode vertical
-font que \TeX\ fait un |\indent| implicite.
+Toute autre commande horizontale en mode vertical
+fait que \TeX\ fait un |\indent| implicite.
 Une fois que \TeX\ a commenc\'e un paragraphe, il est en mode horizontal ordinaire.
 Il commence par suivre toutes commandes situ\'ees dans ^|\everypar|.
 Il commence alors \`a collecter des \'el\'ements pour le paragraphe jusqu'a 
 ce qu'il re\c coive un signal de la fin du paragraphe.
-\`a la fin du paragraphe il r\'einitialise les param\`etres de formation de
+A la fin du paragraphe il r\'einitialise les param\`etres de formation de
 paragraphe ^|\parshape|, |\hang!-indent|,
 ^^|\hangindent| 
 et ^|\looseness|.
@@ -3071,7 +3070,7 @@ le paragraphe sur lequel il travaille.
 Il coupe alors le paragraphe en lignes,
 ajoute la liste r\'esultante d'\'el\'ements dans la liste verticale englobante
 et ex\'ecute le constructeur de page 
-(dans le cas o\`u la liste vertical englobante est la liste vertical principale).
+(dans le cas o\`u la liste verticale englobante est la liste verticale principale).
 Si le paragraphe se termine par une commande intrins\`equement verticale,
 \TeX\ ex\'ecute alors cette commande.
 
@@ -3080,13 +3079,13 @@ Si le paragraphe se termine par une commande intrins\`equement verticale,
 \conceptindex{param\`etres}
 \concept param\`etre
 
-Le terme \defterm{param\`etre} a deux signification diff\'erentes---il peut faire
+Le terme \defterm{param\`etre} a deux significations diff\'erentes---il peut faire
 r\'ef\'erence soit \`a un param\`etre de \TeX, soit \`a un param\`etre de macro.
 
 Un param\`etre de \TeX\ est une \refterm{s\'equence de contr\^ole} qui nomme
 une valeur.
 La valeur d'un param\`etre peut \^etre un \refterm{nombre}, une \refterm{dimension},
-un montant de \refterm{ressort} ou de muglue ou une \refterm{liste de tokens}.
+un montant de \refterm{ressort},  de muglue ou une \refterm{liste de tokens}.
 Par exemple, le param\`etre ^|\parindent|
 sp\'ecifie la distance que \TeX\ saute au d\'ebut d'un paragraphe indent\'e.
 
@@ -3114,7 +3113,7 @@ utilise |\parindent| des deux fa\c cons.  Son effet est de multiplier la valeur 
 
 Vous pouvez penser \`a un param\`etre comme \`a un \refterm{registre} construit.
 ^^{registres//param\`etres comme}
-Vous trouverez la liste de tous les param\`etres de \TeX\ dans les \knuth{pages~272--275}{999--999}.
+Vous trouverez la liste de tous les param\`etres de \TeX\ dans les \knuth{pages~272--275}{317--318}.
 
 Un param\`etre de \refterm{macro} est un endroit qui garde la place du texte 
 qui est branch\'e dans la d\'efinition d'une macro.  Voir \conceptcit{macro}
@@ -3129,12 +3128,12 @@ pour plus d'informations sur ce type de param\`etre.
 Une \defterm{p\'enalit\'e} est un \'el\'ement que vous pouvez inclure dans une 
 liste horizontale, verticale ou math\'ematique
 pour d\'ecourager \TeX\ de couper la liste
-\`a cet endroit ou encourage \TeX\ de couper la liste ici.  
+\`a cet endroit ou encourager \TeX\ de couper la liste ici.  
 ^^{listes horizontales//p\'enalit\'es dans}
 ^^{listes verticales//p\'enalit\'es dans}
 Une p\'enalit\'e positive indique un mauvais point de coupure, tandis qu'une
 p\'enalit\'e n\'egative indique un bon point de coupure.
-Couper une liste horizontal ordinaire
+Couper une liste horizontale ordinaire
 produit une \refterm{coupure de ligne}, tandis que couper une liste
 verticale ordinaire produit
 une \refterm{coupure de page}.  
@@ -3168,14 +3167,14 @@ Voir \xrefpg{bighead} pour une m\'ethode de production de pied de page multi-lig
 
 \defterm{\PlainTeX} est le format de \TeX\ d\'ecrit dans ce
 livre et dans \texbook.  \PlainTeX\ est une partie du syst\`eme  \TeX\ standard,
-donc des documents qui n'utilise que les am\'enagements de \plainTeX\ peuvent
-facilement \^etre transf\'er\'e d'une installation vers une autre sans
+donc des documents qui n'utilisent que les am\'enagements de \plainTeX\ peuvent
+facilement \^etre transf\'er\'es d'une installation vers une autre sans
 difficult\'e.
 
-\PlainTeX\ est constitu\'e des commandes \refterm{primitive} auxquelles se joignent
+\PlainTeX\ est constitu\'e de commandes \refterm{primitive}s auxquelles se joignent
 une large collection de macros et
-autres d\'efinitions.  Ces d\'efinitions additionnelles sont donn\'ees dans 
-l'\knuth{Annexe~B}{}.  Elles doivent aussi \^etre dans le fichier |plain.tex|
+autres d\'efinitions.  Ces d\'efinitions additionnelles sont d\'ecrites dans 
+l'\knuth{annexe~B}{}.  Vous pourrez aussi les trouver dans le fichier |plain.tex|
 quelque part sur votre syst\`eme informatique.
 \endconcept
 
@@ -3222,8 +3221,8 @@ point~:
 abcdefghijklmnopqrstuvwxyz\par
 }\vskip\belowdisplayskip
 Les caract\`eres d'une police sont num\'erot\'es.
-La num\'erotation s'accorde normalement avec le num\'erotation ^{\ascii}
-pour les caract\`eres existant dans le jeu de caract\`eres \ascii.
+La num\'erotation s'accorde normalement avec la num\'erotation ^{\ascii}
+pour les caract\`eres existants dans le jeu de caract\`eres \ascii.
 La table de code de chaque police indique \`a quoi ressemble le caract\`ere
 avec le code $n$ dans cette police.
 Certaines polices, comme celles utilis\'ees pour les symboles math\'ematiques, n'ont pas
@@ -3243,8 +3242,8 @@ de  contr\^ole  que vous utilisez pour nommer la police et `|cmbx12|' identifie
 le fichier de m\'etrique de la police |cmbx12.tfm|  sur votre syst\`eme de 
 fichier. Vous pouvez alors commencer \`a utiliser la police en saisissant 
 `|\twelvebf|'.  Apr\`es cela, la police sera effective jusqu'a ce que soit
-(a)~vous s\'electionner une autre police, soit (b)~vous terminez le \refterm{groupe},
-au cas o\`u, dans lequel vous avez commenc\'e avec la police. Par exemple,
+(a)~vous s\'electionnez une autre police, (b)~vous terminez le \refterm{groupe}
+ dans lequel vous avez commenc\'e avec la police. Par exemple,
 la saisie~:
 
 \csdisplay
@@ -3253,7 +3252,7 @@ la saisie~:
 fera que la police |cmbx12| ne sera effective que pour le texte
 `|white rabbits like carrots|'.
 
-Vous pouvez utiliser \TeX\ avec d'autres police que Computer Modern 
+Vous pouvez utiliser \TeX\ avec d'autres polices que Computer Modern 
 (regardez l'exemple sur \xrefpg{palatino} et les ent\^etes de page). 
 Les fichiers de telles polices doivent \^etre install\'es sur votre syst\`eme
 de fichier \`a une place o\`u \TeX\ puisse les trouver. \TeX\ et ses programmes 
@@ -3265,7 +3264,7 @@ des caract\`eres (|cmbx12.pk|, par exemple).
 \TeX\ lui-m\^eme n'utilise que les fichiers de m\'etriques.
 Un autre programme, le pilote de p\'eriph\'erique,
 ^^{drivers de p\'eriph\'erique}
-converti le \dvifile\
+convertit le \dvifile\
 ^^{\dvifile//convertit par driver}
 produit par \TeX\ en une forme que votre imprimante
 ou autre p\'eriph\'erique de sortie puisse interpr\'eter.  Le pilote
@@ -3273,20 +3272,20 @@ utilise le fichier de forme (s'il existe).
 
 Le fichier de m\'etrique de la police contient l'information dont \TeX\ \`a
 besoin pour allouer de l'espace pour chaque caract\`ere compos\'e.
-Ainsi il inclue la taille de chaque caract\`ere, les ligatures et cr\'enages
-qui modifie les suites de caract\`eres adjacent, et ainsi de suite.
-Ce que le fichier de m\'etrique n'inclue \emph{pas} sont les informations
+Ainsi il inclut la taille de chaque caract\`ere, les ligatures et cr\'enages
+qui modifient les suites de caract\`eres adjacents, et ainsi de suite.
+Ce que le fichier de m\'etrique n'inclut \emph{pas} sont les informations
 sur les formes des caract\`eres de la police.
 
 {\tighten
 Le fichier de forme (pixel) \xrdef{shape}
 ^^{fichier de pixel}^^{fichier de forme}
 peut \^etre de diff\'erents
-formats. la partie d'extension du nom (la partie apr\`es le point)
+formats. La partie d'extension du nom (la partie apr\`es le point)
 informe le pilote sur le format dans lequel est le fichier de forme.  
 Par exemple,
-|cmbx12.pk| ^^{\pkfile} doit \^etre le fichier de forme de la police |cmbx12| en
-format compress\'e, tandis que |cmbx12.gf| ^^{\gffile} semble \^etre le fichier de forme
+|cmbx12.pk| ^^{\pkfile} est le fichier de forme de la police |cmbx12| en
+format compress\'e, tandis que |cmbx12.gf| ^^{\gffile} est le fichier de forme
 pour la police |cmbx12| en format de police g\'en\'erique.
 Un fichier de forme peut ne pas \^etre n\'ecessaire pour une police r\'esidente dans votre
 p\'eriph\'erique de sortie.
@@ -3302,7 +3301,7 @@ est construite dans le programme informatique \TeX.
 Au contraire, une commande qui n'est pas une
 primitive est d\'efinie par une \refterm{macro} ou un autre format de 
 d\'efinition \'ecrit en \TeX.  Les commandes dans \refterm{\plainTeX}
-sont constitu\'ee de commandes primitives auxquelles se joignent
+sont constitu\'ees de commandes primitives auxquelles se joignent
 d'autres commandes d\'efinies en termes de
 primitives.
 \endconcept
@@ -3312,7 +3311,7 @@ primitives.
 
 ^^{\boites//profondeur de}
 La \defterm{profondeur} d'une \refterm{bo\^\i te} est la distance par laquelle 
-la bo\^\i te s'\'etends sous sa \refterm{ligne de base}. 
+la bo\^\i te s'\'etend sous sa \refterm{ligne de base}. 
 \endconcept
 
 
@@ -3362,15 +3361,15 @@ Le second assignement assigne $-1$ au registre de compteur~$255$.
 Un registre d'un type donn\'e, par exemple, un registre de ressort, r\'eagit comme
 un param\`etre de ce type.
 ^^{param\`etres//comme registres}
-Vous retrouvez sa value ou la lui assignez
+Vous retrouvez sa valeur ou la lui assignez
 comme vous le feriez avec un \refterm{param\`etre}.
 Quelques param\`etres de \TeX, par exemple, |\pageno|,
-sont impl\'ement\'es comme des registres, en fait.
+sont impl\'ement\'es comme des registres.
 
 \PlainTeX\
 utilise plein de registres pour son propre usage, donc vous ne devez pas
 simplement prendre un num\'ero de registre arbitraire
-quand vous avez besoin d'un registre.  \`a la place, vous devez demander
+quand vous avez besoin d'un registre.  \`A la place, vous devez demander
 \`a \TeX\ de r\'eserver un registre en utilisant une des commandes
 ^|\newbox|, ^|\newcount|, ^|\newdimen|, ^|\newmuskip|, ^|\newskip|
 ou ^|\newtoks|
@@ -3389,7 +3388,7 @@ dans l'\'etat o\`u ils \'etaient avant de commencer \`a ex\'ecuter le groupe.
 Quand vous utilisez un registre num\'erot\'e explicitement dans un groupe,
 vous devez \^etre sur que le registre n'est modifi\'e par aucune
 \refterm{macro}
-que vous pourriez appel\'e dans le groupe.
+que vous pourriez appeler dans le groupe.
 Soyez sp\'ecialement attentif
 quand vous utilisez des registres arbitraires dans un groupe qui appelle des macros 
 que vous n'avez pas \'ecrit vous-m\^eme.
@@ -3403,10 +3402,10 @@ d'une page juste avant qu'elle soit offerte \`a la \refterm{routine de sortie}.
 Les registres |\dimen0|--|\dimen9|, |\skip0|--|\skip9|,
 |\muskip0|--|\mu!-skip9| et |\box0|--|\box9| ainsi que
 les |255| registres de bo\^\i te autres que |\box255|
-sont g\'en\'eralement utilisable comme registre ``brouillon''.
+sont g\'en\'eralement utilisables comme registre ``brouillon''.
 Aussi \plainTeX\ ne procure qu'un registre brouillon, |\count255|, pour
 des compteurs.
-Voir les \knuth{pages~122 et 346}{999 et 999} pour des conventions \`a suivre
+Voir les \knuth{pages~122 et 346}{141--142 et 402} pour des conventions \`a suivre
 pour choisir des num\'eros de registre.
 \par}
 
@@ -3420,12 +3419,12 @@ avec la commande ^|\showthe| \ctsref\showthe, par exemple, `|\showthe\dimen0|'.
 Vous pouvez utiliser des \refterm{r\'eglures} pour remplir un espace avec des
 copies d'un mod\`ele, c'est-\`a-dire, mettre des points r\'ep\'et\'es entre un titre et
 un num\'ero de page dans une table des mati\`eres.
-une r\'eglure est une copie simple d'un mod\`ele.
+Une r\'eglure est une copie simple d'un mod\`ele.
 La sp\'ecification des r\'eglures contient trois parties d'information.
 \olist\compact
 \li ce qu'est une r\'eglure seule
 \li combien d'espace doit \^etre rempli
-\li comment les copies du mod\`ele doivent \^etre arrang\'ee dans l'espace
+\li comment les copies du mod\`ele doivent \^etre arrang\'ees dans l'espace
 \endolist
 
 \bix^^|\leaders|
@@ -3435,9 +3434,9 @@ La sp\'ecification des r\'eglures contient trois parties d'information.
 \TeX\ poss\`ede trois commandes pour sp\'ecifier des r\'eglures~:
 |\leaders|, |\cleaders| et |\xleaders| (\xref\leaders). 
 L'\refterm{argument} de chaque commande sp\'e\-ci\-fie la r\'eglure.
-La commande doit \^etre suivie d'un \refterm{ressort}~; La taille du ressort
+La commande doit \^etre suivie d'un \refterm{ressort}. La taille du ressort
 sp\'ecifie combien d'espace doit \^etre rempli.  Le choix de la commande d\'etermine
-comment les r\'eglures sont arrang\'ee dans l'espace.}
+comment les r\'eglures sont arrang\'ees dans l'espace.}
 
 Voici un exemple montrant comment les |\leaders| travaillent~:
 \csdisplay
@@ -3446,7 +3445,7 @@ Voici un exemple montrant comment les |\leaders| travaillent~:
 \line{Bail Bonds\dotting 26}
 |
 Ici, nous avons plac\'e les r\'eglures et leur ressort associ\'e dans une d\'efinition
-de \refterm{macro} pour pouvoir les utiliser facilement \`a deux endroit. 
+de \refterm{macro} pour pouvoir les utiliser facilement \`a deux endroits. 
 Cette entr\'ee produit~:
 
 \vdisplay{\advance\hsize by -\parindent
@@ -3471,9 +3470,9 @@ En g\'en\'eral, l'espace \`a remplir agit comme une fen\^etre pour les copies
 r\'ep\'et\'ees de r\'eglures. \TeX\ ins\`ere autant de copies que possible, mais de 
 l'espace est habituellement laiss\'e---soit parce que les r\'eglures s'arr\^etent
 dans la fen\^etre, soit parce que la largeur de la fen\^etre n'est pas un multiple 
-exacte de la largeur de la r\'eglure.
+exact de la largeur de la r\'eglure.
 La diff\'erence entre les trois commandes est dans leur fa\c con d'arranger les
-r\'eglures dans la fen\^etre et comment elle distribuent l'espace perdu.
+r\'eglures dans la fen\^etre et comment elles distribuent l'espace perdu.
 
 \ulist
 \li Pour |\leaders|, \TeX\ produit d'abord une rang\'ee de copies de la r\'eglure.
@@ -3507,7 +3506,7 @@ L'image est comme ceci~:
 {\tighten
 \noindent
 Cette proc\'edure assure que dans les deux lignes d'exemple de la page pr\'ec\'edente,
-les points des deux ligne soient align\'es verticalement (puisque les 
+les points des deux lignes soient align\'es verticalement (puisque les 
 \refterm{points de r\'ef\'erence:point de r\'ef\'erence} des hbox produites par
 |\line| sont align\'es verticalement).
 \par}
@@ -3520,7 +3519,7 @@ L'espace perdu est toujours inf\'erieur \`a la largeur d'une seule r\'eglure.
 fen\^etre. En d'autres mots, si l'espace perdu est $w$ et que la r\'eglure se 
 r\'ep\`ete $n$ fois, \TeX\ met un espace de largeur $w/(n+1)$ entre les r\'eglures
 adjacente et \`a deux extr\'emit\'es des r\'eglures.
-L'effet est habituellement d'\'etaler les r\'eglures une petit peu. l'espace
+L'effet est habituellement d'\'etaler les r\'eglures un petit peu. L'espace
 perdu pour |\xleaders|, comme celui de |\cleaders|, est toujours inf\'erieur
 \`a la largeur d'une r\'eglure seule.
 \endulist
@@ -3537,7 +3536,7 @@ horizontale}. Dans ce cas vous avez besoin de ressort vertical apr\`es les
 r\'eglures.
 \endolist
 \noindent
-Voir les \knuth{pages~223--225}{999--999} pour les r\`egles pr\'ecises que \TeX\ utilise
+Voir les \knuth{pages~223--225}{261--263} pour les r\`egles pr\'ecises que \TeX\ utilise
 en composant des r\'eglures.
 \eix^^|\leaders|
 \eix^^|\cleaders|
@@ -3553,25 +3552,25 @@ Le \defterm{ressort} est de l'espace blanc qui peut se r\'etr\'ecir ou s'\'etire
 Le ressort donne \`a \TeX\ la flexibilit\'e dont il a besoin pour produire
 des documents impeccables.  
 Le ressort existe en deux types~: le ressort horizontal et le ressort vertical.  
-Le ressort horizontale appara\^\i t dans des \refterm{listes horizontales: liste horizontale},
-tandis que le ressort verticale appara\^\i t dans des \refterm{listes verticales:liste verticale}.
+Le ressort horizontal appara\^\i t dans des \refterm{listes horizontales: liste horizontale},
+tandis que le ressort vertical appara\^\i t dans des \refterm{listes verticales:liste verticale}.
 ^^{listes horizontales}
 ^^{listes verticales}
 Vous
 pouvez produire un ressort soit implicitement, c'est-\`a-dire, avec un espace inter-mot, soit
 explicitement, c'est-\`a-dire, avec la commande ^|\hskip|.
 ^^{espace//inter-mots}
-\TeX\ lui-m\^eme produit beaucoup de ressort
+\TeX\ lui-m\^eme produit beaucoup de ressorts
 en composant votre document.
 Nous ne d\'ecrirons que le ressort horizontal---le ressort vertical \'etant analogue.
 
-Quand \TeX\ assemble une liste de bo\^\i tes et de ressort en grande
+Quand \TeX\ assemble une liste de bo\^\i tes et de ressorts en grande
 quantit\'e,
 ^^{\boites//ressort avec}
 il ajuste la taille des ressorts pour garder les espaces demand\'ees d'unit\'e
 de largeur.  Par exemple, \TeX\ s'assure que la ^{marge de droite} d'une page
 est uniforme en ajustant les ressorts horizontaux des lignes.
-Similairement, il d'assure que les diff\'erentes pages ont la
+Similairement, il s'assure que les diff\'erentes pages ont la
 m\^eme ^{marge du bas}
 en ajustant les ressorts entre les blocs de texte comme des paragraphes et
 des affichages math\'ematiques
@@ -3587,7 +3586,7 @@ est de $6$ points, l'\'etirement de $2$ points et le r\'etr\'ecissement
 $3$ points.  Similairement, vous pouvez produire un montant sp\'ecifique de ressort vertical
 avec la commande ^|\vskip| commande \ctsref{\vskip}.
 
-Le meilleur moyen de comprendre ce qui s'\'etire et ce qui se r\'etr\'ecie
+Le meilleur moyen de comprendre ce qui s'\'etire et ce qui se r\'etr\'ecit
 et de voir un exemple de ressort au travail.
 Supposez que vous construisez un \refterm{hbox} de trois bo\^\i tes et deux ressorts, 
 comme dans l'image~:
@@ -3601,15 +3600,15 @@ alors la somme des largeurs de ses parties, soit, $29$ unit\'es.
 
 Ensuite, supposez que le hbox doit \^etre plus large que $29$ unit\'es, disons
 $35$ unit\'es.  Cela
-peut arrivez, par exemple, si le hbox doit occuper une ligne enti\`ere
+peut arriver, par exemple, si le hbox doit occuper une ligne enti\`ere
 et que la largeur de la ligne soit de $35$ unit\'es.
-Puisque les bo\^\i tes ne peuvent changer leurs largeur, 
-\TeX\ produit l'espace suppl\'ementaire n\'ecessaire en rendant les ressorts plus large.
+Puisque les bo\^\i tes ne peuvent changer leurs largeurs, 
+\TeX\ produit l'espace suppl\'ementaire n\'ecessaire en rendant les ressorts plus larges.
 L'image maintenant ressemble \`a ceci~:
 \gluepicture 
    35 {\picbox 4 \gluebox 6 4 2 8 \picbox 5 \gluebox 10 8 6 14 \picbox 4 }
-Les ressorts ne deviennent pas plus large de mani\`ere \'egale~; 
-elle deviennent plus large en proportion de leur \'etirement.  
+Les ressorts ne deviennent pas plus larges de mani\`ere \'egale~; 
+ils deviennent plus large en proportion de leur \'etirement.  
 Puisque le second ressort 
 a deux fois plus d'\'etirement que le premier, 
 il devient plus large de quatre unit\'es tandis que le premier devient plus large de 
@@ -3618,14 +3617,14 @@ Le ressort peut s'\'etirer autant que n\'ecessaire, n\'eanmoins, \TeX\ rechigne
 \`a l'\'etirer au del\`a du montant d'\'etirement donn\'e dans sa d\'efinition.
 
 Finalement, supposez que le hbox doive se rapprocher de $29$ unit\'es \`a, disons
-$25$ unit\'es.  Dans ce cas \TeX\ fait se r\'etr\'ecir les ressorts.
+$25$ unit\'es.  Dans ce cas \TeX\ r\'etr\'ecit les ressorts.
 L'image ressemble \`a ceci~:
 \gluepicture 
    25 {\picbox 4 \gluebox 6 4 2 5 \picbox 5 \gluebox 10 8 6 7 \picbox 4 }
 Les ressorts deviennent plus proches en proportion de leur r\'etr\'e\-cis\-sement.
 Le premier ressort devient plus \'etroit d'une unit\'e, tandis que le second 
 r\'etr\'ecit de trois unit\'es. Le ressort ne peut pas se r\'etr\'ecir
-d'un distance inf\'erieure au montant de r\'etr\'ecissement donn\'e dans sa d\'efinition
+d'une distance inf\'erieure au montant de r\'etr\'ecissement donn\'e dans sa d\'efinition
 m\^eme si la distance \`a laquelle il peut se r\'etr\'ecir est sans
 limite.  Sur ce point important l'\'etirement et le r\'etr\'ecissement r\'eagissent
 diff\'eremment.
@@ -3643,7 +3642,7 @@ Vous pouvez produire un ressort \'etirable \`a l'infini en sp\'ecifiant son
 le ressort mesur\'e en `|filll|' est infiniment plus \'etirable que le ressort mesur\'e
 en `|fill|'.  Vous n'aurez que tr\`es rarement besoin de ressort `|filll|'. Un ressort
 s'\'etirant de |2fil| s'\'etire deux  fois plus qu'un ressort s'\'etirant de |1fil|,
-et de m\^eme pour les autres sortes de ressort \'etirable infiniment.
+et de m\^eme pour les autres sortes de ressorts \'etirables infiniment.
 
 Quand \TeX\ apporte un espace suppl\'ementaire en plus d'un ressort, 
 celui infiniment \'etirable, s'il y en a, en prend la totalit\'e. 
@@ -3657,13 +3656,13 @@ Ce ressort consommera tout l'espace suppl\'ementaire possible sur la ligne.
 Vous pouvez utiliser la commande ^|\leftline| \ctsref{\leftline} 
 ou la commande |\raggedright| \ctsref{\raggedright} pour faire cela.
 \li Pour faire un texte ^{cadr\'e \`a droite}, mettez un ressort horizontal
-infiniment \'etirable \`a sa gauche. comme ci-dessus
+infiniment \'etirable \`a sa gauche. Comme ci-dessus
 ce ressort consommera tout l'espace suppl\'ementaire possible sur la ligne.
 Vous pouvez utiliser la commande ^|\rightline| \ctsref{\rightline} 
 pour faire cela.
 \li Pour faire du ^{texte centr\'e}, mettez un ressort horizontal
 infiniment \'etirable de chaque cot\'e.
-Ces deux ressort diviseront tout l'espace suppl\'ementaire de la ligne
+Ces deux ressorts diviseront tout l'espace suppl\'ementaire de la ligne
 \'egalement entre eux.
 Vous pouvez utiliser la commande ^|\centerline| \ctsref{\centerline} pour faire cela.
 \endulist
@@ -3671,8 +3670,8 @@ Vous pouvez utiliser la commande ^|\centerline| \ctsref{\centerline} pour faire 
 Vous pouvez aussi sp\'ecifier un ressort r\'etr\'ecissable infiniment
 ^^{ressort//infiniment \'etirable}
 de la m\^eme mani\`ere. Un ressort r\'etr\'ecissable infiniment peut agir comme espace n\'egatif.
-Notez que |fil|, etc., ne peuvent \^etre utilis\'e que pour sp\'ecifier l'\'etirement 
-et le r\'etr\'ecissement du ressort---Ils ne peuvent \^etre utilis\'e pour sp\'ecifier 
+Notez que |fil|, etc., ne peuvent \^etre utilis\'es que pour sp\'ecifier l'\'etirement 
+et le r\'etr\'ecissement du ressort---Ils ne peuvent \^etre utilis\'es pour sp\'ecifier 
 sa taille normale.
 \eix^^{\etirement}
 \eix^^{r\'etr\'ecissement}
@@ -3725,8 +3724,8 @@ une liste de \refterm{tokens:token} \`a |\headline| ou
 |\footline| \ctsref{\footline} vous pouvez faire que \TeX\ produise un ent\^ete
 ou un pied de page diff\'erent de l'ordinaire.
 
-La routine de sortie est aussi responsable de collecter 
-toutes\refterm{insertions:insertion}~; en combinant ces insertions et 
+La routine de sortie est aussi responsable pour collecter 
+toutes \refterm{insertions:insertion}~; en combinant ces insertions et 
 toutes ``d\'ecorations'' telles que ent\^etes et pieds de page avec 
 les contenus principaux de la page et empaqu\`ete tout ce mat\'eriel 
 dans une bo\^\i te~; et \'eventuellement envoyer cette bo\^\i te dans 
@@ -3741,11 +3740,11 @@ une routine de sortie d'usage sp\'ecial peut agir diff\'eremment.
 \conceptindex{s\'equences de contr\^ole}
 \concept {s\'equence de contr\^ole}
 
-Une \defterm{S\'equence de contr\^ole} est un nom pour une \refterm{command} \TeX.
-Une control S\'equence de contr\^ole commence par un ^{caract\`ere d'\'echappement}, 
+Une \defterm{S\'equence de contr\^ole} est un nom pour une \refterm{command}e \TeX.
+Une s\'equence de contr\^ole commence par un ^{caract\`ere d'\'echappement}, 
 habituellement un antislash (|\|).
 \indexchar \
-Une S\'equence de contr\^ole prend une des deux formes~:
+Une s\'equence de contr\^ole prend une des deux formes~:
 
 \ulist
 
@@ -3765,20 +3764,20 @@ de bon aloi.)
 
 \li Un \refterm{symbole de contr\^ole}
 ^^{symboles de contr\^ole}
-est une s\'equence de   contr\^ole  constitu\'ee d'une
+est une s\'equence de   contr\^ole  constitu\'ee d'un
 ^{caract\`ere d'\'echappement} suivi par n'importe caract\`ere autre qu'une lettre---%
 m\^eme un espace ou une fin de ligne.
 Un symbole de  contr\^ole  est auto-d\'elimit\'e, c'est-\`a-dire, \TeX\ sait o\`u il termine sans
 devoir regarder le caract\`ere qui le suit.
-Le caract\`ere apr\`es un symbole de  contr\^ole  n'est jamais absorb\'ee par le
+Le caract\`ere apr\`es un symbole de  contr\^ole  n'est jamais absorb\'e par le
 symbole de contr\^ole.
 \endulist
 \noindent Voir \xrefpg{espace} pour plus d'information sur les espaces apr\`es 
 des s\'equences de contr\^ole. 
 
-\TeX\ procure une grand nombre de s\'equences de  contr\^ole  pr\'ed\'efinie.  Les
-s\'equences de  contr\^ole  \refterm{primitives} sont construite dans le programme 
-informatique \TeX\ et donc, sont accessible sous toutes les formes de \TeX.
+\TeX\ procure une grand nombre de s\'equences de  contr\^ole  pr\'ed\'efinies.  Les
+s\'equences de  contr\^ole  \refterm{primitives} sont construites dans le programme 
+informatique \TeX\ et donc, sont accessibles sous toutes les formes de \TeX.
 ^^{primitive//s\'equence de contr\^ole}
 D'autres s\'equences de  contr\^ole  sont fournies par \refterm{\plainTeX}, la
 forme de \TeX\ d\'ecrite dans ce livre
@@ -3787,7 +3786,7 @@ Vous pouvez augmenter des s\'equences de contr\^ole pr\'ed\'efinies avec celles 
 votre cru, en utilisant des commandes telles que ^|\def| et ^|\let| pour les
 d\'efinir. La \chapterref{eplain} de ce livre contient une collection de
 d\'efinitions de s\'equence de contr\^ole que vous pouvez trouver utile. De plus, 
-votre facilit\'e informatique peut vous rendre capable de cr\'eer une collection
+votre syst\`eme informatique peut vous rendre capable de cr\'eer une collection
 de macros \TeX\ d\'evelopp\'ees localement.
 \endconcept
 
@@ -3800,7 +3799,7 @@ Un \defterm{strut} est une \refterm{bo\^\i te} invisible
 ^^{\boites//invisible}
 dont la largeur est \`a z\'ero et dont la hauteur et la profondeur sont l\'eg\`erement
 sup\'erieure \`a celle d'une ligne de texte ``normale'' dans le contexte.  
-Les struts sont pratique pour obtenir un espacement vertical uniforme quand 
+Les struts sont pratiques pour obtenir un espacement vertical uniforme quand 
 l'espacement de ligne usuel de \TeX, par exemple, dans une formule math\'ematique
 ou dans un alignement horizontal o\`u vous sp\'ecifiez ^|\offinterlineskip|.
 Parce qu'un strut est plus haut et plus profond que tout autre chose sur sa ligne,
@@ -3860,19 +3859,19 @@ celle que \TeX\ a choisi en fonction de ses r\`egles usuelles.
 Les quatre styles primaires sont~:
 
 \vdisplay{%
-\halign{\refterm{# style}\hfil&\hskip .25in(for #)\hfil\cr
+\halign{\refterm{# style}\hfil&\hskip .25in(#)\hfil\cr
 display&formules affich\'ees sur une ligne seule\cr
 text&formules englob\'ees dans du texte ordinaire\cr
 script&exposants et indices\cr
 scriptscript&indices d'indices, etc.\cr
 }}
 
-Les quatre autres styles sont dit ^{variantes \'etroites}.  Dans ces variantes 
+Les quatre autres styles sont dits ^{variantes \'etroites}.  Dans ces variantes 
 les exposants ne sont pas mont\'es aussi haut que normalement et donc la formule
-n\'ecessite moins d'espace vertical qu'ils le devraient.  Voir les \knuth{pages~140--141}{999--999} 
+n\'ecessite moins d'espace vertical qu'ils le devraient.  Voir les \knuth{pages~140--141}{164--165} 
 pour les d\'etails sur la fa\c con de \TeX\ de s\'electionner le style.
 
-\TeX\ choisi une taille de caract\`ere en fonction du style~:
+\TeX\ choisit une taille de caract\`ere en fonction du style~:
 
 \ulist\compact
 ^^{style d'affichage}^^{style texte}
@@ -3888,7 +3887,7 @@ pour les d\'etails sur la fa\c con de \TeX\ de s\'electionner le style.
 `$\scriptscriptstyle \rm ceci$'.
 \endulist
 
-Voir \conceptcit{famille} pour plus d'informations \`a propos de ces trois taille.
+Voir \conceptcit{famille} pour plus d'informations \`a propos de ces trois tailles.
 
 \TeX\ n'a pas de style ``scriptscriptscript'' parce qu'un tel style
 serait souvent mis dans une taille de caract\`ere trop petite \`a lire.  \TeX\
@@ -3906,7 +3905,7 @@ commandes ^|\textstyle|, ^|\displaystyle|, ^|\scriptstyle| et ^|\scriptscriptsty
 \concept {symbole de contr\^ole}
 
 Un \defterm{symbole de contr\^ole} est une \refterm{s\'equence de contr\^ole} qui 
-est constitu\'e d'un \refterm{caract\`ere d'\'echappement} suivi d'un caract\`ere 
+est constitu\'ee d'un \refterm{caract\`ere d'\'echappement} suivi d'un caract\`ere 
 autre qu'une lettre---m\^eme un espace et une fin de ligne.
 ^^{caract\`ere d'\'echappement}
 \endconcept
@@ -3920,7 +3919,7 @@ Une \defterm{taille script} d\'ecrit une des trois
 Une taille script est plus petite que la \refterm{taille texte} mais plus 
 grande que la 
 \refterm{taille scriptscript}.  \TeX\ utilise la taille script pour les 
-indices et les exposants, aussi bine que pour les num\'erateurs et les 
+indices et les exposants, aussi bien que pour les num\'erateurs et les 
 d\'enominateurs de fractions dans du texte.
 \endconcept
 
@@ -3938,10 +3937,10 @@ la taille scriptscript pour un indice d'indice ou pour un exposant d'exposant.
 
 \concept {taille texte}
 
-La \defterm{taille texte} d\'ecrit la grande des trois 
+La \defterm{taille texte} d\'ecrit la plus grande des trois 
 \refterm{polices:police} li\'ees dans une \refterm{famille}.
 ^^{famille//taille texte en}
-\TeX\ utilise la taille texte pour des symbole ordinaire apparaissant en 
+\TeX\ utilise la taille texte pour des symboles ordinaires apparaissant en 
 \refterm{mode math\'ematique}.
 \endconcept
 
@@ -3964,10 +3963,10 @@ Par exemple, |\ifvmode| teste la condition que \TeX\
 soit actuellement dans un \refterm{mode vertical}.
 Si la condition est vraie, \TeX\ d\'eveloppe \<true text>.
 Si la condition est fausse, \TeX\ d\'eveloppe \<false text> (s'il est pr\'esent).
-Les tests conditionnel sont interpr\'et\'es dans l'\oesophage de \TeX
-\seeconcept{\anatomy}, donc tous les \minref{token}s d\'eveloppable dans
-le texte interpr\'et\'e ne sont d\'evelopp\'e qu'apr\`es que le test n'ait \'et\'e r\'esolu.
-Les diff\'erents tests conditionnels sont expliqu\'e dans 
+Les tests conditionnels sont interpr\'et\'es dans l'\oesophage\ de \TeX
+\seeconcept{\anatomy}, donc tous les \minref{token}s d\'eveloppables dans
+le texte interpr\'et\'e ne sont d\'evelopp\'es qu'apr\`es que le test n'ait \'et\'e r\'esolu.
+Les diff\'erents tests conditionnels sont expliqu\'es dans 
 \headcit{Tests conditionnels}{conds}.
 
 \endconcept
@@ -3989,9 +3988,9 @@ deux marges soit align\'ees.  Du texte non justifi\'e, d'un autre cot\'e, a \'et
 avec des marges ``d\'echir\'ees'' d'un ou des deux cot\'es.
 Les documents saisis sur les vieilles machines \`a \'ecrire ont la plupart du temps
 des marges droites d\'echir\'ees.
-Bien que les documents produits par \TeX\ soit justifi\'e par d\'efaut,  vous
+Bien que les documents produits par \TeX\ soient justifi\'es par d\'efaut,  vous
 pouvez si vous voulez produire des documents (ou des suites de lignes) qui
-ont la marge ^{droite d\'echir\'ee}---ou ^{gauche d\'echir\'ee}.
+ont la marge ^{droite}---ou ^{gauche d\'echir\'ee}.
 Vous pouvez aussi demander \`a \TeX\ de centrer un suite de lignes, ce qui rend
 les deux marges d\'echir\'ees.
 ^^{texte centr\'e}
@@ -4000,7 +3999,7 @@ Vous pouvez utiliser les commandes
 (\pp \xrefn{\leftskip},~\xrefn{\raggedright}) pour cela.
 
 Quand \TeX\ produit du texte justifi\'e, il a normalement besoin de r\'e\-tr\'ecir ou 
-d'\'etirer les ressorts de chaque ligne pour que les marges soit align\'ees.
+d'\'etirer les ressorts de chaque ligne pour que les marges soient align\'ees.
 Quand \TeX\ produit du texte non justifi\'e, d'un autre cot\'e, il laisse les ressorts
 de chaque ligne \`a leur taille naturelle.
 Beaucoup de typographes pr\'ef\`erent le texte non justifi\'e parce que son espacement
@@ -4014,7 +4013,7 @@ Nous utilisons le terme \defterm{texte math\'ematique} pour faire r\'ef\'erence
 \`a une formule math\'ematique mise dans une ligne de texte, c'est-\`a-dire, 
 entour\'ee de |$|.
 \ttidxref{$}
-\TeX\ mets du texte math\'ematique dans le \refterm{mode} texte math\'ematique .
+\TeX\ met du texte math\'ematique dans le \refterm{mode} texte math\'ematique .
 \endconcept
 
 

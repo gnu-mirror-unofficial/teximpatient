@@ -10,7 +10,7 @@
 
 Cette section couvre 
 des ^{caract\'eristiques de programmation} de \TeX\ et
-toutes autres choses qui ne rentre pas dans les cat\'egories
+toutes autres choses qui ne rentrent pas dans les cat\'egories
 de commandes des chapitres pr\'ec\'edents.
 Pour une explication des conventions utilis\'ees dans cette section,
 voir \headcit{Descriptions des commandes}{cmddesc}.
@@ -32,12 +32,12 @@ Utilis\'ee seule, la s\'equence de contr\^ole |\font| d\'esigne la police couran
 puis\-qu'elle ne peut alors appara\^\i tre que comme argument d'une autre commande.
 
 Pour les trois autres formes de |\font|,
-\<nom de police> nomme un jeu de fichier qui d\'efini une police.
-Ces formes de |\font| sont des commandes.  Chacune de ces formes ont deux 
+\<nom de police> nomme un jeu de fichier qui d\'efinit une police.
+Ces formes de |\font| sont des commandes.  Chacune de ces formes a deux 
 effets~:
 {\tighten
 \olist
-\li Elles d\'efinissent \<s\'equence de contr\^ole> comme un nom qui s\'electionne
+\li Elle d\'efinit \<s\'equence de contr\^ole> comme un nom qui s\'electionne
 la police \<nom de police>, \'eventuellement magnifi\'ee (voir plus bas).
 \li Elle demande \`a \TeX\ de charger le fichier de m\'etriques 
 ^^{fichiers de m\'etriques} de la police (^{\tfmfile}) pour \<nom de 
@@ -65,7 +65,7 @@ par $\hbox{\<dimension>}/ds$, o\`u $ds$ est la taille de dessin de
 \<dimension> et $ds$ sont toujours donn\'es en points.
 \endulist
 \noindent
-Des magnifications de moins que $1$ sont possible~; Elles r\'eduisent la taille.
+Des magnifications de moins que $1$ sont possibles~; Elles r\'eduisent la taille.
 
 Vous devez habituellement fournir un fichier de formes (\xref{shape}) pour chaque
 magnification de police que vous chargez.
@@ -99,10 +99,10 @@ Finally we use {\bigttfont big CM typewriter}.
 \explain
 ^^{polices//param\`etres de}
 Ce param\`etre sp\'ecifie des dimensions vari\'ees associ\'ees avec
-la police nomm\'ee par la s\'equence de contr\^ole \<font>
+la police nomm\'ee par la s\'equence de contr\^ole \<police>
 (\`a distinguer de \<font\-name> qui nomme les fichiers de police).
 Des valeurs de ces param\`etres sont sp\'ecifi\'es dans les fichiers de m\'etriques
-pour \<font>, mais vous pouvez
+pour \<police>, mais vous pouvez
 r\'eparer ou changer leurs valeurs pendant une ex\'ecution de \TeX.
 Les nombres et significations de ces param\`etres sont~:
 \display{\halign{\hfil#\hfil\quad&#\hfil\cr
@@ -117,17 +117,17 @@ Les nombres et significations de ces param\`etres sont~:
 7&espace suppl\'ementaire\cr}}
 \noindent
 \TeX\ utilise l'inclinaison par point pour positionner des accents.
-Il utilise aussi les param\`etres inter-mots pour produire des espaces inter-mots
+Il utilise aussi les param\`etres inter-mot pour produire des espaces inter-mots
 (voir |\spaceskip|, \xref\spaceskip) et le param\`etre d'espace suppl\'ementaire
 pour l'espa\-ce additionel apr\`es une virgule (voir |\xspaceskip|,
 \xref\xspaceskip).
 Les valeurs de ces param\`etres pour les
-polices \plainTeX\ sont \'enum\'er\'ees dans la \knuth{page~433}{999}.
-Les polices de symboles math\'ematiques ont $15$ param\`etres additionnel, 
-dont nous ne parlerons pas i\c ci.
+polices \plainTeX\ sont \'enum\'er\'ees dans la \knuth{page~433}{497}.
+Les polices de symboles math\'ematiques ont $15$ param\`etres additionnels, 
+dont nous ne parlerons pas ici.
 
 Attention~: 
-des assignements de ces param\`etres ne sont \emph{pas} d\'efait \`a la fin
+les assignements de ces param\`etres \emph{ne} sont \emph{pas} d\'efaits \`a la fin
 d'un groupe.
 Si vous voulez changer ces param\`etres localement, vous devrez
 sauvegarder et restaurer leurs valeurs originales explicitement.
@@ -152,7 +152,7 @@ Here's a line printed normally.\par
 \cts mag {\param{nombre}}
 \explain
 \margin{{\tt\\mag} and {\tt\\magnification} combined.}
-Un assigenment de |\magnification| \'etablit 
+Un assignement de |\magnification| \'etablit 
 le ``^{facteur d'\'echelle}'' $f$ qui d\'etermine
 le ratio de \minref{magnification} de votre document \seeconcept{magnification}.
 L'assignation de |\magni!-fication| doit appara\^\i tre avant que la premi\`ere page
@@ -162,8 +162,8 @@ L'assignement met $f$ \`a \<nombre> et met
 aussi |\hsize| et |\vsize|
 ^^|\hsize//d\'etermin\'e par {\tt\\magnification}|
 ^^|\vsize//d\'etermin\'e par {\tt\\magnification}|
-respectively \`a |6.5true in| et |8.9true in|,
-Les valeurs appropri\'e pour une page $8 \frac1/2$-%
+respectivement \`a |6.5true in| et |8.9true in|,
+Les valeurs appropri\'ees pour une page $8 \frac1/2$-%
 par-$11$-pouce.
 $f$ doit \^etre entre $0$ et $32768$.
 Le ratio \minref{magnification} du
@@ -172,7 +172,7 @@ Un facteur d'\'echelle
 de $1000$ procure une unit\'e de magnification, c'est-\`a-dire, il laisse 
 la taille de votre document inchang\'ee.  
 Il est d'usage d'utiliser des puissances de $1.2$ comme facteur d'\'echelle et
-la plupart des librairies de polices sont bas\'ees sur de tels facteurs.  vous 
+la plupart des librairies de polices sont bas\'ees sur de tels facteurs.  Vous 
 pouvez utiliser les commandes ^|\magstep| et ^|\magstephalf| pour sp\'ecifier 
 des magnifications par ces facteurs.
 
@@ -276,8 +276,8 @@ pas de tokens.
 \explain
 \TeX\ met ce param\`etre au 
 nombre de minutes qui se sont d\'eroul\'ees depuis minuit (du jour courant).
-\`a neuf heure, par exemple, |\time| est \`a $720$.
-Cette commande et les trois suivante utilisent l'heure et la date 
+A neuf heures, par exemple, |\time| est \`a $720$.
+Cette commande et les trois suivantes utilisent l'heure et la date 
 enregistr\'ee dans votre ordinateur.
 \TeX\ les r\'ecup\`ere juste une fois, au d\'ebut de votre ex\'ecution, donc |\time|
 \`a la fin de l'ex\'ecution \`a toujours la m\^eme valeur que |\time| au
@@ -297,7 +297,7 @@ un nombre entre $1$ et $31$.
 \begindesc
 \cts month {\param{nombre}}
 \explain
-\TeX\ met ce param\`etre au mois courant.  c'est
+\TeX\ met ce param\`etre au mois courant.  C'est
 un nombre entre $1$ et $12$.
 |\month| est mis au d\'ebut de votre ex\'ecution (voir les commentaires sur
 |\time| ci-dessus).
@@ -321,7 +321,7 @@ C'est un nombre tel que $2004$.
 \explain
 Ces commandes produisent le nom et le num\'ero de version 
 du format \TeX,
-c'est-\`a-dire \minref{\plainTeX} or ^{\LaTeX}, que vous utilisez.
+c'est-\`a-dire \minref{\plainTeX} ou ^{\LaTeX}, que vous utilisez.
 \example
 This book was produced with the \fmtname\ format,
 version~\fmtversion.
@@ -398,10 +398,10 @@ caract\`ere que \TeX\ utilise pour repr\'esenter le \minref{caract\`ere d'\'echa
 quand il
 convertit un nom de s\'equence de contr\^ole en une s\'equence de tokens de caract\`ere.
 Cette conversion \`a lieu quand vous utilisez la commande |\string| et aussi quand
-\TeX\ produit des messages de diagnostique.  La valeur par d\'efaut du caract\`ere
+\TeX\ produit des messages de diagnostic.  La valeur par d\'efaut du caract\`ere
 d'\'echappement est $92$, la code de caract\`ere {\ascii} pour un ^{backslash}.
 Si |\escapechar| n'est pas dans la fourchette $0$--$255$,
-\TeX\ n'inclue pas de caract\`ere d'\'echappement dans le r\'esultat de la conversion.
+\TeX\ n'inclut pas de caract\`ere d'\'echappement dans le r\'esultat de la conversion.
 \example
 \escapechar = `!!
 the control sequence {\tt \string\bigbreak}
@@ -438,7 +438,7 @@ pour d\'efinir \<police>.
 \cts endgroup {}
 \explain
 Ces deux commandes d\'ebutent et terminent un \minref{groupe}.
-Un |\begingroup| ne s'accode pas avec une accolade droite,
+Un |\begingroup| ne s'accorde pas avec une accolade droite,
 ni un |\endgroup| avec une accolade gauche.
 
 \TeX\ traite |\begingroup| et |\endgroup| comme tout autre
@@ -451,7 +451,7 @@ quand vous d\'efinissez des paires de macros, une qui \'etablit
 un environnement et l'autre qui termine cet environnement.
 Vous ne pouvez, de plus, pas utiliser |\begingroup| et |\endgroup| comme 
 substituts pour des
-accolades autres que celle qui entourent un groupe.
+accolades autres que celles qui entourent un groupe.
 \example
 \def\a{One \begingroup \it two }
 \def\enda{\endgroup four}
@@ -479,14 +479,14 @@ Les \minref{s\'equences de contr\^ole} |\bgroup| et |\egroup| sont \'equivalente
 \TeX\ traite |\bgroup| et |\egroup| comme tout autre
 \minref{s\'equence de contr\^ole} quand il scanne son entr\'ee.
 
-|\bgroup| et |\egroup| peuvent \^etre pratique quand vous 
+|\bgroup| et |\egroup| peuvent \^etre pratiques quand vous 
 d\'efinissez des paires de macros, une dans laquelle
 d\'ebute une construction d\'elimit\'ee par accolade (pas n\'ecessairement un groupe)
 et l'autre dans laquelle ce termine cette construction.
 ^^{macros//utiliser \b\tt\\bgroup\e\ et \b\tt\\egroup\e\ dans des}
-Vous ne pouvez pas d\'efinir de telles macros en utilisant des accolades ordinaire---si vous essayez,
-vos d\'efinitions de macro contiendra des accolades non appair\'ees
-et sera de ce fait inacceptable par \TeX.
+Vous ne pouvez pas d\'efinir de telles macros en utilisant des accolades ordinaires---si vous essayez,
+vos d\'efinitions de macro contiendront des accolades non appair\'ees
+et seront de ce fait inacceptables par \TeX.
 Normalement vous ne devez utilisez ces commandes que quand vous ne pouvez utiliser
 d'accolades ordinaires.
 
@@ -548,8 +548,8 @@ et autres assignements comme \'etant
 si et seulement si il est pr\'ec\'ed\'e par |\global| soit explicitement soit implicitement.
 (Les commandes ^|\gdef| et ^|\xdef| (\xref\gdef) ont un pr\'efixe 
 |\global| implicite).
-\li Si |\globaldefs| est sup\'erieur z\'ero, tout assignements et
-d\'efinitions sont implicitement pr\'efix\'e par ^|\global|.
+\li Si |\globaldefs| est sup\'erieur \`a z\'ero, tout assignement et
+d\'efinition est implicitement pr\'efix\'e par ^|\global|.
 \li Si |\globaldefs| est inf\'erieur \`a z\'ero, tout pr\'efixe ^|\global| est ignor\'e.
 \endulist
 \enddesc
@@ -600,14 +600,14 @@ pour diff\'erer le traitement d'un token que vous avez g\'en\'er\'e dans un
 \cts afterassignment {\<token>}
 \explain
 Quand \TeX\ rencontre cette commande il sauve \<token> dans un endroit sp\'ecial.  
-Apr\`es qu'il ait ex\'ecut\'e un \minref{assignment} suivant, il ins\`ere
+Apr\`es qu'il ait ex\'ecut\'e l'\minref{assignment} suivant, il ins\`ere
 \<token> dans l'entr\'ee et le d\'eveloppe.  Si vous appelez |\afterassignment|
 plus d'une fois avant un assignement, seul le dernier appel a un effet.
 Une utilisation de |\afterassignment|
-est dans l'\'ecriture de \minref{macro}s pour des commandes devant \^etre \'ecrite
+est dans l'\'ecriture de \minref{macro}s pour des commandes devant \^etre \'ecrites
 sous la forme d'assignements, comme dans l'exemple suivant.
 
-Voir la \knuth{page~279}{999} pour un description pr\'ecise
+Voir la \knuth{page~279}{325} pour un description pr\'ecise
 du fonctionnement d'|\afterassignment|.
 \example
 \def\setme{\afterassignment\setmeA\count255}
@@ -644,7 +644,7 @@ Some arithmetic: \setme = 27
 Cette commande d\'efinit \<s\'equence de contr\^ole> comme une \minref{macro} avec les
 \<texte de param\`etre> et \<texte de remplacement> sp\'ecifi\'es.
 Voir \xrefpg{macro} pour une explication compl\`ete sur la fa\c con d'\'ecrire une 
-definition de macro.
+d\'efinition de macro.
 \example
 \def\add#1+#2=?{#1+#2&=
    \count255=#1 \advance\count255 by #2 \number\count255\cr}
@@ -669,21 +669,21 @@ La diff\'erence est que \TeX\ d\'eveloppe le \<texte de remplacement>
 d'un |\edef| imm\'ediatement (mais sans rien ex\'ecuter).
 Ainsi toutes d\'efini\-tions du \<texte de remplacement> sont d\'evelopp\'ees, mais 
 des assignements et commandes qui produisent des choses telles que bo\^\i tes et 
-des ressorts sont laiss\'e tels quels.  Par exemple, une commande |\hbox| dans 
+des ressorts sont laiss\'es tels quels.  Par exemple, une commande |\hbox| dans 
 le \<texte de remplacement> d'un |\edef| reste comme une commande et n'est pas
 transform\'ee en une bo\^\i te quand \TeX\ ex\'ecute la d\'efinition.
 Il n'est pas toujours \'evident de savoir ce qui est d\'evelopp\'e et ce qui ne l'est pas, mais vous
-trouverez une liste compl\`ete des s\'equences de contr\^ole d\'eveloppable sur les
-\knuth{pages~212--215}{999--999}.
+trouverez une liste compl\`ete des s\'equences de contr\^ole d\'eveloppables sur les
+\knuth{pages~212--215}{249--252}.
 
 Vous pouvez inhiber le d\'eveloppement d'une s\'equence de contr\^ole qui devrait 
-\^etre d\'evelopp\'e en utilisant |\no!-expand| (\xref\noexpand). ^^|\noexpand|
+\^etre d\'evelopp\'ee en utilisant |\no!-expand| (\xref\noexpand). ^^|\noexpand|
 Vous pouvez diff\'erer le d\'eveloppement d'une s\'equence de contr\^ole en utilisant la commande
 ^|\expandafter| (\xref\expandafter).
 
 Les commandes |\write|, |\message|, |\errmessage|, |\wlog| et |\csname|
 d\'eveloppent leurs 
-liste de token en utilisant les m\^eme r\`egles que |\edef| utilise pour d\'evelopper son
+listes de token en utilisant les m\^eme r\`egles que |\edef| utilise pour d\'evelopper son
 texte de remplacement.
 ^^|\write//d\'evelopp\'e par les r\`egles d'{\tt\\edef}|
 ^^|\message//d\'evelopp\'e par les r\`egles d'{\tt\\edef}|
@@ -722,8 +722,8 @@ Cette commande est \'equivalente \`a |\global\edef|.
 \cts long {}
 \explain
 Cette commande est utilis\'ee comme pr\'efixe d'une d\'efinition de \minref{macro}.
-Elle dis \`a \TeX\ que les arguments de la macro peuvent inclure
-des tokens |\par| (\xref{\@par}), qui indique normalement la fin d'un paragraphe.
+Elle dit \`a \TeX\ que les arguments de la macro peuvent inclure
+des tokens |\par| (\xref{\@par}), qui indiquent normalement la fin d'un paragraphe.
 ^^|\par//dans des arguments de macro|
 Si \TeX\
 essaye de d\'evelopper une macro d\'efinie sans |\long| et qu'un des arguments
@@ -752,7 +752,7 @@ This is the second line.}
 \explain
 \null ^^{outer}
 Cette commande est utilis\'ee comme pr\'efixe d'une d\'efinition de \minref{macro}.
-Elle dis \`a \TeX\ que la macro est externe (\xref{outer})
+Elle dit \`a \TeX\ que la macro est externe (\xref{outer})
 et ne peut pas \^etre utilis\'ee dans certains contextes.
 Si la macro est utilis\'ee dans un contexte interdit, \TeX\ se plaindra.
 
@@ -822,7 +822,7 @@ il peut aussi \^etre un token de \minref{caract\`ere}.
 \begindesc
 \cts futurelet {\<s\'equence de contr\^ole> \<token$_1$> \<token$_2$>}
 \explain
-Cette commande dis \`a \TeX\ de donner \`a \<token$_2$> la signification de
+Cette commande dit \`a \TeX\ de donner \`a \<token$_2$> la signification de
 \<s\'equence de contr\^ole> (comme elle le serait avec |\let|) et ensuite 
 d'ex\'ecu\-ter \<token$_1$> et \<token$_2$> normalement.
 |\futurelet| est pratique \`a la fin d'une d\'efinition de macro
@@ -858,9 +858,9 @@ est en train d'ex\'ecuter avant de continuer.
 \xrdef{\endcsname}
 \explain
 Cette commande produit une s\'equence de contr\^ole \`a partir de \<liste de token>.
-Elle procure un moyen de synth\'etiser des s\'equence de contr\^oles,
-en incluant celle que vous ne pouvez normalement pas \'ecrire.
-\<liste de token> peut elle-m\^eme inclure des s\'equences de contr\^oles~; 
+Elle procure un moyen de synth\'etiser des s\'equences de contr\^ole,
+en incluant celles que vous ne pouvez normalement pas \'ecrire.
+\<liste de token> peut elle-m\^eme inclure des s\'equences de contr\^ole~: 
 elle est d\'eveloppable de la m\^eme mani\`ere que le texte de remplacement d'une 
 d\'efinition |\edef| (\xref\edef).
 Si le d\'eveloppement final
@@ -936,7 +936,7 @@ est simplement \<token> quoi que \<token> devienne.
 \begindesc
 \cts the {\<token>}
 \explain
-Cette commande se d\'eveloppe g\'en\'eralement en une liste de tokens de \minref{caract\`ere}
+Cette commande se d\'eveloppe g\'en\'eralement en une liste de tokens de \minref{caract\`ere}s
 que repr\'esente \<token>.  \<token> peut \^etre parmi ce qui suit~:
 
 \ulist\compact
@@ -949,8 +949,8 @@ que repr\'esente \<token>.  \<token> peut \^etre parmi ce qui suit~:
 \li un param\`etre de police, par exemple, |\fontdimen3\sevenbf|
 \li le ^|\hyphenchar| ou le ^|\skewchar| d'une police, 
 |\skewchar\teni|, par exemple
-\li ^|\lastpenalty|, ^|\lastskip| ou ^|\lastkern| (valeurs d\'eriv\'ee du
-dernier \'el\'ement d'une liste horizontale \minrefs{horizontal list}
+\li ^|\lastpenalty|, ^|\lastskip| ou ^|\lastkern| (valeurs d\'eriv\'ees du
+der\-nier \'el\'ement d'une liste horizontale \minrefs{horizontal list}
 ou \minref{liste verticale} courante)
 \li une s\'equence de contr\^ole d\'efinie par ^|\chardef| ou
 ^|\mathchardef|
@@ -966,7 +966,7 @@ d\'efinie qui s\'electionne la m\^eme police que la s\'equence de contr\^o\-le \
 variable, par exemple, |\the\everypar|
 \endulist
 
-Voir les \knuth{pages~214--215}{999--999} pour une description plus d\'etaill\'ee de ce que
+Voir les \knuth{pages~214--215}{251} pour une description plus d\'etaill\'ee de ce que
 |\the| fait selon les cas.
 \example
 The vertical size is currently \the\vsize.
@@ -999,12 +999,12 @@ Cette commande teste si \<token$_1$> et \<token$_2$>
 ont le m\^eme code de \minref{caract\`ere}, ind\'ependamment de leurs
 \minref{codes de cat\'egorie}.
 Avant d'ex\'ecuter le test, \TeX\ d\'eveloppe les tokens suivant le |\if|
-jusqu'a ce qu'il obtienne deux tokens qui ne peuvent se d\'evelopper plus.  
+jusqu'\`a ce qu'il obtienne deux tokens qui ne peuvent se d\'evelopper plus.  
 Ces deux tokens deviennent \<token$_1$> et \<token$_2$>.
 Le d\'eveloppement 
-inclut le remplacement d'un s\'equence de contr\^ole |\let| \'egale \`a un token de caract\`ere
+inclut le remplacement d'une s\'equence de contr\^ole |\let| \'egale \`a un token de caract\`ere
 par ce token de caract\`ere.
-Une \minref{s\'equence de contr\^ole} qui ne peut plus se d\'evelopper plus est
+Une \minref{s\'equence de contr\^ole} qui ne peut plus se d\'evelopper est
 consid\'er\'ee comme ayant un code de caract\`ere $256$.\par}
 \example
 \def\first{abc}
@@ -1035,12 +1035,12 @@ consid\'er\'ee comme ayant un code de caract\`ere $256$.\par}
 Cette commande teste si \<token$_1$> et \<token$_2$>
 ont le m\^eme \minref{code de cat\'ego\-rie}.
 Avant d'ex\'ecuter le test, \TeX\ d\'eveloppe les tokens suivant le |\if|
-jusqu'a ce qu'il obtienne deux tokens qui ne peuvent se d\'evelopper plus.  
+jusqu'a ce qu'il obtienne deux tokens qui ne puissent plus se d\'evelopper.  
 Ces deux tokens deviennent \<token$_1$> et \<token$_2$>.
 Le d\'eveloppement 
-inclut le remplacement d'un s\'equence de contr\^ole |\let| \'egale \`a un token de caract\`ere
+inclut le remplacement d'une s\'equence de contr\^ole |\let| \'egale \`a un token de caract\`ere
 par ce token de caract\`ere.
-Une \minref{s\'equence de contr\^ole} qui ne peut plus se d\'evelopper plus est
+Une \minref{s\'equence de contr\^ole} qui ne peut plus se d\'evelopper est
 consid\'er\'ee comme ayant un code de caract\`ere $16$.
 \example
 \ifcat axtrue\else false\fi;
@@ -1064,7 +1064,7 @@ consid\'er\'ee comme ayant un code de caract\`ere $16$.
 \ctspecial ifx {\<token$_1$> \<token$_2$>}\ctsxrdef{@ifx}
 \explain
 Cette commande teste si \<token$_1$> et \<token$_2$> s'accordent.
-Contrairement \`a |\if| et |\ifcat|, |\ifx| ne d\'eveloppent \emph{pas} les tokens
+Contrairement \`a |\if| et |\ifcat|, |\ifx| \emph{ne}  d\'eveloppe \emph{pas} les tokens
 suivant |\ifx|, donc \<token$_1$> et \<token$_2$> sont les deux
 tokens imm\'ediatement apr\`es |\ifx|.
 Il y a trois cas~:
@@ -1080,7 +1080,7 @@ que leurs codes de \minref{caract\`ere} et de \minref{cat\'egorie} s'accordent, 
 \li Si les deux tokens sont des macros, les tokens s'accordent si~:
 \olist\compact
 \li leurs d\'eveloppements de ``premier niveau'', c'est-\`a-dire,
-leurs textes de remplacement, sont identique, et
+leurs textes de remplacement, sont identiques, et
 \li Ils ont le m\^eme statut concernant ^|\long| (\xref\long)
 et ^|\outer| (\xref\outer).
 \endolist
@@ -1124,7 +1124,7 @@ Ce teste est g\'en\'eralement plus utile que |\if|.
 Cette commande teste si \<number$_1$> et \<number$_2$>
 satisfont \<relation>, qui peut \^etre soit `|<|', `|=|' ou `|>|'.
 Les nombres peuvent \^etre des constantes telles que |127|, des registres de compteur tels que
-|\pageno| ou |\count22| ou des param\`etres num\'erique tels que |\hbadness|.
+|\pageno| ou |\count22| ou des param\`etres num\'eriques tels que |\hbadness|.
 Avant d'ex\'ecuter le test, \TeX\ d\'eveloppe les tokens suivant le |\ifnum|
 jusqu'a ce qu'il obtienne une s\'equence de tokens ayant la forme \<number$_1$> 
 \<relation> \<number$_2$> suivi par un token
@@ -1298,7 +1298,7 @@ dans ce cas, \TeX\ ne d\'eveloppera rien si aucun des cas n'est satisfait.
 \ctspecial iftrue {}\ctsxrdef{@iftrue}
 \ctspecial iffalse {}\ctsxrdef{@iffalse}
 \explain
-Ces commandes sont \'equivalente \`a des tests qui sont toujours vrai ou toujours
+Ces commandes sont \'equivalentes \`a des tests qui sont toujours vrai ou toujours
 faux.  Le principal usage de ces commandes est de d\'efinir des macros qui gardent
 trace du r\'esultat d'un test.
 \example
@@ -1336,10 +1336,10 @@ Cette commande termine le texte d'un test conditionel.
 \begindesc
 \ctspecial newif {{\bt \\if}\<nom de test>}\ctsxrdef{@newif}
 \explain
-Cette commande nommes un trio de s\'equence de contr\^oles avec comme noms |\alpha!-true|,
+Cette commande nomme un trio de s\'equence de contr\^ole avec comme noms |\alpha!-true|,
 |\alphafalse|,
 et |\ifalpha|, o\`u |alpha| est \<test name>.
-Vous pouvez les utiliser pour d\'efinir vos propre tests en
+Vous pouvez les utiliser pour d\'efinir vos propres tests en
 cr\'eant une variable logique qui enregistre des informations
 true\slash false:
 \ulist\compact
@@ -1488,12 +1488,12 @@ Elle diff\`ere de |\relax| car elle dispara\^\i t apr\`es un d\'eveloppement de 
 \aux\cts toks {\<registre>}
 \explain
 ^^{assignements//de registres}
-Les six premi\`eres commandes list\'ees ici assigne quelque chose \`a un registre.
+Les six premi\`eres commandes list\'ees ici assignent quelque chose \`a un registre.
 Les |=| dans les assignations sont optionnels.
 Les cinq s\'equences de contr\^ole restantes ne sont pas de vraies commandes
 car elles n'apparais\-sent que comme partie d'un argument.
 Elles pr\'ecisent le contenu des registres sp\'ecifi\'es.
-Bien que vous ne puissiez utiliser ces s\'equences de contr\^oles elles-m\^eme comme commandes
+Bien que vous ne puissiez utiliser ces s\'equences de contr\^ole elles-m\^eme comme commandes
 dans un texte,  vous pouvez utili\-ser ^|\the| pour les convertir en texte 
 et ainsi pouvoir composer leurs valeurs.
 
@@ -1501,16 +1501,16 @@ Vous pouvez nommer et r\'eserver de nouveaux registres
 avec la commande ^|\newcount| et ses relatifs
 (\xref{\@newcount}).
 Utiliser ces commandes est un moyen s\^ur d'obtenir des registres qui 
-ne sont pas cenc\'e avoir d'usages conflictuels.
+ne sont pas cens\'es avoir d'usages conflictuels.
 
 ^^{registres count}
 Un registre |\count| contient un entier, qui peut \^etre soit positif soit
 n\'egatif.
-Des entiers peuvent \^etre aussi grand que vous n'aurez probablement jamais besoin qu'ils soient.\footnote
+Des entiers peuvent \^etre aussi grands que vous n'aurez probablement jamais besoin qu'ils soient.\footnote
 {Voici le seul exercice du livre~: trouvez le plus grand entier
 que \TeX\ acceptera.}
 \TeX\ utilise les registres compteur $0$--$9$ pour garder trace des
-num\'ero de page (voir la \knuth{page~119}{999}).
+num\'eros de page (voir la \knuth{page~119}{139}).
 |\count255| est le seul registre compteur possible pour une utilisation
 sans r\'eservation.
 \example
@@ -1523,7 +1523,7 @@ sans r\'eservation.
 \medskip\noindent
 ^^{registre dimension}
 Un registre |\dimen| contient une dimension.
-Les registres de |\dimen0| \`a |\dimen255| sont possible
+Les registres de |\dimen0| \`a |\dimen255| sont possibles
 pour un brouillon.
 
 \example
@@ -1542,7 +1542,7 @@ Un registre |\skip| contient les dimensions de ressort.
 Diff\'erent d'un registre |\dimen|, il
 enregistre un montant d'\'etirement et de r\'etr\'ecissement autant qu'une taille naturelle.
 Les registres de |\skip0| \`a |\skip9| et |\skip255| peuvent \^etre
-utiliser sans r\'eservation.
+utilis\'es sans r\'eservation.
 
 \example
 \skip2 = 2in
@@ -1563,7 +1563,7 @@ La taille d'un |mu| d\'epend de la police courante.
 Par exemple, elle est normalement un peu
 plus petite dans un exposant que dans un texte ordinaire.
 Les registres de |\muskip0| \`a |\muskip9| et |\muskip255| peuvent \^etre
-utilis\'e sans r\'eservation.
+utilis\'es sans r\'eservation.
 
 \example
 \muskip0 = 24mu % An em and a half, no stretch or shrink.
@@ -1582,12 +1582,12 @@ Vous pouvez assigner soit un token variable
 (un registre ou un param\`etre) ou une liste de token
 \`a un registre |\toks|.
 Quand vous assignez une liste de token \`a un registre de token,
-les tokens de la liste de token ne sont \emph{pas} d\'evelopp\'e.
+les tokens de la liste de token \emph{ne} sont \emph{pas} d\'evelopp\'es.
 
-Une fois que les tokens d'une liste de token ont \'et\'e ins\'er\'e dans un texte
+Une fois que les tokens d'une liste de token ont \'et\'e ins\'er\'es dans un texte
 en utilisant ^|\the|, ils sont
-d\'evelopp\'e comme des tokens qui seraient lu directement.
-Ils ont les codes de cat\'egorie qu'il ont re\c cu quand \TeX\ les \`a vu
+d\'evelopp\'es comme des tokens qui seraient lus directement.
+Ils ont les codes de cat\'egorie qu'ils ont re\c cus quand \TeX\ les \`a vu
 une premi\`ere fois dans la~\hbox{source}.
 
 \example
@@ -1670,7 +1670,7 @@ respectivement.
 \li |\newlanguage| r\'eserve un jeu de motifs de c\'esure.
 \endulist
 Vous devez utiliser ces commandes \`a chaque fois que vous avez besoin d'une
-de ces entit\'es, \`a part dans une r\'egion tr\`es locale,
+de ces entit\'es, dans une r\'egion tr\`es locale,
 pour \'eviter des conflits de num\'erotation.
 
 Il y a une diff\'erence importante entre ces commandes~:
@@ -1734,10 +1734,10 @@ d\'efinies en termes de commandes \hbox{de ce groupe}.
 \aux\cts advance {\<registre saut> {\bt by} \<ressort>}
 \aux\cts advance {\<registre muskip> {\bt by} \<muglue>}
 \explain
-Cette commande ajoute une quantit\'e compatible a un registre.  Pour \<ressort>
+Ces commandes ajoutent une quantit\'e compatible a un registre.  Pour \<ressort>
 ou \<muglue> les trois composants (valeur naturelle, \'etirement et r\'etr\'ecissement)
-\minrefs{glue} sont ajout\'e.
-toutes les quantit\'es peuvent \^etre n\'egatives.  
+\minrefs{glue} sont ajout\'es.
+Toutes les quantit\'es peuvent \^etre n\'egatives.  
 Pour ces calculs
 (et autres assignements en fait), \<ressort> peut \^etre converti en une
 \<dimension> en enlevant l'\'etirement et le r\'etr\'ecissement et une \<dimension> 
@@ -1767,7 +1767,7 @@ par \<nombre> (qui peut \^etre n\'egatif).
 Le registre peut \^etre un registre ^|\count|, ^|\dimen|, ^|\skip| 
 ou ^|\muskip|.
 Pour un registre ^|\skip| ou ^|\muskip| (\xref\skip),
-les trois composants du \minref{ressort} du registre sont modifi\'es.
+les trois composantes du \minref{ressort} du registre sont modifi\'es.
 Vous pouvez omettre le mot |by| dans ces commandes---\TeX\ les comprendra quand
 m\^eme.
 
@@ -1810,7 +1810,7 @@ Multiplied value of skip0 is \the\skip0.\par
 \easy\ctspecial bye \ctsxrdef{@bye}
 \explain
 Cette commande dit \`a \TeX\ de remplir et produire la derni\`ere page, d'imprimer
-tout \minref{insertion}s en suspens et de terminer l'ex\'ecution.
+toutes les \minref{insertion}s en suspens et de terminer l'ex\'ecution.
 C'est le moyen usuel de terminer votre fichier source.
 \enddesc
 
@@ -1818,8 +1818,8 @@ C'est le moyen usuel de terminer votre fichier source.
 \cts end {}
 \explain
 Cette commande dit \`a \TeX\ de produire la derni\`ere page et de terminer l'ex\'ecution.
-Elle ne remplit pas la page, n\'eanmoins, 
-dont il est normalement pr\'ef\'erable d'utiliser |\bye| plut\^ot que |\end|.
+Elle ne remplit pas la page,  
+donc il est pr\'ef\'erable d'utiliser |\bye| plut\^ot que |\end|.
 \enddesc
 
 %==========================================================================
@@ -1836,7 +1836,7 @@ dont il est normalement pr\'ef\'erable d'utiliser |\bye| plut\^ot que |\end|.
 \minrefs{file}\minrefs{file name}
 Cette commande demande \`a \TeX\ de lire son entr\'ee \`a partir du fichier \<nom de fichier>.
 Quand ce fichier est \'epuis\'e, \TeX\ retourne lire \`a partir du source d'entr\'ee
-pr\'ec\'edent.  Vous pouvez inclure des fichier d'entr\'ee sur autant de niveau que vous voulez
+pr\'ec\'edent.  Vous pouvez inclure des fichiers d'entr\'ee sur autant de niveaux que vous voulez
 (dans les limites du raisonnable).
 
 Quand vous saisissez un grand document, c'est souvent une bonne id\'ee de
@@ -1849,7 +1849,7 @@ fichier principal.
 
 \TeX\ utilise des r\`egles diff\'erentes pour balayer les noms de fichier que 
 pour lire les \minref{token}s en g\'en\'eral (voir \xref{nom de fichier}).
-Si votre impl\'ementation attend des nom de fichier avec extensions (habituellement
+Si votre impl\'ementation attend des noms de fichier avec extensions (habituellement
 pr\'ec\'ed\'ees par un point), alors \TeX\ procure l'extension par d\'efaut |.tex|.
 \example
 \input macros.tex
@@ -1904,7 +1904,7 @@ Vous devez allouer les num\'eros de flots pour |\openin| en utilisant
 Cette commande demande \`a \TeX\ de fermer le \minref{flot d'entr\'ee} num\'erot\'e
 \<nombre>, c'est-\`a-dire,
 clore l'association entre le flot d'entr\'ee et son fichier.
-Le flot d'entr\'ee avec ce num\'ero devient alors disponible pour \^etre utiliser avec un
+Le flot d'entr\'ee avec ce num\'ero devient alors disponible pour \^etre utilis\'e avec un
 fichier diff\'erent.
 Vous devez fermer un flot d'entr\'ee une fois que vous avez fini d'utiliser son fichier.
 \example
@@ -1954,7 +1954,7 @@ terminal mais omettra l'incitation.
 \explain
 ^^{flots de sortie//ouverture}
 Cette commande demande \`a \TeX\ d'ouvrir le fichier nomm\'e \<nom de fichier>
-et le rend disponible pour l'\'ecriture  via le \minref{flux de sortie}
+et de le rendre disponible pour l'\'ecriture  via le \minref{flux de sortie}
 d\'esign\'e par \<nombre>.
 \<nombre> doit \^etre entre $0$ et $15$.
 Une fois que vous avez ouvert un fichier et l'avez connect\'e \`a un flot de sortie,
@@ -1962,14 +1962,14 @@ vous pouvez \'ecrire dans le fichier en utilisant la commande |\write|
 avec le num\'ero du flot de sortie. 
 
 Un |\openout| g\'en\`ere un \'el\'ement extraordinaire qui devient une partie d'une bo\^\i te.
-Le |\openout| ne prend pas effet avant que \TeX\ n'envoi cette bo\^\i te
+Le |\openout| ne prend pas effet avant que \TeX\ n'envoit cette bo\^\i te
 dans le \dvifile,
 \`a moins que vous ayez fait pr\'ec\'eder |\openout| de ^|\immediate|.
 
 \TeX\ ne se plaindra pas si vous associez plus d'un flux de sortie avec le
 m\^eme fichier, mais vous aurez un sacr\'e bazar dans le fichier si vous essayez~!
 
-Vous devez allouer des num\'ero de flux pour |\openout| en utilisant
+Vous devez allouer des num\'eros de flux pour |\openout| en utilisant
 |\newwrite| (\xref{\@newwrite}).
 \example
 \newwrite\auxfile  \openout\auxfile = addenda.aux
@@ -1991,7 +1991,7 @@ un fichier diff\'erent.
 Vous devez fermer un flot de sortie une fois que vous avez fini d'utiliser son fichier.
 
 Un |\closeout| g\'en\`ere un \'el\'ement extraordinaire qui devient une partie d'une bo\^\i te.
-Le |\closeout| ne prend pas effet avant que \TeX\ n'envoie cette bo\^\i te
+Le |\closeout| ne prend pas effet avant que \TeX\ n'envoit pas cette bo\^\i te
 dans le \dvifile,
 \`a moins que vous ayez fait pr\'ec\'eder |\closeout| de ^|\immediate|.
 \example
@@ -2020,7 +2020,7 @@ En particulier, toute s\'equence de contr\^ole qui n'est pas le
 nom d'une macro est \'ecrite comme un
 ^|\escapechar| suivi par le nom de la s\'equence de contr\^ole 
 et un espace.  tous les tokens `|#|'
-de \<liste de token> sont doubl\'es, c'est-\`a-dire, \'ecrit comme `|##|'.
+de \<liste de token> sont doubl\'es, c'est-\`a-dire, \'ecrits comme `|##|'.
 
 Si \<nombre> n'est pas dans la fourchette de $0$ \`a $15$, \TeX\ \'ecrit
 \<liste de token> dans le fichier log.
@@ -2053,7 +2053,7 @@ Elle demande \`a \TeX\ d'ex\'ecuter l'op\'eration de fichier sp\'ecifi\'ee sans 
 \cts special {\rqbraces{\<liste de token>}}
 \explain
 Cette commande demande \`a \TeX\  
-d'\'ecrire \<liste de token> directement dans le \dvifile\ quand il envera
+d'\'ecrire \<liste de token> directement dans le \dvifile\ quand il enverra
 une page.
 Une utilisation typique de |\special| sera de dire au driver d'impression d'incorporer
 le contenu d'un fichier graphique nomm\'e dans la page de sortie.
@@ -2063,7 +2063,7 @@ La commande |\special| produit un \'el\'ement extraordinaire qui associe
 la position qu'une bo\^\i te de taille nulle aurait eu si un telle bo\^\i te
 serait apparue \`a la place de la commande |\special|.
 Toute utilisation que vous devez faire de |\special| d\'epend strictement des
-^{drivers d'impression} que vous avez \`a disposition.
+^{drivers d'impression} que vous avez \`a votre disposition.
 \example
 \special{graphic expic} 
 % Display the graphics file `expic' here.
@@ -2107,7 +2107,7 @@ on two lines.
 ^^{codes de cat\'egorie//en table de \b\tt\\catcode\e}
 Cette entr\'ee de table contient le \minref{code de cat\'egorie} du caract\`ere
 dont le code \ascii\ est \<charcode>.
-Les codes de cat\'egorie sont list\'e dans des \xrefpg{catcodes}.
+Les codes de cat\'egorie sont list\'es dans la \xrefpg{catcodes}.
 En changeant le code de cat\'egorie d'un caract\`ere vous pouvez demande \`a \TeX\ de traiter
 ce caract\`ere diff\'eremment.
 \example
@@ -2263,7 +2263,7 @@ vous pouvez utiliser cette facilit\'e pour ins\'erer des commandes ^|\show| (voi
 \enddesc
 
 %==========================================================================
-\section {Aide au diagnostique}
+\section {Aide au diagnostic}
 
 \subsection{Afficher des donn\'ees internes}
 
@@ -2276,7 +2276,7 @@ vous pouvez utiliser cette facilit\'e pour ins\'erer des commandes ^|\show| (voi
 \cts showbox {\<nombre>}
 \cts showlists {}
 \explain
-Ces commandes enregistrent de l'information dans la log de votre ex\'ecution \TeX~:
+Ces commandes enregistrent de l'information dans le fichier log de votre ex\'ecution \TeX~:
 \ulist
 \li |\show| enregistre la signification de \<token>.\minrefs{token}
 ^^{tokens//affich\'es par \b\tt\\show\e}
@@ -2286,12 +2286,12 @@ Ces commandes enregistrent de l'information dans la log de votre ex\'ecution \Te
 \li |\showbox| enregistre le contenu du \minref{registre} de la \minref{bo\^\i te} 
 num\'erot\'e \<nom\-bre>.
 Le nombre de
-points affich\'e dans la log indique le nombre de
+points affich\'es dans la log indique le nombre de
 niveaux d'inclusion de bo\^\i tes internes.
 \li |\showlists| enregistre
 le contenu de chaque liste que \TeX\ est en train de construire.
 (les listes sont empil\'ees les unes sur les autres.)
-Voir les \knuth{pages~88--89}{99--99} pour plus d'information sur l'interpr\'etation
+Voir les \knuth{pages~88--89}{103} pour plus d'information sur l'interpr\'etation
 de la sortie de |\showlists|.
 \endulist
 Pour |\show| et |\showthe|, \TeX\ affiche aussi l'information sur votre
@@ -2302,7 +2302,7 @@ si ^|\tracingonline| (\xref \tracingonline) est sup\'erieur \`a z\'ero~;
 si ^|\tracingonline| est \`a z\'ero ou moins (le cas par d\'efaut),
 l'information n'est pas affich\'ee.
 
-\`a chaque fois que \TeX\ rencontre une commande de type |\show| il
+\`A chaque fois que \TeX\ rencontre une commande de type |\show| il
 stoppe pour un interaction.  La requ\^ete d'interaction ne doit \emph{pas}
 indiquer une erreur, mais doit vous donner l'opportunit\'e de demander \`a \TeX\ de
 vous montrer autre chose.  Si vous ne voulez pas voir autre chose, pressez juste
@@ -2313,7 +2313,7 @@ Vous pouvez contr\^oler la quantit\'e de sortie produite par |\showbox| en metta
 ^^|\showboxbreadth| ^^|\showboxdepth|
 Ces param\`etres ont des valeurs par d\'efaut \`a $5$ et $3$ respectivement, 
 C'est pourquoi
-juste cinq \'el\'ements apparaissent pour chaque bo\^\i tes d\'ecrites
+juste cinq \'el\'ements apparaissent pour chaque bo\^\i te d\'ecrite
 dans la sortie de log ci-dessous.  (Le `|..etc.|' indique des \'el\'ements additionnels
 des bo\^\i tes qui ne sont pas affich\'es.)
 \example
@@ -2518,8 +2518,8 @@ Call \a once.
 \cts tracingoutput {\param{nombre}}
 \explain
 Si ce param\`etre est sup\'erieur \`a z\'ero,
-\TeX\ enregistrera dans le fichier log le contenu de toutes les bo\^\i te qu'il
-envoie dans le \dvifile.
+\TeX\ enregistrera dans le fichier log le contenu de toutes les bo\^\i tes qu'il
+envoit dans le \dvifile.
 ^^{\dvifile//\boite\ enregistr\'e dans le fichier}
 Si ^|\tracingonline| est sup\'erieur \`a z\'ero, cette information appara\^\i tra aussi
 sur votre terminal.
@@ -2580,10 +2580,10 @@ sur la liste de page courante, et aussi \`a chaque fois qu'il ex\'ecute une
 point de coupure potentiel pour la page.
 Examiner cette sortie peut \^etre utile quand vous essayez de d\'eterminer
 la cause d'une mauvaise coupure de page.
-Voir les \knuth{pages~112--114}{999--999} pour une illustration et une explication de
+Voir les \knuth{pages~112--114}{130--133} pour une illustration et une explication de
 cette sortie.
 
-Certaines distributions de \TeX\ ignore la valeur de |\tracingpages|
+Certaines distributions de \TeX\ ignorent la valeur de |\tracingpages|
 ainsi elles peuvent s'ex\'ecuter plus rapidement.
 Si vous devez utiliser ce param\`etre, soyez certain d'utiliser une distribution qui
 lui r\'epond.
@@ -2600,10 +2600,10 @@ Si ^|\tracingonline|
 est sup\'erieur \`a z\'ero, cette information appara\^\i tra aussi
 sur votre terminal.
 \TeX\  produit cette sortie quand il atteint la fin de chaque paragraphe.
-Voir les \knuth{pages~98--99}{99--99} pour une illustration et une explication de
+Voir les \knuth{pages~98--99}{115--116} pour une illustration et une explication de
 cette sortie.
 
-Certaines distributions de \TeX\ ignore la valeur de |\tracing!-para!-graphs|
+Certaines distributions de \TeX\ ignorent la valeur de |\tracing!-para!-graphs|
 ainsi elles peuvent s'ex\'ecuter plus rapidement.
 Si vous devez utiliser ce param\`etre, soyez certain d'utiliser une distribution qui
 lui r\'epond.
@@ -2619,7 +2619,7 @@ Si ^|\tracingonline|
 est sup\'erieur \`a z\'ero, cette information appara\^\i tra aussi
 sur votre terminal.
 
-Certaines distributions de \TeX\ ignore la valeur de |\tracing!-restores|
+Certaines distributions de \TeX\ ignorent la valeur de |\tracing!-restores|
 ainsi elles peuvent s'ex\'ecuter plus rapidement.
 Si vous devez utiliser ce param\`etre, soyez certain d'utiliser une distribution qui
 lui r\'epond.
@@ -2630,9 +2630,9 @@ lui r\'epond.
 \explain
 Si ce param\`etre est \`a $1$ ou plus, \TeX\ incluera
 un rapport sur les ressources qu'il utilise pour ex\'ecuter votre travail
-(voir la \knuth{page~300}{999} pour une liste et l'explication de ces ressources).
+(voir la \knuth{page~300}{350--351} pour une liste et l'explication de ces ressources).
 Du reste, si |\tracingstats| est \`a $2$ ou plus,
-\TeX\ fera un rapport sur ses utilisation de m\'emoire \`a chaque fois qu'il fera un
+\TeX\ fera un rapport sur ses utilisations de m\'emoire \`a chaque fois qu'il fera un
 ^|\shipout| (\xref \shipout) pour une page.
 Le rapport appara\^\i t \`a la fin du fichier log. 
 ^^{fichier log//tracer des statistiques dans le}
@@ -2640,9 +2640,9 @@ Si ^|\tracingonline| est sup\'erieur \`a z\'ero, cette information appara\^\i tr
 sur votre terminal.
 Si vous avez des probl\`emes avec \TeX\ d\'epassant une de ses
 capacit\'es, l'information procur\'ee par |\tracingstats| peut vous aider \`a 
-mettre le doigt sur la cause de vos difficult\'e.
+mettre le doigt sur la cause de vos difficult\'es.
 
-Certaines distributions de \TeX\ ignore la valeur de |\tracingstats|
+Certaines distributions de \TeX\ ignorent la valeur de |\tracingstats|
 ainsi elles peuvent s'ex\'ecuter plus rapidement.
 Si vous devez utiliser ce param\`etre, soyez certain d'utiliser une distribution qui
 lui r\'epond.
@@ -2707,9 +2707,9 @@ il produit la sortie pour ^|\showbox| ou ^|\showlists|.
 \cts message {\rqbraces{\<liste de token>}}
 \cts errmessage {\rqbraces{\<liste de token>}}
 \explain
-Cette commandes affiche le message donn\'e par \<liste de token> sur votre
+Cette commande affiche le message donn\'e par \<liste de token> sur votre
 terminal et l'entre aussi dans la log.  Toutes les \minref{macro}s du
-message sont d\'evelopp\'ees, mais aucune commandes n'est ex\'ecut\'ees.  C'est la m\^eme r\`egle
+message sont d\'evelopp\'ees, mais aucune commande n'est ex\'ecut\'ee.  C'est la m\^eme r\`egle
 que \TeX\ utilise pour |\edef| (\xref \edef).
 
 Pour |\errmessage|, \TeX\ fait une pause 
@@ -2787,9 +2787,9 @@ l.8 ...t appreciate receiving this token.}
 \begindesc
 \cts errorcontextlines {\param{nombre}}
 \explain
-Ce param\`etre d\'etermine le nombre de paires de ligne de contexte,
+Ce param\`etre d\'etermine le nombre de paires de lignes de contexte,
 sans compter la premi\`ere et la derni\`ere, que \TeX\ imprime quand il
-rencontre une erreur.  En le mettant \`a $0$ vous pouvez vous d\'ebarrasser de long
+rencontre une erreur.  En le mettant \`a $0$ vous pouvez vous d\'ebarrasser de longs
 messages d'erreur.  
 Vous pouvez forcer le contexte entier en saisissant quelque chose comme~:
 \csdisplay

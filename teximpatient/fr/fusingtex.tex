@@ -41,7 +41,7 @@ voit si vous regardez le listing du fichier.
 Votre fichier source peut s'av\'erer \^etre un peu plus qu'un squelette qui 
 appelle d'autres fichiers source. Les utilisateurs de \TeX\ organisent 
 souvent de grands documents tels que des livres de cette fa\c con. Vous pouvez 
-utiliser la commande ^|\input| (\xref\input) pour inclure un fichier source 
+utiliser la commande ^|\input| (voir \xref\input) pour inclure un fichier source 
 dans des autres. En particulier, vous pouvez utiliser |\input| pour inclure 
 des fichiers contenant 
 des \emph{d\'efinitions de macro}---% 
@@ -50,9 +50,9 @@ d\'efinitions auxiliaires qui augmentent les possibilit\'es de \TeX. Si des
 fichiers de macro sont disponibles sur votre installation \TeX, les 
 informations locales sur \TeX\ devraient vous indiquer comment atteindre 
 les fichiers de macro et ce qu'elles peuvent faire pour vous. Le format 
-standard de \TeX, celui d\'ecrit dans ce livre, inclus une collection de 
+standard de \TeX, celui d\'ecrit dans ce livre, inclut une collection de 
 macros et d'autres d\'efinitions connus sous le nom de ^{\plainTeX} 
-(\xref{\plainTeX}). 
+(voir \xref{\plainTeX}). 
 
 Quand \TeX\ ex\'ecute votre document, il produit un fichier appel\'e 
 ^{\dvifile}. L'abr\'evia\-tion ``|dvi|'' repr\'esente ``device independent''. 
@@ -67,7 +67,7 @@ est un programme qui vous permet de voir sur un \'ecran une approximation de
 ce \`a quoi le r\'esultat compos\'e ressemblera.) Les diff\'erents appareils de 
 sortie exigent normalement diff\'erents drivers de p\'eriph\'erique. Apr\`es avoir 
 ex\'ecut\'e le driver de p\'eriph\'erique, vous devrez \'egalement transf\'erer le 
-r\'esultat du driver de p\'eriph\'erique vers l'impri\-mante ou \`a tout autre 
+r\'esultat du driver de p\'eriph\'erique vers l'impri\-mante ou tout autre 
 appareil de sortie. ^^{dispositifs de sortie} ^^{imprimantes} Les 
 informations locales sur \TeX\ devraient vous indiquer comment obtenir le 
 driver de p\'eriph\'erique correct et l'utiliser.
@@ -81,11 +81,11 @@ contenant les dimensions des caract\`eres dans la police (le \emph{fichier
 de m\'etriques}) ^^{fichiers de m\'etriques} et un contenant les formes des 
 caract\`eres (le \emph{fichier de formes}). ^^{fichier de formes} Les 
 versions magni\-fi\'ees d'une police partagent les m\'etriques mais ont 
-diff\'erents dossiers de forme. ^^{magnification} Les fichiers de m\'etrique 
+diff\'erents dossiers de forme. ^^{magnification} Les fichiers de m\'etriques
 sont d\'esign\'es parfois sous le nom de \tfmfiles ^^{\tfmfile}, et les diff\'erentes 
 vari\'et\'es de fichiers de forme sous le nom de \pkfiles ^^{\pkfile}, \pxlfiles\ ^^{\pxlfile} et 
 \gffiles ^^{\gffile}. Ces noms correspondent aux noms des dossiers que \TeX\ et ses 
-programmes compagnon utilisent. Par exemple, |cmr10.tfm| est le dossier de 
+programmes compagnons utilisent. Par exemple, |cmr10.tfm| est le dossier de 
 m\'etrique pour la police |cmr10| (Computer Modern Romain 10 point).
 
 \TeX\ lui-m\^eme n'utilise que le fichier des m\'etriques, puisqu'il ne g\`ere 
@@ -122,7 +122,7 @@ Transcript written on screed.log.
 |
 affich\'e sur votre terminal, ou imprim\'e dans votre \logfile\  si vous ne 
 travaillez pas sur un terminal. La majeure partie de ce r\'esultat est 
-explicite. Les nombres entre parenth\`eses sont des num\'eros de page que \TeX 
+explicite. Les nombres entre crochets sont des num\'eros de page que \TeX 
 \ affiche quand il charge chaque page de votre document dans le \dvifile. 
 \TeX\ mettra normalement une extention `|.tex|' \`a un nom de fichier source 
 si celui que vous avez donn\'e n'en a pas. Pour quelques formes de \TeX\ vous 
@@ -148,12 +148,12 @@ de traiter chaque fichier imbriqu\'e.
 \xrdef{infiles}
 \TeX\ affiche une parenth\`ese gauche et le nom du fichier quand il commence 
 \`a travailler sur un fichier et affiche la parenth\`ese droite correspondante 
-quand il en a fini avec le fichier. Si vous recevez n'importe quels 
-^{messages d'erreur} dans la sortie affich\'ee, vous pouvez les associer avec 
+quand il en a fini avec le fichier. Si vous recevez n'importe quel 
+^{message d'erreur} dans la sortie affich\'ee, vous pouvez les associer avec 
 un fichier en recherchant la parenth\`ese gauche la plus r\'ecemment ouverte. 
 
 Pour une explication plus compl\`ete de la fa\c con de faire marcher \TeX, voir 
-\knuth{chapitre~6}{} et votre ^{information locale}. 
+le \knuth{chapitre~6}{} et votre ^{assistance informatique locale}. 
 \eix^^{ex\'ecuter \TeX}
 
 
@@ -169,7 +169,7 @@ fournie ici appara\^\i t \'egalement dans les exemples dans la
 
 \bix^^{commandes}
 \bix^^{s\'equences de contr\^ole}
-Un source \TeX\ se compose d'une s\'equence de commandes qui indiquent \`a 
+Une source \TeX\ se compose d'une s\'equence de commandes qui indique \`a 
 \TeX\ comment composer votre document. La plupart des caract\`eres agissent 
 en tant que commandes d'un genre particuli\`erement simple~: \break``compose-moi''. 
 La lettre `|a|', par exemple, est une commande pour composer un `a'. Mais 
@@ -188,7 +188,7 @@ She plunged a dagger (\dag) into the villain's heart.
 }
 \noindent Tout dans cet exemple except\'e le |\dag| et les  espaces agissent 
 comme une commande ``compose-moi''. Nous en expliquerons plus au sujet des 
-espaces dans \xrefpg{espaces}. 
+espaces \xrefpg{espaces}. 
 
 Il y a deux sortes de s\'equences de contr\^ole~: les \emph{mots de contr\^ole}
 ^^{mots de contr\^ole}
@@ -228,12 +228,12 @@ The wonders of \TeX shall never cease!
 \noindent
 qui est ce que vous obtenez si vous enlevez `|\|\visiblespace' ou `|{}|'.
 
-Ne faite pas suivre un mot de contr\^ole par le texte qui le suit---\TeX\ ne 
+Ne faites pas suivre un mot de contr\^ole par le texte qui le suit---\TeX\ ne 
 saura pas o\`u le mot de commande finit. Par exemple, la s\'equence de 
 contr\^ole |\c| place une c\'edille sur le caract\`ere qui le suit. Le mot 
 fran\c cais {\it gar\c con\/} doit \^etre saisi ainsi 
 `|gar\c!visiblespace!.con|', et non `|gar\ccon| '; si vous \'ecrivez cela, 
-\TeX\ se plaindra au sujet d'une \'equence de contr\^ole |\ccon| non d\'efinie.
+\TeX\ se plaindra au sujet d'une s\'equence de contr\^ole |\ccon| non d\'efinie.
 
 Un symbole de contr\^ole, par contre, n'absorbe rien de ce qui le suit. Ainsi 
 vous devez saisir `\$13.56' ainsi `|\$13.56|', et non `|\$!vs13.56|'; la 
@@ -283,7 +283,7 @@ cas, les accolades exig\'ees d\'efinissent un groupe (voir \xref{bracegroup}).
 \subsection Param\`etres
 
 \xrdef{introparms}
-Certaines commandes sont des param\`etres (\xref{param\`etre}).
+Certaines commandes sont des param\`etres (voir \xref{param\`etre}).
 ^^{param\`etres//comme commandes}
 Vous pouvez utiliser un param\`etre de deux fa\c cons~:
 \olist
@@ -297,13 +297,13 @@ met la valeur du nombre du param\`etre |\hbadness| \`a $200$.
 \endolist
 \noindent
 Nous utilisons aussi le terme ``param\`etre'' pour faire r\'ef\'erence aux entit\'es telle que |\pageno|
-qui sont normalement des registres mais se comporte comme des param\`etres.
+qui sont normalement des registres mais se comportent comme des param\`etres.
 ^^{registres//param\`etres comme}
 
 Certaines commandes sont des noms des tables. Ces commandes sont employ\'ees comme 
 des param\`etres, sauf qu'elles exigent un argument additionnel qui indique une 
 entr\'ee particuli\`ere dans la table. Par exemple, |\catcode| appelle une table 
-de codes de cat\'egorie (\xref{codes de cat\'egorie}). Ainsi la commande 
+de codes de cat\'egorie (voir \xref{codes de cat\'egorie}). Ainsi la commande 
 \hbox{|\catcode`~=13|} place le code de cat\'egorie du caract\`ere `|~|' \`a $13$.
 
 
@@ -319,7 +319,7 @@ un ^{point} dans votre saisie. Quoique vous fassiez, \TeX\ ex\'ecute ses
 man\oe uvres de fin de phrase et laisse (dans la plupart des cas) la place 
 appropri\'ee apr\`es le point. \TeX\ traite \'egalement la fin d'une ligne 
 de source comme \'equivalente \`a un espace. Ainsi vous pouvez finir vos 
-lignes de source partout o\`u cela vous arrange---% 
+lignes de source partout o\`u cela vous arrange --- % 
 \TeX\ transforme des lignes de source en paragraphes de la m\^eme fa\c con 
 quelles que soient les coupures de ligne dans votre source.
 
@@ -329,7 +329,7 @@ Plusieurs lignes blanches sont \'equivalentes \`a une seule ligne.
 
 \TeX\ ignore les espaces du source dans les formules math\'ematiques (voir 
 ci-dessous). Ainsi vous pouvez inclure ou omettre des espaces n'importe 
-o\`u dans une formule math\'ematique---\TeX\ ne s'en inqui\`ete pas. M\^eme 
+o\`u dans une formule math\'ematique --- \TeX\ ne s'en inqui\`ete pas. M\^eme 
 dans une formule math\'ematique, cependant, vous ne devez pas relier un mot 
 de contr\^ole avec la lettre qui le suit.
 
@@ -338,14 +338,14 @@ particuli\`erement attention o\`u vous mettez les fins de ligne dans les
 d\'efinitions. Il est tr\`es facile de d\'efinir une macro qui produit un 
 ^{espace non d\'esir\'e} en plus de ce qu'elle est cens\'ee produire. Nous 
 discuterons de ce probl\`eme ailleurs parce qu'il est quelque peu technique 
-; voir \xrefpg{unwantedspace}.
+(voir \xrefpg{unwantedspace}.
 
 Un espace ou son \'equivalent entre deux mots dans votre source ne se 
 transforme pas simplement en caract\`ere d'espace dans votre r\'esultat. 
 Quelques-uns de ces espaces du source se transforment en fins des lignes 
 dans le r\'esultat, puisque, g\'en\'eralement, les lignes du source ne 
 correspondent pas aux lignes du r\'esultat. Les autres se transforment en 
-espaces de largeur variable appel\'ees ``ressort'' (\xref{ressort}), qui ont une 
+espaces de largeur variable appel\'es ``ressort'' (\xref{ressort}), qui ont une 
 taille normale (la taille qu'il ``veut avoir'') mais qui peut s'\'etendre 
 ou se r\'etr\'ecir. Quand \TeX\ compose un paragraphe qui est cens\'e avoir 
 une marge \`a droite (le cas habituel), il ajuste les largeurs des ressorts de 
@@ -364,7 +364,7 @@ saisissant `|Fig.~8|' vous pouvez emp\^echer une telle coupure de ligne.
 
 \xrdef{commentaires}
 \pix\bix^^{commentaires}
-Vous pouvez ins\'erer des commentaires dans votre source \TeX\. Quand \TeX\ 
+Vous pouvez ins\'erer des commentaires dans votre source \TeX. Quand \TeX\ 
 voit un commentaire il passe simplement au-dessus de lui, ainsi ce qui est dans un 
 commentaire n'affecte pas votre document final de quelque fa\c con. Les 
 commentaires sont utiles pour fournir des informations suppl\'emen\-taires 
@@ -424,8 +424,8 @@ permet d'obtenir~:
 
 Certains pr\'ef\`erent ne pas laisser plus d'espace apr\`es une ponctuation 
 \`a la fin d'une phrase. Vous pouvez obtenir cet effet avec la commande 
-^|\frenchspacing| (\xref\frenchspacing). |\frenchspacing| est souvent 
-recom\-mand\'ee pour les ^{bibliographies}.
+^|\frenchspacing| (voir \xref\frenchspacing). |\frenchspacing| est souvent 
+recomman\-d\'ee pour les ^{bibliographies}.
 
 Pour les ^{marques de citation} simples, vous devez employer les quotes 
 simples gauches et droites (|`| et |'|) sur votre clavier. Pour les 
@@ -460,9 +460,9 @@ trois guillemets presque \'equidistants \`a suivre.
 \li un long (cadratin) comme ceci ( --- ). vous l'obtenez en saisissant~`^|---|'.
 \endulist
 \noindent Typiquement, vous utiliserez les traits d'union pour indiquer les 
-mots compos\'es comme ``will-o'-the-wisp'', les demi-cadratins d\'esignerons 
+mots compos\'es comme ``will-o'-the-wisp'', les demi-cadratins d\'esigneront 
 les suites de page telles que ``pages~81--87'', et les cadratins 
-d\'esignerons une coupure dans la continuit\'e---comme ceci.
+d\'esigneront une coupure dans la continuit\'e---comme ceci.
 
 
 \subsection Caract\`eres sp\'eciaux
@@ -562,7 +562,7 @@ Une formule math\'ematique peut appara\^\i tre dans du \emph{texte math\'ematiqu
 ou se placer sur une ligne s\'epar\'ee par de l'espace 
 vertical suppl\'e\-mentaire autour d'elle (\emph{math\'ematiques affich\'ees}). 
 ^^{math\'ematiques affich\'ees} 
-Vous enfermez une formule des textes entre des signes dollar simples 
+Vous enfermez le texte d\' une formule entre des signes dollar simples 
 (|$|) et une formule affich\'ee entre des signes dollars doubles (|$$|). 
 \ttidxref{$}\ttidxref{$$} 
 Par exemple~:
@@ -593,13 +593,13 @@ Les ^{yeux} transforment un fichier d'entr\'ee en s\'equence de caract\`eres. La
 ^^{tokens} 
 o\`u chaque token est un caract\`ere simple ou une s\'equence de contr\^ole.
 ^^{s\'equences de contr\^ole//comme tokens} 
-l'\oe sophage d\'eveloppe les tokens
+L'\oe sophage d\'eveloppe les tokens
 s\'equence de \emph{commandes primitives}, qui sont \'egalement des tokens. 
 ^^{d\'evelopper des tokens} 
 L'^{estomac} effectue les op\'erations indiqu\'ees par les 
 commandes primitives, produisant une s\'equence de pages. 
 Finalement, l'^{intestin} transforme chaque page dans la forme requise 
-pour le \dvifile\ et l'y envoi. 
+pour le \dvifile\ et l'y envoit. 
 ^^{\dvifile//cr\'e\'e par l'intestin de \TeX} 
 Ces actions sont d\'ecrites en plus d\'etail dans la \chapterref{concepts} sous 
 \conceptcit{\anatomy}. 
@@ -616,7 +616,7 @@ fait une page enti\`ere. Une bo\^\i te peut contenir des bo\^\i tes plus petites
 mais aussi des ^^{ressort} \emph{ressorts} (\xref{ressort}) et autres 
 diverses choses. Les ressorts produisent de l'espace entre les cases les plus 
 petites. Une propri\'et\'e importante des ressorts est qu'ils peuvent s'\'etendre et 
-se r\'etr\'ecir ; ainsi \TeX\ peut rendre une bo\^\i te plus grande ou plus petite 
+se r\'etr\'ecir~; ainsi \TeX\ peut rendre une bo\^\i te plus grande ou plus petite 
 en \'etirant ou en r\'etr\'ecissant les ressorts.
 
 En g\'en\'eral, une ligne est une bo\^\i te contenant une suite de bo\^\i 
@@ -639,8 +639,8 @@ longueur, ex\'ecutant une analyse plut\^ot raffin\'ee afin de choisir
 l'ensemble de coupures qui semble la meilleure pour le paragraphe 
 \seeconcept{coupure de ligne}. L'estomac suit un processus semblable mais plus simple 
 afin de transformer une s\'equence de lignes en page. Essentiellement 
-l'estomac accumule des lignes jusqu'\`a ce que plus aucune lignes ne 
-puissent rentrer dans la page. Il choisit alors un endroit simple pour 
+l'estomac accumule des lignes jusqu'\`a ce que plus aucune ligne ne 
+puisse rentrer dans la page. Il choisit alors un endroit simple pour 
 couper la page, en mettant les lignes avant la coupure sur la page courante 
 et en sauvant les lignes apr\`es la coupure pour la page suivante 
 \seeconcept{coupure de page}. 
@@ -650,14 +650,14 @@ Quand \TeX\ assemble un \'el\'ement d'une liste d'articles (bo\^\i tes, ressorts
 etc.), il est dans un des six \emph{modes} ^^{modes} (\xref{mode}). Le genre 
 d'entit\'e qu'il assemble d\'efinit le mode dans lequel il est. Il y a deux modes 
 ordinaires~: le mode horizontal ordinaire pour l'assemblage des paragraphes
-(avant qu'ils ne soient coup\'es en lignes) et le mode vertical ordinaire pour les 
+(avant qu'ils ne soient coup\'es en lignes) et le mode vertical ordinaire pour 
 l'assemblage des pages. Il y a deux modes internes~: le mode horizontal interne 
 pour assembler des articles horizontalement pour former une bo\^\i te horizontale et 
 un mode vertical interne pour assembler des articles verticalement pour former une 
 bo\^\i te verticale (autre qu'une page). Finalement, il y a deux modes math\'ematiques~: 
 le mode math\'ematique de texte pour des formules de maths s'assemblant dans un 
 paragraphe et le mode math\'ematique d'affichage pour les formules math\'ematiques qui 
-sont affih\'ees sur des lignes seules (voir ``formules math\'ematiques'', 
+sont affich\'ees sur des lignes seules (voir ``formules math\'ematiques'', 
 \xref{mathform}).
 
 
@@ -669,7 +669,7 @@ En 1989, Knuth a fait une r\'evision importante de \TeX\ afin de
 l'adapter aux jeux de caract\`eres n\'ecessaires \`a la composition des 
 langues autres que l'anglais.\space ^^{langues \'etrang\`eres}
 
-Cette r\'evision inclus quelques fonctions suppl\'ementaires mineures 
+Cette r\'evision inclut quelques fonctions suppl\'ementaires mineures 
 qui peuvent \^etre ajout\'ees sans d\'eranger autre chose. Ce livre 
 d\'ecrit le ``^{\newTeX}''. Si vous utilisez toujours une version plus 
 ancienne de \TeX\ (version $2.991$ ou ant\'erieure), vous devez savoir 
@@ -726,7 +726,7 @@ American Mathematical Society, 1986.
 Vous pouvez joindre le ^{\TUG} (TUG), qui \'edite un bulletin appel\'e 
 {\it ^{TUGBoat}}. Le TUG est une excellente source d'informations non 
 seulement sur \TeX\ mais \'egalement pour des collections de macros, 
-y compris le \AMSTeX. Son adresse est~: 
+y compris \AMSTeX. Son adresse est~: 
 \smallskip
 {\obeylines
 ^{\TUG}
@@ -738,7 +738,7 @@ U.S.A.
 \smallskip
 \noindent
 En conclusion, vous pouvez obtenir des copies des macros ^|eplain.tex| 
-d\'ecrits dans la \chapterref{eplain} aussi bien que les macros utilis\'e en 
+d\'ecrites dans la \chapterref{eplain} aussi bien que les macros utilis\'ees en 
 composant ce livre. Elles sont disponibles par le r\'eseau Internet par 
 \ftp\ anonyme \`a partir des centres serveurs suivants~: 
 {\obeylines\display{\tt
@@ -785,7 +785,7 @@ N\'eanmoins, de nombreux ouvrages existent dans la langue de Moli\`ere. Aussi bi
 ^{Knuth, Donald E.}, {\sl Le \TeX book}\itcorr.  Paris, France : Vuibert, 12/2003.\par}
 \smallskip
 \noindent
-Un grand merci \`a ^{Jean-C\^ome Charpentier} pour cette traduction tant attendu par la 
+Un grand merci \`a ^{Jean-C\^ome Charpentier} pour cette traduction tant attendue par la 
 communau\TeX\ francophone. 
 
 \smallskip
@@ -793,16 +793,23 @@ communau\TeX\ francophone.
 ^{Seroul, Raymond}, {\sl Le petit livre de \TeX}.  Paris, France : Masson, 1996.\par}
 \smallskip
 \noindent
-
+Pour comprendre \TeX\ et comment le franciser.
 
 \subsection {\LaTeX}
 
 \smallskip
-{\narrower\noindent\frenchspacing\spaceskip = 3.33pt plus 2pt minus 1.2pt
+{\narrower\noindent%\frenchspacing\spaceskip = 3.33pt plus 2pt minus 1.2pt
+^{Bayart, Benjamin}, {\sl Le Joli Manuel Pour \LaTeX}.  En t\'el\'echargement libre sur le CTAN.\par}
+\smallskip
+\noindent
+Mon premier livre de chevet sur \LaTeX. Une nouvelle version est en cours d'\'ecriture.
+
+\smallskip
+{\narrower\noindent%\frenchspacing\spaceskip = 3.33pt plus 2pt minus 1.2pt
 ^{Desgraupes, Bernard}, {\sl\LaTeX, apprentissage, guide et r\'ef\'erence}.  Paris, France : Vuibert, 2000.\par}
 \smallskip
 \noindent
-tr\`es bien fait, un must pour comprendre la gestion des polices sous \TeX\ et \LaTeX.
+tr\`es bien fait, un must pour comprendre la gestion des polices sous \LaTeX.
 
 \smallskip
 {\narrower\noindent
@@ -836,16 +843,17 @@ Pour en apprendre un peu plus sur l'univers de \TeX.
 \noindent
 pas d'\'equivalent, \`a part le \MF book de Knuth (en anglais) .
 
+\subsection {Association}
+
 Vous pouvez joindre l'association ^{GUTenberg} (GUTenberg), qui \'edite un bulletin appel\'e 
 {\it ^{La lettre de GUTenberg}}. GUTenberg est une excellente source d'informations sur 
 \TeX\ en fran\c cais. Son adresse est~: 
 \smallskip
 {\obeylines
-^{\TUG}
-c/o American Mathematical Society
-P.O. Box 9506
-Providence,  RI  02940
-U.S.A.
+GUTenberg
+c/o Irisa, Campus universitaire de Beaulieu
+F-35042 Rennes cedex
+France
 }
 \smallskip
 

@@ -33,7 +33,7 @@ Cette commande produit un \minref{cr\'enage} positif
 dont la largeur \'equivaut \`a un sixi\`eme d'em
 (\xref{dimdefs})
 c'est-\`a-dire qu'il demande \`a \TeX\ de d\'eplacer sa position \`a droite de ce montant.
-c'est pratique
+C'est pratique
 quand vous avez par exemple des quotes imbriqu\'ees
 et que vous voulez les s\'eparer.
 \TeX\ ne coupe pas de ligne sur un
@@ -94,7 +94,8 @@ Chacune de ces commandes
 produit un bout de \minref{ressort} horizontal
 qui ne peut ni s'\'etirer ni se r\'etr\'ecir.
 \TeX\ peut couper une ligne \minrefs{line break} sur un tel ressort.
-Les largeurs de ces ressort (qui sont relatifs \`a la police courante)
+Les largeurs de ces ressort/dimension
+(qui sont relatifs \`a la police courante)
 sont les suivantes pour |cmr10|, la police par d\'efaut de \plainTeX~:
 \medskip
 \def\distance#1{\hbox{\strut $\rightarrow$\vrule\hskip #1\vrule$\leftarrow$}}
@@ -125,7 +126,7 @@ en\enskip skip; quad\quad skip; qquad\qquad skip
 \cts bigskip {}
 \explain
 Ces commandes produisent des montants d'espacement vertical 
-successivement plus large~:
+successivement plus larges~:
 \display{{\def\bar{\kern 2pt\hrule width 5pc} 
 \def\lbl#1{\hbox to 5pc{\hfil #1skip\hfil}}
 \leavevmode
@@ -178,12 +179,12 @@ vous changez |\baselineskip| (\xref\baselineskip).
 \bix^^{espace vertical}
 \explain
 Ces commandes produisent des ressorts respectivement horizontaux et verticaux.
-Dans le cas le plus simple et le plus courant, quand seul \<dimension$_1$> est pr\'esent,
+Dans le cas le plus simple et le plus courant, quand il n'y a seulement que \<dimension$_1$>,
 |\hskip| saute vers la droite de \<dimension$_1$>
 et |\vskip| saute vers le bas de la page de \<dimension$_1$>.
-Plus g\'en\'eralement, ces commandes
-produisent des \minref{ressort} dont la taille naturelle est
-\<dimen!-sion$_1$>, l'\'etirement est \<dimension$_2$> et le r\'etr\'ecissement \<dimension$_3$>.
+Plus g\'en\'erale\-ment, ces commandes
+produisent des \minref{ressort}s dont la taille naturelle est
+\<dimension$_1$>, l'\'etirement \<dimension$_2$> et le r\'etr\'ecissement \<dimension$_3$>.
 Le |plus| \<dimension$_2$>, le |minus |\<dimension$_3$>,
 ou les deux peuvent \^etre omis.
 Si les deux sont pr\'esent, le |plus| doit \^etre avant le |minus|.
@@ -231,7 +232,7 @@ pour aucune des dimensions.  Si vous voulez des unit\'es |mu|, utilisez |\mskip|
 ^^{ressort horizontal}
 \explain
 La commande |\hglue| produit un \minref{ressort} horizontal qui ne dispara\^\i t pas sur
-une coupure de ligne~; La commande |\vglue|
+une coupure de ligne. La commande |\vglue|
 produit un \minref{ressort} vertical qui ne dispara\^\i t pas sur une coupure de page. 
 Pour le reste ces commandes sont comme |\hskip| et |\vskip|.
 Vous pouvez utiliser |\vglue| pour produire de l'espace blanc en haut d'une page,
@@ -244,13 +245,13 @@ par exemple, au dessus d'un titre sur la premi\`ere page d'un document, mais
 \explain
 \margin{Command added; recent addition to \TeX}
 Cette commande\footnote{|\topglue| a \'et\'e ajout\'e \`a \TeX\ dans la version 3.0,
-apr\`es les autres am\'enagements introduit par le ^{\newTeX}
+apr\`es les autres am\'enagements introduitis par le ^{\newTeX}
 (\xref{newtex}).  C'est la premi\`ere d\'ecrite dans la \emph{dix-huiti\`eme\/}
 \'edition de \texbook.} fait que l'espace entre le haut de la page et le
 haut de la premi\`ere bo\^\i te de la page soit pr\'ecis\'ement \'egal \`a \<glue>.
 Le haut de la page est consid\'er\'e \^etre sur la ligne de base d'une
 ligne imaginaire de texte juste au-dessus de la ligne du haut de la page.
-Plus pr\'ecis\'ement, c'est un distance |\topskip| au dessus de l'origine donn\'ee par
+Plus pr\'ecis\'ement, c'est une distance |\topskip| au dessus de l'origine donn\'ee par
 |\hoffset| et |\voffset|.
 
 Cette commande est pratique parce que \TeX\ ajuste le ressort normalement 
@@ -264,7 +265,7 @@ ces ajustements.
 \cts kern {\<dimension>}
 \explain
 L'effet de cette commande d\'epend du mode dans lequel est \TeX\ quand 
-il ma rencontre~:
+il la rencontre~:
 \ulist
 
 \li En mode horizontal, \TeX\ d\'eplace sa position vers la droite (pour un cr\'enage positif) 
@@ -278,7 +279,7 @@ ou vers le haut de la page (pour un cr\'enage n\'egatif).
 Ainsi un cr\'enage positif produit un espace vide tandis qu'un cr\'enage n\'egatif
 fait que \TeX\ recule sur quelque chose qu'il a d\'ej\`a produit.
 Cette notion de cr\'enage ^^{cr\'enages}
-est diff\'erente de la notion de cr\'enage dans certain syst\`eme de composition 
+est diff\'erente de la notion de cr\'enage dans certains syst\`emes de composition 
 typographique informatis\'es---dans \TeX, des cr\'e\-nages positifs  \emph{\'ecartent} 
 deux lettres au lieu de les rapprocher.
 
@@ -286,14 +287,14 @@ Un cr\'enage est similaire \`a un
 \minref{ressort}, sauf que (a)~un cr\'enage ne peut ni s'\'etirer ni se r\'etr\'ecir,
 et (b)~\TeX\ ne coupera une ligne ou une page sur un cr\'enage que si le cr\'enage
 est suivi par un ressort et ne fait pas partie d'une formule math\'ematique.
-Su \TeX\ trouve un cr\'enage \`a la fin 
+Si \TeX\ trouve un cr\'enage \`a la fin 
 d'une ligne ou d'une page, il \'elimine le cr\'enage.
 Si vous voulez obtenir l'effet d'un cr\'enage qui ne dispara\^\i t jamais,
 utilisez ^|\hglue| ou ^|\vglue|.
 
-Vous pouvez utiliser |\kern| en mode math\'ematique, mais vous ne pouvez utiliser d'unit\'es |mu|
+Vous pouvez utiliser |\kern| en mode math\'ematique, mais vous ne pouvez pas utiliser d'unit\'es |mu|
 \seeconcept{unit\'e math\'ematique}
-pour \<dimen!-sion>.  Si vous voulez des unit\'es |mu|, utilisez |\mkern|
+pour \<dimension>.  Si vous voulez des unit\'es |mu|, utilisez |\mkern|
 (\xref\mkern) \`a la place.
 ^^{coupures de ligne//cr\'enages sur des}
 ^^{coupures de page//cr\'enages sur des}
@@ -335,7 +336,7 @@ Si |\hfill| et |\hfil| apparaissent dans la m\^eme \minref{bo\^\i te},
 le |\hfill| consumera toute la place suppl\'ementaire possible
 et le |\hfil| sera effectivement ignor\'e.
 |\hfill| peut \`a son tour est \'ecras\'e par |\hskip 0pt plus 1filll|.
-les ressort produits par
+Les ressorts produits par
 |\hfil| et |\hfill| ne r\'etr\'ecissent jamais.
 
 Le comportement de |\vfil| et |\vfill| est analogue.
@@ -491,7 +492,7 @@ sa largeur naturelle plus \<dimension>, c'est-\`a-dire, le hbox s'allongera de
 \endulist
 
 La commande ^|\hfil| (\xref\hfil) est utile pour remplir un
-hbox d'espace vide quand le mat\'eriel dan la bo\^\i te n'est pas aussi large que la
+hbox d'espace vide quand le mat\'eriel dans la bo\^\i te n'est pas aussi large que la
 largeur de la bo\^\i te.
 \example
 \hbox{ugly suburban sprawl}
@@ -525,9 +526,9 @@ produisent une \minref{vbox} (\minref{bo\^\i te} verticale)
 contenant du \<ma\-t\'eriel en mode vertical>.
 Les accolades autour du \<mat\'eriel en mode vertical> d\'efinissent un groupe.
 \TeX\ est en mode vertical interne quand il assemble la bo\^\i te.
-\TeX\ ne change pas la taille de la bo\^\i te un fois qu'elle est produite.
+\TeX\ ne change pas la taille de la bo\^\i te une fois qu'elle est produite.
 
-La diff\'erence entre |\vtop| et |\vbox| consiste en o\`u \TeX\ met
+La diff\'erence entre |\vtop| et |\vbox| est o\`u \TeX\ met
 le point de r\'ef\'erence de la vbox construite.
 Normalement, le point de r\'ef\'erence obtenu de |\vtop| tend \`a \^etre sur ou pr\`es
 du haut de la vbox construite,
@@ -539,7 +540,7 @@ tendra \`a avoir leurs hauts \`a peu pr\`es align\'es,
 tandis qu'une rang\'e de vbox toutes construites avec |\vbox|
 tendra \`a avoir leurs bas \`a peu pr\`es align\'es.
 
-|\vtop| et |\vbox| sont souvent pratique
+|\vtop| et |\vbox| sont souvent pratiques
 quand vous voulez garder du texte ensemble sur une seule page.
 (Pour cela, peu importe normalement quelle commande vous utilisez.)
 Si votre usage de ces commandes
@@ -566,7 +567,7 @@ r\'epartit l'extension verticale entre la hauteur et la profondeur comme
 d\'ecrit ci-dessous.
 
 Normalement, la largeur d'une vbox construite est la largeur de l'\'el\'e\-ment le plus
-largeur contenu\footnote
+large contenu\footnote
 {Plus pr\'ecis\'ement, c'est la distance du point de r\'ef\'erence au cot\'e le plus \`a
 droite de la vbox construite.  Par cons\'equent,
 si vous d\'eplacez un des \'el\'ements vers la droite en utilisant ^|\moveright| ou
@@ -577,13 +578,13 @@ hauteur et la profondeur sont plus compliqu\'ees~:
 \ulist
 \li Pour |\vtop|,
 la hauteur est la hauteur de son premier \'el\'ement, si cet \'el\'ement est une bo\^\i te ou un filet.
-Autrement la hauteur est \`a z\'ero. La profondeur est toute extension vertical
+Autrement la hauteur est \`a z\'ero. La profondeur est toute extension verticale
 restante quand la hauteur a \'et\'e enlev\'ee.
 \li Pour |\vbox|,
 la profondeur est la profondeur de son dernier \'el\'ement, si cet \'el\'ement est une bo\^\i te ou un filet.
-Autrement la profondeur est \`a z\'ero. La hauteur est toute extension vertical
+Autrement la profondeur est \`a z\'ero. La hauteur est toute extension verticale
 restante quand la profondeur a \'et\'e enlev\'ee%
-\footnote{En fait, il ya une complication suppl\'ementaire.
+\footnote{En fait, il y a une complication suppl\'ementaire.
 Supposez qu'apr\`es que la profondeur ait \'et\'e d\'etermin\'ee
 en utilisant les deux r\`egles pr\'ec\'edentes, la profondeur devienne plus grande que
 ^|\boxmaxdepth|.
@@ -673,9 +674,9 @@ Si vous produisez une bo\^\i te dont la profondeur $d$ doit d\'epasser $D$,
 profondeur exc\'edentaire dans la hauteur de la bo\^\i te, en abaissant en r\'ealit\'e le 
 \minref{point de r\'ef\'erence} de la bo\^\i te de $d-D$.
 Si vous mettez |\boxmaxdepth| \`a z\'ero, \TeX\ alignera une rang\'ee de vbox
-de telle mani\`ere que leur fronti\`ere du bas seront toute sur la m\^eme ligne horizontale.
+de telle mani\`ere que leurs fronti\`eres du bas seront toutes sur la m\^eme ligne horizontale.
 \PlainTeX\ met |\boxmaxdepth| \`a |\maxdimen| \ctsref{\maxdimen},
-donc |\boxmaxdepth| n'affectera pas vos bo\^\i tes \`a moins que le changiez.
+donc |\boxmaxdepth| n'affectera pas vos bo\^\i tes \`a moins que vous le changiez.
 \enddesc
 
 \begindesc
@@ -700,7 +701,7 @@ Ces param\`etres contiennent des liste de token que \TeX\ d\'eveloppe au d\'ebut
 toutes \minref{hbox} ou \minref{vbox} qu'il construit.
 Tout \'el\'ement r\'esultant de l'expansion devient alors
 le d\'ebut de la liste d'\'el\'ements pour la bo\^\i te.
-Par d\'efaut, ces listes de token sont vide.
+Par d\'efaut, ces listes de token sont vides.
 \enddesc
 
 %==========================================================================
@@ -716,9 +717,9 @@ Par d\'efaut, ces listes de token sont vide.
 Ces commandes remplissent et r\'ecup\`erent respectivement le contenu
 du registre de bo\^\i te
 dont le num\'ero est \<registre>.  
-Notez que vous remplissez un registre de bo\^\i te d'un mani\`ere un peu diff\'erente de celle
-utilis\'ees pour les autres types de registres~: vous utilisez 
-|\setbox|$\,n$~|=| rather than |\box|$\,n$~|=|.
+Notez que vous remplissez un registre de bo\^\i te d'une mani\`ere un peu diff\'erente de celle
+utilis\'ee pour les autres types de registres~: vous utilisez 
+|\setbox|$\,n$~|=| plut\^ot que |\box|$\,n$~|=|.
 
 \emph{R\'ecup\'erer le contenu d'un registre de bo\^\i te
 avec ces commandes a l'effet secondaire d'enlever ce qu'il contient,
@@ -744,7 +745,7 @@ de mani\`ere \`a ne pas augmenter la m\'emoire de \TeX\ en la remplissant avec d
 \explain
 ^^{\boites//copie}\minrefs{box}
 Cette commande
-produit une copy d'un registre de bo\^\i te \<registre>.
+produit une copie d'un registre de bo\^\i te \<registre>.
 Cette commande est utile quand vous voulez r\'ecup\'erer le contenu d'un registre
 de bo\^\i te mais ne voulez pas en d\'etruire le contenu.
 (R\'ecup\'erer le contenu d'un registre avec ^|\box| rend le registre vide.)
@@ -888,7 +889,8 @@ respectivement du \minref{registre} de \minref{bo\^\i te} \<registre>.
 Vous pouvez les utiliser pour conna\^\i tre les dimensions d'une bo\^\i te.
 Vous pouvez aussi changer les dimensions d'une bo\^\i te, mais ce n'est pas une mince affaire~;
 si vous voulez \^etre aventureux vous pouvez
-apprendre tout sur cela dans les \knuth{pages~388--389}{999--999}.
+apprendre tout sur cela dans les \
+{pages~388--389}{448--449}.
 \example
 \setbox0 = \vtop{\hbox{a}\hbox{beige}\hbox{bunny}}%
 The box has width \the\wd0, height \the\ht0,
@@ -914,7 +916,7 @@ The commands have also been reordered.}
 \explain
 Cette commande produit une bo\^\i te dont la largeur est \`a z\'ero
 et dont la hauteur (|8.5pt|) et la profondeur (|3.5pt|)
-sont celle d'une ligne de caract\`ere plus ou moins en |cmr10|,
+sont celles d'une ligne de caract\`ere plus ou moins en |cmr10|,
 la police par d\'efaut de \plainTeX.
 Son utilisation principale est de forcer des lignes \`a avoir la m\^eme hauteur
 quand vous avez d\'ebranch\'e le ressort inter-ligne de \TeX\ avec
@@ -991,8 +993,8 @@ $$\displaylines{
 Cette commande produit une \minref{bo\^\i te} vide
 ayant la m\^eme taille et placement
 que \<argument> aurait s'il \'etait compos\'e.  
-Une utilisation de |\phantom| est de r\'eserver de l'espace pour un symbole qui pour certaine
-raison demande \`a \^etre dessin\'e \`a la main.
+Une utilisation de |\phantom| est de r\'eserver de l'espace pour un symbole qui pour certaines
+raisons demande \`a \^etre dessin\'e \`a la main.
 \example
 $1\phantom{9}2$
 |
@@ -1006,7 +1008,7 @@ $1\phantom{9}2$
 \cts vphantom {\<argument>}
 \explain
 Ces commandes produisent des bo\^\i tes\minrefs{bo\^\i te}\ fant\^ome qui
-n'imprime rien~:
+n'impriment rien~:
 \ulist\compact
 \li |\hphantom| produit une bo\^\i te avec la m\^eme largeur que \<argument>
 mais de hauteur et profondeur z\'ero.
@@ -1014,7 +1016,7 @@ mais de hauteur et profondeur z\'ero.
 mais de largeur z\'ero.
 \endulist
 \noindent
-Leur usage principal est de forcer une sous-formule \`a avoir un certaine dimension
+Leur usage principal est de forcer une sous-formule \`a avoir un dimension
 horizontale ou verticale minimum.
 \example
 $$\left[\vphantom{u\over v}t\right] \star
@@ -1082,8 +1084,8 @@ que \TeX\ positionne pour un ``overfull \minref{hbox}''.
 \cts hbadness {\param{nombre}}
 \cts vbadness {\param{nombre}}
 \explain
-Ces param\`etres sp\'ecifient les seuils de \minref{badness} horizontale 
-et verticale pour rapporter des ``underfull'' ou ``overfull boxes''.
+Ces param\`etres sp\'ecifient les seuils de \minref{badness} horizontal 
+et vertical pour rapporter des ``underfull'' ou ``overfull boxes''
 |\hbadness| s'applique aux hbox et |\vbadness| s'applique aux vbox.
 Si la m\'ediocrit\'e d'une bo\^\i te construite d\'epasse le seuil,
 \TeX\ reportera une erreur.  Si vous augmentez les seuils
@@ -1092,7 +1094,7 @@ Si la m\'ediocrit\'e d'une bo\^\i te construite d\'epasse le seuil,
 Notez que les valeurs de |\hbadness| et |\vbadness| n'ont pas d'effet sur
 l'apparence de votre document compos\'e~; ils n'affectent que le message d'erreur
 que vous obtenez.
-Voir la \knuth{page~302}{999} pour une description pr\'ecise 
+Voir la \knuth{page~302}{353} pour une description pr\'ecise 
 sur comment \TeX\ d\'ecide quand se plaindre d'``overfull'' ou d'``underfull
 box''.
 
@@ -1133,7 +1135,7 @@ Ces param\`etres sp\'ecifient les valeurs dont une
 \minref{bo\^\i te} peut d\'epasser sa taille naturelle avant que \TeX\ la consid\`ere comme
 \'etant overfull. ^^{\boites//overfull}
 |\hfuzz| s'applique aux hbox et |\vfuzz| s'applique aux vbox.
-\PlainTeX\ mets ces deux param\`etres \`a |0.1pt|.
+\PlainTeX\ met ces deux param\`etres \`a |0.1pt|.
 \example
 \hfuzz = .5in
 \hbox to 2in{This box is longer than two inches.}
@@ -1219,7 +1221,7 @@ de cette liste.  Si l'\'el\'ement n'est pas du bon type, ces commandes n'ont
 pas d'effet.  Comme ^|\lastbox|, vous ne pouvez pas les appliquer \`a des listes en 
 mode math\'ema\-tique ou \`a la liste verticale principale.
 Ces commandes
-sont plus pratique apr\`es un appel de macro connu pour avoir ins\'er\'e
+sont plus pratiques apr\`es un appel de macro connu pour avoir ins\'er\'e
 un \'el\'ement sp\'ecifique que vous ne voulez pas ici.
 \TeX\ ne procure pas de commande ^|\unbox| parce que |\lastbox| produit
 \`a peu pr\`es le m\^eme effet.
@@ -1239,12 +1241,12 @@ un \'el\'ement sp\'ecifique que vous ne voulez pas ici.
 \cts vrule {}
 \aux\cts vrule {{\bt width \<dimension> height \<dimension> depth \<dimension>}}
 \explain
-La commande |\hrule| produit un filet horizontal~; La commande |\vrule| 
+La commande |\hrule| produit un filet horizontal. La commande |\vrule| 
 produit un filet vertical.  Vous pouvez sp\'ecifier tout ou une partie des largeur,
 hauteur et profondeur du filet---\TeX\ apporte des valeurs par d\'efaut pour celles
 que vous omettez.  Vous pouvez donner les dimensions du filet dans n'importe quel ordre~;
 les formes list\'ees ci-dessus vous montrent simplement deux combinaisons possibles.  Vous
-pouvez m\^eme donner une dimension d'un type donn\'e plus d'une fois---si vous le faite,
+pouvez m\^eme donner une dimension d'un type donn\'e plus d'une fois---si vous le faites,
 la derni\`ere sera celle qui sera prise en compte.
 
 Si vous ne sp\'ecifiez pas la largeur d'un filet horizontal, le filet est
@@ -1338,7 +1340,7 @@ contient une rang\'ee de r\'eglures et \TeX\ doit \^etre en mode horizontal~;
 si \<commande de saut> est un saut vertical, la fen\^etre 
 contient une colonne de r\'eglures et \TeX\ doit \^etre en mode vertical.
 
-Les commandes diff\`erent dans leur fa\c con d'arranger le motif r\'ep\'et\'e dans l'espace
+Les commandes diff\`erent dans leur fa\c con d'arranger le motif r\'ep\'et\'e 
 et o\`u elles mettent l'espace restant~:
 
 \ulist\compact
@@ -1407,7 +1409,7 @@ aux deux bouts (gauche et droite ou haut et bas) des r\'eglures.
 Ces commandes remplissent respectivement l'espace horizontal englob\'e avec 
 une rang\'ee de points sur la ligne de base et avec
 une ligne horizontale sur la ligne de base.
-C'est habituellement une bonne id\'ee de laisser une espace entre 
+C'est habituellement une bonne id\'ee de laisser un espace entre 
 |\dotfill| ou |\hrulefill|
 et le texte qui la pr\'ec\`ede ou la suit (voir l'exemple ci-dessous).
 \example
@@ -1489,7 +1491,7 @@ le `|&|' \'etablit une nouvelle tabulation \`a cette position.
 La premi\`ere forme de
 cette commande d\'efinit un jeu de tabulations d'arr\^et ^^{tabulations}
 pour un \minref{alignement} tabul\'e.
-Elle demande \`a \TeX\ de mettre les tabulation d'arr\^et de mani\`ere \`a divisez chaque ligne en
+Elle demande \`a \TeX\ de mettre les tabulations d'arr\^et de mani\`ere \`a diviser chaque ligne en
 \<nombre> parties \'egales.  \TeX\ prend la longueur d'une ligne comme \'etant
 |\hsize|, normalement.  Vous pouvez rendre l'alignement plus \'etroit en diminuant
 |\hsize|.
@@ -1521,10 +1523,9 @@ l'exemple ci-dessous.  Le mat\'eriel suivant la derni\`ere tabulation
 d'arr\^et est inutile, puisqu'il n'a pas besoin de positionner
 quoi que ce soit \`a l'endroit o\`u le |\cr|~appara\^\i t.
 
-The tab settings established by |\settabs| remain in effect until
-you issue a new |\settabs| command or end a group containing
-the |\settabs| command.
-This is true for both forms of the command.
+Les r\'eglages de tabulation \'etablies par |\settabs| restent actifs jusqu'\'a  
+une nouvelle commande |\settabs| ou la fin du groupe contenant |\set!-tabs|. Ceci est vrai pour 
+les deux formes de la commande.
 
 \example
 % The first line establishes the template.
@@ -1547,8 +1548,8 @@ This is true for both forms of the command.
 \cts cleartabs {}
 \explain
 Cette commande efface toutes les tabulations \`a droite de la colonne courante.
-Son utilisation principale est dans des applications telle que la composition de programme informatique
-dans lesquels les positions de tabulation change \`a chaque ligne.
+Son utilisation principale est dans des applications telles que la composition de programme informatique
+dans lesquels les positions de tabulation changent \`a chaque ligne.
 \enddesc
 
 \see |\cr|, |\endline|, |\crcr| (\xref \endline).
@@ -1567,7 +1568,7 @@ dans lesquels les positions de tabulation change \`a chaque ligne.
    \rqbraces{\<pr\'eambule> \\cr \<rang> \\cr $\ldots$ \<rang> \\cr}}}
 \par}
 \explain
-Cette commande produit un \minref{alignement} horizontal constitu\'e d'un
+Cette commande produit un \minref{alignement} horizontal constitu\'e d'une
 suite de rang\'ees, o\`u chaque rang\'ee \`a son tour contient une suite
 d'entr\'ee de colonne. \TeX\ ajuste les largeurs des entr\'ees de colonne 
 pour accommoder la plus large dans chaque colonne.
@@ -1583,7 +1584,7 @@ suite de patrons de colonne, s\'epar\'es par `|&|' et termin\'e
 par |\cr|.
 \bix^^{patron}
 \bix^^{entr\'ee (colonne ou rang\'ee)}
-Chaque rang\'ee consiste en une suite d'entr\'ee 
+Chaque rang\'ee consiste en une suite d'entr\'ees 
 de ^{colonne}, s\'epar\'ees aussi par `|&|' et termin\'ees par |\cr|. Dans
 un patron, `|#|' indique o\`u \TeX\ doit ins\'erer le
 texte correspondant \`a l'entr\'ee de colonne. 
@@ -1633,16 +1634,16 @@ forme |to|.
 \par}
 \explain
 Cette commande produit un \minref{alignement} vertical
-constitu\'e d'un
+constitu\'e d'une
 suite de colonnes, o\`u chaque colonne \`a son tour contient une suite
-d'entr\'ee de rang\'ee.
+d'entr\'ees de rang\'ee.
 \TeX\ ajuste les hauteurs des entr\'ees de rang\'ee pour accommoder la plus longue
 dans chaque rang\'ee.
 
 Un alignement vertical
 n'appara\^\i t que quand \TeX\ est dans un \minref{mode} horizontal.
-Puisque les alignements verticaux sont (a)~conceptuellement assez difficile et
-(b)~peu souvent utilis\'e, nous vous recommandons d'ap\-prendre les
+Puisque les alignements verticaux sont (a)~conceptuellement assez difficiles et
+(b)~peu souvent utilis\'es, nous vous recommandons d'ap\-prendre les
 alignements en g\'en\'eral
 (\xref{alignement}) et la commande |\halign| (voir ci-dessus) avant
 d'essayer d'utiliser la commande |\valign|.
@@ -1665,11 +1666,11 @@ et englobe implicitement l'entr\'ee dans un groupe.
 Il donne toujours \`a la vbox une profondeur \`a z\'ero.
 Tout texte ou autre mat\'eriel en mode horizontal dans une entr\'ee de rang\'ee met alors \TeX\
 en mode horizontal ordinaire.
-(c'est juste une application des r\`egles g\'en\'erales du fonctionnement de \TeX\
-en mode vertical interne.)
+C'est juste une application des r\`egles g\'en\'erales du fonctionnement de \TeX\
+en mode vertical interne.
 Les param\`etres de paragraphage habituels s'appliquent dans ce cas~:
 l'entr\'ee de rang\'ee a une indentation
-initial de |\parindent| (\xref\parindent) et 
+initiale de |\parindent| (\xref\parindent) et 
 les \minref{ressorts} 
 |\leftskip| et |\rightskip| (\xref\leftskip)
 s'appliquent \`a ses lignes.
@@ -1807,7 +1808,7 @@ patron `|#|'.
 \begindesc
 \cts span {}
 \explain
-La signification de cette commande d\'epend qu'elle appara\^\i t soit dans un pr\'eambule
+La signification de cette commande d\'epend suivant qu'elle appara\^\i t soit dans un pr\'eambule
 soit dans une entr\'ee d'alignement.
 \ulist
 \li Normalement, \TeX\ ne d\'eveloppe pas de tokens dans le pr\'eambule
@@ -1953,7 +1954,7 @@ colonnes d'un alignement horizontal ou entre les
 rang\'ees d'un alignement vertical.
 \TeX\ met aussi le ressort |\tabskip|
 \`a gauche de la premi\`ere colonne et \`a droite de la derni\`ere colonne
-d'un alignement horizontal et
+d'un alignement horizontal,
 avant la premi\`ere rang\'ee 
 et apr\`es la derni\`ere rang\'ee d'un alignement vertical.
 Vous pouvez changer |\tabskip| dans un patron---%
@@ -1999,12 +2000,12 @@ le changement affectera le ressort associ\'e avec tous les
 \begindesc
 \cts hidewidth {}
 \explain
-Cette commande demande \`a \TeX\ d'ignorer la largeur de la l'entr\'ee de la colonne suivante dans un
-alignement horizontal.  c'est pratique quand vous avez une entr\'ee qui est plus longue
+Cette commande demande \`a \TeX\ d'ignorer la largeur de l'entr\'ee de la colonne suivante dans un
+alignement horizontal.  C'est pratique quand vous avez une entr\'ee qui est plus longue
 que la plupart des autres dans la m\^eme colonne
 et que vous pr\'ef\'erez avoir cette entr\'ee sortant de la colonne plut\^ot
 que rendre toutes les entr\'ees
-de la colonne plus large.  Si le |\hidewidth| est \`a gauche de
+de la colonne plus larges.  Si le |\hidewidth| est \`a gauche de
 l'entr\'ee, l'entr\'ee d\'ebordera \`a gauche~; si le |\hidewidth| est \`a
 droite de l'entr\'ee, l'entr\'ee d\'ebordera \`a droite.
 \example
@@ -2036,12 +2037,12 @@ un |\cr|---\`a la fin de chaque pr\'eambule,
 et \`a la fin de chaque colonne d'un alignement vertical.
 La commande |\everycr| est d\'evelopp\'ee juste apr\`es le |\cr|.
 Ainsi vous pouvez demander \`a \TeX\ 
-d'ex\'ecuter certaines commandes \`a la fin d'un pr\'eambule, d'un rang\'ee ou d'une colonne en
+d'ex\'ecuter certaines commandes \`a la fin d'un pr\'eambule, d'une rang\'ee ou d'une colonne en
 assignant une liste de commandes \`a |\everycr|.
 
-Les tokens |\everycr| ne doivent pas inclure d'autre commandes que |\no!-align|.
+Les tokens |\everycr| ne doivent pas inclure d'autres commandes que |\no!-align|.
 Ceci parce que 
-les tokens |\everycr| r\'eappara\^\i trons apr\`es le dernier
+les tokens |\everycr| r\'eappara\^\i tront apr\`es le dernier
 |\cr| de l'alignement. Une commande autre qu'un
 |\noalign| fera penser \`a \TeX\ qu'il commence une nouvelle
 rang\'ee ou colonne.

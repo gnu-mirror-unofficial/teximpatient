@@ -2101,7 +2101,12 @@
 \def\hand{{\handfont +}}
 \def\ifatest{{\tt \\if} test}
 \chardef\inches = "7D
-\def\knuth#1#2{#1 de \texbook\ et #2 de la tra\-duc\-tion fran\-\c caise}
+\def\knuth#1#2{#1 de \texbook\ et
+\def\tempa{#2}% Merci Joss !
+\ifx\tempa\empty\else
+#2
+\fi
+de la tra\-duc\-tion fran\-\c caise}
 \def\logfile{fichier~{\tt .log}}
 \let\Metafont = \MF
 \def\Mperiod.{$M$\kern-1.6pt.}

@@ -19,7 +19,7 @@
 ~^^{caract\`eres espace} ^^{tirets} ^^{paragraphes//terminer un}
 ~\edef\examplepageno{\number\count255}%
 Il est simple de pr\'eparer un texte ordinaire pour \TeX\ puisque
-\TeX\ n'a pas besoin de savoir comment coupez les lignes dans
+\TeX\ n'a pas besoin de savoir comment couper les lignes dans
 votre source. Il traite la fin d'une ligne comme un espace%
 \footnote \dag{\TeX\ traite aussi une tabulation	comme un espace, comme
 vous le voyez dans ce {\it pied de page}.}.   Si vous ne voulez pas
@@ -33,7 +33,7 @@ sautant une ligne (ou plus d'une ligne).
 Quand \TeX\ voit un point suivi d'un espace (ou de la fin de la
 ligne, ce qui est \'equivalent), il pense normalement que vous avez
 fini une phrase et ins\`ere un petit espace suppl\'ementaire apr\`es le
-point.  Il traite les point d'interrogation et d'exclamation de la
+point.  Il traite les points d'interrogation et d'exclamation de la
 m\^eme mani\`ere.   
 
   Mais les r\`egles de \TeX\ pour rep\'erer un point ont parfois besoin
@@ -50,7 +50,7 @@ entre deux lignes.  (Les trois points indiquent une ellipse.)
 Vous pouvez mettre des citations entre des paires de simples
 ``quotes'' gauches et droites pour avoir les bonnes marques de
 citation doubles gauches et droites.  ``pour des marques de citation
-simple et double adjacente, ins\'erez un`espace fin'\thinspace''. Vous
+simple et double adjacentes, ins\'erez un `espace fin'\thinspace''. Vous
 pouvez avoir des tirets demi-cadratins--comme ceci, et des tirets 
 cadratins---comme cela.
 
@@ -60,7 +60,7 @@ cadratins---comme cela.
 ~^^{indentation} ^^{marges} ^^{paragraphes//\'etroit}
 \noindent Maintenant, regardons comment contr\^oler l'indentation. 
 Si un traitement de texte sait le faire, \TeX\ le sait s\^urement. 
-Notez que ce paragraphe n'est pas indent\'e
+Notez que ce paragraphe n'est pas indent\'e.
 
 Habituellement, on veut soit indenter les paragraphes, soit
 laisser de l'espace suppl\'ementaire entre eux. Comme nous n'avons
@@ -68,13 +68,13 @@ rien chang\'e maintenant, ce paragraphe est indent\'e.
 
 {\parindent = 0pt \parskip = 6pt
 % l'accolade gauche d\'ebute un groupe contenant le texte non indent\'e
-faisons ces deux paragraphes d'une mani\`ere diff\'erente,
+Faisons ces deux paragraphes d'une mani\`ere diff\'erente,
 sans indentation et avec six points suppl\'ementaires
 entre eux.
 
 Voici un autre paragraphe, compos\'e sans indentation. Si nous 
 ne mettons pas d'espace entre ces paragraphes, Nous aurons du mal
-\`a savoir o\`u fini l'un et o\`u commence l'autre.
+\`a savoir o\`u finit l'un et o\`u commence l'autre.
 \par % Le paragraphe *doit* \^etre termin\'e dans le groupe.
 }% L'accolade droite termine le groupe contenant du texte nin indent\'e.
 
@@ -90,7 +90,7 @@ paragraphe. C'est souvent un bon moyen de pr\'esenter de longues citations
 le voulez. C'est le second paragraphe indent\'e simplement.''\par}
 
 {\narrower \narrower Vous pouvez m\^eme faire des paragraphes 
-doublement indent\'e si vous en avez besoin. Ceci en est un 
+doublement indent\'es si vous en avez besoin. Ceci en est un 
 exemple.\par}
 \vskip 1pc % Saut vers le bas d'un pica pour s\'eparation visuelle.
 Dans ce paragraphe, nous revenons aux marges normales, comme vous
@@ -110,12 +110,12 @@ demi pouce et laissons la marge gauche \`a sa position usuelle.\par}
 ~^^|$| ^^|&| ^^|#| ^^|_| ^^|%| ^^|^| ^^|~| ^^|{| ^^|}| \indexchar \
 {\it Voici quelques mots en police italique}, {\bf quelques 
 autres en police grasse}, {\it et un\/ {\bf m\'elange} 
-des deux, avec deux\/ {\rm mots en romain} ins\'er\'es}.
+des deux, avec trois\/ {\rm mots en romain} ins\'er\'es}.
 Quand une police italique est suivie par une non italique, on 
 ins\`ere une ``correction d'italique'' ({\tt \\/}) pour que 
 l'espacement rende bien.
 Voici un mot plus {\sevenrm petit}---mais les polices standard
-de \TeX\ ne vous en donnerons pas de plus petit de {\fiverm celui-l\`a}.
+de \TeX\ ne vous en donneront pas de plus petit que {\fiverm celui-l\`a}.
 
 Si vous voulez un de ces dix caract\`eres~:
 \medskip
@@ -127,14 +127,14 @@ Si vous voulez un de ces dix caract\`eres~:
 \noindent  vous devez les \'ecrire d'une mani\`ere sp\'eciale. Regardez 
 la page d'en face pour savoir comment.
 \TeX\ a les accents et les lettres dont vous avez besoin
-pour des mots Fran\c cais comme {\it r\^ ole\/} et  {\it \'
-el\` eve\/}, pour des mots Allemands comme {\it Schu\ss\/}
+pour des mots fran\c cais comme {\it r\^ ole\/} et  {\it \'
+el\` eve\/}, pour des mots allemands comme {\it Schu\ss\/}
 aussi bien que pour des mots de plein d'autres langues.
 Vous trouverez une liste compl\`ete des accents de \TeX\ et des lettres 
 de langues Europ\'eennes \`a la !xrefdelim[fornlets] et \`a la !xrefdelim[accents].
 
 Vous trouverez aussi des lettres Grecques comme ``$\alpha$'' et
-``$\Omega$'' pour les utilisez en math\'ematique, des couleurs de carte 
+``$\Omega$'' pour les utiliser en math\'ematique, des couleurs de carte 
 comme ``$\spadesuit$'' et ``$\diamondsuit$'', des symboles de musique
 comme ``$\sharp$'' et ``$\flat$'', et plein d'autres symboles
 sp\'eciaux dont vous trouverez la liste \`a la !xrefdelim[specsyms].
@@ -161,17 +161,17 @@ Un jour, vous voudrez imprimer un document avec de l'espace
 suppl\'ementaire entre les lignes. Par exemple, les actes du congr\`es
 sont imprim\'es ainsi pour que les l\'egislateurs puissent les annoter.
 Pour la m\^eme raison, les \'editeurs insistent habituellement pour que 
-les manuscrits ait un espacement double. L'espacement double est
-rarement appropri\'e pour les documents finis, n\'eanmoins.
+les manuscrits aient un espacement double. L'espacement double est n\'eammoins
+rarement appropri\'e pour les documents finis.
 
 Une ligne de base est une ligne imaginaire qui agit comme les
 lignes horizontales d'un papier quadrill\'e. Vous pouvez contr\^oler
 l'espacement interligne---ce que les imprimeurs appellent 
 ``interlignage''---en fixant la taille de l'espace entre les lignes de
-base. regardez le source pour voir comment faire. Vous pouvez
+base. Regardez la source pour voir comment faire. Vous pouvez
 utiliser la m\^eme m\'ethode pour un espacement de $1\;1/2$, en mettant
 {\tt 1.5} au lieu de {\tt 2}. (Vous pouvez aussi \'ecrire $1\frac 1/2$
-d'une meilleur fa\c con.)
+d'une meilleure fa\c con.)
 % Here we've used the macro definition given above.
 
 Pour cet exemple, nous avons aussi augment\'e l'indentation de 
@@ -181,8 +181,8 @@ paragraphe et saut\'e une ligne de plus entre les paragraphes.
 \xmpheader !xmpnum/{Espacement, traits et bo\^\i tes}% !xmpheaddef
 ~^^{listes de description} ^^{\boites//dessiner des} ^^{barre de r\'evision}
 Voici un exemple de ``liste descriptive''. En pratique vous
-feriez mieux de creer une macro pour avoir des constructions r\'ep\'etitive
-et \^etre sur que la largeur des sous-titres soit suffisament grande~:
+feriez mieux de creer une macro pour avoir des constructions r\'ep\'etitives
+et \^etre s\^ur que la largeur des sous-titres soit suffisament grande~:
 \bigskip
 % Call the indentation for descriptions \descindent
 % and set it to 8 picas.
@@ -237,12 +237,12 @@ $N^6$-ethe\-no\-adeno\-sine
 et que \TeX\ se plaint aupr\`es de vous d'un ``overfull hbox'', essayez
 d'ins\'erer des ``c\'esures discr\'etionnaires''. La notation
 `{\tt \\-}' indique \`a \TeX\ les c\'esures  dis\-cr\'e\-tionnaire,
-qui sont celles qui n'auraient pas \'et\'e ins\'er\'e autrement.
+qui sont celles qui n'auraient pas \'et\'e ins\'er\'es autrement.
 \medskip
-{\raggedright   Vous pouvez composer une texte non justifi\'e, c'est-\`a-dire, 
-avec une marge droite non align\'ee. Autrefois, avant que mes traitements de
-texte soient commun, les document tap\'es \`a la machine parce qu'il n'y avait
-pas de solutions pratiques.
+{\raggedright   Vous pouvez composer un texte non justifi\'e, c'est-\`a-dire, 
+avec une marge droite non align\'ee. Comme utrefois, avant que les traitements 
+de texte soient communs, les document tap\'es \`a la machine parce qu'il n'y 
+avait pas de solution pratique.
 Certaines personnes pr\'ef\`erent que le texte ne soit pas justifi\'e
 parce que l'espacement entre les mots est uniforme. La plupart des
 livres sont fait avec des marges justifi\'ees, mais pas tous. \par}
@@ -251,7 +251,7 @@ livres sont fait avec des marges justifi\'ees, mais pas tous. \par}
 les en-t\^etes d'asser\-tions, lemmes, th\'eor\`emes, etc.
 
 Voici un exemple de comment composer une liste d'items \`a deux 
-niveaux de profondeur.  Si vous avez besoin de niveau suppl\'ementaires,
+niveaux de profondeur.  Si vous avez besoin de niveaux suppl\'ementaires,
 vous devrez les programmer vous-m\^eme, h\'elas.
 \smallskip
 \item {1.} Voici le premier item.
@@ -293,7 +293,7 @@ typographe du vingti\`eme si\`ecle. Cette page vous donnera une id\'ee
 de ce \`a quoi elle ressemble.
 
 Les polices peuvent provenir soit sous forme vectorielles soit de 
-bitmaps. une police vectorielle d\'ecrit le dessin des caract\`eres, 
+bitmaps. Une police vectorielle d\'ecrit le dessin des caract\`eres, 
 tandis qu'une bitmap sp\'ecifie chaque pixel (point) qui forme chaque 
 caract\`ere. Une police vectorielle peut \^etre utilis\'ee pour 
 g\'en\'erer diff\'e\-rentes tailles de la m\^eme police. Le programme 
@@ -308,7 +308,7 @@ comme Palatino Romain. Cela semble une d\'ecision \'economiquement
 sensible, mais c'est un sacrifice esth\'etique. Une police ne peut pas 
 \^etre agrandie et r\'etr\'ecie lin\'eairement sans perdre en 
 qualit\'e. Les grandes lettres ne doivent pas, en g\'en\'eral, avoir 
-les m\^emes proportions que les plus petites~; Cela ne rend simplement 
+les m\^emes proportions que les plus petites. Cela ne rend simplement 
 pas beau. Par exemple, une police qui est diminu\'ee lin\'eairement 
 aura trop peu d'espace entre ses lettres et la hauteur des minuscules 
 sera trop petite.
@@ -405,7 +405,7 @@ $$D = \left|\matrix{a_{11}&a_{12}&\ldots&a_{1n}\cr
 est d\'efinie comme la somme de $n!!$ termes~:
 $$\sum\>(\pm)\>a_{1i}a_{2j} \ldots a_{nk}$$
 % The \> above produces a medium space.
-o\`u $i$, $j$, \dots,~$k$\/ prenent toutes les valeurs possibles
+o\`u $i$, $j$, \dots,~$k$\/ prennent toutes les valeurs possibles
 entre $1$ et $n$ et pour  lequel, le signe du produit est 
 $+$ si la s\'equence $i$, $j$, \dots,~$k$\/ est une
 permutation paire et $-$ autrement.  De plus~:
@@ -423,13 +423,13 @@ Il arrive que pour $k \ge 0$~:
 $$x^{k^2}=\overbrace{x\>x\>\cdots\> x}^{2k\ \rm fois}
    \eqno (1)$$
 
-Voici un exemple qui montre certains controles d'espacement, avec 
+Voici un exemple qui montre certains contr\^oles d'espacement, avec 
 un num\'ero  \`a gauche~:
 $$[u]!negthin[v][w]\,[x]\>[y]\;[z]\leqno(2a)$$
-Le montant d'espace entre les items entre crochets
-augmente graduellement de gauche \`a droite.  (Nous avons fait
+Le montant d'espace pour les items entre crochets
+augmente graduellement de gauche \`a droite.  Nous avons fait
 l'espace entre les deux premiers items plus {\it petit\/}
-que l'espace naturel.)
+que l'espace naturel.
 Il arrive parfois que $$\leqalignno{
 u'_1 + tu''_2 &= u'_2 + tu''_1&(2b)\cr
 \hat\imath &\ne \hat \jmath&(2c)\cr
