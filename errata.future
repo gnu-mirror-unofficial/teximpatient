@@ -1,8 +1,27 @@
-(Ideas for future changes.  Did not make these in the free edition since
+$Id$
+
+Ideas for future changes.  Did not make these in the free edition since
 I didn't want to change the page breaks because I didn't want to install
 Icon so I could regenerate the index -- aside from lack of time and
 inclination. :)
 
+
+from Will Adams:
+
+ - p. 105 (and throughout) the encoding for Zapf Dingbats doesn't 
+agree w/ what was used and instead of a right pointing hand dingbat, a 
+Star of David appears on the .pdf
+
+ - p. 113 - text overlaps / crashes here, I think 'cause some stuff 
+escaped out of Verbatim mode.
+
+ - colophon - this appears on a verso, not a recto, which I find a bit odd.
+
+One last bit of consideration is how you want to handle the cover / 
+frontmatter.
+
+
+from Karl and Kathy:
 
 * The default values should probably be in roman everywhere.  I don't
 think `6pt plus 1pt minus 2pt' looks bad in roman any more, which was
