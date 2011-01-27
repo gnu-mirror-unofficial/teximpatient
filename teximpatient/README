@@ -1,22 +1,20 @@
+$Id$
 This is the README file for version 1.0 of the free edition of the book
 TeX for the Impatient, released under the GNU Free Documentation License.
 (This README file itself is public domain.)
 
-Primary distribution point:
-       ftp://tug.org/tex/impatient
-  aka http://tug.org/ftp/tex/impatient/
-It will also be available from CTAN.
+Primary distribution is through CTAN:
+   http://mirror.ctan.org/info/impatient/
+
+TeX for the Impatient is also a GNU package, and the development sources,
+contact information, and other project details are available at
+http://www.gnu.org/software/teximpatient.
 
 Information about the free edition is included at the end of the preface
 and on the copyright page.
 
 We'd be interested in hearing about any projects undertaken with this
-material.  See errata.future for some relatively small ideas for
-enhancements.
-
-TeX for the Impatient is now a GNU project, and the development sources,
-contact information, and other project details are available at
-http://savannah.gnu.org/projects/teximpatient.
+material.  See errata.future for some ideas.
 
 
 Some random thoughts for people thinking of working with the source:
@@ -35,4 +33,4 @@ version is needed (which in turn would require using the current eplain
 to print the book).
 
 
-Happy TeX'ing.
+Happy TeXing.

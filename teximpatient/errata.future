@@ -5,16 +5,17 @@ I didn't want to change the page breaks because I didn't want to install
 Icon so I could regenerate the index -- aside from lack of time and
 inclination. :)  See the README.
 
-Larger ideas:
+
+- incorporate the images in the artwork/ subdirectory.
+
+- discuss CTAN, other Internet resources, plain or generic macro
+  packages, and so on.
 
 - extend with descriptions of e-TeX, pdftex, omega.
 
 - html output, perhaps using tex2page.
   http://www.ccs.neu.edu/home/dorai/tex2page/tex2page-doc.html
   (tex4ht did nothing useful with it, but maybe with work ...)
-
-- discuss CTAN, other Internet resources, plain or generic macro
-packages, and so on.
 
 
 from Will Adams:
