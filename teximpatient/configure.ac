@@ -1,3 +1,4 @@
+dnl $Id$
 dnl public domain
 dnl configure.ac for TeX for the Impatient.
 

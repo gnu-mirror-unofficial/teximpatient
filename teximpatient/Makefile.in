@@ -1,3 +1,4 @@
+# $Id$
 # public domain
 # Makefile[.in] for TeX for the Impatient.
 
@@ -88,9 +89,9 @@ book.sdx: book.idx ${ICONSCRIPTS}
 
 dist: all
 	tar czf $(PACKAGE_TARNAME)-$(PACKAGE_VERSION).tar.gz \
-	Makefile.in configure configure.ac \
-	NEWS README errata.future \
-	${ICONSCRIPTS} ${TEXFILES} ${SDXFILE} ${DVIFILE} ${PDFFILE}
+	  Makefile.in configure configure.ac \
+	  NEWS README errata.future \
+	  ${ICONSCRIPTS} ${TEXFILES} ${SDXFILE} ${DVIFILE} ${PDFFILE}
 
 distclean: clean
 	-rm -rf config.log config.status autom4te.cache Makefile
@@ -103,6 +104,3 @@ clean:
 
 configure: configure.ac
 	autoconf
-
-Makefile: Makefile.in
-	$(SHELL) config.status --recheck
