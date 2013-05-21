@@ -1,4 +1,5 @@
-x.tex
+Makefile
+autom4te.cache
 book.aux
 book.ccs
 book.dvi
@@ -6,3 +7,7 @@ book.idx
 book.log
 book.pdf
 book.toc
+config.log
+config.status
+configure
+x.tex

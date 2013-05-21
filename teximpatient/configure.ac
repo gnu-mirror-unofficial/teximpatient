@@ -1,4 +1,7 @@
-AC_INIT([teximpatient], [2003], [impatient@tug.org])
+dnl public domain
+dnl configure.ac for TeX for the Impatient.
+
+AC_INIT([teximpatient], [2.3], [impatient@tug.org])
 AC_CONFIG_SRCDIR([book.tex])
 
 AC_PROG_INSTALL

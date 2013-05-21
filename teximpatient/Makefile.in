@@ -1,6 +1,5 @@
 # public domain
-
-DESTDIR = 
+# Makefile[.in] for TeX for the Impatient.
 
 PACKAGE_NAME = @PACKAGE_NAME@
 PACKAGE_TARNAME = @PACKAGE_TARNAME@
@@ -10,11 +9,14 @@ PACKAGE_BUGREPORT = @PACKAGE_BUGREPORT@
 PACKAGE_URL = @PACKAGE_URL@
 
 prefix = @prefix@
+datarootdir = @datarootdir@
 docdir = @docdir@
 pdfdir = @pdfdir@
 dvidir = @dvidir@
 htmldir = @htmldir@
+DESTDIR = 
 
+SHELL = /bin/sh
 ICON = @ICON@
 TEX = @TEX@
 PDFTEX = @PDFTEX@
@@ -25,10 +27,10 @@ INSTALL = @INSTALL@
 INSTALL_DATA = @INSTALL_DATA@
 
 TEXFILES = backm.tex book.tex capsule.tex concepts.tex config.tex	\
-copyrght.tex eplain.tex errors.tex examples.tex fdl.tex fonts.tex	\
-frontm.tex genops.tex index.tex macros.tex math.tex modes.tex		\
-pages.tex paras.tex preface.tex read1st.tex tips.tex usebook.tex	\
-usermacs.tex usingtex.tex xmptext.tex
+  copyrght.tex eplain.tex errors.tex examples.tex fdl.tex fonts.tex	\
+  frontm.tex genops.tex index.tex macros.tex math.tex modes.tex		\
+  pages.tex paras.tex preface.tex read1st.tex tips.tex usebook.tex	\
+  usermacs.tex usingtex.tex xmptext.tex
 
 ICONSCRIPTS = index1.icn index2.icn
 
@@ -75,22 +77,32 @@ book.pdf: fdl.tex preface.tex ${SDXFILE}
 	$(PDFTEX) '\nonstopmode\input book'
 
 book.html: book.tex
-	$(HTTEX) $< "html"
+	$(HTTEX) book.tex "html"
 
 book.idx: book.dvi
 
 book.sdx: book.idx ${ICONSCRIPTS}
-	cat $< | $(ICON) index1.icn | sort | $(ICON) index2.icn > $@
+	if test -z "$(ICON)"; then touch book.sdx; else \
+	  (cat book.idx | $(ICON) index1.icn | sort \
+           | $(ICON) index2.icn >book.sdx); fi
 
 dist: all
-	tar czf $(PACKAGE_TARNAME)-$(PACKAGE_VERSION).tar.gz Makefile.in	\
-	        configure README errata.future ${ICONSCRIPTS} ${TEXFILES}	\
-	        ${SDXFILE} ${DVIFILE} ${PDFFILE}
+	tar czf $(PACKAGE_TARNAME)-$(PACKAGE_VERSION).tar.gz \
+	Makefile.in configure configure.ac \
+	NEWS README errata.future \
+	${ICONSCRIPTS} ${TEXFILES} ${SDXFILE} ${DVIFILE} ${PDFFILE}
 
 distclean: clean
-	-rm -vrf config.log config.status autom4te.cache Makefile
+	-rm -rf config.log config.status autom4te.cache Makefile
 
 clean:
-	-rm -vf ${LOGFILES} ${AUXFILES} x.tex 
+	-rm -f ${LOGFILES} ${AUXFILES} x.tex 
 
-.PHONY: all dist clean pdf dvi html install installdirs install-dvi install-pdf install-html
+.PHONY: all dist clean pdf dvi html install installdirs \
+        install-dvi install-pdf install-html
+
+configure: configure.ac
+	autoconf
+
+Makefile: Makefile.in
+	$(SHELL) config.status --recheck
