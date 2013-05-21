@@ -49,11 +49,11 @@ HTMLFILE = book.html
 
 all: dvi pdf #html
 
-dvi: ${DVIFILE}
+dvi: $(DVIFILE)
 
-pdf: ${PDFFILE}
+pdf: $(PDFFILE)
 
-html: ${HTMLFILE}
+html: $(HTMLFILE)
 
 install: installdirs install-dvi install-pdf
 
@@ -71,10 +71,10 @@ install-pdf: pdf
 install-html: html
 	$(INSTALL_DATA) book.html $(DESTDIR)$(dvidir)/teximpatient.html
 
-book.dvi: fdl.tex preface.tex
+book.dvi: $(TEXFILES)
 	$(TEX) '\nonstopmode\input book'
 
-book.pdf: fdl.tex preface.tex ${SDXFILE}
+book.pdf: $(TEXFILES) $(SDXFILE)
 	$(PDFTEX) '\nonstopmode\input book'
 
 book.html: book.tex
@@ -82,7 +82,11 @@ book.html: book.tex
 
 book.idx: book.dvi
 
-book.sdx: book.idx ${ICONSCRIPTS}
+# + chars in book.idx should be changed to SPC chars in book.sdx
+# by the Icon programs, but aren't.  Therefore, effectively disable the
+# rule as long as book.sdx exists.  Also avoids rerunning every time
+# (since book.idx changes every time; that is written by TeX).
+book.sdx:  #book.idx $(ICONSCRIPTS)
 	if test -z "$(ICON)"; then touch book.sdx; else \
 	  (cat book.idx | $(ICON) index1.icn | sort \
            | $(ICON) index2.icn >book.sdx); fi
@@ -91,13 +95,13 @@ dist: all
 	tar czf $(PACKAGE_TARNAME)-$(PACKAGE_VERSION).tar.gz \
 	  Makefile.in configure configure.ac \
 	  NEWS README errata.future \
-	  ${ICONSCRIPTS} ${TEXFILES} ${SDXFILE} ${DVIFILE} ${PDFFILE}
+	  $(ICONSCRIPTS) $(TEXFILES) $(SDXFILE) $(DVIFILE) $(PDFFILE)
 
 distclean: clean
 	-rm -rf config.log config.status autom4te.cache Makefile
 
 clean:
-	-rm -f ${LOGFILES} ${AUXFILES} x.tex 
+	-rm -f $(LOGFILES) $(AUXFILES) x.tex 
 
 .PHONY: all dist clean pdf dvi html install installdirs \
         install-dvi install-pdf install-html
