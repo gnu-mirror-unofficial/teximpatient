@@ -82,10 +82,11 @@ book.html: book.tex
 
 book.idx: book.dvi
 
-# + chars in book.idx should be changed to SPC chars in book.sdx
-# by the Icon programs, but aren't.  Therefore, effectively disable the
-# rule as long as book.sdx exists.  Also avoids rerunning every time
-# (since book.idx changes every time; that is written by TeX).
+# + chars in book.idx need to be changed to SPC chars in book.sdx
+# somewhere, but currently aren't.  Therefore, we effectively disable
+# the rule as long as book.sdx exists.  This also avoids rerunning every
+# time (since book.idx changes every time; that file is written by TeX).
+# But the page numbers in the existing book.sdx are probably wrong by now :(.
 book.sdx:  #book.idx $(ICONSCRIPTS)
 	if test -z "$(ICON)"; then touch book.sdx; else \
 	  (cat book.idx | $(ICON) index1.icn | sort \
@@ -95,7 +96,9 @@ dist: all
 	tar czf $(PACKAGE_TARNAME)-$(PACKAGE_VERSION).tar.gz \
 	  Makefile.in configure configure.ac \
 	  NEWS README errata.future \
-	  $(ICONSCRIPTS) $(TEXFILES) $(SDXFILE) $(DVIFILE) $(PDFFILE)
+	  $(ICONSCRIPTS) \
+	  $(TEXFILES) \
+	  $(SDXFILE) $(DVIFILE) $(PDFFILE)
 
 distclean: clean
 	-rm -rf config.log config.status autom4te.cache Makefile
