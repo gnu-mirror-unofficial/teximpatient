@@ -1,5 +1,5 @@
 % This is part of the book TeX for the Impatient.
-% Copyright (C) 2003 Paul W. Abrahams, Kathryn A. Hargreaves, Karl Berry.
+% Copyright (C) 2003, 2014 Paul W. Abrahams, Kathryn A. Hargreaves, Karl Berry.
 % See file fdl.tex for copying conditions.
 
 \input macros
@@ -1710,7 +1710,7 @@ individually for each one or put the change into |\everypar|
 \cts linepenalty {\param{number}}
 \explain
 \minrefs{line break}
-This parameter specifies \minref{demerits} that \TeX\ assesses for each line
+This parameter specifies the \minref{penalty} that \TeX\ assesses for each line
 break when it is breaking a paragraph into lines.
 The penalty is independent of where the line break occurs.
 Increasing the value
@@ -2145,8 +2145,8 @@ italics.  \<arg\-u\-ment> must be followed by a period and a space token,
 which serve
 to set off \<argument> from \<general text>.
 \<general text> consists of the text up to the next paragraph
-boundary, except that you can include multiple paragraphs by putting them
-within braces and ending a paragraph after the closing right brace.
+boundary.  You can include multiple paragraphs by using |\endgraf|
+instead of a blank line or |\par|.
 \example
 \proclaim Theorem 1.
 What I say is not to be believed.

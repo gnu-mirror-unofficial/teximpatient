@@ -1,5 +1,5 @@
 % This is part of the book TeX for the Impatient.
-% Copyright (C) 2003 Paul W. Abrahams, Kathryn A. Hargreaves, Karl Berry.
+% Copyright (C) 2003, 2014 Paul W. Abrahams, Kathryn A. Hargreaves, Karl Berry.
 % See file fdl.tex for copying conditions.
 
 \input macros 
@@ -629,18 +629,14 @@ You can also |\write| to |\tocfile| yourself.
       \tocfileopenedtrue
       \immediate\openout\tocfile = \jobname.toc
 \fi}%
+\def\writetocentry#1#2{%
+   \writenumberedtocentry{#1}{#2}\empty}% 
 \def\writenumberedtocentry#1#2#3{\ifrewritetocfile
    \opentocfile
    \write\tocfile{%
       \expandafter\noexpand \csname toc#1entry\endcsname
       {#2}{#3}{\folio}}%
-\ignorespaces\fi}%
-\def\writenumberedtocentry#1#2#3{\ifrewritetocfile
-   \opentocfile
-   \write\tocfile{%
-      \expandafter\noexpand \csname toc#1entry\endcsname
-      {#2}{#3}{\folio}}%
-\ignorespaces\fi}%
+\fi\ignorespaces}%
 |
 
 To produce a table of contents, read the |.toc| file with

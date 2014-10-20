@@ -1,5 +1,5 @@
 % This is part of the book TeX for the Impatient.
-% Copyright (C) 2003 Paul W. Abrahams, Kathryn A. Hargreaves, Karl Berry.
+% Copyright (C) 2003, 2014 Paul W. Abrahams, Kathryn A. Hargreaves, Karl Berry.
 % See file fdl.tex for copying conditions.
 
 \input macros
@@ -664,9 +664,9 @@ $${\int_0^\pi \sin^2 ax\,dx} = {\pi \over 2}$$
 \begindesc
 \cts limits {}
 \explain
-When it's in text style, \TeX\ normally places limits after a large operator.
-This command tells \TeX\ to place
-limits above and below a large operator rather than after it.
+In text style, \TeX\ normally places limits after a large operator.
+This command tells \TeX\ to place limits above and below a large
+operator rather than after it.
 
 If you specify more than one of |\limits|, |\nolimits|, 
 and |\display!-limits|, the last command rules.
@@ -684,13 +684,16 @@ two elements.
 \begindesc
 \cts nolimits {}
 \explain
-When it's in display
-style, \TeX\ normally places limits above and below a large operator.
-(The |\int| operator is an exception---\TeX\
-places limits for |\int| after the operator in all cases.)
+In display style, \TeX\ normally places limits above and below a large
+operator.  This command tells \TeX\ to place limits after a large
+operator rather than above and below it.
+
+The integral operators |\int| and |\oint| are exceptions---\TeX\ places
+limits after them in all cases, unless overridden, as in |\int\limits|.
+(\plainTeX\ defines ^|\int| and ^|\oint| as macros that specify the
+operator symbol followed by |\nolimits|---this is what causes them to
+behave differently by default.)
 ^^|\int//limits after|
-This command tells \TeX\ to place
-limits after a large operator rather than above and below it.
 
 If you specify more than one of |\limits|, |\nolimits|, 
 and |\display!-limits|, the last command rules.
@@ -706,22 +709,9 @@ $$\bigcap\nolimits_{i=1}^Nq_i$$
 \begindesc
 \cts displaylimits {}
 \explain
-This command tells \TeX\ to 
-follow its normal rules for placement of limits:
-\olist\compact
-\li Limits on ^|\int| are placed after the operator.
-\li Limits on other large operators are placed after the
-operator in text style.
-\li Limits on other large operators are placed above and below the operator
-in display style.
-\endolist
-It's usually simpler to use |\limits| or |\nolimits|
-to produce a specific effect, but |\display!-limits| is sometimes
-useful in \minref{macro} definitions.
-
-Note that \plainTeX\ defines ^|\int| as a macro that sets |\nolimits|,
-so |\int\displaylimits| in text style restores the |\limits|
-convention.  
+This command tells \TeX\ to place limits above and below all operators
+(including the integrals) if in display style, and after all operators
+if in text style.
 
 If you specify more than one of |\limits|, |\nolimits|, 
 and |\display!-limits|, the last command rules.
