@@ -629,8 +629,13 @@ You can also |\write| to |\tocfile| yourself.
       \tocfileopenedtrue
       \immediate\openout\tocfile = \jobname.toc
 \fi}%
-\def\writetocentry#1#2{%
-   \writenumberedtocentry{#1}{#2}\empty}% 
+\def\writetocentry#1#2{\ifrewritetocfile
+   \opentocfile
+   \write\tocfile{%
+      \expandafter\noexpand \csname toc#1entry\endcsname
+      {#2}{\folio}}%
+\fi\ignorespaces}%
+%
 \def\writenumberedtocentry#1#2#3{\ifrewritetocfile
    \opentocfile
    \write\tocfile{%
