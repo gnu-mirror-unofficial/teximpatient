@@ -14,6 +14,16 @@ Development sources, etc.: http://savannah.gnu.org/projects/teximpatient/
 Information about the free edition is included at the end of the preface
 and on the copyright page.
 
+A French translation is included in the distribution,
+and a Chinese translation is at https://bitbucket.org/zohooo/impatient
+(with PDF at
+http://zoho.is-programmer.com/user_files/zoho/epics/tex-impatient-cn.pdf).
+
+Original high-resolution scans of the artwork are available from
+http://ftpmirror.gnu.org/teximpatient/artwork.  Reduced-size bitmaps are
+in the artwork/ subdirectory here.
+
+
 Some random thoughts for people thinking of working with the source:
 
 - See errata.future for some relatively small ideas for enhancements.

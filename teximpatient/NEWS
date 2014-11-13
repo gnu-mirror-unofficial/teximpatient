@@ -7,7 +7,10 @@ This NEWS file records noteworthy changes, very tersely.
   are permitted in any medium without royalty provided the copyright
   notice and this notice are preserved.
 
-Typo fixes from Chinese translator, Zou Hu.
+
+ Version 2.4 (13 November 2014)
+- Chinese translation.
+- fixes from new Chinese translator, Zou Hu.
 
  Version 2.3 (21 May 2013)
 - first release on ftp.gnu.org.  Now looking for a maintainer.

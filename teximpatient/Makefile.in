@@ -47,7 +47,7 @@ DVIFILE = book.dvi
 
 HTMLFILE = book.html
 
-all: dvi pdf #html
+all: pdf #html dvi
 
 dvi: $(DVIFILE)
 
@@ -96,9 +96,15 @@ dist: all
 	tar czf $(PACKAGE_TARNAME)-$(PACKAGE_VERSION).tar.gz \
 	  Makefile.in configure configure.ac \
 	  NEWS README errata.future \
+	  artwork/README artwork/*.png \
 	  $(ICONSCRIPTS) \
 	  $(TEXFILES) \
-	  $(SDXFILE) $(DVIFILE) $(PDFFILE)
+	  $(SDXFILE) \
+	  $(PDFFILE)
+
+dist-cn:
+	tar czf $(PACKAGE_TARNAME)-$(PACKAGE_VERSION)cn.tar.gz \
+	  cn-git/Makefile cn-git/*.tex cn-git/cnbook.pdf
 
 distclean: clean
 	-rm -rf config.log config.status autom4te.cache Makefile
