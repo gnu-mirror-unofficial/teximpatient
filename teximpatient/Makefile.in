@@ -96,7 +96,6 @@ dist: all
 	tar czf $(PACKAGE_TARNAME)-$(PACKAGE_VERSION).tar.gz \
 	  Makefile.in configure configure.ac \
 	  NEWS README errata.future \
-	  artwork/README artwork/*.png \
 	  $(ICONSCRIPTS) \
 	  $(TEXFILES) \
 	  $(SDXFILE) \
