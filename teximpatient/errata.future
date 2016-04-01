@@ -127,9 +127,6 @@ time warp.
 (middle) % Skips like this => % Skips like that, because one of the
 skips was just given.
 
-26 fonts won't give you => fonts don't give you
-page 100 and page 97 => pages 97 and 100
-
 32 (bottom) try to use these commands => try to use those commands,
 since the commands are above the comment.
 Also, they can get lists with more levels than one by using the Eplain
@@ -248,8 +245,6 @@ we've done something active than ``insure''.
 
 80 (math mode) Should say that display math gives you space above and
 below the formula.
-
-84 (page) between exercises => between exercisings?
 
 86 (page layout) We don't give the default space between the body of the
 text and the headers or footers.
